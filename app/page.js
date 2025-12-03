@@ -6,11 +6,13 @@ import NewsSection from "@/components/Home/NewsSection";
 import PodcastSection from "@/components/Home/PodcastSection";
 import ProgramsSection from "@/components/Home/ProgramsSection";
 import StatsSection from "@/components/Home/StatsSection";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* <Header /> */}
+      <Navbar />
       <main>
         <HeroSection />
         <ProgramsSection />
