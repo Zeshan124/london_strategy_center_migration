@@ -135,17 +135,18 @@ export default function HeroSection() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-20">
       {/* Hero Section */}
       <main className="pt-20 px-6 lg:px-8 py-12 max-w-[1400px] mx-auto">
         {/* Welcome Text */}
         <div className="text-center mb-12 lg:mb-16">
-          <p className="text-xs font-semibold tracking-widest text-gray-600 mb-6">
-            WELCOME TO BCG
+          <p className="text-xs font-semibold tracking-widest text-gray-900 leading-tight mb-4">
+            WELCOME TO LSC
           </p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-5xl mx-auto px-4">
-            Unlocking the Potential of Those Who Advance the World
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-light text-gray-900 max-w-5xl mx-auto px-4">
+            Innovation, Strategy <br/> & Leadership Excellence
           </h1>
+          <p className="font-light text-gray-600 max-w-2xl mx-auto py-2 lg:px-10">Transform your business with our four-pillar approach, Specializing in cutting-edge AI and Cyberscurity certifications for the digital-first future.</p>
         </div>
 
         {/* Carousel Section */}
@@ -283,6 +284,23 @@ export default function HeroSection() {
             <div className="ml-2 text-sm font-medium text-gray-600">
               {String(currentSlide + 1).padStart(2, "0")}
             </div>
+          </div>
+        </div>
+        {/* BCG Spotlight Footer Section */}
+        <div className="mt-12 sm:mt-16 lg:mt-20 flex justify-center px-4">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12 px-4 sm:px-6 md:px-8 py-3 sm:py-4 border border-gray-200 rounded-full shadow-sm bg-white max-w-full">
+            <button className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
+              BCG SPOTLIGHT
+            </button>
+            <button className="text-xs sm:text-sm font-semibold text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap">
+              ARTIFICIAL INTELLIGENCE
+            </button>
+            <button className="text-xs sm:text-sm font-semibold text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap">
+              CEO AGENDA
+            </button>
+            <button className="text-xs sm:text-sm font-semibold text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap">
+              CLIENT IMPACT LIBRARY
+            </button>
           </div>
         </div>
       </main>

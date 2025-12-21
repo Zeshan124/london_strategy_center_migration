@@ -1,3 +1,6 @@
+import AboutSection from "@/components/Home/AboutSection";
+import CertificationsSection from "@/components/Home/CertificationsSection";
+import FeaturedEpisode from "@/components/Home/FeaturedEpisode";
 import Footer from "@/components/Home/Footer";
 import FreebiesSection from "@/components/Home/FreebiesSection";
 import Header from "@/components/Home/Header";
@@ -15,10 +18,13 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
-        <ProgramsSection />
+        <AboutSection />
+        <CertificationsSection />
+        <FeaturedEpisode />
+        {/* <ProgramsSection />
         <PodcastSection />
         <FreebiesSection />
-        <NewsSection />
+        <NewsSection /> */}
         <StatsSection />
       </main>
       <Footer />

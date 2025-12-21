@@ -69,22 +69,29 @@ const Navbar = () => {
   return (
     <>
       {/* Main Navbar */}
-      <nav className="fixed top-0 left-0 right-0 bg-transparent z-50 px-6 lg:px-8 py-4">
+      <nav className="fixed top-0 left-0 right-0 bg-transparent z-50 px-6 lg:px-15 py-10">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="px-1 py-1 text-lg text-gray-700 font-bold bg-white rounded-lg transition-colors shadow-sm border border-gray-200 flex items-center gap-2"
+              className="px-2 py-2 text-lg text-gray-700 font-bold bg-white rounded-xl transition-colors shadow-md border border-gray-200 flex items-center gap-2"
               aria-label="Open menu"
             >
               <Image
-                src="/images/icons/hamburger-icon.svg"
+                src="/images/icons/hamburger.svg"
                 alt="Menu Icon"
-                width={32}
-                height={32}
-                className="w-7 h-7"
+                width={48}
+                height={48}
+                className="w-12 h-12"
               />
-              BCG
+              <Image
+                src="/images//icons/LSC-logo.svg"
+                alt="BCG Logo"
+                width={80}
+                height={32}
+                className="h-8 w-auto"
+                priority
+              />
             </button>
           </div>
 
