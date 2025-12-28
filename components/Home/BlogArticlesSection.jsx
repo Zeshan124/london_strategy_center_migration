@@ -10,7 +10,7 @@ export default function BlogArticlesSection() {
       date: 'DEC 18, 2025',
       readTime: '5 MIN READ',
       title: 'AI-Driven Leadership: The New Executive Imperative',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop',
+      image: '/images/home/Leadership.jpg',
       size: 'large'
     },
     {
@@ -28,7 +28,7 @@ export default function BlogArticlesSection() {
       date: 'DEC 12, 2025',
       readTime: '6 MIN READ',
       title: 'Strategic Innovation in Digital Transformation',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+      image: '/images/home/Innovation.jpg',
       size: 'small'
     }
   ];
@@ -48,7 +48,7 @@ export default function BlogArticlesSection() {
               />
               
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/70 to-transparent" />
               
               {/* Badge */}
               <div className="absolute top-6 left-6">
@@ -72,10 +72,12 @@ export default function BlogArticlesSection() {
                 </h3>
 
                 {/* Read More Button */}
-                <button className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-white text-white rounded-full text-sm font-medium hover:bg-white hover:text-gray-900 transition-all duration-300">
-                  READ MORE
-                  <ArrowRight className="w-4 h-4" />
-                </button>
+              <div className="flex justify-end">
+  <button className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-white text-white rounded-xl text-sm font-medium hover:bg-white hover:text-gray-900 transition-all duration-300">
+    READ MORE
+    <ArrowRight className="w-4 h-4" />
+  </button>
+</div>
               </div>
             </div>
           </div>
@@ -83,7 +85,7 @@ export default function BlogArticlesSection() {
           {/* Right Side - Two Small Cards */}
           <div className="flex flex-col gap-6">
             {/* Small Card 1 */}
-            <div className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer bg-gray-100">
+            <div className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer bg-[#F1EEEA]">
               <div className="p-8 lg:p-10">
                 {/* Badge */}
                 <div className="mb-4">
@@ -105,10 +107,12 @@ export default function BlogArticlesSection() {
                 </h3>
 
                 {/* Read More Button */}
-                <button className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition-all duration-300">
-                  READ MORE
-                  <ArrowRight className="w-4 h-4" />
-                </button>
+                <div className="flex justify-end">
+  <button className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition-all duration-300">
+    READ MORE
+    <ArrowRight className="w-4 h-4" />
+  </button>
+</div>
               </div>
             </div>
 
@@ -146,10 +150,12 @@ export default function BlogArticlesSection() {
                   </h3>
 
                   {/* Read More Button */}
-                  <button className="inline-flex items-center gap-2 px-5 py-2.5 bg-transparent border-2 border-white text-white rounded-full text-sm font-medium hover:bg-white hover:text-gray-900 transition-all duration-300">
-                    READ MORE
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+                  <div className="flex justify-end">
+  <button className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition-all duration-300">
+    READ MORE
+    <ArrowRight className="w-4 h-4" />
+  </button>
+</div>
                 </div>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import AboutSection from "@/components/Home/AboutSection";
+import BlogArticlesSection from "@/components/Home/BlogArticlesSection";
 import CertificationsSection from "@/components/Home/CertificationsSection";
 import FeaturedEpisode from "@/components/Home/FeaturedEpisode";
 import Footer from "@/components/Home/Footer";
@@ -23,6 +24,7 @@ export default function Home() {
         <CertificationsSection />
         <FeaturedEpisode />
         <IndustriesSection />
+        <BlogArticlesSection />
         {/* <ProgramsSection />
         <PodcastSection />
         <FreebiesSection />
