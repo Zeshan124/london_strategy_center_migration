@@ -5,6 +5,7 @@ import Footer from "@/components/Home/Footer";
 import FreebiesSection from "@/components/Home/FreebiesSection";
 import Header from "@/components/Home/Header";
 import HeroSection from "@/components/Home/HeroSection";
+import IndustriesSection from "@/components/Home/IndustriesSection";
 import NewsSection from "@/components/Home/NewsSection";
 import PodcastSection from "@/components/Home/PodcastSection";
 import ProgramsSection from "@/components/Home/ProgramsSection";
@@ -21,6 +22,7 @@ export default function Home() {
         <AboutSection />
         <CertificationsSection />
         <FeaturedEpisode />
+        <IndustriesSection />
         {/* <ProgramsSection />
         <PodcastSection />
         <FreebiesSection />

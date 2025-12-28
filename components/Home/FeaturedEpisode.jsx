@@ -34,14 +34,14 @@ export default function FeaturedEpisode() {
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4">
-            <button className="inline-flex items-center gap-2 px-6 py-3 bg-[white] border-2 border-[#0E2253] text-gray-900 rounded-full font-medium text-sm hover:bg-gray-900 hover:text-white transition-all duration-300">
-              <Play className="w-4 h-4 fill-current" />
+            <button className="inline-flex items-center gap-2 px-6 py-3 bg-[white] border-2 border-[#0E2253] text-gray-900 rounded-sm font-medium text-sm hover:bg-gray-900 hover:text-white transition-all duration-300">
               PLAY NOW
+              <img src="/images/icons/play-icon.svg" alt="Play Icon" className="w-4 h-4" />
             </button>
             
             <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#0E2253] text-white rounded-full font-medium text-sm hover:bg-gray-800 transition-all duration-300">
-              <Download className="w-4 h-4" />
               DOWNLOAD
+              <img src="/images/icons/download-icon.svg" alt="Download Icon" className="w-4 h-4" />
             </button>
           </div>
         </div>

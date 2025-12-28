@@ -59,11 +59,11 @@ export default function CertificationsSection() {
                 />
                 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 " />
                 
                 {/* Badge */}
                 <div className="absolute top-5 left-5">
-                  <span className="inline-block px-4 py-1.5 bg-transparent border-2 border-white/60 rounded-md text-xs font-medium tracking-wider text-white uppercase">
+                  <span className="inline-block px-4 py-1 bg-transparent border-2 border-white/60 rounded-md text-xs font-medium tracking-wider text-white uppercase">
                     {cert.badge}
                   </span>
                 </div>
@@ -72,7 +72,7 @@ export default function CertificationsSection() {
               {/* Content Box */}
               <div className="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow-xl transform translate-y-0 transition-transform duration-500">
                 {/* Duration */}
-                <p className="text-xs font-semibold tracking-wider text-gray-600 mb-3 uppercase">
+                <p className="text-xs font-semibold tracking-wider text-[#0E2253] mb-3 uppercase">
                   {cert.duration}
                 </p>
 

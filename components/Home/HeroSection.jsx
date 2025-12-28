@@ -11,7 +11,7 @@ export default function HeroSection() {
     {
       id: 1,
       image:
-        "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=1000&fit=crop",
+        "/images/home/1.jpg",
       category: "Talent and Skills",
       categoryLink: "/talent-skills-strategy",
       title: "As AI Changes Work, CEOs Must Change How Work Happens",
@@ -24,7 +24,7 @@ export default function HeroSection() {
     {
       id: 2,
       image:
-        "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&h=1000&fit=crop",
+         "/images/home/2.jpg",
       category: "Marketing and Sales",
       categoryLink: "/marketing-sales",
       title: "The Agentic Marketing Race Is On. CMOs That Move First Will Win.",
@@ -37,7 +37,7 @@ export default function HeroSection() {
     {
       id: 3,
       image:
-        "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=1000&fit=crop",
+         "/images/home/3.jpg",
       category: "Value Creation Strategy",
       categoryLink: "/value-creation-strategy",
       title:
@@ -51,7 +51,7 @@ export default function HeroSection() {
     {
       id: 4,
       image:
-        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=1000&fit=crop",
+         "/images/home/4.jpg",
       category: "Climate Risk, Adaptation, and Resilience",
       categoryLink: "/climate-risk-adaptation",
       title: "Actions to Mobilize Investment in Adaptation and Resilience",
