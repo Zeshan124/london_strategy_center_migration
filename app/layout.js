@@ -19,8 +19,8 @@ const metropolis = localFont({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${metropolis.variable} antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${metropolis.variable} antialiased`} suppressHydrationWarning>
         {children}
       </body>
     </html>
