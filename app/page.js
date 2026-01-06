@@ -7,6 +7,7 @@ import FreebiesSection from "@/components/Home/FreebiesSection";
 import Header from "@/components/Home/Header";
 import HeroSection from "@/components/Home/HeroSection";
 import IndustriesSection from "@/components/Home/IndustriesSection";
+import NewsletterCTASection from "@/components/Home/NewsletterCTASection";
 import NewsSection from "@/components/Home/NewsSection";
 import PodcastSection from "@/components/Home/PodcastSection";
 import ProgramsSection from "@/components/Home/ProgramsSection";
@@ -25,11 +26,12 @@ export default function Home() {
         <FeaturedEpisode />
         <IndustriesSection />
         <BlogArticlesSection />
+        <NewsletterCTASection />
         {/* <ProgramsSection />
         <PodcastSection />
         <FreebiesSection />
         <NewsSection /> */}
-        <StatsSection />
+        {/* <StatsSection /> */}
       </main>
       <Footer />
     </div>

@@ -1,97 +1,234 @@
+"use client";
 
-import Link from 'next/link';
+import Image from "next/image";
 
 export default function Footer() {
+  const services = [
+    "Business Strategy",
+    "Operations Optimization",
+    "Growth Acceleration",
+    "Organizational Design",
+    "Financial Advisory",
+    "Market Entry",
+  ];
+
+  const industries = [
+    "Technology",
+    "Financial Services",
+    "Healthcare",
+    "Manufacturing",
+    "Retail & Consumer",
+    "Energy & Utilities",
+  ];
+
   return (
-    <footer className="bg-slate-800 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <img 
-              src="https://static.readdy.ai/image/21157b32f65a0c4c24b8101274f60641/11caa737723ac06453aea8f10ecff760.png" 
-              alt="London Strategy Centre"
-              className="h-16 w-auto mb-4 brightness-0 invert"
-            />
-            <p className="text-gray-300 mb-4">
-              Leading business consulting firm delivering strategic solutions and sustainable growth for companies worldwide.
+    <footer className="bg-[#F1EEEA]">
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-8 py-8 sm:py-12 md:py-16 lg:py-20">
+        {/* Top Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 xl:gap-12 mb-8 sm:mb-12 lg:mb-16">
+          {/* Company Description */}
+          <div className="lg:col-span-1">
+            <p className="text-sm sm:text-base lg:text-xl text-gray-800 leading-relaxed">
+              Leading business consulting firm delivering strategic solutions
+              and sustainable growth for companies worldwide.
             </p>
-            <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center cursor-pointer hover:bg-red-800 transition-colors">
-                <i className="ri-linkedin-fill"></i>
+          </div>
+
+          {/* Services Column */}
+          <div>
+            <ul className="space-y-2 sm:space-y-3">
+              {services.map((service, index) => (
+                <li key={index}>
+                  <a
+                    href="#"
+                    className="text-xs sm:text-sm lg:text-base text-gray-800 hover:text-gray-600 transition-colors block"
+                  >
+                    {service}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Industries Column */}
+          <div>
+            <ul className="space-y-2 sm:space-y-3">
+              {industries.map((industry, index) => (
+                <li key={index}>
+                  <a
+                    href="#"
+                    className="text-xs sm:text-sm lg:text-base text-gray-800 hover:text-gray-600 transition-colors block"
+                  >
+                    {industry}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Information */}
+          <div className="space-y-3 sm:space-y-4">
+            {/* Address */}
+            <div className="flex items-start gap-2 sm:gap-3">
+              <div className="relative w-4 h-4 sm:w-5 sm:h-5 shrink-0 mt-0.5 sm:mt-1">
+                <Image
+                  src="/images/icons/location.svg"
+                  alt="Location"
+                  fill
+                  className="object-contain"
+                />
               </div>
-              <div className="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center cursor-pointer hover:bg-red-800 transition-colors">
-                <i className="ri-twitter-fill"></i>
+
+              <div className="text-xs sm:text-sm lg:text-base text-gray-800">
+                <p>45 Albemarle Street,</p>
+                <p>3rd Floor, Mayfair, W1S 4JL,</p>
+                <p>London, United Kingdom</p>
               </div>
-              <div className="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center cursor-pointer hover:bg-red-800 transition-colors">
-                <i className="ri-facebook-fill"></i>
-              </div>
-              <div className="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center cursor-pointer hover:bg-red-800 transition-colors">
-                <i className="ri-youtube-fill"></i>
-              </div>
+            </div>
+
+            {/* Email */}
+            <div className="flex items-start gap-2 sm:gap-3">
+              <img
+                src="/images/icons/mail.svg"
+                alt="Mail Icon"
+                className="w-4 h-4 sm:w-5 sm:h-5 shrink-0 mt-0.5"
+              />
+              <a
+                href="mailto:enquiries@londonstrategycentre.com"
+                className="text-xs sm:text-sm lg:text-base text-gray-800 hover:text-gray-600 transition-colors break-all"
+              >
+                enquiries@londonstrategycentre.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Middle Section - Logo and Social */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6 py-6 sm:py-8 border-t border-gray-300">
+          {/* Logo */}
+          <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center flex-shrink-0">
+              <Image
+                src="/images/icons/logo-footer.svg"
+                alt="London Strategy Centre Logo"
+                width={100}
+                height={100}
+                className="object-contain sm:w-[120px] sm:h-[120px] md:w-[140px] md:h-[140px] lg:w-[150px] lg:h-[150px]"
+                priority
+              />
             </div>
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
-              <li><Link href="/business-strategy" className="text-gray-300 hover:text-white transition-colors cursor-pointer">Business Strategy</Link></li>
-              <li><Link href="/operations-optimization" className="text-gray-300 hover:text-white transition-colors cursor-pointer">Operations Optimization</Link></li>
-              <li><Link href="/growth-acceleration" className="text-gray-300 hover:text-white transition-colors cursor-pointer">Growth Acceleration</Link></li>
-              <li><Link href="/organizational-design" className="text-gray-300 hover:text-white transition-colors cursor-pointer">Organizational Design</Link></li>
-              <li><Link href="/financial-advisory" className="text-gray-300 hover:text-white transition-colors cursor-pointer">Financial Advisory</Link></li>
-              <li><Link href="/market-entry" className="text-gray-300 hover:text-white transition-colors cursor-pointer">Market Entry</Link></li>
-            </ul>
-          </div>
+          {/* Social Media */}
+          <div className="flex flex-wrap items-center gap-1 sm:gap-2">
+            <span className="text-xs sm:text-sm font-medium text-gray-800 mr-1 sm:mr-2 w-full sm:w-auto mb-2 sm:mb-0">
+              FOLLOW US
+            </span>
 
-          <div>
-            <h4 className="font-semibold mb-4">Industries</h4>
-            <ul className="space-y-2">
-              <li><Link href="/technology" className="text-gray-300 hover:text-white transition-colors cursor-pointer">Technology</Link></li>
-              <li><Link href="/financial-services" className="text-gray-300 hover:text-white transition-colors cursor-pointer">Financial Services</Link></li>
-              <li><Link href="/healthcare" className="text-gray-300 hover:text-white transition-colors cursor-pointer">Healthcare</Link></li>
-              <li><Link href="/manufacturing" className="text-gray-300 hover:text-white transition-colors cursor-pointer">Manufacturing</Link></li>
-              <li><Link href="/retail" className="text-gray-300 hover:text-white transition-colors cursor-pointer">Retail & Consumer</Link></li>
-              <li><Link href="/energy" className="text-gray-300 hover:text-white transition-colors cursor-pointer">Energy & Utilities</Link></li>
-            </ul>
-          </div>
+            <a
+              href="#"
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center transition-all"
+              aria-label="Facebook"
+            >
+              <img
+                src="/images/icons/facebook.svg"
+                alt="Facebook"
+                className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
+              />
+            </a>
 
-          <div>
-            <h4 className="font-semibold mb-4">Contact Info</h4>
-            <ul className="space-y-3 text-gray-300">
-              <li className="flex items-start space-x-2">
-                <i className="ri-map-pin-line mt-1"></i>
-                <span>25 Cavendish Square<br />London W1G 0PN<br />United Kingdom</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <i className="ri-phone-line"></i>
-                <span>+44 20 7123 4567</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <i className="ri-mail-line"></i>
-                <span>hello@londonstrategy.com</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <i className="ri-time-line"></i>
-                <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
-              </li>
-            </ul>
+            <a
+              href="#"
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center transition-all"
+              aria-label="Instagram"
+            >
+              <img
+                src="/images/icons/insta.svg"
+                alt="Instagram"
+                className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
+              />
+            </a>
+
+            <a
+              href="#"
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center transition-all"
+              aria-label="LinkedIn"
+            >
+              <img
+                src="/images/icons/linkedin.svg"
+                alt="LinkedIn"
+                className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
+              />
+            </a>
+
+            <a
+              href="#"
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center transition-all"
+              aria-label="TikTok"
+            >
+              <img
+                src="/images/icons/tiktok.svg"
+                alt="TikTok"
+                className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
+              />
+            </a>
+
+            <a
+              href="#"
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center transition-all"
+              aria-label="YouTube"
+            >
+              <img
+                src="/images/icons/youtube.svg"
+                alt="YouTube"
+                className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
+              />
+            </a>
           </div>
         </div>
-      </div>
 
-      <div className="border-t border-slate-700 py-6">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-300 text-sm">
-            © 2024 London Strategy Centre. All rights reserved.
+        {/* Bottom Section */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 pt-4 sm:pt-6 border-t border-gray-300">
+          {/* Links */}
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm">
+            <a
+              href="#"
+              className="text-gray-800 hover:text-gray-600 transition-colors font-medium whitespace-nowrap"
+            >
+              PRIVACY POLICY
+            </a>
+            <a
+              href="#"
+              className="text-gray-800 hover:text-gray-600 transition-colors font-medium whitespace-nowrap"
+            >
+              POLICIES AND LEGISLATION
+            </a>
+            <a
+              href="#"
+              className="text-gray-800 hover:text-gray-600 transition-colors font-medium whitespace-nowrap"
+            >
+              SITEMAP
+            </a>
+          </div>
+
+          {/* Copyright */}
+          <p className="text-xs sm:text-sm text-gray-800 whitespace-nowrap">
+            © 2025 London Strategy Centre
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-gray-300 hover:text-white text-sm transition-colors cursor-pointer">Privacy Policy</Link>
-            <Link href="/terms" className="text-gray-300 hover:text-white text-sm transition-colors cursor-pointer">Terms of Service</Link>
-            <Link href="/cookies" className="text-gray-300 hover:text-white text-sm transition-colors cursor-pointer">Cookie Policy</Link>
-            <Link href="https://readdy.ai/?origin=logo" className="text-gray-300 hover:text-white text-sm transition-colors cursor-pointer">Made with Readdy</Link>
-          </div>
         </div>
       </div>
+
+      {/* AI Assistant Button */}
+      {/* <div className="fixed bottom-8 right-8 z-50">
+        <button className="group relative w-16 h-16 bg-[#1e3a6b] rounded-full shadow-2xl hover:bg-[#0a1d4a] transition-all duration-300 flex items-center justify-center">
+          <MessageCircle className="w-8 h-8 text-white" fill="white" />
+          
+          <div className="absolute bottom-full right-0 mb-2 px-4 py-2 bg-[#1e3a6b] text-white text-xs font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+            ASK OUR<br />AI ASSISTANT
+          </div>
+        </button>
+      </div> */}
     </footer>
   );
 }
