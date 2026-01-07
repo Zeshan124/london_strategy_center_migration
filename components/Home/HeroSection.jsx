@@ -10,8 +10,7 @@ export default function HeroSection() {
   const articles = [
     {
       id: 1,
-      image:
-        "/images/home/1.jpg",
+      image: "/images/home/1.jpg",
       category: "Talent and Skills",
       categoryLink: "/talent-skills-strategy",
       title: "As AI Changes Work, CEOs Must Change How Work Happens",
@@ -23,8 +22,7 @@ export default function HeroSection() {
     },
     {
       id: 2,
-      image:
-         "/images/home/2.jpg",
+      image: "/images/home/2.jpg",
       category: "Marketing and Sales",
       categoryLink: "/marketing-sales",
       title: "The Agentic Marketing Race Is On. CMOs That Move First Will Win.",
@@ -36,8 +34,7 @@ export default function HeroSection() {
     },
     {
       id: 3,
-      image:
-         "/images/home/3.jpg",
+      image: "/images/home/3.jpg",
       category: "Value Creation Strategy",
       categoryLink: "/value-creation-strategy",
       title:
@@ -50,8 +47,7 @@ export default function HeroSection() {
     },
     {
       id: 4,
-      image:
-         "/images/home/4.jpg",
+      image: "/images/home/4.jpg",
       category: "Climate Risk, Adaptation, and Resilience",
       categoryLink: "/climate-risk-adaptation",
       title: "Actions to Mobilize Investment in Adaptation and Resilience",
@@ -63,8 +59,7 @@ export default function HeroSection() {
     },
     {
       id: 5,
-      image:
-        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=1000&fit=crop",
+      image: "/images/home/5.jpg",
       category: "Artificial Intelligence",
       categoryLink: "/artificial-intelligence",
       title:
@@ -144,14 +139,18 @@ export default function HeroSection() {
             WELCOME TO LSC
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-light text-gray-900 max-w-5xl mx-auto px-4">
-            Innovation, Strategy <br/> & Leadership Excellence
+            Innovation, Strategy <br /> & Leadership Excellence
           </h1>
-          <p className="font-light text-gray-600 max-w-2xl mx-auto py-2 lg:px-10">Transform your business with our four-pillar approach, Specializing in cutting-edge AI and Cyberscurity certifications for the digital-first future.</p>
+          <p className="font-light text-gray-600 max-w-2xl mx-auto py-2 lg:px-10">
+            Transform your business with our four-pillar approach, Specializing
+            in cutting-edge AI and Cyberscurity certifications for the
+            digital-first future.
+          </p>
         </div>
 
         {/* Carousel Section */}
         <div className="relative">
-          <div className="flex items-center justify-center gap-4 overflow-hidden h-[450px] mb-8">
+          <div className="flex items-center justify-center gap-14 overflow-hidden h-[450px] mb-8">
             {getOrderedSlides().map((article, displayIndex) => {
               const position = article.position;
 
@@ -173,7 +172,7 @@ export default function HeroSection() {
                     }
                     ${
                       position === -2 || position === 2
-                        ? "w-[140px] sm:w-[170px] lg:w-[200px] h-[340px] opacity-50 z-10"
+                        ? "w-[140px] sm:w-[170px] lg:w-[240px] h-[320px] opacity-50 z-10"
                         : ""
                     }
                   `}
