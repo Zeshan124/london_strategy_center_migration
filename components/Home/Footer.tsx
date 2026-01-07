@@ -24,7 +24,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#F1EEEA]">
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-8 py-8 sm:py-12 md:py-16 lg:py-20">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-18 py-8 sm:py-12 md:py-16 lg:py-20">
         {/* Top Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 xl:gap-12 mb-8 sm:mb-12 lg:mb-16">
           {/* Company Description */}
@@ -42,7 +42,7 @@ export default function Footer() {
                 <li key={index}>
                   <a
                     href="#"
-                    className="text-xs sm:text-sm lg:text-base text-gray-800 hover:text-gray-600 transition-colors block"
+                    className="text-xs sm:text-sm  text-gray-800 hover:text-gray-600 transition-colors block"
                   >
                     {service}
                   </a>
@@ -58,7 +58,7 @@ export default function Footer() {
                 <li key={index}>
                   <a
                     href="#"
-                    className="text-xs sm:text-sm lg:text-base text-gray-800 hover:text-gray-600 transition-colors block"
+                    className="text-xs sm:text-sm  text-gray-800 hover:text-gray-600 transition-colors block"
                   >
                     {industry}
                   </a>
@@ -80,7 +80,7 @@ export default function Footer() {
                 />
               </div>
 
-              <div className="text-xs sm:text-sm lg:text-base text-gray-800">
+              <div className="text-xs sm:text-sm text-gray-800">
                 <p>45 Albemarle Street,</p>
                 <p>3rd Floor, Mayfair, W1S 4JL,</p>
                 <p>London, United Kingdom</p>
@@ -96,7 +96,7 @@ export default function Footer() {
               />
               <a
                 href="mailto:enquiries@londonstrategycentre.com"
-                className="text-xs sm:text-sm lg:text-base text-gray-800 hover:text-gray-600 transition-colors break-all"
+                className="text-xs sm:text-sm text-gray-800 hover:text-gray-600 transition-colors break-all"
               >
                 enquiries@londonstrategycentre.com
               </a>

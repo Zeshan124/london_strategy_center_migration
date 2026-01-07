@@ -16,7 +16,7 @@ export default function NewsletterCTASection() {
     <section className="relative overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[400px] lg:min-h-[680px]">
         {/* Left Side - Dark Blue Background with Content */}
-        <div className="bg-gradient-to-br from-[#0a1d4a] to-[#1e3a6b] px-6 sm:px-8 lg:px-16 xl:px-20 py-12 sm:py-16 lg:py-20 flex flex-col justify-center relative z-0">
+        <div className="bg-gradient-to-br from-[#0a1d4a] to-[#1e3a6b] px-6 sm:px-8 lg:px-16 xl:px-24 py-12 sm:py-16 lg:py-20 flex flex-col justify-center relative z-0">
           <div className="relative z-10">
             <h2 className="text-3xl sm:text-4xl lg:text-4xl font-light leading-tight mb-6 text-white">
               Free Resources & Toolkits
