@@ -49,31 +49,54 @@ export default function NewsletterCTASection() {
 
             {/* Email Input */}
             <div className="flex-1 lg:max-w-2xl">
-              <div className="relative w-full">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email address"
-                  className="w-full pr-36 sm:pr-40 px-5 sm:px-6 py-3 sm:py-3.5 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#1e3a6b] focus:ring-2 focus:ring-[#1e3a6b]/20 transition-all text-sm sm:text-base"
-                />
+  <div className="flex flex-col sm:flex-row gap-3 sm:gap-0 w-full relative">
+    <input
+      type="email"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      placeholder="Enter your email address"
+      className="
+        w-full
+        px-5 sm:px-6
+        py-3 sm:py-3.5
+        bg-white
+        border border-gray-300
+        rounded-lg sm:rounded-r-none
+        text-gray-900 placeholder-gray-500
+        focus:outline-none focus:border-[#1e3a6b]
+        focus:ring-2 focus:ring-[#1e3a6b]/20
+        transition-all
+        text-sm sm:text-base
+      "
+    />
 
-                <button
-                  onClick={handleSubmit}
-                  className="absolute right-1 top-1/2 -translate-y-1/2 inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#0a1d4a] text-white rounded-lg font-medium text-sm sm:text-base hover:bg-[#1e3a6b] transition-all duration-300 whitespace-nowrap"
-                >
-                  SUBSCRIBE
-                  <Image
-                    src="/images/icons/top-arrow.png"
-                    alt="Arrow"
-                    width={16}
-                    height={16}
-                    className="object-contain"
-                  />
-                </button>
-              </div>
+    <button
+      onClick={handleSubmit}
+      className="
+        inline-flex items-center justify-center gap-2
+        px-5 sm:px-6
+        py-3 sm:py-3.5
+        bg-[#0a1d4a] text-white
+        rounded-lg sm:rounded-l-none
+        font-medium
+        text-sm sm:text-base
+        hover:bg-[#1e3a6b]
+        transition-all duration-300
+        whitespace-nowrap
+      "
+    >
+      SUBSCRIBE
+      <Image
+        src="/images/icons/top-arrow.png"
+        alt="Arrow"
+        width={16}
+        height={16}
+        className="object-contain"
+      />
+    </button>
+  </div>
             </div>
-          </div>
+            </div>
         </div>
       </div>
     </section>
