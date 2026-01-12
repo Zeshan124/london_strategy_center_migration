@@ -27,9 +27,9 @@ export default function AboutSection() {
         {/* Left Content */}
         <div className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-26 py-12 sm:py-16 md:py-20 lg:py-24 flex flex-col justify-center">
           {/* Eyebrow */}
-          <p className="text-xs sm:text-xs font-semibold tracking-widest text-gray-700 mb-4 sm:mb-6 uppercase">
+          {/* <p className="text-xs sm:text-xs font-semibold tracking-widest text-gray-700 mb-4 sm:mb-6 uppercase">
             About London Strategy Centre
-          </p>
+          </p> */}
 
           {/* Main Heading */}
           <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl font-light leading-tight mb-6 sm:mb-8 text-gray-900">
