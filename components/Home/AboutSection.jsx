@@ -84,7 +84,7 @@ export default function AboutSection() {
         {/* Right Image */}
         <div className="relative h-64 sm:h-80 md:h-96 lg:h-full min-h-[400px] lg:min-h-screen">
           <img
-            src="/images/about-section.jpg"
+            src="/images/home/6.jpg"
             alt="Executive meeting"
             className="w-full h-full object-cover"
           />
