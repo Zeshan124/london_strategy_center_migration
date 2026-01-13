@@ -2,10 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { X, Menu, Search } from "lucide-react";
 import Image from "next/image";
 
 const Navbar = () => {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [email, setEmail] = useState("");
@@ -38,12 +41,10 @@ const Navbar = () => {
 
   const handleSignIn = (e) => {
     e.preventDefault();
-    // Add your sign-in logic here
     console.log("Sign in with:", email);
   };
 
   const handleSignUp = () => {
-    // Add your sign-up logic here
     console.log("Sign up clicked");
   };
 
@@ -66,42 +67,105 @@ const Navbar = () => {
     { name: "Urban Planning", href: "#" },
   ];
 
+  const centerMenuItems = [
+    { name: "HOME", href: "/" },
+    { name: "ABOUT US", href: "/about" },
+    { name: "SERVICES", href: "/services" },
+    { name: "BLOG", href: "/blog" },
+    { name: "FREE MATERIALS", href: "/materials" },
+    { name: "CONTACT", href: "/contact" },
+  ];
+
   return (
     <>
       {/* Main Navbar */}
       <nav className="fixed top-0 left-0 right-0 bg-transparent z-50 px-3 sm:px-6 lg:px-15 py-4 sm:py-6 lg:py-10">
         <div className="flex items-center justify-between">
+          {/* Left Side - Logo/Menu Button */}
           <div className="flex items-center gap-2 sm:gap-4">
-            <button
-              onClick={() => setIsMobileMenuOpen(true)}
-              className="px-1.5 py-1.5 sm:px-2 sm:py-2 text-lg text-gray-700 font-bold bg-white rounded-lg sm:rounded-xl transition-colors shadow-md border border-gray-200 flex items-center gap-1 sm:gap-2"
-              aria-label="Open menu"
-            >
-              <Image
-                src="/images/icons/hamburger.svg"
-                alt="Menu Icon"
-                width={48}
-                height={48}
-                className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12"
-              />
-              <Image
-                src="/images/icons/LSC-logo.svg"
-                alt="BCG Logo"
-                width={80}
-                height={32}
-                className="h-5 sm:h-6 lg:h-8 w-auto"
-                priority
-              />
-            </button>
+            {isHomePage ? (
+              <button
+                onClick={() => setIsMobileMenuOpen(true)}
+                className="px-1.5 py-1.5 sm:px-2 sm:py-2 text-lg text-gray-700 font-bold bg-white rounded-lg sm:rounded-xl transition-colors shadow-md border border-gray-200 flex items-center gap-1 sm:gap-2"
+                aria-label="Open menu"
+              >
+                <Image
+                  src="/images/icons/hamburger.svg"
+                  alt="Menu Icon"
+                  width={48}
+                  height={48}
+                  className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12"
+                />
+                <Image
+                  src="/images/icons/LSC-logo.svg"
+                  alt="LSC Logo"
+                  width={80}
+                  height={32}
+                  className="h-5 sm:h-6 lg:h-8 w-auto"
+                  priority
+                />
+              </button>
+            ) : (
+              <div className="px-3 py-2 sm:px-4 sm:py-3 bg-white rounded-lg sm:rounded-xl shadow-md border border-gray-200 flex items-center gap-2 sm:gap-3">
+                <button
+                  onClick={() => setIsMobileMenuOpen(true)}
+                  className="lg:hidden"
+                  aria-label="Open menu"
+                >
+                  <Menu className="w-6 h-6 sm:w-7 sm:h-7 text-gray-700" />
+                </button>
+                <Link href="/" className="flex items-center">
+                  <Image
+                    src="/images/icons/LSC-logo.svg"
+                    alt="LSC Logo"
+                    width={120}
+                    height={40}
+                    className="h-6 sm:h-8 lg:h-10 w-auto"
+                    priority
+                  />
+                </Link>
+              </div>
+            )}
           </div>
 
+          {/* Center Navigation - Only for non-home pages on desktop */}
+          {!isHomePage && (
+            <div className="hidden lg:flex items-center justify-center flex-1 mx-8">
+              <div className="bg-white rounded-full shadow-lg border border-gray-200 px-6 py-3">
+                <ul className="flex items-center gap-6 xl:gap-8">
+                  {centerMenuItems.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        href={item.href}
+                        className="text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors whitespace-nowrap"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          )}
+
+          {/* Right Side - Search & Login */}
           <div className="flex items-center gap-2 sm:gap-4">
+            {!isHomePage && (
+              <button
+                className="px-3 py-2 sm:px-4 sm:py-3 text-gray-600 font-medium bg-white hover:bg-gray-100 rounded-lg sm:rounded-xl transition-colors shadow-md border border-gray-200 hidden sm:flex items-center gap-2"
+                aria-label="Search"
+              >
+                <Search className="w-5 h-5" />
+              </button>
+            )}
             <button
               onClick={() => setIsLoginModalOpen(true)}
-              className="px-2 py-2 sm:px-2 sm:py-2.5 text-xs sm:text-sm text-gray-600 font-medium bg-white hover:bg-gray-200 rounded-lg transition-colors shadow-sm border border-gray-200 flex items-center gap-1 sm:gap-2"
+              className="px-3 py-2 sm:px-4 sm:py-3 text-xs sm:text-sm text-gray-600 font-medium bg-white hover:bg-gray-200 rounded-lg sm:rounded-xl transition-colors shadow-md border border-gray-200 flex items-center gap-1 sm:gap-2"
             >
-              <Search className="w-4 h-4 sm:w-5 sm:h-5" />
-              <span className="hidden xs:inline">LOG IN</span>
+              {isHomePage && <Search className="w-4 h-4 sm:w-5 sm:h-5" />}
+              <span className={isHomePage ? "hidden xs:inline" : ""}>
+                LOG IN
+              </span>
             </button>
           </div>
         </div>
@@ -126,7 +190,7 @@ const Navbar = () => {
                   className="text-xl sm:text-2xl font-bold tracking-tight"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  BCG
+                  LSC
                 </Link>
                 <div className="hidden sm:flex flex-1 max-w-2xl mx-4">
                   <input
@@ -194,7 +258,7 @@ const Navbar = () => {
                               className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
-                              BCG X
+                              LSC X
                             </Link>
                           </li>
                         </ul>
@@ -211,14 +275,14 @@ const Navbar = () => {
                         </Link>
                       </div>
 
-                      {/* BCG Alumni */}
+                      {/* LSC Alumni */}
                       <div>
                         <Link
                           href="#"
                           className="text-sm font-medium text-gray-900 hover:text-gray-700 transition-colors"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
-                          BCG Alumni
+                          LSC Alumni
                         </Link>
                       </div>
 
@@ -234,7 +298,7 @@ const Navbar = () => {
                               className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
-                              About BCG
+                              About LSC
                             </Link>
                           </li>
                           <li>

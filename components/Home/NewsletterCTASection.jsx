@@ -49,13 +49,13 @@ export default function NewsletterCTASection() {
 
             {/* Email Input */}
             <div className="flex-1 lg:max-w-2xl">
-  <div className="flex flex-col sm:flex-row gap-3 sm:gap-0 w-full relative">
-    <input
-      type="email"
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-      placeholder="Enter your email address"
-      className="
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-0 w-full relative">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email address"
+                  className="
         w-full
         px-5 sm:px-6
         py-3 sm:py-3.5
@@ -68,11 +68,11 @@ export default function NewsletterCTASection() {
         transition-all
         text-sm sm:text-base
       "
-    />
+                />
 
-    <button
-      onClick={handleSubmit}
-      className="
+                <button
+                  onClick={handleSubmit}
+                  className="
         inline-flex items-center justify-center gap-2
         px-5 sm:px-6
         py-3 sm:py-3.5
@@ -84,19 +84,19 @@ export default function NewsletterCTASection() {
         transition-all duration-300
         whitespace-nowrap
       "
-    >
-      SUBSCRIBE
-      <Image
-        src="/images/icons/top-arrow.png"
-        alt="Arrow"
-        width={16}
-        height={16}
-        className="object-contain"
-      />
-    </button>
-  </div>
+                >
+                  SUBSCRIBE
+                  <Image
+                    src="/images/icons/top-arrow.png"
+                    alt="Arrow"
+                    width={16}
+                    height={16}
+                    className="object-contain"
+                  />
+                </button>
+              </div>
             </div>
-            </div>
+          </div>
         </div>
       </div>
     </section>

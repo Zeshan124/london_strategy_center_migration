@@ -24,7 +24,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#F1EEEA]">
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-18 py-8 sm:py-12 md:py-16 lg:py-20">
+      <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-24 xl:px-24 py-8 sm:py-12 md:py-16 lg:py-20">
         {/* Top Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 xl:gap-12 mb-8 sm:mb-12 lg:mb-16">
           {/* Company Description */}

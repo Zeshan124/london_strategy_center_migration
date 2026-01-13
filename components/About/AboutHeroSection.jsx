@@ -2,7 +2,7 @@
 
 export default function AboutHeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-start overflow-hidden">
+    <section className="relative min-h-[80vh] sm:min-h-screen flex items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -10,22 +10,23 @@ export default function AboutHeroSection() {
           alt="Modern geometric architecture"
           className="w-full h-full object-cover"
         />
-        
+
         {/* Dark Overlay */}
-        <div className="absolute inset-0"></div>
+        {/* <div className="absolute inset-0 bg-black/50"></div> */}
       </div>
 
       {/* Content */}
-      <div className="container relative z-10  mx-auto px-6 sm:px-8 lg:px-16 py-20 sm:py-24 lg:py-32">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28 lg:py-32">
         <div className="max-w-3xl">
           {/* Heading */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white mb-8 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6 sm:mb-8 leading-tight">
             About LSC
           </h1>
 
           {/* Description */}
-          <p className="text-lg sm:text-xl lg:text-2xl text-white/90 leading-relaxed">
-            Helping executives and organizations unlock their full potential in preparation for the future world of work.
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed">
+            Helping executives and organisations unlock their full potential in
+            preparation for the future world of work.
           </p>
         </div>
       </div>

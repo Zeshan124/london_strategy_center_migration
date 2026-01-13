@@ -34,7 +34,7 @@ export default function IndustriesSection() {
 
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-24">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-0">
+      <div className="mx-auto px-6 sm:px-8 lg:px-24">
         {/* Header */}
         <div className="mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light leading-tight mb-4 text-gray-900">
