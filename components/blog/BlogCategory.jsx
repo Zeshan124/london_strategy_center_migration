@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronDown, Search as SearchIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function BlogCategory() {
   const [selectedCategory, setSelectedCategory] = useState("Choose Category");
@@ -18,6 +19,7 @@ export default function BlogCategory() {
   const blogPosts = [
     {
       id: 1,
+      slug: "emotional-intelligent-leadership",
       category: "LEADERSHIP",
       date: "18TH AUGUST, 2025",
       title: "Emotional intelligent leadership: being it or performing it?",
@@ -28,6 +30,7 @@ export default function BlogCategory() {
     },
     {
       id: 2,
+      slug: "leadership-maturity",
       category: "LEADERSHIP",
       date: "11TH AUGUST, 2025",
       title: "Leadership Maturity",
@@ -37,6 +40,7 @@ export default function BlogCategory() {
     },
     {
       id: 3,
+      slug: "leadership-development-roi",
       category: "LEADERSHIP",
       date: "28TH JULY, 2025",
       title: "Leadership Development and the ROI Ritual",
@@ -46,6 +50,7 @@ export default function BlogCategory() {
     },
     {
       id: 4,
+      slug: "leadership-practices",
       category: "LEADERSHIP",
       date: "23RD JULY, 2025",
       title: "Leadership As a Set of Practices",
@@ -55,6 +60,7 @@ export default function BlogCategory() {
     },
     {
       id: 5,
+      slug: "womens-leadership-what-to-fix",
       category: "LEADERSHIP",
       date: "17TH JUNE, 2025",
       title: "Women's Leadership: What Exactly Are We Trying to Fix?",
@@ -64,6 +70,7 @@ export default function BlogCategory() {
     },
     {
       id: 6,
+      slug: "womens-leadership-confidence",
       category: "LEADERSHIP",
       date: "17TH JUNE, 2025",
       title:
@@ -74,6 +81,7 @@ export default function BlogCategory() {
     },
     {
       id: 7,
+      slug: "limelight-or-shade",
       category: "LEADERSHIP",
       date: "17TH JUNE, 2025",
       title: "The Limelight Or The Shade",
@@ -83,6 +91,7 @@ export default function BlogCategory() {
     },
     {
       id: 8,
+      slug: "climate-action-geopolitical-tensions",
       category: "GEOPOLITICAL",
       date: "5TH JUNE, 2025",
       title:
@@ -93,6 +102,7 @@ export default function BlogCategory() {
     },
     {
       id: 9,
+      slug: "pope-francis-leadership-legacy",
       category: "LEADERSHIP",
       date: "25TH MAY, 2025",
       title: "The Late Pope Francis and His Leadership Legacy",
@@ -102,6 +112,7 @@ export default function BlogCategory() {
     },
     {
       id: 10,
+      slug: "make-innovation-happen",
       category: "INNOVATION",
       date: "24TH MAY, 2025",
       title: "How Do We Make Innovation Happen?",
@@ -224,7 +235,8 @@ export default function BlogCategory() {
         {/* Blog Posts Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {sortedPosts.map((post) => (
-            <div
+            <Link
+              href={`/blog/${post.slug || 'post-' + post.id}`}
               key={post.id}
               className="group relative bg-white border-2 border-gray-900 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300"
             >
@@ -289,7 +301,7 @@ export default function BlogCategory() {
                   </button>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
