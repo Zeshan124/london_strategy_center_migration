@@ -4,7 +4,9 @@ import FeaturedInsightsHeader from "@/components/blog/FeaturedInsightsHeader";
 import NewsletterSubscription from "@/components/blog/NewsletterSubscription";
 import Footer from "@/components/Home/Footer";
 import Navbar from "@/components/Navbar";
+import ContactFormSection from "@/components/services/ContactFormSection";
 import Executives from "@/components/services/Executives";
+import ExperienceSection from "@/components/services/ExperienceSection";
 import LearningObjectives from "@/components/services/LearningObjectives";
 import ServicesHero from "@/components/services/ServicesHero";
 import StrategyCourseComponent from "@/components/services/StrategyCourseComponent";
@@ -19,6 +21,8 @@ const page = () => {
         <Executives />
         <StrategyCourseComponent />
         <LearningObjectives />
+        <ExperienceSection />
+        <ContactFormSection />
       </main>
       <Footer />
     </div>

@@ -9,8 +9,8 @@ const StrategyCourseComponent = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="mx-auto px-4 sm:px-6 lg:px-24 py-8 sm:py-12 lg:py-16">
+    <div className="bg-white">
+      <div className="mx-auto px-4 sm:px-6 lg:px-24 py-8 sm:py-12 lg:py-24">
         
         {/* Header */}
         <h1 className="text-3xl sm:text-4xl lg:text-5xl text-gray-900 mb-8 sm:mb-12">

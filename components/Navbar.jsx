@@ -106,13 +106,19 @@ const Navbar = () => {
                 />
               </button>
             ) : (
-              <div className="px-3 py-2 sm:px-4 sm:py-3 bg-white rounded-lg sm:rounded-xl shadow-md border border-gray-200 flex items-center gap-2 sm:gap-3">
+              <div className="px-3 py-2 sm:px-4 sm:py-3 bg-white rounded-xl shadow-md border border-gray-200 flex items-center gap-2 sm:gap-3">
                 <button
                   onClick={() => setIsMobileMenuOpen(true)}
-                  className="lg:hidden"
                   aria-label="Open menu"
+                  className="flex items-center justify-center"
                 >
-                  <Menu className="w-6 h-6 sm:w-7 sm:h-7 text-gray-700" />
+                  <Image
+                    src="/images/icons/hamburger.svg"
+                    alt="Menu Icon"
+                    width={40}
+                    height={40}
+                    className="w-8 h-8 sm:w-9 sm:h-9"
+                  />
                 </button>
                 <Link href="/" className="flex items-center">
                   <Image
@@ -128,45 +134,47 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Center Navigation - Only for non-home pages on desktop */}
-          {!isHomePage && (
-            <div className="hidden lg:flex items-center justify-center flex-1 mx-8">
-              <div className="bg-white rounded-full shadow-lg border border-gray-200 px-6 py-3">
-                <ul className="flex items-center gap-6 xl:gap-8">
-                  {centerMenuItems.map((item, index) => (
-                    <li key={index}>
-                      <Link
-                        href={item.href}
-                        className="text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors whitespace-nowrap"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          )}
-
-          {/* Right Side - Search & Login */}
-          <div className="flex items-center gap-2 sm:gap-4">
+          {/* Right Side - Navigation, Search & Login */}
+          <div className="flex items-center gap-3 sm:gap-4">
+            {/* Navigation Menu - Only for non-home pages on desktop */}
             {!isHomePage && (
-              <button
-                className="px-3 py-2 sm:px-4 sm:py-3 text-gray-600 font-medium bg-white hover:bg-gray-100 rounded-lg sm:rounded-xl transition-colors shadow-md border border-gray-200 hidden sm:flex items-center gap-2"
-                aria-label="Search"
-              >
-                <Search className="w-5 h-5" />
-              </button>
+              <div className="hidden lg:flex items-center">
+                <div className="bg-white rounded-full shadow-lg border border-gray-200 px-6 py-3">
+                  <ul className="flex items-center gap-5 xl:gap-7">
+                    {centerMenuItems.map((item, index) => (
+                      <li key={index}>
+                        <Link
+                          href={item.href}
+                          className={`text-sm font-medium transition-colors whitespace-nowrap ${
+                            pathname === item.href
+                              ? "text-gray-900 px-3 py-1.5 border border-gray-300 rounded-md"
+                              : "text-gray-700 hover:text-gray-900"
+                          }`}
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             )}
-            <button
-              onClick={() => setIsLoginModalOpen(true)}
-              className="px-3 py-2 sm:px-4 sm:py-3 text-xs sm:text-sm text-gray-600 font-medium bg-white hover:bg-gray-200 rounded-lg sm:rounded-xl transition-colors shadow-md border border-gray-200 flex items-center gap-1 sm:gap-2"
-            >
-              {isHomePage && <Search className="w-4 h-4 sm:w-5 sm:h-5" />}
-              <span className={isHomePage ? "hidden xs:inline" : ""}>
+
+            {/* Search & Login */}
+            <div className="flex items-center gap-2 sm:gap-3 bg-white rounded-full shadow-lg border border-gray-200 px-3 py-2 sm:px-4 sm:py-2.5">
+              <button
+                aria-label="Search"
+                className="p-1.5 hover:bg-gray-100 rounded-full transition-colors"
+              >
+                <Search className="w-5 h-5 text-gray-700" />
+              </button>
+              <button
+                onClick={() => setIsLoginModalOpen(true)}
+                className="text-sm font-semibold text-gray-900 hover:text-gray-600 transition-colors whitespace-nowrap"
+              >
                 LOG IN
-              </span>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
       </nav>

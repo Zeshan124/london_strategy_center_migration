@@ -11,12 +11,12 @@ const LearningObjectives = () => {
   ];
 
   return (
-    <div className="bg-[#F1EEEA] rounded-lg px-6 sm:px-8 lg:px-24 py-8 sm:py-10 lg:py-12">
+    <div className="bg-[#F1EEEA] rounded-lg px-6 sm:px-8 lg:px-24 py-8 sm:py-10 lg:py-16">
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
         Intended Learning Objectives
-      </h2>
+      </h2>        
 
-      <p className="text-xs sm:text-sm font-semibold text-gray-700 tracking-wide mb-6 sm:mb-8">
+      <p className="text-xs sm:text-sm  text-[#0E2253] tracking-wide mb-6 sm:mb-8">
         ON SUCCESSFUL COMPLETION OF THIS PROGRAMME THE PARTICIPANTS SHOULD BE ABLE TO:
       </p>
 
