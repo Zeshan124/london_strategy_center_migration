@@ -22,7 +22,7 @@ export default function Newsletter() {
 
   return (
     <section className="bg-white py-12 sm:py-16 lg:py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-24">
         <div className="bg-gradient-to-r from-[#0f2557] to-[#1a3a6b] rounded-2xl sm:rounded-3xl px-6 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-12 shadow-xl">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10">
             {/* Heading */}

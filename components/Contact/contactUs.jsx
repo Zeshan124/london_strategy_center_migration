@@ -38,7 +38,7 @@ export default function ContactPage() {
           }}></div>
         </div>
 
-        <div className="relative mx-auto px-4 sm:px-6 md:px-8 lg:px-24 py-26 sm:py-20 lg:py-36">
+        <div className="relative mx-auto px-4 sm:px-6 md:px-8 lg:px-24 py-26 sm:py-20 lg:py-40">
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6 leading-tight">
               Get in Touch

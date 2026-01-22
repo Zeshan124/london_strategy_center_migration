@@ -49,7 +49,7 @@ export default function MissionVisionSection() {
   return (
     <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24">
       {/* Container */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-24">
         {/* Header */}
         <div className="mb-10 sm:mb-12 lg:mb-16 text-center sm:text-left">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-4 sm:mb-6">
