@@ -302,7 +302,7 @@ const Navbar = () => {
                         <ul className="space-y-1 pl-0">
                           <li>
                             <Link
-                              href="#"
+                              href="/about"
                               className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
@@ -311,29 +311,29 @@ const Navbar = () => {
                           </li>
                           <li>
                             <Link
-                              href="#"
+                              href="/services"
                               className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
-                              Client Impact
+                              Services
                             </Link>
                           </li>
                           <li>
                             <Link
-                              href="#"
+                              href="/blog"
                               className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
-                              People
+                              Blog
                             </Link>
                           </li>
                           <li>
                             <Link
-                              href="#"
+                              href="/free-material"
                               className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
-                              Offices
+                              Free Materials
                             </Link>
                           </li>
                           <li>
