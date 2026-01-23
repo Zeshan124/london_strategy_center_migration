@@ -25,7 +25,7 @@ export default function BlogCategory() {
       title: "Emotional intelligent leadership: being it or performing it?",
       description:
         'The late Maya Angelou once said, "I\'ve learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel."',
-      image: "/images/blog/1.jpg",
+      image: "/images/blog/two.jpg",
       hasReadMore: true,
     },
     {
@@ -35,7 +35,7 @@ export default function BlogCategory() {
       date: "11TH AUGUST, 2025",
       title: "Leadership Maturity",
       description: "",
-      image: "/images/blog/2.jpg",
+      image: "/images/blog/two.jpg",
       hasReadMore: false,
     },
     {
@@ -45,7 +45,7 @@ export default function BlogCategory() {
       date: "28TH JULY, 2025",
       title: "Leadership Development and the ROI Ritual",
       description: "",
-      image: "/images/blog/3.jpg",
+      image: "/images/blog/three.jpg",
       hasReadMore: false,
     },
     {
@@ -55,7 +55,7 @@ export default function BlogCategory() {
       date: "23RD JULY, 2025",
       title: "Leadership As a Set of Practices",
       description: "",
-      image: "/images/blog/4.jpg",
+      image: "/images/blog/four.jpg",
       hasReadMore: false,
     },
     {
@@ -65,7 +65,7 @@ export default function BlogCategory() {
       date: "17TH JUNE, 2025",
       title: "Women's Leadership: What Exactly Are We Trying to Fix?",
       description: "",
-      image: "/images/blog/5.jpg",
+      image: "/images/blog/five.jpg",
       hasReadMore: false,
     },
     {
@@ -76,7 +76,7 @@ export default function BlogCategory() {
       title:
         'Women\'s Leadership and "confidence" (Aw), not just "nice to haves" but differentiators',
       description: "",
-      image: "/images/blog/6.jpg",
+      image: "/images/blog/six.jpg",
       hasReadMore: false,
     },
     {
@@ -86,7 +86,7 @@ export default function BlogCategory() {
       date: "17TH JUNE, 2025",
       title: "The Limelight Or The Shade",
       description: "",
-      image: "/images/blog/7.jpg",
+      image: "/images/blog/seven.jpg",
       hasReadMore: false,
     },
     {
@@ -97,7 +97,7 @@ export default function BlogCategory() {
       title:
         "Climate Action: Can Climate Action Survive Rising Geopolitical Tensions?",
       description: "",
-      image: "/images/blog/8.jpg",
+      image: "/images/blog/eight.jpg",
       hasReadMore: false,
     },
     {
@@ -107,7 +107,7 @@ export default function BlogCategory() {
       date: "25TH MAY, 2025",
       title: "The Late Pope Francis and His Leadership Legacy",
       description: "",
-      image: "/images/blog/9.jpg",
+      image: "/images/blog/nine.jpg",
       hasReadMore: false,
     },
     {
@@ -117,7 +117,7 @@ export default function BlogCategory() {
       date: "24TH MAY, 2025",
       title: "How Do We Make Innovation Happen?",
       description: "",
-      image: "/images/blog/1.jpg",
+      image: "/images/blog/one.jpg",
       hasReadMore: false,
     },
   ];
