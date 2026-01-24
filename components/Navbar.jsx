@@ -329,7 +329,7 @@ const Navbar = () => {
                           </li>
                           <li>
                             <Link
-                              href="/free-materials"
+                              href="/free-material"
                               className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
