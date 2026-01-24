@@ -14,35 +14,35 @@ export default function FeaturedCampaignsSection() {
       category: 'LEADERSHIP',
       date: '17TH JUNE, 2025',
       title: "Women's Leadership: What Exactly Are We Trying to Fix?",
-      image: '/images/blog/6.jpg'
+      image: '/images/blog/six.jpg'
     },
     {
       id: 2,
       category: 'LEADERSHIP',
       date: '17TH JUNE, 2025',
       title: "Women's Leadership and Gender Diversity; not just 'nice to haves' but differentiators",
-      image: '/images/blog/7.jpg'
+      image: '/images/blog/seven.jpg'
     },
     {
       id: 3,
       category: 'LEADERSHIP',
       date: '11TH JUNE, 2025',
       title: 'The Limelight Or The Shade',
-      image: '/images/blog/8.jpg'
+      image: '/images/blog/eight.jpg'
     },
     {
       id: 4,
       category: 'GEOPOLITICAL',
       date: '5TH JUNE, 2025',
       title: 'Caught in the Crossfire: Can Climate Action Survive Rising Geopolitical Tensions?',
-      image: '/images/blog/9.jpg'
+      image: '/images/blog/nine.jpg'
     },
     {
       id: 5,
       category: 'LEADERSHIP',
       date: '25TH MAY, 2025',
       title: 'The Latest Developments in His Leadership',
-      image: '/images/blog/7.jpg'
+      image: '/images/blog/seven.jpg'
     }
   ];
 

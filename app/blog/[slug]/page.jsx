@@ -24,7 +24,7 @@ const blogPosts = {
       avatar: '/images/blog/blog-inner.jpg'
     },
     readTime: '8 min read',
-    image: '/images/blog/1.jpg',
+    image: '/images/blog/one.jpg',
     sections: [
       {
         heading: 'What is maturity?',
@@ -77,7 +77,7 @@ A very smart senior leader whom I was coaching said to me recently (referring to
       avatar: '/images/authors/lester.jpg'
     },
     readTime: '6 min read',
-    image: '/images/blog/2.jpg',
+    image: '/images/blog/two.jpg',
     sections: [
       {
         heading: 'What is maturity?',
@@ -97,7 +97,7 @@ A very smart senior leader whom I was coaching said to me recently (referring to
     title: 'Leadership Development and the ROI Ritual',
     author: { name: 'Michael Roberts', role: 'Leadership Development Expert', company: 'London Strategy Centre', avatar: '/images/authors/michael.jpg' },
     readTime: '7 min read',
-    image: '/images/blog/3.jpg',
+    image: '/images/blog/three.jpg',
     sections: [
       {
         heading: 'Understanding ROI',
@@ -117,7 +117,7 @@ A very smart senior leader whom I was coaching said to me recently (referring to
     title: 'Leadership As a Set of Practices',
     author: { name: 'Jennifer Lee', role: 'Executive Coach', company: 'London Strategy Centre', avatar: '/images/authors/jennifer.jpg' },
     readTime: '6 min read',
-    image: '/images/blog/4.jpg',
+    image: '/images/blog/four.jpg',
     sections: [
       {
         heading: 'Daily Practices',
@@ -136,7 +136,7 @@ A very smart senior leader whom I was coaching said to me recently (referring to
     title: "Women's Leadership: What Exactly Are We Trying to Fix?",
     author: { name: 'Dr. Amanda Foster', role: 'Gender Leadership Researcher', company: 'London Strategy Centre', avatar: '/images/authors/amanda.jpg' },
     readTime: '8 min read',
-    image: '/images/blog/5.jpg',
+    image: '/images/blog/five.jpg',
     sections: [
       {
         heading: 'The Question',
@@ -155,7 +155,7 @@ A very smart senior leader whom I was coaching said to me recently (referring to
     title: 'Women\'s Leadership and "confidence" (Aw), not just "nice to haves" but differentiators',
     author: { name: 'Dr. Amanda Foster', role: 'Gender Leadership Researcher', company: 'London Strategy Centre', avatar: '/images/authors/amanda.jpg' },
     readTime: '7 min read',
-    image: '/images/blog/6.jpg',
+    image: '/images/blog/six.jpg',
     sections: [
       {
         heading: 'Confidence Matters',
@@ -174,7 +174,7 @@ A very smart senior leader whom I was coaching said to me recently (referring to
     title: 'The Limelight Or The Shade',
     author: { name: 'Thomas Anderson', role: 'Leadership Psychologist', company: 'London Strategy Centre', avatar: '/images/authors/thomas.jpg' },
     readTime: '5 min read',
-    image: '/images/blog/7.jpg',
+    image: '/images/blog/seven.jpg',
     sections: [
       {
         heading: 'Leadership Visibility',
@@ -193,7 +193,7 @@ A very smart senior leader whom I was coaching said to me recently (referring to
     title: 'Climate Action: Can Climate Action Survive Rising Geopolitical Tensions?',
     author: { name: 'Dr. Elena Rodriguez', role: 'Environmental Policy Expert', company: 'London Strategy Centre', avatar: '/images/authors/elena.jpg' },
     readTime: '9 min read',
-    image: '/images/blog/8.jpg',
+    image: '/images/blog/eight.jpg',
     sections: [
       {
         heading: 'Global Cooperation',
@@ -212,7 +212,7 @@ A very smart senior leader whom I was coaching said to me recently (referring to
     title: 'The Late Pope Francis and His Leadership Legacy',
     author: { name: 'Father Marcus Thompson', role: 'Religious Studies Scholar', company: 'London Strategy Centre', avatar: '/images/authors/marcus.jpg' },
     readTime: '10 min read',
-    image: '/images/blog/9.jpg',
+    image: '/images/blog/nine.jpg',
     sections: [
       {
         heading: 'A Legacy',
@@ -231,7 +231,7 @@ A very smart senior leader whom I was coaching said to me recently (referring to
     title: 'How Do We Make Innovation Happen?',
     author: { name: 'Dr. Kevin Park', role: 'Innovation Strategist', company: 'London Strategy Centre', avatar: '/images/authors/kevin.jpg' },
     readTime: '8 min read',
-    image: '/images/blog/1.jpg',
+    image: '/images/blog/one.jpg',
     sections: [
       {
         heading: 'Innovation Framework',
