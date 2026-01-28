@@ -65,7 +65,7 @@ export default function IndustriesSection() {
                 
                 {/* Badge */}
                 <div className="absolute top-5 left-5">
-                  <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md border border-white/40 rounded-md text-xs font-medium tracking-wider text-white uppercase">
+                  <span className="inline-block px-4 py-2 bg-black/50 backdrop-blur-md border border-white/50 rounded-md text-xs font-medium tracking-wider text-white uppercase">
                     {industry.badge}
                   </span>
                 </div>

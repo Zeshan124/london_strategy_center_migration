@@ -97,7 +97,7 @@ export default function FeaturedCampaignsCarousel() {
             {getVisibleCampaigns().map((campaign, index) => (
               <div
                 key={`${campaign.id}-${currentSlide}-${index}`}
-                className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                className="group relative overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
                 style={{
                   animation: "fadeIn 0.5s ease-in-out"
                 }}

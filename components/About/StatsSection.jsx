@@ -32,7 +32,7 @@ export default function StatsSection() {
   return (
     <section
       ref={sectionRef}
-      className="bg-white py-16 sm:py-20 lg:py-24"
+      className="bg-white py-16 sm:py-20 lg:py-16"
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-24">
         {/* Stats */}

@@ -1,36 +1,37 @@
-'use client';
+"use client";
 
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight } from "lucide-react";
 
 export default function BlogArticlesSection() {
   const articles = [
     {
       id: 1,
-      badge: 'LEADERSHIP',
-      date: 'DEC 18, 2025',
-      readTime: '5 MIN READ',
-      title: 'AI-Driven Leadership: The New Executive Imperative',
-      image: '/images/home/Leadership.jpg',
-      size: 'large'
+      badge: "LEADERSHIP",
+      date: "DEC 18, 2025",
+      readTime: "5 MIN READ",
+      title: "AI-Driven Leadership: The New Executive Imperative",
+      image: "/images/home/Leadership.jpg",
+      size: "large",
     },
     {
       id: 2,
-      badge: 'CYBERSECURITY',
-      date: 'DEC 14, 2025',
-      readTime: '7 MIN READ',
-      title: 'Cybersecurity Excellence: Building Resilient Organizations',
-      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop',
-      size: 'small'
+      badge: "CYBERSECURITY",
+      date: "DEC 14, 2025",
+      readTime: "7 MIN READ",
+      title: "Cybersecurity Excellence: Building Resilient Organizations",
+      image:
+        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop",
+      size: "small",
     },
     {
       id: 3,
-      badge: 'INNOVATION',
-      date: 'DEC 12, 2025',
-      readTime: '6 MIN READ',
-      title: 'Strategic Innovation in Digital Transformation',
-      image: '/images/home/Innovation.jpg',
-      size: 'small'
-    }
+      badge: "INNOVATION",
+      date: "DEC 12, 2025",
+      readTime: "6 MIN READ",
+      title: "Strategic Innovation in Digital Transformation",
+      image: "/images/home/Innovation.jpg",
+      size: "small",
+    },
   ];
 
   return (
@@ -46,10 +47,13 @@ export default function BlogArticlesSection() {
                 alt={articles[0].title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              
+
+              {/* Blue Tint Overlay */}
+              <div className="absolute inset-0 bg-[#0E2253]/50" />
+
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/70 to-transparent" />
-              
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0E2253]/90 via-[#0E2253]/50 to-transparent" />
+
               {/* Badge */}
               <div className="absolute top-6 left-6">
                 <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md border border-white/40 rounded-md text-xs font-medium tracking-wider text-white uppercase">
@@ -72,12 +76,12 @@ export default function BlogArticlesSection() {
                 </h3>
 
                 {/* Read More Button */}
-              <div className="flex justify-end">
-  <button className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-white text-white rounded-xl text-sm font-medium hover:bg-white hover:text-gray-900 transition-all duration-300">
-    READ MORE
-    <ArrowRight className="w-4 h-4" />
-  </button>
-</div>
+                <div className="flex justify-end">
+                  <button className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-white text-white rounded-xl text-sm font-medium hover:bg-white hover:text-gray-900 transition-all duration-300">
+                    READ MORE
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -108,11 +112,11 @@ export default function BlogArticlesSection() {
 
                 {/* Read More Button */}
                 <div className="flex justify-end">
-  <button className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition-all duration-300">
-    READ MORE
-    <ArrowRight className="w-4 h-4" />
-  </button>
-</div>
+                  <button className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-all duration-300">
+                    READ MORE
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -124,10 +128,10 @@ export default function BlogArticlesSection() {
                   alt={articles[2].title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                
+
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                
+                <div className="absolute inset-0 bg-gradient-to-t from-[#B90722]/90 via-[#0E2253]/60 to-transparent" />
+
                 {/* Badge */}
                 <div className="absolute top-6 left-6">
                   <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md border border-white/40 rounded-md text-xs font-medium tracking-wider text-white uppercase">
@@ -151,11 +155,11 @@ export default function BlogArticlesSection() {
 
                   {/* Read More Button */}
                   <div className="flex justify-end">
-  <button className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition-all duration-300">
-    READ MORE
-    <ArrowRight className="w-4 h-4" />
-  </button>
-</div>
+                    <button className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-all duration-300">
+                      READ MORE
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

@@ -21,9 +21,9 @@ import FeaturedCampaignsSection from "@/components/blog/FeaturedCampaignsSection
 export default function ServicesHero() {
   return (
     <>
-      <div className="min-h-screen bg-white lg:py-28 py-20">
+      <div className="min-h-screen bg-white lg:pt-28 py-12">
         {/* Full Width Container */}
-        <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-8 sm:py-12 md:py-16 lg:py-20">
+        <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-8 sm:py-8 md:py-8 lg:pt-16">
           {/* Title */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-normal text-gray-900 leading-tight mb-6">
             Strategy in the Digital Landscape
@@ -56,7 +56,7 @@ export default function ServicesHero() {
                     What is maturity?
                   </h2>
 
-                  <div className="text-base text-gray-700 leading-relaxed whitespace-pre-line mb-6">
+                  <div className="text-base text-gray-700 leading-relaxed whitespace-pre-line mb-2">
                     Digitization is revolutionizing markets and redefining the
                     rules of competition; it is transforming the way business is
                     being performed today. Although the long-term impact of

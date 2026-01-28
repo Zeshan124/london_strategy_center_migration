@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const LearningObjectives = () => {
   const objectives = [
@@ -7,24 +7,25 @@ const LearningObjectives = () => {
     "Identify trends that have the potential to redefine competition and leverage digital opportunities to develop competitive advantage",
     "Discover the meaning of value and how value analysis can help evaluate potential disruptions",
     "Understand the concept of value creation and how it relates to customers' Willingness-to-Pay (WTP) in B2C and B2B contexts",
-    "Critically apply a range of tools and techniques for crafting strategic choice in the context of digital disruption"
+    "Critically apply a range of tools and techniques for crafting strategic choice in the context of digital disruption",
   ];
 
   return (
     <div className="bg-[#F1EEEA] rounded-lg px-6 sm:px-8 lg:px-24 py-8 sm:py-10 lg:py-16">
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
         Intended Learning Objectives
-      </h2>        
+      </h2>
 
       <p className="text-xs sm:text-sm  text-[#0E2253] tracking-wide mb-6 sm:mb-8">
-        ON SUCCESSFUL COMPLETION OF THIS PROGRAMME THE PARTICIPANTS SHOULD BE ABLE TO:
+        ON SUCCESSFUL COMPLETION OF THIS PROGRAMME THE PARTICIPANTS SHOULD BE
+        ABLE TO:
       </p>
 
-      <ul className="space-y-4 sm:space-y-5">
+      <ul className="space-y-2 sm:space-y-3">
         {objectives.map((objective, index) => (
           <li key={index} className="flex items-start gap-3">
-            <span className="text-gray-900 mt-1 flex-shrink-0">•</span>
-            <span className="text-base sm:text-lg text-gray-900 leading-relaxed">
+            <span className="text-gray-900 mt-[6px] flex-shrink-0">•</span>
+            <span className="text-base sm:text-lg text-gray-900 leading-snug">
               {objective}
             </span>
           </li>

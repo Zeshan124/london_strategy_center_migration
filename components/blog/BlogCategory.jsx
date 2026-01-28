@@ -145,12 +145,12 @@ export default function BlogCategory() {
   });
 
   return (
-    <section className="bg-white py-8 sm:py-12 md:py-16 lg:py-20">
+    <section className="bg-white py-8 sm:py-12 md:py-12 lg:py-14">
       <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
         {/* Filters Section */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12 lg:mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12 lg:mb-16">
           {/* Category Dropdown */}
-          <div className="relative w-full sm:w-48 md:w-56">
+          <div className="relative col-span-1">
             <button
               onClick={() => {
                 setIsCategoryOpen(!isCategoryOpen);
@@ -185,7 +185,7 @@ export default function BlogCategory() {
           </div>
 
           {/* Sort Dropdown */}
-          <div className="relative w-full sm:w-48 md:w-56">
+          <div className="relative col-span-1">
             <button
               onClick={() => {
                 setIsSortOpen(!isSortOpen);
@@ -220,7 +220,7 @@ export default function BlogCategory() {
           </div>
 
           {/* Search Input */}
-          <div className="relative flex-1">
+          <div className="relative col-span-1 sm:col-span-2">
             <input
               type="text"
               placeholder="Search"
@@ -236,36 +236,28 @@ export default function BlogCategory() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {sortedPosts.map((post) => (
             <Link
-              href={`/blog/${post.slug || 'post-' + post.id}`}
+              href={`/blog/${post.slug || "post-" + post.id}`}
               key={post.id}
-              className="group relative bg-white border-2 border-gray-900 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+              className="group relative bg-white rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300"
             >
               {/* Image */}
-              <div className="relative h-56 sm:h-64 overflow-hidden">
+                 <div className="relative h-[400px] sm:h-[450px] overflow-hidden">
                 <Image
                   src={post.image}
                   alt={post.title}
                   fill
-                  className="object-cover"
+                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
-                  <span
-                    className={`px-3 py-1.5 text-[10px] sm:text-xs font-bold tracking-wide uppercase rounded-md ${
-                      post.category === "LEADERSHIP"
-                        ? "bg-[#1e3a8a] text-white"
-                        : post.category === "INNOVATION"
-                        ? "bg-gray-900 text-white"
-                        : "bg-[#92400e] text-white"
-                    }`}
-                  >
+                  <span className="px-3 py-1.5 text-[10px] sm:text-xs font-bold tracking-wide uppercase rounded-md bg-black/50 text-white backdrop-blur-sm">
                     {post.category}
                   </span>
                 </div>
               </div>
 
               {/* Content */}
-              <div className="bg-white p-5 sm:p-6">
+             <div className="absolute bottom-5 left-5 right-5 bg-white rounded-2xl p-5 shadow-xl transform transition-all duration-500 group-hover:translate-y-[-8px]">
                 {/* Date */}
                 <p className="text-[11px] sm:text-xs text-gray-600 mb-3 font-semibold tracking-wide uppercase">
                   {post.date}

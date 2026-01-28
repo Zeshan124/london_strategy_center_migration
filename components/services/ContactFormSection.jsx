@@ -47,7 +47,7 @@ export default function ContactFormSection() {
               value={formData.fullName}
               onChange={handleChange}
               placeholder="Full Name"
-              className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-white border-2 border-gray-300 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900 transition-colors text-sm sm:text-base"
+              className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-white border-2 border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900 transition-colors text-sm sm:text-base"
             />
             <input
               type="text"
@@ -55,7 +55,7 @@ export default function ContactFormSection() {
               value={formData.jobTitle}
               onChange={handleChange}
               placeholder="Job Title"
-              className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-white border-2 border-gray-300 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900 transition-colors text-sm sm:text-base"
+              className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-white border-2 border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900 transition-colors text-sm sm:text-base"
             />
           </div>
 
@@ -67,7 +67,7 @@ export default function ContactFormSection() {
               value={formData.organisation}
               onChange={handleChange}
               placeholder="Organisation"
-              className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-white border-2 border-gray-300 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900 transition-colors text-sm sm:text-base"
+              className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-white border-2 border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900 transition-colors text-sm sm:text-base"
             />
             <input
               type="email"
@@ -75,7 +75,7 @@ export default function ContactFormSection() {
               value={formData.email}
               onChange={handleChange}
               placeholder="Official Email Address"
-              className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-white border-2 border-gray-300 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900 transition-colors text-sm sm:text-base"
+              className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-white border-2 border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900 transition-colors text-sm sm:text-base"
             />
           </div>
 
@@ -87,7 +87,7 @@ export default function ContactFormSection() {
               value={formData.whatsapp}
               onChange={handleChange}
               placeholder="Whatsapp Number"
-              className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-white border-2 border-gray-300 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900 transition-colors text-sm sm:text-base"
+              className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-white border-2 border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900 transition-colors text-sm sm:text-base"
             />
             <input
               type="text"
@@ -95,7 +95,7 @@ export default function ContactFormSection() {
               value={formData.linkedin}
               onChange={handleChange}
               placeholder="LinkedIn"
-              className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-white border-2 border-gray-300 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900 transition-colors text-sm sm:text-base"
+              className="w-full px-5 sm:px-6 py-3.5 sm:py-4 bg-white border-2 border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900 transition-colors text-sm sm:text-base"
             />
           </div>
 

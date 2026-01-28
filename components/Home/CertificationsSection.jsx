@@ -63,7 +63,7 @@ export default function CertificationsSection() {
                 
                 {/* Badge */}
                 <div className="absolute top-5 left-5">
-                  <span className="inline-block px-4 py-1 bg-transparent border-2 border-white/60 rounded-md text-xs font-medium tracking-wider text-white uppercase">
+                  <span className="inline-block px-4 py-1 bg-black/50 border-2 border-white/60 rounded-md text-xs font-medium tracking-wider text-white uppercase">
                     {cert.badge}
                   </span>
                 </div>

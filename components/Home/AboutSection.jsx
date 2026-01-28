@@ -53,7 +53,7 @@ export default function AboutSection() {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`
-                  flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-full border-2 transition-all duration-300
+                  flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl border-2 transition-all duration-300
                   ${
                     activeTab === tab.id
                       ? "border-red-600 text-red-600 bg-transparent shadow-md"

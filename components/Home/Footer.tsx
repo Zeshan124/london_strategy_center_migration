@@ -121,7 +121,7 @@ export default function Footer() {
           </div>
 
           {/* Social Media */}
-          <div className="flex flex-wrap items-center gap-1 sm:gap-2">
+          <div className="flex flex-wrap items-center">
             <span className="text-xs sm:text-sm font-medium text-gray-800 mr-1 sm:mr-2 w-full sm:w-auto mb-2 sm:mb-0">
               FOLLOW US
             </span>

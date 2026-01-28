@@ -161,7 +161,7 @@ const Navbar = () => {
             )}
 
             {/* Search & Login */}
-            <div className="flex items-center gap-2 sm:gap-3 bg-white rounded-full shadow-lg border border-gray-200 px-3 py-2 sm:px-4 sm:py-2.5">
+            <div className="flex items-center gap-2 sm:gap-3 bg-white rounded-xl shadow-lg border border-gray-200 px-3 py-2 sm:px-4 sm:py-2.5">
               <button
                 aria-label="Search"
                 className="p-1.5 hover:bg-gray-100 rounded-full transition-colors"
@@ -170,7 +170,7 @@ const Navbar = () => {
               </button>
               <button
                 onClick={() => setIsLoginModalOpen(true)}
-                className="text-sm font-semibold text-gray-900 hover:text-gray-600 transition-colors whitespace-nowrap"
+                className="text-sm font-bold text-gray-900 hover:text-gray-600 transition-colors whitespace-nowrap"
               >
                 LOG IN
               </button>
