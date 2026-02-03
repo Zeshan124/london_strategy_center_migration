@@ -191,109 +191,97 @@ export default function HeroSection() {
               }}
               className="h-full !overflow-visible"
             >
-              {articles.map((article) => (
-                <SwiperSlide key={article.id}>
-                  {({ isActive, isNext, isPrev }) => {
-                    // Determine position
-                    let position = 0;
-                    if (isActive) position = 0;
-                    else if (isNext) position = 1;
-                    else if (isPrev) position = -1;
+           {articles.map((article) => (
+  <SwiperSlide key={article.id}>
+    {({ isActive, isNext, isPrev }) => {
+      const position = isActive ? 0 : isNext ? 1 : isPrev ? -1 : 2;
+      const isCenter = position === 0;
+      const isAdjacent = position === -1 || position === 1;
 
-                    return (
-                     <div
-  style={{ willChange: "transform" }}
-  className={`h-full flex items-center justify-center transition-all duration-1000 ease-out
-    ${
-      position === 0
-        ? "scale-[1.15] opacity-100 z-30"
-        : position === -1 || position === 1
-        ? "scale-[0.65] opacity-80 z-20"
-        : "scale-[0.7] opacity-50 z-10"
-    }`}
->
-                        <div
-                          className={`
-                            transition-all duration-1000 ease-out
-                            ${
-                              position === 0
-                                ? "w-[240px] sm:w-[280px] lg:w-[240px] h-[330px]"
-                                : position === -1 || position === 1
-                                ? "w-[240px] sm:w-[280px] lg:w-[240px] h-[330px]"
-                                : "w-[240px] sm:w-[280px] lg:w-[240px] h-[330px]"
-                            }
-                          `}
-                        >
-                          <div className="relative w-full h-full overflow-hidden shadow-xl group">
-                            <img
-                              src={article.image}
-                              alt={article.title}
-                              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-100"
-                            />
+      return (
+        <div
+          style={{ willChange: "transform" }}
+          className={`h-full flex items-center justify-center transition-all duration-1000 ease-out ${
+            isCenter
+              ? "scale-[1.25] opacity-100 z-30"
+              : isAdjacent
+              ? "scale-[0.69] z-20"
+              : "scale-[0.89] z-10"
+          }`}
+        >
+          {/* Card – single fixed size, scaling handled by parent */}
+          <div className="w-[240px] sm:w-[280px] lg:w-[240px] h-[330px] relative overflow-hidden shadow-xl group">
+            <img
+              src={article.image}
+              alt={article.title}
+              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            />
 
-                            {/* Gradient Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/95 group-hover:via-black/60 transition-all duration-700" />
+            {/* Gradient overlay – stronger on center card */}
+            <div
+              className={`absolute inset-0 bg-gradient-to-t transition-all duration-700 ${
+                isCenter
+                  ? "from-black/80 via-black/40 to-transparent"
+                  : "from-black/50 via-black/20 to-transparent group-hover:from-black/70"
+              }`}
+            />
 
-                            {/* Content Overlay */}
-                            <div className="absolute inset-0 flex flex-col justify-end text-white">
-                              <div className="px-5 pb-5 translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out">
-                                {(position === 0 ||
-                                  position === -1 ||
-                                  position === 1) && (
-                                  <>
-                                    <h3
-                                      className={`font-light mb-3 leading-snug ${
-                                        position === 0
-                                          ? "text-xl lg:text-2xl line-clamp-3"
-                                          : "text-base lg:text-lg line-clamp-2"
-                                      }`}
-                                    >
-                                      {article.title}
-                                    </h3>
+            {/* Content overlay */}
+            <div className="absolute inset-0 flex flex-col justify-end text-white">
+              {/* 
+                Center card: content always visible.
+                Adjacent/other cards: content slides up on hover only.
+              */}
+              <div
+                className={`px-5 pb-5 transition-transform duration-700 ease-out ${
+                  isCenter ? "translate-y-0" : "translate-y-full group-hover:translate-y-0"
+                }`}
+              >
+                {/* Category badge – only on center */}
+                {isCenter && (
+                  <span className="inline-block px-3 py-1 mb-3 bg-white/15 backdrop-blur-sm border border-white/20 rounded text-xs font-semibold uppercase tracking-wider">
+                    {article.type}
+                  </span>
+                )}
 
-                                    {position === 0 && (
-                                      <>
-                                        <p className="text-sm text-gray-200 mb-4 line-clamp-3 leading-relaxed">
-                                          {article.description}
-                                        </p>
+                {/* Title – always shown when content is visible */}
+                <h3
+                  className={`font-light leading-snug ${
+                    isCenter ? "text-xl lg:text-2xl line-clamp-3" : "text-base lg:text-lg line-clamp-2"
+                  }`}
+                >
+                  {article.title}
+                </h3>
 
-                                        <div className="flex items-center gap-2 text-xs text-gray-300 mb-4">
-                                          <span className="uppercase font-semibold">
-                                            {article.type}
-                                          </span>
-                                          <span>·</span>
-                                          <span>{article.date}</span>
-                                        </div>
+                {/* Extra detail – center card only */}
+                {isCenter && (
+                  <>
+                    <p className="text-sm text-gray-200 mt-2 mb-3 line-clamp-2 leading-relaxed">
+                      {article.description}
+                    </p>
 
-                                        <button className="inline-flex items-center gap-2 px-6 py-2.5 bg-green-400 hover:bg-green-500 text-black font-semibold text-sm rounded-md transition-colors duration-300">
-                                          LEARN MORE
-                                          <svg
-                                            className="w-4 h-4"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                          >
-                                            <path
-                                              strokeLinecap="round"
-                                              strokeLinejoin="round"
-                                              strokeWidth={2}
-                                              d="M9 5l7 7-7 7"
-                                            />
-                                          </svg>
-                                        </button>
-                                      </>
-                                    )}
-                                  </>
-                                )}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  }}
-                </SwiperSlide>
-              ))}
+                    <div className="flex items-center gap-2 text-xs text-gray-300 mb-4">
+                      <span className="uppercase font-semibold">{article.type}</span>
+                      <span>·</span>
+                      <span>{article.date}</span>
+                    </div>
+
+                    <button className="inline-flex items-center gap-2 px-6 py-2.5 bg-green-400 hover:bg-green-500 text-black font-semibold text-sm rounded-md transition-colors duration-300">
+                      LEARN MORE
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                  </>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }}
+  </SwiperSlide>
+))}
             </Swiper>
           </div>
 

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Bookmark, Download, Printer, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Bookmark, Download, Printer, Mail, Facebook, Twitter, Linkedin, Instagram, Link2Icon } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Home/Footer';
 import FeaturedCampaignsSection from '@/components/blog/FeaturedCampaignsSection';
@@ -21,7 +21,7 @@ const blogPosts = {
       name: 'Lester Coupland',
       role: 'President at',
       company: 'London Strategy Centre',
-      avatar: '/images/blog/blog-inner.jpg'
+      image: '/images/about/lester-coupland.jpg'
     },
     readTime: '8 min read',
     image: '/images/blog/one.jpg',
@@ -342,27 +342,49 @@ export default function BlogPost() {
             </div>
 
             {/* Authors Section */}
-            <div className="mt-16 pt-8 border-t border-gray-200">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Authors</h3>
+           <div className="mt-16 pt-8 border-t border-gray-200">
+        <h3 className="text-2xl font-semibold text-gray-900 mb-6">Authors</h3>
 
-              <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-lg">
-                <div className="w-16 h-16 rounded-full bg-gray-300 overflow-hidden flex-shrink-0">
-                  <div className="w-full h-full bg-gradient-to-br from-gray-400 to-gray-500" />
-                </div>
-
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-1">
-                    {post.author.name}
-                  </h4>
-                  <p className="text-sm text-gray-600 mb-2">
-                    {post.author.role}
-                  </p>
-                  <p className="text-sm font-medium text-gray-900">
-                    {post.author.company}
-                  </p>
-                </div>
+        <div className="bg-white  border border-gray-200 rounded-2xl p-5 sm:p-6 hover:shadow-lg transition-shadow max-w-md">
+          <div className="flex items-start gap-4">
+            {/* Image */}
+            <div className="flex-shrink-0">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden bg-gray-200">
+                <Image
+                  src={post.author.image || "/images/default-avatar.jpg"}
+                  alt={post.author.name}
+                  width={96}
+                  height={96}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
+
+            {/* Info */}
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 border-b border-gray-900 inline-block pb-1 mb-2">
+                {post.author.name}
+              </h3>
+
+              <p className="text-sm sm:text-base text-gray-600">
+                {post.author.role}
+              </p>
+
+              <p className="text-sm sm:text-base font-semibold text-gray-900">
+                {post.author.company}
+              </p>
+
+              {/* Email Icon */}
+              <button
+                className="mt-3 inline-flex items-center justify-center w-8 h-8 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors"
+                aria-label={`Email ${post.author.name}`}
+              >
+                <Mail className="w-4 h-4 text-gray-700" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
           </div>
 
           {/* Right Sidebar */}
@@ -403,7 +425,7 @@ export default function BlogPost() {
                   </button>
 
                   <button className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-gray-900 hover:bg-gray-900 group transition-colors">
-                    <Printer className="w-5 h-5 text-gray-900 group-hover:text-white transition-colors" />
+                    <Link2Icon className="w-5 h-5 text-gray-900 group-hover:text-white transition-colors" />
                   </button>
 
                   <button className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-gray-900 hover:bg-gray-900 group transition-colors">
