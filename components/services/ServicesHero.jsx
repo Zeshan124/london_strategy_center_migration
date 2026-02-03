@@ -26,10 +26,10 @@ export default function ServicesHero() {
         <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-8 sm:py-8 md:py-8 lg:pt-16">
           {/* Title */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-normal text-gray-900 leading-tight mb-6">
-            Strategy in the Digital Landscape
+            Strategy in the <br/> Digital Landscape
           </h1>
 
-          <div className="text-sm text-gray-900 font-semibold mb-8">
+          <div className="text-sm text-gray-900 mb-8">
             Navigate the digital landscape with confidence, staying ahead of the
             curve with cutting-edge tools and concepts.
           </div>
@@ -52,7 +52,7 @@ export default function ServicesHero() {
               {/* Article Content */}
               <div className="prose prose-lg max-w-none">
                 <div className="mb-10">
-                  <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
+                  <h2 className="text-2xl sm:text-3xl text-gray-900 mb-6">
                     What is maturity?
                   </h2>
 

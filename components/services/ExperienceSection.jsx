@@ -33,7 +33,7 @@ export default function ExperienceSection() {
       <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-24">
         {/* Header */}
         <div className="mb-10 sm:mb-12 lg:mb-14">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight text-gray-900 mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-light leading-tight text-gray-900 mb-4 sm:mb-6">
             Experience You will Never Forget
           </h2>
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-4xl">

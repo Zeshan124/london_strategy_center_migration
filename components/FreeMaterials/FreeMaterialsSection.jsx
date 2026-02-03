@@ -215,73 +215,82 @@ export default function FreeMaterialsSection() {
         </div>
 
         {/* Materials Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-          {sortedMaterials.map((material) => (
-            <div
-              key={material.id}
-              className="group relative bg-white border-2 border-gray-900 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-            >
-              {/* Image */}
-              <div className="relative h-56 sm:h-64 overflow-hidden">
-                <img
-                  src={material.image}
-                  alt={material.title}
-                  className="w-full h-full object-cover"
-                />
-                {/* Category Badge */}
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1.5 text-[10px] sm:text-xs font-bold tracking-wide uppercase rounded-md bg-transparent text-gray-200 border border-white/80">
-                    {material.category}
-                  </span>
-                </div>
-              </div>
+     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+  {sortedMaterials.map((material) => (
+    <div
+      key={material.id}
+      className="group relative bg-white rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+    >
+      {/* Image */}
+      <div className="relative h-[400px] sm:h-[450px] overflow-hidden">
+        <img
+          src={material.image}
+          alt={material.title}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
 
-              {/* Content */}
-              <div className="bg-white p-5 sm:p-6">
-                <p className="text-[11px] sm:text-xs text-gray-600 mb-3 font-semibold tracking-wide uppercase">
-                  {material.type}
-                </p>
-                <h3 className="text-base sm:text-lg font-bold text-gray-900 leading-snug">
-                  {material.title}
-                </h3>
-              </div>
-
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-[#E8E3DC] opacity-0 invisible group-hover:opacity-95 group-hover:visible transition-all duration-300 flex flex-col justify-between p-6 sm:p-8">
-                <div>
-                  <p className="text-xs sm:text-sm text-[#0E2253] font-semibold mb-3 tracking-wide uppercase">
-                    {material.type}
-                  </p>
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 leading-tight mb-3 sm:mb-4">
-                    {material.title}
-                  </h3>
-                  <p className="text-sm text-gray-800 leading-relaxed mb-4">
-                    {material.description}
-                  </p>
-                  <div className="flex items-center gap-4 text-xs text-gray-700 mb-2">
-                    <div className="flex items-center gap-1.5">
-                      <FileText className="w-4 h-4" />
-                      <span>{material.pages}</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <Download className="w-4 h-4" />
-                      <span>{material.downloads}</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex justify-end">
-                  <button
-                    onClick={() => handleDownload(material)}
-                    className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#0E2253] text-white text-xs sm:text-sm font-semibold rounded-full hover:bg-[#1a3a6b] transition-colors"
-                  >
-                    DOWNLOAD FREE
-                    <Download className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Category Badge */}
+        <div className="absolute top-4 left-4">
+          <span className="px-3 py-1.5 text-[10px] sm:text-xs font-bold tracking-wide uppercase rounded-md bg-black/50 text-white backdrop-blur-sm">
+            {material.category}
+          </span>
         </div>
+      </div>
+
+      {/* Floating Content Card */}
+      <div className="absolute bottom-5 left-5 right-5 bg-white rounded-2xl p-5 shadow-xl transform transition-all duration-500 group-hover:-translate-y-2">
+        <p className="text-[11px] sm:text-xs text-gray-600 mb-3 font-semibold tracking-wide uppercase">
+          {material.type}
+        </p>
+
+        <h3 className="text-base sm:text-lg font-bold text-gray-900 leading-snug">
+          {material.title}
+        </h3>
+      </div>
+
+      {/* Hover Overlay */}
+      <div className="absolute inset-0 bg-[#E8E3DC] opacity-0 invisible group-hover:opacity-95 group-hover:visible transition-all duration-300 flex flex-col justify-between p-6 sm:p-8">
+        {/* Top Content */}
+        <div>
+          <p className="text-xs sm:text-sm text-[#0E2253] font-semibold mb-3 tracking-wide uppercase">
+            {material.type}
+          </p>
+
+          <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 leading-tight mb-3 sm:mb-4">
+            {material.title}
+          </h3>
+
+          <p className="text-sm text-gray-800 leading-relaxed line-clamp-4 sm:line-clamp-5 mb-4">
+            {material.description}
+          </p>
+
+          <div className="flex items-center gap-4 text-xs text-gray-700">
+            <div className="flex items-center gap-1.5">
+              <FileText className="w-4 h-4" />
+              <span>{material.pages}</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <Download className="w-4 h-4" />
+              <span>{material.downloads}</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Button */}
+        <div className="flex justify-end">
+          <button
+            onClick={() => handleDownload(material)}
+            className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#0E2253] text-white text-xs sm:text-sm font-semibold rounded-full hover:bg-[#1a3a6b] transition-colors"
+          >
+            DOWNLOAD FREE
+            <Download className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
 
         {/* No Results */}
         {sortedMaterials.length === 0 && (

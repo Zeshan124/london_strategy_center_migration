@@ -10,7 +10,7 @@ export default function BlogArticlesSection() {
       date: "DEC 18, 2025",
       readTime: "5 MIN READ",
       title: "AI-Driven Leadership: The New Executive Imperative",
-      image: "/images/home/Leadership.jpg",
+      image: "/images/home/Leadership.png",
       size: "large",
     },
     {
@@ -29,7 +29,7 @@ export default function BlogArticlesSection() {
       date: "DEC 12, 2025",
       readTime: "6 MIN READ",
       title: "Strategic Innovation in Digital Transformation",
-      image: "/images/home/Innovation.jpg",
+      image: "/images/home/Innovation.png",
       size: "small",
     },
   ];
@@ -52,7 +52,7 @@ export default function BlogArticlesSection() {
               <div className="absolute inset-0 bg-[#0E2253]/50" />
 
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0E2253]/90 via-[#0E2253]/50 to-transparent" />
+             
 
               {/* Badge */}
               <div className="absolute top-6 left-6">
@@ -128,9 +128,6 @@ export default function BlogArticlesSection() {
                   alt={articles[2].title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#B90722]/90 via-[#0E2253]/60 to-transparent" />
 
                 {/* Badge */}
                 <div className="absolute top-6 left-6">

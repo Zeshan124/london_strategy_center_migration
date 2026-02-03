@@ -43,54 +43,71 @@ export default function NewsletterSubscription() {
               {/* Right Form */}
               <div className="flex items-center justify-end">
                 <form onSubmit={handleSubmit} className="w-full max-w-xl">
-                <div className="flex-1 lg:max-w-2xl">
-                              <div className="flex flex-col sm:flex-row gap-3 sm:gap-0 w-full relative">
-                                <input
-                                  type="email"
-                                  value={email}
-                                  onChange={(e) => setEmail(e.target.value)}
-                                  placeholder="Enter your email address"
-                                  className="
-                        w-full
-                        px-5 sm:px-6
-                        py-3 sm:py-3.5
-                        bg-white
-                        border border-gray-300
-                        rounded-xl sm:rounded-r-none
-                        text-gray-900 placeholder-gray-500
-                        focus:outline-none focus:border-[#1e3a6b]
-                        focus:ring-2 focus:ring-[#1e3a6b]/20
-                        transition-all
-                        text-sm sm:text-base
-                      "
-                                />
+              <div className="flex-1 lg:max-w-2xl">
+                          <div
+                            className="
+                                flex flex-col gap-3
+                                sm:flex-row sm:gap-0
+                                sm:border sm:border-gray-300 sm:rounded-lg
+                                sm:focus-within:border-[#1e3a6b]
+                                sm:focus-within:ring-2 sm:focus-within:ring-[#1e3a6b]/20
+                                sm:bg-white
+                                transition-all
+                              "
+                          >
+                            <input
+                              type="email"
+                              value={email}
+                              onChange={(e) => setEmail(e.target.value)}
+                              placeholder="Enter your email address"
+                              className="
+                                    w-full
+                                    px-4 sm:px-6
+                                    py-3 sm:py-3.5
+                                    text-sm sm:text-base
+                                    text-gray-900 placeholder-gray-400
                 
-                                <button
-                                  onClick={handleSubmit}
-                                  className="
-                        inline-flex items-center justify-center gap-2
-                        px-5 sm:px-6
-                        py-3 sm:py-3.5
-                        bg-[#0a1d4a] text-white
-                        rounded-lg sm:rounded-l-none
-                        font-medium
-                        text-sm sm:text-base
-                        hover:bg-[#1e3a6b]
-                        transition-all duration-300
-                        whitespace-nowrap
-                      "
-                                >
-                                  SUBSCRIBE
-                                  <Image
-                                    src="/images/icons/top-arrow.png"
-                                    alt="Arrow"
-                                    width={16}
-                                    height={16}
-                                    className="object-contain"
-                                  />
-                                </button>
-                              </div>
-                            </div>
+                                    /* mobile: own border */
+                                    bg-white border border-gray-300 rounded-lg
+                                    focus:outline-none focus:border-[#1e3a6b]
+                                    focus:ring-2 focus:ring-[#1e3a6b]/20
+                
+                                  
+                                    sm:bg-transparent sm:border-0 sm:rounded-none
+                                    sm:focus:border-0 sm:focus:ring-0
+                
+                                    transition-all
+                                  "
+                            />
+            
+                            <button
+                              onClick={handleSubmit}
+                              className="
+                                    inline-flex items-center justify-center gap-2
+                                    text-sm sm:text-base
+                                    font-medium whitespace-nowrap
+                                    bg-[#0a1d4a] text-white
+                                    hover:bg-[#1e3a6b]
+                                    transition-all duration-300
+                
+                                    /* mobile: full-width, own shape */
+                                    w-full px-5 py-3 rounded-lg
+                
+                                    /* sm+: auto-width, floats inset with margin */
+                                    sm:w-auto sm:px-6 sm:py-2.5 sm:m-1.5 sm:rounded-md
+                                  "
+                            >
+                              SUBSCRIBE
+                              <Image
+                                src="/images/icons/top-arrow.png"
+                                alt="Arrow"
+                                width={16}
+                                height={16}
+                                className="object-contain"
+                              />
+                            </button>
+                          </div>
+                        </div>
                 </form>
               </div>
             </div>

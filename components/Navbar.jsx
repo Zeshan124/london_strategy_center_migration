@@ -72,7 +72,7 @@ const Navbar = () => {
     { name: "ABOUT US", href: "/about" },
     { name: "SERVICES", href: "/services" },
     { name: "BLOG", href: "/blog" },
-    { name: "FREE MATERIALS", href: "/free-materials" },
+    { name: "FREE MATERIALS", href: "/free-material" },
     { name: "CONTACT", href: "/contact" },
   ];
 
@@ -147,7 +147,7 @@ const Navbar = () => {
                           href={item.href}
                           className={`text-sm font-medium transition-colors whitespace-nowrap ${
                             pathname === item.href
-                              ? "text-gray-900 px-3 py-1.5 border border-gray-300 rounded-md"
+                              ? "text-gray-900 px-3 py-1.5  bg-[#F1EEEA] rounded-md"
                               : "text-gray-700 hover:text-gray-900"
                           }`}
                         >
@@ -161,7 +161,7 @@ const Navbar = () => {
             )}
 
             {/* Search & Login */}
-            <div className="flex items-center gap-2 sm:gap-3 bg-white rounded-xl shadow-lg border border-gray-200 px-3 py-2 sm:px-4 sm:py-2.5">
+            <div className="flex items-center gap-2 sm:gap-3 bg-white rounded-xl shadow-lg px-3 py-2 sm:px-4 sm:py-2.5">
               <button
                 aria-label="Search"
                 className="p-1.5 hover:bg-gray-100 rounded-full transition-colors"
@@ -443,7 +443,7 @@ const Navbar = () => {
               {/* Sign In Button */}
               <button
                 onClick={handleSignIn}
-                className="w-full bg-green-400 hover:bg-green-500 text-gray-900 font-medium py-2.5 sm:py-3 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 flex items-center justify-center gap-2 text-sm sm:text-base"
+                className="w-full bg-[#0D1B3E] hover:bg-[#0a1d4a] text-white font-medium py-2.5 sm:py-3 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 flex items-center justify-center gap-2 text-sm sm:text-base"
               >
                 SIGN IN
                 <span className="text-lg">→</span>

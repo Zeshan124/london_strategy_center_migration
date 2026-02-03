@@ -50,7 +50,7 @@ const StrategyCourseComponent = () => {
 
         {/* Programme Commitment */}
         <div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl text-gray-900 mb-6 sm:mb-8">
             Programme Commitment
           </h2>
 

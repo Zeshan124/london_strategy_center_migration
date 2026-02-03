@@ -48,31 +48,36 @@ export default function AboutSection() {
 
           {/* Tab Buttons */}
           <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`
-                  flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl border-2 transition-all duration-300
-                  ${
-                    activeTab === tab.id
-                      ? "border-red-600 text-red-600 bg-transparent shadow-md"
-                      : "border-gray-300 text-gray-700 hover:border-gray-400 bg-transparent"
-                  }
-                `}
-              >
-                <span className="font-medium text-xs sm:text-sm">
-                  {tab.label}
-                </span>
-                {tab.icon === "down" ? (
-                  <ChevronDown className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                ) : (
-                  <ChevronUp className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                )}
-              </button>
-            ))}
-          </div>
+            {tabs.map((tab) => {
+              const isActive = activeTab === tab.id;
 
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`
+                    flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl border-2 transition-all duration-300
+                    ${
+                      isActive
+                        ? "border-red-600 text-red-600 bg-transparent shadow-md"
+                        : "border-gray-300 text-gray-700 hover:border-gray-400 bg-transparent"
+                    }
+                  `}
+                >
+                  <span className="font-medium text-xs sm:text-sm">
+                    {tab.label}
+                  </span>
+
+                  {/* Single icon, rotated 180° when active */}
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 ease-in-out ${
+                      isActive ? "rotate-0" : "rotate-180"
+                    }`}
+                  />
+                </button>
+              );
+            })}
+          </div>
           {/* Content Box */}
           <div className="bg-white border-2 border-gray-200 rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-4 shadow-sm">
             <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
