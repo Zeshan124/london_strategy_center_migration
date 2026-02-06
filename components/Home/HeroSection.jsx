@@ -217,34 +217,22 @@ export default function HeroSection() {
               className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
 
-            {/* Gradient overlay – stronger on center card */}
+            {/* Gradient overlay – appears on hover */}
             <div
-              className={`absolute inset-0 bg-gradient-to-t transition-all duration-700 ${
-                isCenter
-                  ? "from-black/80 via-black/40 to-transparent"
-                  : "from-black/50 via-black/20 to-transparent group-hover:from-black/70"
-              }`}
+              className={`absolute inset-0 bg-gradient-to-t transition-all duration-700 from-black/50 via-black/20 to-transparent group-hover:from-black/90 group-hover:via-black/50`}
             />
 
             {/* Content overlay */}
             <div className="absolute inset-0 flex flex-col justify-end text-white">
-              {/* 
-                Center card: content always visible.
-                Adjacent/other cards: content slides up on hover only.
-              */}
-              <div
-                className={`px-5 pb-5 transition-transform duration-700 ease-out ${
-                  isCenter ? "translate-y-0" : "translate-y-full group-hover:translate-y-0"
-                }`}
-              >
-                {/* Category badge – only on center */}
-                {isCenter && (
+              <div className="px-5 pb-5 translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out">
+                {/* Category badge */}
+                {(isCenter || isAdjacent) && (
                   <span className="inline-block px-3 py-1 mb-3 bg-white/15 backdrop-blur-sm border border-white/20 rounded text-xs font-semibold uppercase tracking-wider">
                     {article.type}
                   </span>
                 )}
 
-                {/* Title – always shown when content is visible */}
+                {/* Title */}
                 <h3
                   className={`font-light leading-snug ${
                     isCenter ? "text-xl lg:text-2xl line-clamp-3" : "text-base lg:text-lg line-clamp-2"

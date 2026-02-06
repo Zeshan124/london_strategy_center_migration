@@ -152,10 +152,10 @@ export default function BlogArticlesSection() {
 
                   {/* Read More Button */}
                   <div className="flex justify-end">
-                    <button className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition-all duration-300">
-                      READ MORE
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
+                      <button className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-white text-white rounded-xl text-sm font-medium hover:bg-white hover:text-gray-900 transition-all duration-300">
+                    READ MORE
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
                   </div>
                 </div>
               </div>

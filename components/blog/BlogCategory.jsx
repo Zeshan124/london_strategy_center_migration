@@ -145,7 +145,7 @@ export default function BlogCategory() {
   });
 
   return (
-    <section className="bg-white py-8 sm:py-12 md:py-12 lg:py-14">
+    <section className="bg-white py-8 sm:py-12 md:py-12 lg:py-8">
       <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
         {/* Filters Section */}
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12 lg:mb-16">
@@ -276,7 +276,7 @@ export default function BlogCategory() {
                   <p className="text-xs sm:text-sm text-[#0E2253] font-semibold mb-3 sm:mb-4 tracking-wide">
                     {post.date}
                   </p>
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 leading-tight mb-3 sm:mb-4">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl text-gray-900 leading-tight mb-3 sm:mb-4">
                     {post.title}
                   </h3>
                   <p className="text-sm text-gray-800 leading-relaxed line-clamp-4 sm:line-clamp-5">
@@ -287,7 +287,7 @@ export default function BlogCategory() {
 
                 {/* Bottom Button */}
                 <div className="flex justify-end">
-                  <button className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#0E2253] text-white text-xs sm:text-sm font-semibold rounded-full hover:bg-[#1a3a6b] transition-colors">
+                  <button className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#0E2253] text-white text-xs sm:text-sm font-semibold rounded-xl hover:bg-[#1a3a6b] transition-colors">
                     READ MORE
                     <span className="text-base sm:text-lg">↗</span>
                   </button>

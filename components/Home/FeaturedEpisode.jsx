@@ -34,9 +34,9 @@ export default function FeaturedEpisode() {
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4">
-            <button className="inline-flex items-center gap-2 px-6 py-3 bg-[white] border-2 border-[#0E2253] text-gray-900 rounded-xl font-medium text-sm hover:bg-gray-900 hover:text-white transition-all duration-300">
+            <button className="group inline-flex items-center gap-2 px-6 py-3 bg-[white] border-2 border-[#0E2253] text-gray-900 rounded-xl font-medium text-sm hover:bg-gray-900 hover:text-white transition-all duration-300">
               PLAY NOW
-              <img src="/images/icons/play-icon.svg" alt="Play Icon" className="w-4 h-4" />
+              <img src="/images/icons/play-icon.svg" alt="Play Icon" className="w-4 h-4 transition-all duration-300 group-hover:brightness-0 group-hover:invert" />
             </button>
             
             <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#0E2253] text-white rounded-xl font-medium text-sm hover:bg-gray-800 transition-all duration-300">
