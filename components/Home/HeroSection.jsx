@@ -315,13 +315,13 @@ export default function HeroSection() {
             <button className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
               BCG SPOTLIGHT
             </button>
-            <button className="text-xs sm:text-sm font-semibold text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap">
+            <button className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
               ARTIFICIAL INTELLIGENCE
             </button>
-            <button className="text-xs sm:text-sm font-semibold text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap">
+            <button className="text-xs sm:text-sm font-semibold text-gray-600 hover:text-green-600 transition-colors whitespace-nowrap">
               CEO AGENDA
             </button>
-            <button className="text-xs sm:text-sm font-semibold text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap">
+            <button className="text-xs sm:text-sm font-semibold text-gray-600 hover:text-green-600 transition-colors whitespace-nowrap">
               CLIENT IMPACT LIBRARY
             </button>
           </div>
