@@ -8,7 +8,6 @@ import ContactFormSection from "@/components/InnerPages/CyberExcellence/ContactF
 import Executives from "@/components/InnerPages/CyberExcellence/Executives";
 import ExperienceSection from "@/components/InnerPages/CyberExcellence/ExperienceSection";
 import LearningObjectives from "@/components/InnerPages/CyberExcellence/LearningObjectives";
-import ServicesHero from "@/components/InnerPages/CyberExcellence/ServicesHero";
 import StrategyCourseComponent from "@/components/InnerPages/CyberExcellence/StrategyCourseComponent";
 import React from "react";
 import CertificationLevels from "@/components/InnerPages/CyberExcellence/CertificationLevels";
@@ -19,23 +18,23 @@ import TimelineSection from "@/components/InnerPages/CyberExcellence/TimelineSec
 import LearningGlobalModels from "@/components/InnerPages/CyberExcellence/LearningGlobalModels";
 import AssessmentProcessByLevel from "@/components/InnerPages/CyberExcellence/AssessmentProcessByLevel";
 import WhyActNow from "@/components/InnerPages/CyberExcellence/WhyActNow";
-import UniBirmingham from "@/components/InnerPages/CyberExcellence/UniBirmingham";
+import HeroBanner from "@/components/press-releases/PressReleaseHero";
+import PartnershipQuoteSection from "@/components/press-releases/PartnershipQuoteSection";
+import PressReleaseHero from "@/components/press-releases/PressReleaseHero";
+import AboutOrganizations from "@/components/press-releases/AboutOrganizations";
 
 const page = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
       <main>
-        <ServicesHero />
-        <Executives />
-        <UniBirmingham />
-        <CertificationLevels />
-        <BenefitsSection />
-        <CyberAssessmentFramework />
-        <TimelineSection />
-        <LearningGlobalModels />
-        <AssessmentProcessByLevel />
-        <WhyActNow />
+        <PressReleaseHero />
+        <PartnershipQuoteSection />
+        <AboutOrganizations />
+        {/* <StrategyCourseComponent />
+        <LearningObjectives />
+        <ExperienceSection /> */}
+        <ContactFormSection />
       </main>
       <Footer />
     </div>

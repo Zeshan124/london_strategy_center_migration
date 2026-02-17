@@ -14,24 +14,24 @@ import {
 const LearningGlobalModels = () => {
   const topStats = [
     {
-      icon: Shield,
+      icon: "/images/InnerPages/CyberExcellence/bookmark_stacks.png",
       percentage: "99%",
       description:
-        "of internet-based vulnerabilities mitigated with certified controls.",
+        "of organisations see improved executive engagement with cybersecurity.",
     },
     {
-      icon: Globe,
+      icon: "/images/InnerPages/CyberExcellence/article_shortcut.png",
       percentage: "82%",
-      description:
-        "of certified organisations reported improved confidence in defending against threats.",
-    },
-    {
-      icon: FileCheck,
-      percentage: "61%",
       description: "of buyers prefer certified suppliers.",
     },
     {
-      icon: Handshake,
+      icon: "/images/InnerPages/CyberExcellence/shoppingmode.png",
+      percentage: "61%",
+      description:
+        "of organisations see improved executive engagement with cybersecurity.",
+    },
+    {
+      icon: "/images/InnerPages/CyberExcellence/forms_apps_script.png",
       percentage: "71%",
       description:
         "of organisations see improved executive engagement with cybersecurity.",
@@ -40,37 +40,34 @@ const LearningGlobalModels = () => {
 
   const bottomStats = [
     {
-      icon: TrendingDown,
+      icon: "/images/InnerPages/CyberExcellence/fact_check.png",
       description: "80% reduction in cyber incidents among certified partners",
     },
     {
-      icon: Network,
+      icon: "/images/InnerPages/CyberExcellence/inventory_2.png",
       description:
         "A unified assurance standard across thousands of suppliers.",
     },
     {
-      icon: ShieldCheck,
+      icon: "/images/InnerPages/CyberExcellence/badge.png",
       description: "Simplified compliance via independent certification.",
     },
   ];
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 px-4 py-20 relative overflow-hidden">
+    <div className="w-full min-h-screen px-4 py-12 relative overflow-hidden">
       {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.02]">
-        <div className="absolute inset-0 bg-[linear-gradient(30deg,#1e293b_12%,transparent_12.5%,transparent_87%,#1e293b_87.5%,#1e293b),linear-gradient(150deg,#1e293b_12%,transparent_12.5%,transparent_87%,#1e293b_87.5%,#1e293b),linear-gradient(30deg,#1e293b_12%,transparent_12.5%,transparent_87%,#1e293b_87.5%,#1e293b),linear-gradient(150deg,#1e293b_12%,transparent_12.5%,transparent_87%,#1e293b_87.5%,#1e293b)] bg-[length:80px_140px] bg-[position:0_0,0_0,40px_70px,40px_70px]"></div>
-      </div>
 
       {/* Decorative Elements */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-slate-300/20 rounded-full blur-3xl"></div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="mx-auto px-6 sm:px-8 lg:px-24">
         {/* Header */}
-        <div className="mb-16 text-center animate-fade-in">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#132D5F] leading-tight tracking-tight">
-            LEARNING FROM GLOBAL MODELS
-          </h1>
+        <div className="mb-16 animate-fade-in">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-4 sm:mb-6">
+            Learning from global models
+          </h2>
         </div>
 
         {/* Top Stats Grid */}
@@ -83,24 +80,14 @@ const LearningGlobalModels = () => {
                 className="group animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="flex flex-col items-center text-center">
+                <div className="flex flex-col items-start text-left">
                   {/* Icon Circle */}
-                  <div className="relative mb-6">
-                    {/* Outer Glow */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#132D5F] to-[#5B7AAE] rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 scale-110"></div>
-
-                    {/* Main Circle with White Border */}
-                    <div className="relative w-28 h-28 bg-white rounded-full flex items-center justify-center shadow-xl border-[6px] border-slate-200 group-hover:scale-110 transition-all duration-500">
-                      {/* Inner Background Circle */}
-                      <div className="absolute inset-4 bg-gradient-to-br from-[#132D5F] to-[#1a3a6b] rounded-full"></div>
-
-                      {/* Inner Glow */}
-                      <div className="absolute inset-5 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
-
-                      {/* Icon */}
-                      <IconComponent
-                        className="w-12 h-12 text-white relative z-10"
-                        strokeWidth={2.5}
+                  <div className="mb-4 sm:mb-6 flex justify-start">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20">
+                      <img
+                        src={stat.icon}
+                        alt={stat.description}
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   </div>
@@ -125,8 +112,8 @@ const LearningGlobalModels = () => {
           className="mb-12 animate-fade-in"
           style={{ animationDelay: "500ms" }}
         >
-          <div className="bg-gradient-to-r from-[#1a3a6b] via-[#132D5F] to-[#1a3a6b] rounded-2xl p-8 shadow-2xl border border-[#132D5F]/20">
-            <p className="text-white text-center text-base md:text-lg leading-relaxed max-w-5xl mx-auto">
+          <div className="bg-[#0E2253] rounded-2xl p-8 shadow-2xl border border-[#132D5F]/20">
+            <p className="text-white text-center text-base md:text-xl leading-relaxed max-w-5xl mx-auto">
               A leading UK wealth management firm, mandated certification for
               its partner network. Within a year, this initiative resulted in:
             </p>
@@ -134,7 +121,7 @@ const LearningGlobalModels = () => {
         </div>
 
         {/* Bottom Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 lg:py-12">
           {bottomStats.map((stat, index) => {
             const IconComponent = stat.icon;
             return (
@@ -143,24 +130,14 @@ const LearningGlobalModels = () => {
                 className="group animate-fade-in-up"
                 style={{ animationDelay: `${600 + index * 100}ms` }}
               >
-                <div className="flex flex-col items-center text-center">
+                <div className="flex flex-col items-start text-left">
                   {/* Icon Circle */}
-                  <div className="relative mb-6">
-                    {/* Outer Glow */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#132D5F] to-[#5B7AAE] rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 scale-110"></div>
-
-                    {/* Main Circle with White Border */}
-                    <div className="relative w-28 h-28 bg-white rounded-full flex items-center justify-center shadow-xl border-[6px] border-slate-200 group-hover:scale-110 transition-all duration-500">
-                      {/* Inner Background Circle */}
-                      <div className="absolute inset-4 bg-gradient-to-br from-[#132D5F] to-[#1a3a6b] rounded-full"></div>
-
-                      {/* Inner Glow */}
-                      <div className="absolute inset-5 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
-
-                      {/* Icon */}
-                      <IconComponent
-                        className="w-12 h-12 text-white relative z-10"
-                        strokeWidth={2.5}
+                  <div className="mb-4 sm:mb-6 flex justify-start">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20">
+                      <img
+                        src={stat.icon}
+                        alt={stat.description}
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   </div>
@@ -177,8 +154,8 @@ const LearningGlobalModels = () => {
 
         {/* Bottom Banner */}
         <div className="animate-fade-in" style={{ animationDelay: "1000ms" }}>
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
-            <p className="text-slate-700 text-center text-base leading-relaxed max-w-5xl mx-auto">
+          <div className="bg-[#F1EEEA] rounded-2xl p-8 shadow-lg border border-slate-200">
+            <p className="text-slate-700 text-center text-lg leading-relaxed max-w-5xl mx-auto">
               Cyber Excellence adapts these lessons for the Middle East,
               ensuring both small and large organisations benefit from a
               cohesive framework.
@@ -191,10 +168,46 @@ const LearningGlobalModels = () => {
           className="mt-8 text-center animate-fade-in"
           style={{ animationDelay: "1100ms" }}
         >
-          <p className="text-slate-500 text-sm italic">
+          <p className="text-gray-800 text-sm font-bold">
             Cyber Essentials Impact Evaluation (2024), Department for Science,
             Innovation and Technology (DSIT).
           </p>
+        </div>
+        <div className="px-4 sm:px-6 lg:px-0 py-8 sm:py-12 lg:py-8">
+          {/* Header */}
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl text-gray-900 mb-8 sm:mb-12">
+            Message From Our Principal
+          </h1>
+
+          {/* Profile Section */}
+          <div className="flex items-start gap-4 sm:gap-6 mb-8 sm:mb-10">
+            <img
+              src="/images/InnerPages/cyberexcellence/major.png"
+              alt="Dr Adnan Alturkistani"
+              className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full object-cover flex-shrink-0"
+            />
+            <div className="flex flex-col justify-center">
+              <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-1">
+                Major General Paul Nanson Principal,
+              </h2>
+              <p className="text-sm sm:text-base text-gray-600">Principal,</p>
+              <p className="text-sm sm:text-base font-semibold text-gray-900">
+                London Strategy Centre
+              </p>
+            </div>
+          </div>
+
+          {/* Description */}
+          <div className="mb-12 sm:mb-16">
+            <p className="text-base text-gray-700 leading-relaxed">
+              “In cybersecurity, standing still is falling behind. Regular
+              reassessment and updated certification standards create a culture
+              of vigilance, ensuring teams remain aware and proactive.
+              Continuous improvement isn’t optional, it’s the only way to stay
+              ahead of evolving threats and protect critical assets in an
+              ever-changing digital landscape.”
+            </p>
+          </div>
         </div>
       </div>
 

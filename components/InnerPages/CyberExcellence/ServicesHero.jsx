@@ -30,7 +30,7 @@ export default function ServicesHero() {
           </h1>
 
           <div className="text-sm text-gray-900 mb-8">
-            BUILDING A SAFER DIGITAL FUTURE FOR THE MIDDLE EAST
+            Building a safer digital future for the middle east
           </div>
 
           {/* Featured Image - Full Width */}
