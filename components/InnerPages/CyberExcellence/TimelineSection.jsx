@@ -17,7 +17,7 @@ const TimelineSection = () => {
       title: "The term",
       subtitle: '"cybersecurity"',
       description: "is first used.",
-      icon: "/images/InnerPages/cyberexcellence/bug_report.png",
+      icon: "/images/InnerPages/cyberexcellence/account_tree.png",
       position: "top",
     },
     {
@@ -25,7 +25,7 @@ const TimelineSection = () => {
       title: "CITC launches",
       subtitle: "Computer Emergency",
       description: "Response Team (CERT",
-      icon: "/images/InnerPages/cyberexcellence/bug_report.png",
+      icon: "/images/InnerPages/cyberexcellence/trackpad_input_3.png",
       position: "bottom",
     },
     {
@@ -33,7 +33,7 @@ const TimelineSection = () => {
       title: "First formal National",
       subtitle: "Cybersecurity Strategy",
       description: "was introduced to improve governance.",
-      icon: "/images/InnerPages/cyberexcellence/bug_report.png",
+      icon: "/images/InnerPages/cyberexcellence/tactic.png",
       position: "top",
     },
     {
@@ -41,7 +41,7 @@ const TimelineSection = () => {
       title: "Establishment of the",
       subtitle: "National Cybersecurity",
       description: "Authority (NCA)",
-      icon: "/images/InnerPages/cyberexcellence/bug_report.png",
+      icon: "/images/InnerPages/cyberexcellence/flag.png",
       position: "bottom",
     },
     {
@@ -49,7 +49,7 @@ const TimelineSection = () => {
       title: "Persistent cyber",
       subtitle: "threat landscape.",
       description: "",
-      icon: "/images/InnerPages/cyberexcellence/bug_report.png",
+      icon: "/images/InnerPages/cyberexcellence/emergency_home.png",
       position: "top",
     },
   ];
