@@ -1,0 +1,84 @@
+"use client";
+
+import { useState } from "react";
+import { useParams } from "next/navigation";
+import Link from "next/link";
+import {
+  Bookmark,
+  Download,
+  Printer,
+  Mail,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Building2,
+} from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Home/Footer";
+import FeaturedCampaignsSection from "@/components/blog/FeaturedCampaignsSection";
+
+export default function DigitalTwinHero() {
+  return (
+    <>
+      <div className="min-h-screen bg-white lg:pt-28 py-12">
+        {/* Full Width Container */}
+        <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-8 sm:py-8 md:py-8 lg:pt-16">
+          {/* Category Badge */}
+          <div className="mb-6">
+            <span className="inline-flex items-center gap-2 px-4 py-3 border rounded-lg text-sm font-bold">
+              LSC DIGITAL TWIN
+            </span>
+          </div>
+
+          {/* Title */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-6">
+            Scalable Intelligence
+          </h1>
+
+          <div className="text-lg text-gray-900 mb-8">
+            From AI-powered executive growth partners to organisation-wide
+            strategic sensing systems, we turn how leaders think into a
+            continuous intelligence infrastructure that strengthens alignment,
+            accelerates decision-making, and builds cybernetic capability. This
+            is not AI coaching. This is leadership intelligence engineered for
+            scale.
+          </div>
+          <div className="text-lg text-gray-900 italic mb-8">
+            This is not AI coaching. This is leadership intelligence engineered
+            for scale.
+          </div>
+
+          <div className="flex flex-wrap gap-4">
+            <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#0E2253] text-white rounded-xl font-medium text-sm hover:bg-gray-800 transition-all duration-300">
+             DISCOVER HOW IT WORKS
+            </button>
+            <button className="group inline-flex items-center gap-2 px-6 py-3 bg-[white] border-2 border-[#0E2253] text-gray-900 rounded-xl font-medium text-sm hover:bg-gray-900 hover:text-white transition-all duration-300">
+             BOOK A CONSULTATION
+              <img
+                src="/images/icons/play-icon.svg"
+                alt="Play Icon"
+                className="w-4 h-4 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+              />
+            </button>
+          </div>
+
+          {/* Featured Video - Full Width */}
+          <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] mb-12 pt-10 rounded-2xl overflow-hidden">
+            <video
+              src="/images/InnerPages/digitaltwin/1.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Two Column Layout for Content and Sidebar */}
+          
+        </div>
+      </div>
+    </>
+  );
+}
