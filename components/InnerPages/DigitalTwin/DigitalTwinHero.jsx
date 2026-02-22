@@ -26,7 +26,7 @@ export default function DigitalTwinHero() {
         <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-16 sm:py-8 md:py-8 lg:pt-16">
           {/* Category Badge */}
           <div className="mb-6">
-            <span className="inline-flex items-center gap-2 px-4 py-3 border rounded-lg text-sm font-bold">
+            <span className="inline-flex items-center gap-2 px-4 py-3 border rounded-lg text-xs sm:text-sm font-bold">
               LSC DIGITAL TWIN
             </span>
           </div>

@@ -106,7 +106,7 @@ export default function HowItWorks() {
                 </button>
               </div>
             </div>
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6 lg:gap-10 pt-4 mt-4">
+            <div className="flex flex-wrap justify-center sm:justify-start items-center gap-4 sm:gap-6 lg:gap-10 pt-4 mt-4">
               {/* Complimentary session */}
               <div className="flex items-center gap-2 sm:gap-3">
                 <img
