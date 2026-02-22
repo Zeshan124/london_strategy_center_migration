@@ -8,7 +8,6 @@ import ContactFormSection from "@/components/InnerPages/CyberExcellence/ContactF
 import Executives from "@/components/InnerPages/CyberExcellence/Executives";
 import ExperienceSection from "@/components/InnerPages/CyberExcellence/ExperienceSection";
 import LearningObjectives from "@/components/InnerPages/CyberExcellence/LearningObjectives";
-import StrategyCourseComponent from "@/components/InnerPages/CyberExcellence/StrategyCourseComponent";
 import React from "react";
 import CertificationLevels from "@/components/InnerPages/CyberExcellence/CertificationLevels";
 import BenefitsSection from "@/components/InnerPages/CyberExcellence/BenefitsSection";
