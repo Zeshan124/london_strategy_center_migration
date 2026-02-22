@@ -5,11 +5,11 @@ import Image from "next/image";
 
 const DigitalTwinProcess = () => {
   return (
-    <div className="w-full bg-[#F7F5F4] py-16 md:py-20">
+    <div className="w-full bg-gradient-to-b from-white to-[#F1EEEA] py-16 md:py-20">
       <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
         {/* Process Image */}
         <div className="hidden md:block mb-12 md:mb-16">
-          <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[520px]">
+          <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[300px]">
             <Image
               src="/images/InnerPages/digitaltwin/process.png"
               alt="Digital Twin Lifecycle Process"

@@ -40,7 +40,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-12">
+    <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24">
       {/* Container */}
       <div className="mx-auto px-4 sm:px-6 lg:px-24">
         {/* Header */}
@@ -106,11 +106,11 @@ export default function HowItWorks() {
                 </button>
               </div>
             </div>
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6 lg:gap-10 pt-4 mt-4 border-t border-white/20">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6 lg:gap-10 pt-4 mt-4">
               {/* Complimentary session */}
               <div className="flex items-center gap-2 sm:gap-3">
                 <img
-                  src="/images/InnerPages/digitaltwin/hdf.png"
+                  src="/images/InnerPages/digitaltwin/contemporary.svg"
                   alt="Session"
                   className="w-5 h-5 sm:w-6 sm:h-6 object-contain brightness-0 invert"
                 />
@@ -125,7 +125,7 @@ export default function HowItWorks() {
               {/* 5 minutes */}
               <div className="flex items-center gap-2 sm:gap-3">
                 <img
-                  src="/images/InnerPages/digitaltwin/clock.png"
+                  src="/images/InnerPages/digitaltwin/timer.svg"
                   alt="Duration"
                   className="w-5 h-5 sm:w-6 sm:h-6 object-contain brightness-0 invert"
                 />
