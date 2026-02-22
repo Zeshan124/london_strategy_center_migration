@@ -1,3 +1,4 @@
+import React from "react";
 import BlogCategory from "@/components/blog/BlogCategory";
 import FeaturedCampaignsCarousel from "@/components/blog/FeaturedCampaignsCarousel";
 import FeaturedInsightsHeader from "@/components/blog/FeaturedInsightsHeader";
@@ -9,8 +10,6 @@ import Executives from "@/components/InnerPages/CyberExcellence/Executives";
 import ExperienceSection from "@/components/InnerPages/CyberExcellence/ExperienceSection";
 import LearningObjectives from "@/components/InnerPages/CyberExcellence/LearningObjectives";
 import ServicesHero from "@/components/InnerPages/CyberExcellence/ServicesHero";
-import StrategyCourseComponent from "@/components/InnerPages/CyberExcellence/StrategyCourseComponent";
-import React from "react";
 import CertificationLevels from "@/components/InnerPages/CyberExcellence/CertificationLevels";
 import BenefitsSection from "@/components/InnerPages/CyberExcellence/BenefitsSection";
 import CertificationsSection from "@/components/Home/CertificationsSection";

@@ -22,7 +22,7 @@ const StrategyCourseComponent = () => {
           <img
             src="/images/services/dr-adnan-alturkistani.jpg"
             alt="Dr Adnan Alturkistani"
-            className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full object-cover flex-shrink-0"
+            className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-xl object-cover flex-shrink-0"
           />
           <div className="flex flex-col justify-center">
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-1">

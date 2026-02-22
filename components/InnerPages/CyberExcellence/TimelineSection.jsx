@@ -55,7 +55,7 @@ const TimelineSection = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 px-4 py-20 relative overflow-hidden">
+    <div className="w-full min-h-screen px-4 py-20 relative overflow-hidden">
       {/* Subtle Background Pattern */}
       {/* <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute inset-0 bg-[linear-gradient(30deg,#1e293b_12%,transparent_12.5%,transparent_87%,#1e293b_87.5%,#1e293b),linear-gradient(150deg,#1e293b_12%,transparent_12.5%,transparent_87%,#1e293b_87.5%,#1e293b),linear-gradient(30deg,#1e293b_12%,transparent_12.5%,transparent_87%,#1e293b_87.5%,#1e293b),linear-gradient(150deg,#1e293b_12%,transparent_12.5%,transparent_87%,#1e293b_87.5%,#1e293b)] bg-[length:80px_140px] bg-[position:0_0,0_0,40px_70px,40px_70px]"></div>
@@ -76,7 +76,7 @@ const TimelineSection = () => {
         {/* Desktop Timeline */}
         <div className="hidden lg:block relative px-32">
           {/* Main Horizontal Line */}
-          <div className="absolute top-1/2 left-32 right-32 h-2 bg-gradient-to-r from-transparent via-[#5B7AAE] to-transparent transform -translate-y-1/2 rounded-full"></div>
+          <div className="absolute top-1/2 left-32 right-32 h-1 bg-gradient-to-r from-transparent via-[#0E2253] to-transparent transform -translate-y-1/2 rounded-full"></div>
 
           {/* Timeline Events */}
           <div className="relative" style={{ minHeight: "600px" }}>
@@ -109,7 +109,7 @@ const TimelineSection = () => {
 
                       {/* Content */}
                       <div className="relative z-10 text-center">
-                        <h2 className="text-4xl font-bold text-[#132D5F] mb-4">
+                        <h2 className="text-4xl font-bold text-[#0E2253] mb-4">
                           {event.year}
                         </h2>
                         <p className="text-slate-700 text-base leading-relaxed font-medium">

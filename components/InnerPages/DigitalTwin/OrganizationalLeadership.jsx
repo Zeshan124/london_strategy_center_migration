@@ -4,28 +4,28 @@ export default function OrganizationalLeadership() {
   const features = [
     {
       id: 1,
-      icon: "/images/InnerPages/digitaltwin/modeling.png",
+      icon: "/images/InnerPages/digitaltwin/modeling.svg",
       title: "Modeling Executive Logic",
       description:
         "Capture priorities, risk tolerance, decision sequencing, and escalation expectations from leadership.",
     },
     {
       id: 2,
-      icon: "/images/InnerPages/digitaltwin/neurology.png",
+      icon: "/images/InnerPages/digitaltwin/neurology.svg",
       title: "Create Intelligence System",
       description:
         "Build a leadership-anchored system that continuously tests alignment to strategic intent.",
     },
     {
       id: 3,
-      icon: "/images/InnerPages/digitaltwin/compress.png",
+      icon: "/images/InnerPages/digitaltwin/compress.svg",
       title: "Scale Across Enterprise",
       description:
         "Deploy as sensing infrastructure providing real-time visibility into alignment and execution.",
     },
     {
       id: 4,
-      icon: "/images/InnerPages/digitaltwin/detector_status.png",
+      icon: "/images/InnerPages/digitaltwin/detector_status.svg",
       title: "Strengthen Governance",
       description:
         "Enable boards and executive committees to reduce strategic drift and embed cybernetic foundations.",
@@ -47,7 +47,7 @@ export default function OrganizationalLeadership() {
   ];
 
   return (
-    <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-20">
+    <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24">
       {/* Container */}
       <div className="mx-auto px-4 sm:px-6 lg:px-24">
         {/* Header */}
@@ -95,38 +95,6 @@ export default function OrganizationalLeadership() {
               </p>
             </div>
           ))}
-        </div>
-        <div className="mt-12 sm:mt-16 md:mt-20">
-          <div className="bg-[#132D5F] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl text-white relative overflow-hidden">
-            {/* Decorative Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]"></div>
-            </div>
-
-            <div className="relative z-10 flex flex-col md:flex-row items-center md:items-center justify-between gap-6 md:gap-8">
-              {/* Text Content */}
-              <div className="flex-1 text-center md:text-left w-full">
-                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-normal text-white mb-3 md:mb-2">
-                  Ready to get Certified?
-                </h3>
-                <p className="text-white text-sm sm:text-base lg:text-base leading-relaxed">
-                  Join thousands of organisations improving their cybersecurity
-                  posture across the Middle East.
-                </p>
-              </div>
-
-              {/* Buttons - Responsive stacking */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto md:flex-shrink-0">
-                <button className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-slate-900 text-sm sm:text-base rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden w-full sm:w-auto">
-                  <span className="relative z-10">GET CERTIFIED TODAY</span>
-                </button>
-                <button className="px-6 sm:px-8 py-3 sm:py-4 bg-transparent text-white text-sm sm:text-base rounded-xl border-2 border-white hover:bg-white/10 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-                  LEARN MORE
-                  <span className="text-base sm:text-xl px-2">↗</span>
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

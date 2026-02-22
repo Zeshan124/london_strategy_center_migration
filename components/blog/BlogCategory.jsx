@@ -264,7 +264,7 @@ export default function BlogCategory() {
                 </p>
 
                 {/* Title */}
-                <h3 className="text-base sm:text-lg font-bold text-gray-900 leading-snug">
+                <h3 className="text-base sm:text-lg text-gray-900 leading-snug">
                   {post.title}
                 </h3>
               </div>

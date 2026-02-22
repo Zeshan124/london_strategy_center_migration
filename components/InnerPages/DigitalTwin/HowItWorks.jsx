@@ -4,24 +4,24 @@ export default function HowItWorks() {
   const features = [
     {
       id: 1,
-      icon: "/images/InnerPages/digitaltwin/multimodal_hand_eye.png",
-      title: "Modeling Executive Logic",
+      icon: "/images/InnerPages/digitaltwin/multimodal_hand_eye.svg",
+      title: "Book a Free Session",
       description:
-        "Capture priorities, risk tolerance, decision sequencing, and escalation expectations from leadership.",
+        "Schedule a complimentary introductory session in just a few clicks.",
     },
     {
       id: 2,
-      icon: "/images/InnerPages/digitaltwin/graph_4.png",
-      title: "Create Intelligence System",
+      icon: "/images/InnerPages/digitaltwin/graph_4.svg",
+      title: "Connect with the Digital Twin",
       description:
         "Build a leadership-anchored system that continuously tests alignment to strategic intent.",
     },
     {
       id: 3,
-      icon: "/images/InnerPages/digitaltwin/tactic.png",
+      icon: "/images/InnerPages/digitaltwin/tactic.svg",
       title: "Scale Across Enterprise",
       description:
-        "Deploy as sensing infrastructure providing real-time visibility into alignment and execution.",
+        "Engage directly with the AI Digital Twin in a secure, private environment.",
     },
     // {
     //   id: 5,
@@ -101,12 +101,17 @@ export default function HowItWorks() {
 
               {/* Buttons - Responsive stacking */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto md:flex-shrink-0">
-                <button className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-slate-900 text-sm sm:text-base rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden w-full sm:w-auto">
-                  <span className="relative z-10">GET CERTIFIED TODAY</span>
-                </button>
+                 <button className="group inline-flex items-center gap-2 px-6 py-3 bg-[white] border-2 border-[#0E2253] text-gray-900 rounded-xl text-sm hover:bg-gray-900 hover:text-white transition-all duration-300">
+              BOOK FREE SESSION
+              <img
+                src="/images/InnerPages/digitaltwin/arrow-up.svg"
+                alt="Play Icon"
+                className="w-4 h-4 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+              />
+            </button>
               </div>
             </div>
-            <div className="flex flex-wrap justify-center sm:justify-start items-center gap-4 sm:gap-6 lg:gap-10 pt-4 mt-4">
+            <div className="flex flex-wrap justify-center sm:justify-start items-center gap-4 sm:gap-6 lg:gap-10 pt-4 mt-2">
               {/* Complimentary session */}
               <div className="flex items-center gap-2 sm:gap-3">
                 <img

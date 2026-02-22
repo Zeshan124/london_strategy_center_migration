@@ -47,7 +47,7 @@ export default function WhyActNow() {
   ];
 
   return (
-    <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-12">
+    <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24">
       {/* Container */}
       <div className="mx-auto px-4 sm:px-6 lg:px-24">
         {/* Header */}

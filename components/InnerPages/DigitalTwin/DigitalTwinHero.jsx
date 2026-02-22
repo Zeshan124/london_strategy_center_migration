@@ -32,6 +32,9 @@ export default function DigitalTwinHero() {
           </div>
 
           {/* Title */}
+          <p className="text-xs font-bold tracking-widest text-[#0E2253] uppercase mb-4">
+           Transform Leadership Logic into
+          </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-6">
             Scalable Intelligence
           </h1>
@@ -68,12 +71,12 @@ export default function DigitalTwinHero() {
             <video
               src="/images/InnerPages/digitaltwin/Paul_Nanson.mp4"
               autoPlay
-              muted
               loop
               playsInline
+              controls
               className="w-full h-full object-cover rounded-2xl"
             />
-          </div>
+          </div> 
         </div>
       </div>
     </>

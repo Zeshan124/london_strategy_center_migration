@@ -138,9 +138,9 @@ export default function FreeMaterialsSection() {
     <section className="bg-white py-8 sm:py-12 md:py-16 lg:py-8">
       <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
         {/* Filters Section */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12 lg:mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12 lg:mb-16">
           {/* Category Dropdown */}
-          <div className="relative w-full sm:w-48 md:w-56">
+          <div className="relative col-span-1">
             <button
               onClick={() => {
                 setIsCategoryOpen(!isCategoryOpen);
@@ -171,7 +171,7 @@ export default function FreeMaterialsSection() {
           </div>
 
           {/* Sort Dropdown */}
-          <div className="relative w-full sm:w-48 md:w-56">
+          <div className="relative col-span-1">
             <button
               onClick={() => {
                 setIsSortOpen(!isSortOpen);
@@ -202,7 +202,7 @@ export default function FreeMaterialsSection() {
           </div>
 
           {/* Search Input */}
-          <div className="relative flex-1">
+          <div className="relative col-span-1 sm:col-span-2">
             <input
               type="text"
               placeholder="Search"

@@ -55,7 +55,7 @@ const LearningGlobalModels = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen px-4 py-12 relative overflow-hidden">
+    <div className="w-full min-h-screen px-4 py-8 relative overflow-hidden">
       {/* Subtle Background Pattern */}
 
       {/* Decorative Elements */}
@@ -173,7 +173,7 @@ const LearningGlobalModels = () => {
             Innovation and Technology (DSIT).
           </p>
         </div>
-        <div className="px-4 sm:px-6 lg:px-0 py-8 sm:py-12 lg:py-8">
+        <div className="px-4 sm:px-6 lg:px-0 py-8 sm:py-12 lg:py-20">
           {/* Header */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl text-gray-900 mb-8 sm:mb-12">
             Message From Our Principal
@@ -182,13 +182,13 @@ const LearningGlobalModels = () => {
           {/* Profile Section */}
           <div className="flex items-start gap-4 sm:gap-6 mb-8 sm:mb-10">
             <img
-              src="/images/InnerPages/cyberexcellence/major.png"
+              src="/images/InnerPages/cyberexcellence/major.svg"
               alt="Dr Adnan Alturkistani"
-              className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full object-cover flex-shrink-0"
+              className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-xl object-cover flex-shrink-0"
             />
             <div className="flex flex-col justify-center">
-              <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-1">
-                Major General Paul Nanson Principal,
+              <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-1 border-b-2 border-gray-300 pb-1">
+                Major General Paul Nanson
               </h2>
               <p className="text-sm sm:text-base text-gray-600">Principal,</p>
               <p className="text-sm sm:text-base font-semibold text-gray-900">

@@ -4,21 +4,21 @@ export default function DigitalExecutives() {
   const features = [
     {
       id: 1,
-      icon: "/images/InnerPages/digitaltwin/psychology.png",
+      icon: "/images/InnerPages/digitaltwin/psychology.svg",
       title: "Cognitive Modelling",
       description:
         "Models how you frame problems, sequence decisions, and manage trade-offs under pressure through continuous learning.",
     },
     {
       id: 2,
-      icon: "/images/InnerPages/digitaltwin/stacks.png",
+      icon: "/images/InnerPages/digitaltwin/stacks.svg",
       title: "Structured Frameworks",
       description:
         "Interprets interactions through leadership and business growth frameworks to build your evolving cognitive profile.",
     },
     {
       id: 3,
-      icon: "/images/InnerPages/digitaltwin/vital_signs.png",
+      icon: "/images/InnerPages/digitaltwin/vital_signs.svg",
       title: "Live Context Learning",
       description:
         "Strengthens judgment and accelerates learning cycles within your actual work environment and challenges.",
@@ -31,7 +31,7 @@ export default function DigitalExecutives() {
       <section className="bg-[#F1EEEA]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
           {/* Left Content */}
-          <div className="bg-[#F1EEEA] px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-14 lg:py-16 flex flex-col justify-center">
+          <div className="bg-[#F1EEEA] px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-14 lg:py-18 flex flex-col justify-center">
             <p className="text-xs font-bold tracking-widest text-[#0E2253] uppercase mb-4">
               AI DIGITAL TWIN EXECUTIVE COACH
             </p>

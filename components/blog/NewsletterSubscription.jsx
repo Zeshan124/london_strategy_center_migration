@@ -35,7 +35,7 @@ export default function NewsletterSubscription() {
                 </p>
 
                 {/* Heading */}
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-light text-gray-900 leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[34px] font-light text-gray-900 leading-tight">
                   Featured Insights: Explore the ideas shaping the future of business
                 </h2>
               </div>
@@ -48,7 +48,7 @@ export default function NewsletterSubscription() {
                             className="
                                 flex flex-col gap-3
                                 sm:flex-row sm:gap-0
-                                sm:border sm:border-gray-300 sm:rounded-lg
+                                sm:border sm:border-gray-300 sm:rounded-xl
                                 sm:focus-within:border-[#1e3a6b]
                                 sm:focus-within:ring-2 sm:focus-within:ring-[#1e3a6b]/20
                                 sm:bg-white

@@ -9,25 +9,25 @@ export default function CertificationLevel() {
       number: "1",
       title: "Entry Level",
       desc: "Self-assessment for low-risk organisations.",
-      img: "/images/InnerPages/cyberexcellence/Level-1.png",
+      img: "/images/InnerPages/cyberexcellence/Level-1.svg",
     },
     {
       number: "2",
       title: "Foundation Level",
       desc: "Additional controls for low-risk organisations.",
-      img: "/images/InnerPages/cyberexcellence/Level-2.png",
+      img: "/images/InnerPages/cyberexcellence/Level-2.svg",
     },
     {
       number: "3",
       title: "Certified Level",
       desc: "Independent assessment for moderate-risk organisations.",
-      img: "/images/InnerPages/cyberexcellence/Level-3.png",
+      img: "/images/InnerPages/cyberexcellence/Level-3.svg",
     },
     {
       number: "4",
       title: "Assured Level",
       desc: "Highest standard for critical infrastructure.",
-      img: "/images/InnerPages/cyberexcellence/Level-4.png",
+      img: "/images/InnerPages/cyberexcellence/Level-4.svg",
     },
   ];
 
@@ -69,7 +69,7 @@ export default function CertificationLevel() {
         </div>
 
         {/* Certification Cards Grid - Fully Responsive */}
-        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7 md:gap-8 mb-12 sm:mb-16 md:mb-20">
+        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7 md:gap-16 mb-12 sm:mb-16 md:mb-20">
           {certifications.map((cert, index) => (
             <div
               key={index}
@@ -79,7 +79,7 @@ export default function CertificationLevel() {
               <div className="flex flex-col items-center sm:items-start">
                 {/* Logo Image - Responsive sizing */}
                 <div className="mb-4 sm:mb-5 md:mb-6 w-full flex justify-center sm:justify-start">
-                  <div className="relative w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 flex items-center justify-center">
+                  <div className="relative flex items-center justify-center">
                     <Image
                       src={cert.img}
                       alt={cert.title}
@@ -91,7 +91,7 @@ export default function CertificationLevel() {
                 </div>
 
                 {/* Title - Responsive text */}
-                <h3 className="text-lg sm:text-xl md:text-xl text-gray-900 mb-2 sm:mb-3 text-center sm:text-left">
+                <h3 className="text-lg sm:text-xl md:text-2xl text-gray-900 mb-2 sm:mb-3 text-center sm:text-left">
                   {cert.title}
                 </h3>
 

@@ -134,7 +134,7 @@ export default function FeaturedCampaignsCarousel() {
   };
 
   return (
-    <div className="min-h-screen bg-white px-6 lg:px-8 py-12">
+    <div className="bg-white px-6 lg:px-8 py-2">
       <div className="mx-auto px-6 sm:px-8 lg:px-8 xl:px-24">
         {/* Title */}
         <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-12">
@@ -142,7 +142,7 @@ export default function FeaturedCampaignsCarousel() {
         </h2>
 
         {/* Carousel Container */}
-        <div className="relative mb-8">
+        <div className="relative mb-6">
           <Swiper
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}

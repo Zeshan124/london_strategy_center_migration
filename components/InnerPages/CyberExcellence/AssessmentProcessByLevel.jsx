@@ -56,7 +56,7 @@ const AssessmentProcessByLevel = () => {
   ];
 
   return (
-    <div className="w-full bg-[#F1EEEA] py-15">
+    <div className="w-full bg-[#F1EEEA] py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
         {/* Header */}
         <div className="mb-12">
