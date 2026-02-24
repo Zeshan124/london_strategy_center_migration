@@ -14,24 +14,24 @@ import {
 const LearningGlobalModels = () => {
   const topStats = [
     {
-      icon: "/images/InnerPages/CyberExcellence/bookmark_stacks.png",
+      icon: "/images/InnerPages/CyberExcellence/bookmark_stacks.svg",
       percentage: "99%",
       description:
         "of organisations see improved executive engagement with cybersecurity.",
     },
     {
-      icon: "/images/InnerPages/CyberExcellence/article_shortcut.png",
+      icon: "/images/InnerPages/CyberExcellence/article_shortcut.svg",
       percentage: "82%",
       description: "of buyers prefer certified suppliers.",
     },
     {
-      icon: "/images/InnerPages/CyberExcellence/shoppingmode.png",
+      icon: "/images/InnerPages/CyberExcellence/shoppingmode.svg",
       percentage: "61%",
       description:
         "of organisations see improved executive engagement with cybersecurity.",
     },
     {
-      icon: "/images/InnerPages/CyberExcellence/forms_apps_script.png",
+      icon: "/images/InnerPages/CyberExcellence/forms_apps_script.svg",
       percentage: "71%",
       description:
         "of organisations see improved executive engagement with cybersecurity.",
@@ -40,16 +40,16 @@ const LearningGlobalModels = () => {
 
   const bottomStats = [
     {
-      icon: "/images/InnerPages/CyberExcellence/fact_check.png",
+      icon: "/images/InnerPages/CyberExcellence/fact_check.svg",
       description: "80% reduction in cyber incidents among certified partners",
     },
     {
-      icon: "/images/InnerPages/CyberExcellence/inventory_2.png",
+      icon: "/images/InnerPages/CyberExcellence/inventory_2.svg",
       description:
         "A unified assurance standard across thousands of suppliers.",
     },
     {
-      icon: "/images/InnerPages/CyberExcellence/badge.png",
+      icon: "/images/InnerPages/CyberExcellence/badge.svg",
       description: "Simplified compliance via independent certification.",
     },
   ];

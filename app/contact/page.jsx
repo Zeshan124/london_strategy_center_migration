@@ -8,7 +8,7 @@ const page = () => {
     <div className="min-h-screen">
       <Navbar />
       <main>
-       <ContactPage />
+        <ContactPage />
       </main>
       <Footer />
     </div>

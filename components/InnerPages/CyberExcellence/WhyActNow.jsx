@@ -4,28 +4,28 @@ export default function WhyActNow() {
   const features = [
     {
       id: 1,
-      icon: "/images/InnerPages/cyberexcellence/verified.png",
+      icon: "/images/InnerPages/cyberexcellence/verified.svg",
       title: "Proven Imapct",
       description:
         "We help individuals and organisations grow through advanced strategy, leadership, and innovation development.",
     },
     {
       id: 2,
-       icon: "/images/InnerPages/cyberexcellence/flag-mountain.png",
+       icon: "/images/InnerPages/cyberexcellence/flag-mountain.svg",
       title: "Commercial Advantage",
       description:
         "We provide world-class programmes to unlock leadership and strategic potential at the executive level.",
     },
     {
       id: 3,
-     icon: "/images/InnerPages/cyberexcellence/strategy.png",
+     icon: "/images/InnerPages/cyberexcellence/strategy.svg",
       title: "Scalable Approach",
       description:
         "We use contemporary, immersive executive education to improve thinking and organisational performance.",
     },
     {
       id: 4,
-  icon: "/images/InnerPages/cyberexcellence/alt_route.png",
+  icon: "/images/InnerPages/cyberexcellence/alt_route.svg",
       title: "Cultural Change",
       description:
         "We blend entrepreneurship, strategy courses, and technology-enabled learning to create tailored solutions.",

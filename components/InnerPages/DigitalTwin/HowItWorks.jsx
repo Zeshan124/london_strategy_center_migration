@@ -14,14 +14,14 @@ export default function HowItWorks() {
       icon: "/images/InnerPages/digitaltwin/graph_4.svg",
       title: "Connect with the Digital Twin",
       description:
-        "Build a leadership-anchored system that continuously tests alignment to strategic intent.",
+        "Engage directly with the AI Digital Twin in a secure, private environment.",
     },
     {
       id: 3,
       icon: "/images/InnerPages/digitaltwin/tactic.svg",
-      title: "Scale Across Enterprise",
+      title: "Engage in Strategic Dialogue",
       description:
-        "Engage directly with the AI Digital Twin in a secure, private environment.",
+        "Experience a focused, time-limited interaction designed to surface leadership insight and decision logic.",
     },
     // {
     //   id: 5,
@@ -100,16 +100,16 @@ export default function HowItWorks() {
               </div>
 
               {/* Buttons - Responsive stacking */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto md:flex-shrink-0">
-                 <button className="group inline-flex items-center gap-2 px-6 py-3 bg-[white] border-2 border-[#0E2253] text-gray-900 rounded-xl text-sm hover:bg-gray-900 hover:text-white transition-all duration-300">
-              BOOK FREE SESSION
-              <img
-                src="/images/InnerPages/digitaltwin/arrow-up.svg"
-                alt="Play Icon"
-                className="w-4 h-4 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
-              />
-            </button>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto md:flex-shrink-0 sm:pt-10">
+  <button className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 bg-white border-2 border-[#0E2253] text-gray-900 rounded-xl text-sm text-center hover:bg-gray-900 hover:text-white transition-all duration-300">
+    BOOK FREE SESSION
+    <img
+      src="/images/InnerPages/digitaltwin/arrow-up.svg"
+      alt="Play Icon"
+      className="w-4 h-4 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+    />
+  </button>
+</div>
             </div>
             <div className="flex flex-wrap justify-center sm:justify-start items-center gap-4 sm:gap-6 lg:gap-10 pt-4 mt-2">
               {/* Complimentary session */}
