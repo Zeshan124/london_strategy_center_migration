@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const DigitalTwinProcess = () => {
   return (
-    <div className="w-full bg-gradient-to-b from-white to-[#F1EEEA] py-16 md:py-20">
+    <div className="w-full bg-gradient-to-b from-white to-[#F1EEEA] py-6 md:py-20">
       <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
         {/* Process Image */}
         <div className="hidden md:block mb-12 md:mb-16">
@@ -21,7 +21,7 @@ const DigitalTwinProcess = () => {
         </div>
 
         <div className="block md:hidden mb-12 md:mb-16">
-          <div className="relative w-full h-[400px] sm:h-[550px] md:h-[450px] lg:h-[520px]">
+          <div className="relative w-full h-[500px] sm:h-[550px] md:h-[450px] lg:h-[520px]">
             <Image
               src="/images/InnerPages/digitaltwin/mob-process.png"
               alt="Digital Twin Lifecycle Process"
