@@ -4,7 +4,6 @@ import FeaturedInsightsHeader from "@/components/blog/FeaturedInsightsHeader";
 import NewsletterSubscription from "@/components/blog/NewsletterSubscription";
 import Footer from "@/components/Home/Footer";
 import Navbar from "@/components/Navbar";
-import ContactFormSection from "@/components/InnerPages/CyberExcellence/ContactFormSection";
 import ExperienceSection from "@/components/InnerPages/CyberExcellence/ExperienceSection";
 import LearningObjectives from "@/components/InnerPages/CyberExcellence/LearningObjectives";
 import React from "react";
@@ -22,6 +21,7 @@ import DigitalExecutives from "@/components/InnerPages/DigitalTwin/DigitalExecut
 import OrganizationalLeadership from "@/components/InnerPages/DigitalTwin/OrganizationalLeadership";
 import DigitalTwinProcess from "@/components/InnerPages/DigitalTwin/DigitalTwinProcess";
 import HowItWorks from "@/components/InnerPages/DigitalTwin/HowItWorks";
+import ContactFormSection from "@/components/InnerPages/DigitalTwin/ContactFormSection";
 
 const page = () => {
   return (
@@ -33,6 +33,7 @@ const page = () => {
         <OrganizationalLeadership />
         <DigitalTwinProcess />
         <HowItWorks />
+        <ContactFormSection />
       </main>
       <Footer />
     </div>
