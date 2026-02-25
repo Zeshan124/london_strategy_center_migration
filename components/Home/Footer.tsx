@@ -30,8 +30,7 @@ export default function Footer() {
           {/* Company Description */}
           <div className="lg:col-span-1">
             <p className="text-sm sm:text-base lg:text-xl text-gray-800 leading-relaxed">
-              Leading business consulting firm delivering strategic solutions
-              and sustainable growth for companies worldwide.
+             LSC is a capability transformation partner integrating people, practice, and technology to build organisational intelligence and sustained performance under complexity.
             </p>
           </div>
 

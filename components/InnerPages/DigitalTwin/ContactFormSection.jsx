@@ -48,7 +48,7 @@ export default function ContactFormSection() {
           {/* Header */}
           <div className="mb-8 sm:mb-10 lg:mb-12">
             <h2 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 mb-3 sm:mb-4">
-              Book Free Session
+              Book a virtual one-one session with Major General Paul Nanson CB CBE
             </h2>
             <p className="text-xs sm:text-sm text-gray-700 uppercase tracking-wide">
               REGISTER YOUR INTEREST AND OUR TEAM WILL BE IN TOUCH
