@@ -4,8 +4,6 @@ import FeaturedInsightsHeader from "@/components/blog/FeaturedInsightsHeader";
 import NewsletterSubscription from "@/components/blog/NewsletterSubscription";
 import Footer from "@/components/Home/Footer";
 import Navbar from "@/components/Navbar";
-import ContactFormSection from "@/components/InnerPages/CyberExcellence/ContactFormSection";
-import Executives from "@/components/InnerPages/CyberExcellence/Executives";
 import ExperienceSection from "@/components/InnerPages/CyberExcellence/ExperienceSection";
 import LearningObjectives from "@/components/InnerPages/CyberExcellence/LearningObjectives";
 import React from "react";
@@ -17,24 +15,26 @@ import TimelineSection from "@/components/InnerPages/CyberExcellence/TimelineSec
 import LearningGlobalModels from "@/components/InnerPages/CyberExcellence/LearningGlobalModels";
 import AssessmentProcessByLevel from "@/components/InnerPages/CyberExcellence/AssessmentProcessByLevel";
 import WhyActNow from "@/components/InnerPages/CyberExcellence/WhyActNow";
-import HeroBanner from "@/components/press-releases/PressReleaseHero";
-import PartnershipQuoteSection from "@/components/press-releases/PartnershipQuoteSection";
-import PressReleaseHero from "@/components/press-releases/PressReleaseHero";
-import AboutOrganizations from "@/components/press-releases/AboutOrganizations";
-import CTApartners from "@/components/press-releases/CTApartners";
+import UniBirmingham from "@/components/InnerPages/CyberExcellence/UniBirmingham";
+import DigitalExecutives from "@/components/InnerPages/DigitalTwin/DigitalExecutives";
+import OrganizationalLeadership from "@/components/InnerPages/DigitalTwin/OrganizationalLeadership";
+import DigitalTwinProcess from "@/components/InnerPages/DigitalTwin/DigitalTwinProcess";
+import HowItWorks from "@/components/InnerPages/DigitalTwin/HowItWorks";
+import ContactFormSection from "@/components/InnerPages/DigitalTwin/ContactFormSection";
+import ReframeReadsHero from "@/components/ReframeReads/ReframeReadsHero";
+import PodcastCarousel from "@/components/ReframeReads/PodcastCarousel";
 
 const page = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
       <main>
-        <PressReleaseHero />
-        <CTApartners />
-        <AboutOrganizations />
-        {/* <PartnershipQuoteSection /> */}
-        {/* <StrategyCourseComponent />
-        <LearningObjectives />
-        <ExperienceSection /> */}
+        <ReframeReadsHero />
+        <PodcastCarousel />
+        <DigitalExecutives />
+        <OrganizationalLeadership />
+        <DigitalTwinProcess />
+        <HowItWorks />
         <ContactFormSection />
       </main>
       <Footer />

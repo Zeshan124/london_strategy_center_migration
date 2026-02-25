@@ -102,7 +102,7 @@ export default function PressReleaseHero() {
       <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-8 sm:py-8 md:py-8 pt-24 lg:pt-34">
         <article>
           {/* Breadcrumb */}
-          <nav className="mb-8">
+          {/* <nav className="mb-8">
             <ol className="flex items-center gap-2 text-sm text-slate-600">
               <li>
                 <a href="/" className="hover:text-[#0E2253] transition-colors">
@@ -121,18 +121,17 @@ export default function PressReleaseHero() {
               <li>/</li>
               <li className="text-slate-900 font-medium">Current Release</li>
             </ol>
-          </nav>
+          </nav> */}
 
           {/* Category Badge */}
           <div className="mb-6">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium">
-              <Building2 className="w-4 h-4" />
+            <span className="inline-flex items-center gap-2 px-4 py-3 border rounded-lg text-xs sm:text-sm font-bold">
               Strategic Partnership
             </span>
           </div>
 
           {/* Headline */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-4 sm:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-light leading-tight text-gray-900 mb-4 sm:mb-6">
             London Strategy Centre and MILE Announce Strategic Collaboration
           </h2>
 
@@ -143,7 +142,7 @@ export default function PressReleaseHero() {
           </p>
 
           {/* Meta Information */}
-          <div className="flex flex-wrap items-center gap-6 pb-8 mb-8 border-b border-slate-200 pt-4">
+          <div className="flex flex-wrap items-center gap-6 pb-4 mb-4 pt-4">
             <div className="flex items-center gap-2 text-slate-600">
               <Calendar className="w-5 h-5 text-[#0E2253]" />
               <span className="text-sm font-medium">February 11, 2026</span>
@@ -161,27 +160,26 @@ export default function PressReleaseHero() {
           </div>
 
           {/* Featured Image */}
-          <div className="relative h-[400px] sm:h-[500px] lg:h-[600px] mb-12 rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative h-[150px] sm:h-[500px] lg:h-[500px] mb-12 overflow-hidden">
             <Image
-              src="/images/InnerPages/cyberexcellence/Main-Slider.jpg"
+              src="/images/press-release/Main-Slider.jpg"
               alt="London Strategy Centre and MILE Strategic Collaboration"
               fill
-              className="object-cover"
+              className="object-contain"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent"></div>
           </div>
 
           {/* Article Body */}
           <div className="prose prose-lg max-w-none">
             {/* Opening Dateline */}
-            <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-6">
+            <p className="text-sm font-semibold text-[#0E2253] uppercase tracking-wide mb-6">
               LONDON, UK and RIYADH, SAUDI ARABIA — February 11, 2026
             </p>
 
             {/* Paragraphs */}
             <div className="space-y-6 text-slate-700 leading-relaxed">
-              <p className="text-sm sm:text-base lg:text-base text-gray-700 leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-slate-900 first-letter:mr-2 first-letter:float-left first-letter:leading-none">
+              <p className="text-sm sm:text-base lg:text-base text-gray-700 leading-relaxed">
                 London Strategy Centre and MILE are pleased to announce a
                 strategic collaboration aimed at transforming the practice of
                 management around the world. Both organisations share a
