@@ -28,9 +28,9 @@ import Image from "next/image";
 export default function ReframeReadsHero() {
   return (
     <>
-      <div className="min-h-screen bg-white lg:pt-28 py-12">
+      <div className="min-h-screen bg-white lg:pt-28 py-0">
         {/* Full Width Container */}
-        <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-16 sm:py-8 md:py-8 lg:pt-16">
+        <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 pt-24 py-8 sm:py-8 md:py-8 lg:pt-16">
           {/* Category Badge */}
           <div className="mb-6">
             <div className="inline-block">
@@ -65,11 +65,11 @@ export default function ReframeReadsHero() {
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
-            <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#0E2253] text-white rounded-xl text-sm hover:bg-gray-800 transition-all duration-300">
+          <div className="flex gap-4 justify-center sm:justify-start">
+            <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#0E2253] text-white rounded-xl text-xs sm:text-sm hover:bg-gray-800 transition-all duration-300">
               JOIN US AS A SPEAKER
             </button>
-            <button className="group inline-flex items-center gap-2 px-6 py-3 bg-[white] border-2 border-[#0E2253] text-gray-900 rounded-xl font-medium text-sm hover:bg-gray-900 hover:text-white transition-all duration-300">
+            <button className="group inline-flex items-center gap-2 px-6 py-3 bg-[white] border-2 border-[#0E2253] text-gray-900 rounded-xl font-medium text-xs sm:text-sm hover:bg-gray-900 hover:text-white transition-all duration-300">
               REFRAME READS
               <img
                 src="/images/InnerPages/digitaltwin/arrow-up.svg"

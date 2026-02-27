@@ -20,6 +20,16 @@ const metropolis = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* FontAwesome icons (used by video section) */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          integrity="sha512-..." // optionally you can include integrity
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+      </head>
       <body className={`${metropolis.variable} antialiased`} suppressHydrationWarning>
         {children}
       </body>

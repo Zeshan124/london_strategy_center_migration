@@ -68,7 +68,7 @@ export default function PodcastCarousel() {
   };
 
   return (
-    <section className="bg-white py-12 sm:py-16 md:py-20">
+    <section className="bg-white py-12 sm:py-16 md:py-4">
       <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
         {/* Podcast Carousel */}
         <div className="mb-8">
@@ -104,7 +104,7 @@ export default function PodcastCarousel() {
             {podcasts.map((podcast) => (
               <SwiperSlide key={podcast.id}>
                 {/* Featured Podcast Banner */}
-                <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] rounded-3xl overflow-hidden">
+                <div className="relative w-full h-[100px] sm:h-[350px] md:h-[400px] rounded-2xl overflow-hidden">
                   {/* Background Image/Gradient */}
                   <div className="absolute inset-0 ">
                     {/* Network Pattern Overlay */}
@@ -116,7 +116,7 @@ export default function PodcastCarousel() {
                         src="/images/InnerPages/trl/podcast-banner.jpg"
                         alt="AI Pattern"
                         fill
-                        className="object-cover"
+                        className="object-contain"
                       />
                     </div>
                   </div>
