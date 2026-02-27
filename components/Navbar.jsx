@@ -273,29 +273,29 @@ const Navbar = () => {
                         <ul className="space-y-1 pl-0">
                           <li>
                             <Link
-                              href="#"
+                              href="/cyberexcellence"
                               className="text-sm text-gray-700 hover:text-gray-900 transition-colors bg-gray-100 block py-2 px-3 rounded"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
-                              Industries
+                             Cyber Excellence
                             </Link>
                           </li>
                           <li>
                             <Link
-                              href="#"
+                              href="/digital-twin"
                               className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
-                              Capabilities
+                              Digital Twin
                             </Link>
                           </li>
                           <li>
                             <Link
-                              href="#"
+                              href="/press-release"
                               className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
-                              LSC X
+                             Press Release
                             </Link>
                           </li>
                         </ul>
