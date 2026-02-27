@@ -23,7 +23,7 @@ export default function Executives() {
 
           <div>
             <img
-              src="/images/InnerPages/cyberexcellence/LSC-logo.svg"
+              src="/images/InnerPages/cyberexcellence/LSC-Logo.svg"
               alt="LSC Logo"
               className="w-40 mb-6"
             />
