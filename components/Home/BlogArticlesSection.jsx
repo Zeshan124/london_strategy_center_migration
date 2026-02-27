@@ -52,7 +52,6 @@ export default function BlogArticlesSection() {
               <div className="absolute inset-0 bg-[#0E2253]/50" />
 
               {/* Gradient Overlay */}
-             
 
               {/* Badge */}
               <div className="absolute top-6 left-6">
@@ -152,10 +151,10 @@ export default function BlogArticlesSection() {
 
                   {/* Read More Button */}
                   <div className="flex justify-end">
-                      <button className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-white text-white rounded-xl text-sm font-medium hover:bg-white hover:text-gray-900 transition-all duration-300">
-                    READ MORE
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+                    <button className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-white text-white rounded-xl text-sm font-medium hover:bg-white hover:text-gray-900 transition-all duration-300">
+                      READ MORE
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
                   </div>
                 </div>
               </div>

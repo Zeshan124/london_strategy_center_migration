@@ -21,7 +21,7 @@ import FeaturedCampaignsSection from "@/components/blog/FeaturedCampaignsSection
 export default function DigitalTwinHero() {
   return (
     <>
-      <div className="min-h-screen bg-white lg:pt-28 py-12">
+      <div className="min-h-screen bg-white lg:pt-28 py-6">
         {/* Full Width Container */}
         <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-16 sm:py-8 md:py-8 lg:pt-16">
           {/* Category Badge */}

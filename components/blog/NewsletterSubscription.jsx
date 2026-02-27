@@ -30,12 +30,12 @@ export default function NewsletterSubscription() {
               {/* Left Content */}
               <div>
                 {/* Label */}
-                <p className="text-[10px] sm:text-xs font-bold tracking-widest text-[#0E2253] mb-4 sm:mb-6 uppercase">
+                <p className="text-[10px] sm:text-xs font-bold tracking-widest text-[#0E2253] mb-4 sm:mb-6 uppercase md:text-left text-center">
                   Biweekly Newsletter Subscription
                 </p>
 
                 {/* Heading */}
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[34px] font-light text-gray-900 leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[34px] font-light text-gray-900 leading-tight md:text-left text-center">
                   Featured Insights: Explore the ideas shaping the future of business
                 </h2>
               </div>

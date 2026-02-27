@@ -21,7 +21,7 @@ import FeaturedCampaignsSection from "@/components/blog/FeaturedCampaignsSection
 export default function ServicesHero() {
   return (
     <>
-      <div className="min-h-screen bg-white lg:pt-28 py-12">
+      <div className="min-h-screen bg-white lg:pt-28 pt-16 py-0">
         {/* Full Width Container */}
         <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-8 sm:py-8 md:py-8 lg:pt-16">
           {/* Title */}
@@ -82,7 +82,7 @@ export default function ServicesHero() {
                    This programme offers tools and concepts that will help the participants to develop a strategic response which can turn digital threats into opportunities. It will enable participants to leverage digital opportunities to create competitive advantage and improve performance.
                   </div>
 
-                     <div className="text-base text-gray-700 leading-relaxed whitespace-pre-line mb-6">
+                     <div className="text-base text-gray-700 leading-relaxed whitespace-pre-line mb-0">
                     Participants on this programme will be led, not lectured, through a combination of presentations, facilitated discussion, and activity-based learning.
                   </div>
                 </div>

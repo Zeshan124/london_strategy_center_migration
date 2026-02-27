@@ -62,7 +62,7 @@ const LearningGlobalModels = () => {
       <div className="absolute top-20 right-10 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-slate-300/20 rounded-full blur-3xl"></div>
 
-      <div className="mx-auto px-6 sm:px-8 lg:px-24">
+      <div className="mx-auto px-6 sm:px-8 lg:px-24 text-center sm:text-left">
         {/* Header */}
         <div className="mb-16 animate-fade-in">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-4 sm:mb-6">
@@ -80,9 +80,9 @@ const LearningGlobalModels = () => {
                 className="group animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="flex flex-col items-start text-left">
+                <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
                   {/* Icon Circle */}
-                  <div className="mb-4 sm:mb-6 flex justify-start">
+                  <div className="mb-4 sm:mb-6 flex justify-center sm:justify-start">
                     <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20">
                       <img
                         src={stat.icon}
@@ -130,9 +130,9 @@ const LearningGlobalModels = () => {
                 className="group animate-fade-in-up"
                 style={{ animationDelay: `${600 + index * 100}ms` }}
               >
-                <div className="flex flex-col items-start text-left">
+                <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
                   {/* Icon Circle */}
-                  <div className="mb-4 sm:mb-6 flex justify-start">
+                  <div className="mb-4 sm:mb-6 flex justify-center sm:justify-start">
                     <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20">
                       <img
                         src={stat.icon}
@@ -180,7 +180,7 @@ const LearningGlobalModels = () => {
           </h1>
 
           {/* Profile Section */}
-          <div className="flex items-start gap-4 sm:gap-6 mb-8 sm:mb-10">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 mb-8 sm:mb-10 text-center sm:text-left">
             <img
               src="/images/InnerPages/cyberexcellence/major.svg"
               alt="Dr Adnan Alturkistani"
