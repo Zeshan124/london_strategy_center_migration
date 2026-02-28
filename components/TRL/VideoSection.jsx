@@ -172,7 +172,7 @@ export default function VideoSection({
             return (
               <div key={video.videoId} className={`group ${offsetClass}`}>
                 {/* Video Card */}
-                <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                <div className="bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
                   {/* Thumbnail Container */}
                   <div className="relative aspect-video overflow-hidden bg-slate-900">
                     {/* Video Thumbnail */}
@@ -235,7 +235,7 @@ export default function VideoSection({
                   {/* Card Body */}
                   <div className="p-5">
                     {/* Title */}
-                    <h3 className="text-lg font-semibold text-blue-600 mb-3 leading-tight hover:underline cursor-pointer line-clamp-2">
+                    <h3 className="text-sm font-semibold text-[#0095BF] mb-3 leading-tight hover:underline cursor-pointer line-clamp-2">
                       {video.title}
                     </h3>
 
