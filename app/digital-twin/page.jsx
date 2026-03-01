@@ -35,7 +35,7 @@ const page = () => {
         <ContactFormSection />
       </main>
       <Footer />
-      <ChatWidget />
+      {/* <ChatWidget /> */}
     </div>
   );
 };
