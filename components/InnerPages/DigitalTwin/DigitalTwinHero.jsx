@@ -18,9 +18,12 @@ import {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Home/Footer";
 import FeaturedCampaignsSection from "@/components/blog/FeaturedCampaignsSection";
+import DigitalAvatarModal from "./DigitalAvatarModal";
 
 export default function DigitalTwinHero() {
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isAvatarOpen, setIsAvatarOpen] = useState(false);
+  const [submittedName, setSubmittedName] = useState("");
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -52,11 +55,13 @@ export default function DigitalTwinHero() {
     }
 
     setIsSubmitting(true);
+    const name = formData.fullName;
 
-    // Open the digital avatar link after a brief delay
+    // Close the form and open the digital avatar in-page
     setTimeout(() => {
-      window.open("https://liveavatar-web-sdk-demo-ten.vercel.app/", "_blank");
+      setSubmittedName(name);
       setIsFormOpen(false);
+      setIsAvatarOpen(true);
       setFormData({
         fullName: "",
         email: "",
@@ -132,6 +137,13 @@ export default function DigitalTwinHero() {
           </div>
         </div>
       </div>
+
+      {/* Digital Avatar Modal */}
+      <DigitalAvatarModal
+        isOpen={isAvatarOpen}
+        onClose={() => setIsAvatarOpen(false)}
+        userName={submittedName}
+      />
 
       {/* Consultation Form Modal */}
       {isFormOpen && (
