@@ -277,7 +277,7 @@ const Navbar = () => {
                               className="text-sm text-gray-700 hover:text-gray-900 transition-colors bg-gray-100 block py-2 px-3 rounded"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
-                             Cyber Excellence
+                              Cyber Excellence
                             </Link>
                           </li>
                           <li>
@@ -295,7 +295,7 @@ const Navbar = () => {
                               className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
-                             Press Release
+                              Press Release
                             </Link>
                           </li>
                         </ul>
