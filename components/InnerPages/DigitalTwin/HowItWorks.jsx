@@ -1,5 +1,9 @@
 "use client";
 
+import DigitalAvatarModal from "./DigitalAvatarModal";
+import { X } from "lucide-react";
+import { useState } from "react";
+
 export default function HowItWorks() {
   const features = [
     {
@@ -38,6 +42,58 @@ export default function HowItWorks() {
     //     "We seek motivated, inquisitive individuals passionate about making a meaningful impact with excellence.",
     // },
   ];
+
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isAvatarOpen, setIsAvatarOpen] = useState(false);
+  const [submittedName, setSubmittedName] = useState("");
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    organization: "",
+    objective: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    // Validate required fields
+    if (
+      !formData.fullName.trim() ||
+      !formData.email.trim() ||
+      !formData.phone.trim()
+    ) {
+      alert("Please fill in all required fields");
+      return;
+    }
+
+    setIsSubmitting(true);
+    const name = formData.fullName;
+
+    // Close the form and open the digital avatar in-page
+    setTimeout(() => {
+      setSubmittedName(name);
+      setIsFormOpen(false);
+      setIsAvatarOpen(true);
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        organization: "",
+        objective: "",
+      });
+      setIsSubmitting(false);
+    }, 500);
+  };
 
   return (
     <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24">
@@ -100,16 +156,19 @@ export default function HowItWorks() {
               </div>
 
               {/* Buttons - Responsive stacking */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto md:flex-shrink-0 sm:pt-10">
-  <button className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 bg-white border-2 border-[#0E2253] text-gray-900 rounded-xl text-sm text-center hover:bg-gray-900 hover:text-white transition-all duration-300">
-    BOOK FREE SESSION
-    <img
-      src="/images/InnerPages/digitaltwin/arrow-up.svg"
-      alt="Play Icon"
-      className="w-4 h-4 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
-    />
-  </button>
-</div>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto md:flex-shrink-0 sm:pt-10">
+                <button
+                  onClick={() => setIsFormOpen(true)}
+                  className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 bg-white border-2 border-[#0E2253] text-gray-900 rounded-xl text-sm text-center hover:bg-gray-900 hover:text-white transition-all duration-300"
+                >
+                  BOOK FREE SESSION
+                  <img
+                    src="/images/InnerPages/digitaltwin/arrow-up.svg"
+                    alt="Play Icon"
+                    className="w-4 h-4 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                  />
+                </button>
+              </div>
             </div>
             <div className="flex flex-wrap justify-center sm:justify-start items-center gap-4 sm:gap-6 lg:gap-10 pt-4 mt-2">
               {/* Complimentary session */}
@@ -142,6 +201,129 @@ export default function HowItWorks() {
           </div>
         </div>
       </div>
+
+      {/* Digital Avatar Modal */}
+<DigitalAvatarModal
+  isOpen={isAvatarOpen}
+  onClose={() => setIsAvatarOpen(false)}
+  userName={submittedName}
+/>
+
+{/* Consultation Form Modal */}
+{isFormOpen && (
+  <div
+    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+    onClick={() => setIsFormOpen(false)}
+  >
+    <div
+      className="bg-white rounded-2xl shadow-lg w-full max-w-md max-h-[90vh] overflow-y-auto"
+      onClick={(e) => e.stopPropagation()}
+    >
+      {/* Modal Header */}
+      <div className="flex justify-between items-center p-6 border-b border-gray-200">
+        <h2 className="text-2xl font-bold text-[#0E2253]">
+          Book a Consultation
+        </h2>
+        <button
+          onClick={() => setIsFormOpen(false)}
+          className="text-gray-500 hover:text-gray-700 transition-colors"
+        >
+          <X size={24} />
+        </button>
+      </div>
+
+      {/* Modal Body */}
+      <form onSubmit={handleFormSubmit} className="p-6 space-y-4">
+        {/* Full Name */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-900 mb-2">
+            Full Name *
+          </label>
+          <input
+            type="text"
+            name="fullName"
+            value={formData.fullName}
+            onChange={handleInputChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0E2253]"
+            placeholder="Enter your full name"
+          />
+        </div>
+
+        {/* Email */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-900 mb-2">
+            Email Address *
+          </label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0E2253]"
+            placeholder="Enter your email"
+          />
+        </div>
+
+        {/* Phone */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-900 mb-2">
+            Phone *
+          </label>
+          <input
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleInputChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0E2253]"
+            placeholder="Enter your phone number"
+          />
+        </div>
+
+        {/* Organization */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-900 mb-2">
+            Organization
+          </label>
+          <input
+            type="text"
+            name="organization"
+            value={formData.organization}
+            onChange={handleInputChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0E2253]"
+            placeholder="Enter your organization"
+          />
+        </div>
+
+        {/* Objective */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-900 mb-2">
+            Objective
+          </label>
+          <textarea
+            name="objective"
+            value={formData.objective}
+            onChange={handleInputChange}
+            rows="4"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0E2253]"
+            placeholder="Describe your objectives"
+          />
+        </div>
+
+        {/* Submit */}
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full bg-[#0E2253] text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 disabled:opacity-50"
+        >
+          {isSubmitting ? "Opening Avatar..." : "Book a Free Session"}
+        </button>
+      </form>
+    </div>
+  </div>
+)}
     </section>
   );
 }

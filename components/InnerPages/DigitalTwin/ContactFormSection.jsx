@@ -20,13 +20,12 @@ export default function ContactFormSection() {
     });
   };
 
-  const handleSubmit = () => {
-    console.log("Form submitted:", formData);
-    // Add your form submission logic here
-    
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
     // Show success modal
     setShowSuccessModal(true);
-    
+
     // Reset form
     setFormData({
       fullName: "",
@@ -48,7 +47,10 @@ export default function ContactFormSection() {
           {/* Header */}
           <div className="mb-8 sm:mb-10 lg:mb-12">
             <h2 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900 mb-3 sm:mb-4">
-              Book a virtual one-one session with <span className="font-medium">Major General Paul Nanson CB CBE</span> 
+              Book a virtual one-one session with{" "}
+              <span className="font-medium">
+                Major General Paul Nanson CB CBE
+              </span>
             </h2>
             <p className="text-xs sm:text-sm text-gray-700 uppercase tracking-wide">
               REGISTER YOUR INTEREST AND OUR TEAM WILL BE IN TOUCH
@@ -56,12 +58,13 @@ export default function ContactFormSection() {
           </div>
 
           {/* Form */}
-          <div className="space-y-5 sm:space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
             {/* Row 1: Full Name & Email */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
               <input
                 type="text"
                 name="fullName"
+                required
                 value={formData.fullName}
                 onChange={handleChange}
                 placeholder="Full Name"
@@ -70,6 +73,7 @@ export default function ContactFormSection() {
               <input
                 type="email"
                 name="email"
+                required
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Email Address"
@@ -82,6 +86,7 @@ export default function ContactFormSection() {
               <input
                 type="tel"
                 name="phone"
+                required
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="Phone Number"
@@ -90,6 +95,7 @@ export default function ContactFormSection() {
               <input
                 type="text"
                 name="organisation"
+                required
                 value={formData.organisation}
                 onChange={handleChange}
                 placeholder="Organisation"
@@ -102,6 +108,7 @@ export default function ContactFormSection() {
               <input
                 type="text"
                 name="objective"
+                required
                 value={formData.objective}
                 onChange={handleChange}
                 placeholder="Objective"
@@ -112,13 +119,13 @@ export default function ContactFormSection() {
             {/* Submit Button */}
             <div className="flex justify-end pt-4">
               <button
-                onClick={handleSubmit}
+               type="submit"
                 className="px-12 sm:px-16 md:px-24 py-3.5 sm:py-4 bg-[#0a1d4a] text-white rounded-lg font-medium text-sm hover:bg-[#1e3a6b] transition-all duration-300 uppercase tracking-wide"
               >
                 SUBMIT
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </section>
 
