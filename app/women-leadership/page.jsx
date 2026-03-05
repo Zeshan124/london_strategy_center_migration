@@ -23,6 +23,9 @@ import WomenLeadershipHero from "@/components/InnerPages/WDL/WomenLeadershipHero
 import CTASection from "@/components/InnerPages/WDL/CTASection";
 import ProgrammeCommitment from "@/components/InnerPages/WDL/ProgrammeCommitment";
 import PerfectFit from "@/components/InnerPages/WDL/PerfectFit";
+import ProgramHighlights from "@/components/InnerPages/WDL/ProgramHighlights";
+import GalaDinner from "@/components/InnerPages/WDL/GalaDinner";
+import MeetTheTeam from "@/components/InnerPages/WDL/MeetTheTeam";
 
 const page = () => {
   return (
@@ -33,9 +36,9 @@ const page = () => {
         <CTASection />
         <ProgrammeCommitment />
         <PerfectFit />
-        <OrganizationalLeadership />
-        <DigitalTwinProcess />
-        <HowItWorks />
+        <ProgramHighlights />
+        <GalaDinner />
+        <MeetTheTeam />
         <ContactFormSection />
       </main>
       <Footer />
