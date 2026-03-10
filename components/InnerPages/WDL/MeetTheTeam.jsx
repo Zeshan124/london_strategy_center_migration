@@ -9,7 +9,7 @@ const teamMembers = [
     role: 'PROGRAMME DIRECTOR',
     title: 'Head of Subject and Associate Professor',
     organization: 'University of Birmingham Dubai',
-    image: '/images/about/paul-nanson.jpg',
+    image: '/images/InnerPages/WDL/dr-heather.svg',
   },
   {
     id: '2',
@@ -17,7 +17,7 @@ const teamMembers = [
     role: 'PROGRAMME DIRECTOR',
     title: 'Principal at',
     organization: 'London Strategy Centre',
-    image: '/images/about/paul-nanson.jpg',
+    image: '/images/InnerPages/WDL/saskia.svg',
   },
   {
     id: '3',
@@ -25,7 +25,7 @@ const teamMembers = [
     role: 'PROGRAMME DIRECTOR',
     title: 'CEO at',
     organization: 'London Strategy Centre',
-    image: '/images/about/imran-zawwar.jpg',
+    image: '/images/InnerPages/WDL/maya.svg',
   },
 ];
 

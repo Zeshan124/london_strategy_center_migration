@@ -26,6 +26,9 @@ import PerfectFit from "@/components/InnerPages/WDL/PerfectFit";
 import ProgramHighlights from "@/components/InnerPages/WDL/ProgramHighlights";
 import GalaDinner from "@/components/InnerPages/WDL/GalaDinner";
 import MeetTheTeam from "@/components/InnerPages/WDL/MeetTheTeam";
+import ProfessorYusra from "@/components/InnerPages/WDL/ProfessorYusra";
+import SampleCertificate from "@/components/InnerPages/WDL/SampleCertificate";
+import ProgrammeFeesPartners from "@/components/InnerPages/WDL/ProgrammeFeesPartners";
 
 const page = () => {
   return (
@@ -39,7 +42,9 @@ const page = () => {
         <ProgramHighlights />
         <GalaDinner />
         <MeetTheTeam />
-        <ContactFormSection />
+        <ProfessorYusra />
+        <SampleCertificate />
+        {/* <ProgrammeFeesPartners /> */}
       </main>
       <Footer />
       {/* <ChatWidget /> */}

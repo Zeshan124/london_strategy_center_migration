@@ -298,6 +298,24 @@ const Navbar = () => {
                               Press Release
                             </Link>
                           </li>
+                           <li>
+                            <Link
+                              href="/trl"
+                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              TRL
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/women-leadership"
+                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              WDL
+                            </Link>
+                          </li>
                         </ul>
                       </div>
 
