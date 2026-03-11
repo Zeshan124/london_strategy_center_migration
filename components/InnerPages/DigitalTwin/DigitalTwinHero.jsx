@@ -107,14 +107,14 @@ export default function DigitalTwinHero() {
           </div>
 
           <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
-            <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#0E2253] text-white rounded-xl text-sm hover:bg-gray-800 transition-all duration-300">
+            <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#0E2253] text-white rounded-xl text-xs hover:bg-gray-800 transition-all duration-300">
               DISCOVER HOW IT WORKS
             </button>
             <button
               onClick={() => setIsFormOpen(true)}
-              className="group inline-flex items-center gap-2 px-6 py-3 bg-[white] border-2 border-[#0E2253] text-gray-900 rounded-xl font-medium text-sm hover:bg-gray-900 hover:text-white transition-all duration-300"
+              className="group inline-flex items-center gap-2 px-6 py-3 bg-[white] border-2 border-[#0E2253] text-gray-900 rounded-xl font-medium text-xs hover:bg-[#0E2253] hover:text-white transition-all duration-300"
             >
-              BOOK A CONSULTATION
+              BOOK FREE DIGITAL TWIN CONSULTATION
               <img
                 src="/images/InnerPages/digitaltwin/arrow-up.svg"
                 alt="Play Icon"
