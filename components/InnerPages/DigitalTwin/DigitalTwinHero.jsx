@@ -107,7 +107,10 @@ export default function DigitalTwinHero() {
           </div>
 
           <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
-            <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#0E2253] text-white rounded-xl text-xs hover:bg-gray-800 transition-all duration-300">
+            <button
+              onClick={() => document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" })}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#0E2253] text-white rounded-xl text-xs hover:bg-gray-800 transition-all duration-300"
+            >
               DISCOVER HOW IT WORKS
             </button>
             <button
