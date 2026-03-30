@@ -7,18 +7,18 @@ export default function AboutSection() {
   const [activeTab, setActiveTab] = useState("approach");
 
   const tabs = [
-    { id: "approach", label: "Our Approach", icon: "down" },
-    { id: "uniqueness", label: "Our Uniqueness", icon: "up" },
-    { id: "programmes", label: "Our Programmes", icon: "down" },
+    { id: "people", label: "People", icon: "down" },
+    { id: "practice", label: "Practice", icon: "up" },
+    { id: "technology", label: "Technology", icon: "down" },
   ];
 
   const content = {
-    approach:
-      "Our unique blend of Entrepreneurship facilitation, strategy courses, and technology-based learning solutions are cutting-edge and state-of-the-art. We provide customised programmes using problem-based learning design. For us, every client is a unique partner!",
-    uniqueness:
-      "Our blend of Entrepreneurship facilitation, strategy courses, and technology-based learning solutions are cutting-edge and state-of-the-art. We provide customised programmes using problem-based learning design. For us, every client is a unique partner!",
-    programmes:
-      "Our unique blend of Entrepreneurship facilitation, strategy courses, and technology-based learning solutions are cutting-edge and state-of-the-art. We provide customised programmes using problem-based learning design. For us, every client is a unique partner!",
+    people:
+      "We develop leaders and teams with the judgement, capability, and discipline required to lead and perform in complex environments. ",
+    practice:
+      "We advise organisations on implementing artificial intelligence, agentic leadership and cybernetic transformation, turning insights into effective action.",
+    technology:
+      "We design and build AI-enabled protocols and decision systems that strengthen how organisations think, decide, and execute.",
   };
 
   return (
@@ -33,17 +33,12 @@ export default function AboutSection() {
 
           {/* Main Heading */}
           <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl font-light leading-tight mb-6 sm:mb-8 text-gray-900">
-            An Elite Next Generation Executive Development Center
+            Built for Leaders Operating in Complex Systems
           </h2>
 
           {/* Description */}
           <p className="text-sm sm:text-base lg:text-base text-gray-700 leading-relaxed mb-8 sm:mb-10">
-            With our world-class expertise, large-scale networks and unrivalled
-            partnerships we develop people and organisations in strategy,
-            innovation and leadership, a distinctive combination. We are
-            committed to unlocking the potential of people and organisations by
-            working with business leaders and their management teams to overcome
-            industry specific challenges.
+            London Strategy Centre helps organisations build strategic intelligence that enable leaders to think clearly, decide effectively, and act decisively in complex environments. We combine capability development, strategic advisory, and AI-enabled systems to help organisations perform and adapt in complex and rapidly changing environments.
           </p>
 
           {/* Tab Buttons */}

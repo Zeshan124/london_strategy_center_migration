@@ -6,7 +6,7 @@ export default function CertificationsSection() {
       id: 1,
       badge: 'ADVANCED',
       duration: '12 WEEKS',
-      title: 'AI First Accreditation',
+      title: 'Artificial Intelligence',
       description: 'Comprehensive AI strategy and implementation certification',
       image: '/images/AI.jpg'
     },
@@ -14,7 +14,7 @@ export default function CertificationsSection() {
       id: 2,
       badge: 'EXPERT',
       duration: '16 WEEKS',
-      title: 'Cyber Excellence',
+      title: 'Cyber Security',
       description: 'Advanced cybersecurity framework and risk management',
       image: '/images/Cyber-Excellence.jpg'
     },
@@ -22,7 +22,7 @@ export default function CertificationsSection() {
       id: 3,
       badge: 'PROFESSIONALS',
       duration: '10 WEEKS',
-      title: 'Digital Logistics Certification',
+      title: 'Advisory Services',
       description: 'Digital transformation in logistics and supply chain',
       image: '/images/Digital-Logistics.jpg'
     }
@@ -34,10 +34,10 @@ export default function CertificationsSection() {
         {/* Header */}
         <div className="mb-12 lg:mb-20">
           <h2 className="text-3xl sm:text-4xl lg:text-4xl font-light leading-tight mb-4 text-gray-900">
-            Professional Accreditations and <br /> Certification Schemes
+            Our Capability 
           </h2>
           <p className="text-base text-gray-600">
-            Advance your career with our industry-recognized certification programmes
+            Through advisory, capability development, and intelligent platforms, we help organisations strengthen leadership, align strategy with execution, and build the systems required to perform in an increasingly complex world. 
           </p>
         </div>
 

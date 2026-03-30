@@ -18,7 +18,7 @@ export default function BlogArticlesSection() {
       badge: "CYBERSECURITY",
       date: "DEC 14, 2025",
       readTime: "7 MIN READ",
-      title: "Cybersecurity Excellence: Building Resilient Organizations",
+      title: "Cybersecurity Excellence: Building Resilient Organisations",
       image:
         "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop",
       size: "small",

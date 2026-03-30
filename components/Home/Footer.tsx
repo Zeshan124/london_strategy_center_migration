@@ -29,7 +29,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 xl:gap-12 mb-8 sm:mb-12 lg:mb-16">
           {/* Company Description */}
           <div className="lg:col-span-1">
-            <p className="text-sm sm:text-base lg:text-xl text-gray-800 leading-relaxed">
+            <div className="mb-3">
+              <Image
+                src="/images/icons/logo-footer.svg"
+                alt="London Strategy Centre Logo"
+                width={120}
+                height={120}
+                className="object-contain"
+                priority
+              />
+            </div>
+            <p className="text-sm sm:text-base text-gray-800 leading-relaxed">
              LSC is a capability transformation partner integrating people, practice, and technology to build organisational intelligence and sustained performance under complexity.
             </p>
           </div>
@@ -100,95 +110,30 @@ export default function Footer() {
                 enquiries@londonstrategycentre.com
               </a>
             </div>
-          </div>
-        </div>
 
-        {/* Middle Section - Logo and Social */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6 py-6 sm:py-8 border-t border-gray-300">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center flex-shrink-0">
-              <Image
-                src="/images/icons/logo-footer.svg"
-                alt="London Strategy Centre Logo"
-                width={100}
-                height={100}
-                className="object-contain sm:w-[120px] sm:h-[120px] md:w-[140px] md:h-[140px] lg:w-[150px] lg:h-[150px]"
-                priority
-              />
+            {/* Social Icons */}
+            <div className="flex items-center gap-1 pt-1">
+              <a href="#" className="w-8 h-8 flex items-center justify-center transition-all" aria-label="Facebook">
+                <img src="/images/icons/facebook.svg" alt="Facebook" className="w-6 h-6 sm:w-7 sm:h-7" />
+              </a>
+              <a href="#" className="w-8 h-8 flex items-center justify-center transition-all" aria-label="Instagram">
+                <img src="/images/icons/insta.svg" alt="Instagram" className="w-6 h-6 sm:w-7 sm:h-7" />
+              </a>
+              <a href="#" className="w-8 h-8 flex items-center justify-center transition-all" aria-label="LinkedIn">
+                <img src="/images/icons/linkedin.svg" alt="LinkedIn" className="w-6 h-6 sm:w-7 sm:h-7" />
+              </a>
+              <a href="#" className="w-8 h-8 flex items-center justify-center transition-all" aria-label="TikTok">
+                <img src="/images/icons/tiktok.svg" alt="TikTok" className="w-6 h-6 sm:w-7 sm:h-7" />
+              </a>
+              <a href="#" className="w-8 h-8 flex items-center justify-center transition-all" aria-label="YouTube">
+                <img src="/images/icons/youtube.svg" alt="YouTube" className="w-6 h-6 sm:w-7 sm:h-7" />
+              </a>
             </div>
-          </div>
-
-          {/* Social Media */}
-          <div className="flex flex-wrap items-center">
-            <span className="text-xs sm:text-sm font-medium text-gray-800 mr-1 sm:mr-2 w-full sm:w-auto mb-2 sm:mb-0">
-              FOLLOW US
-            </span>
-
-            <a
-              href="#"
-              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center transition-all"
-              aria-label="Facebook"
-            >
-              <img
-                src="/images/icons/facebook.svg"
-                alt="Facebook"
-                className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
-              />
-            </a>
-
-            <a
-              href="#"
-              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center transition-all"
-              aria-label="Instagram"
-            >
-              <img
-                src="/images/icons/insta.svg"
-                alt="Instagram"
-                className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
-              />
-            </a>
-
-            <a
-              href="#"
-              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center transition-all"
-              aria-label="LinkedIn"
-            >
-              <img
-                src="/images/icons/linkedin.svg"
-                alt="LinkedIn"
-                className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
-              />
-            </a>
-
-            <a
-              href="#"
-              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center transition-all"
-              aria-label="TikTok"
-            >
-              <img
-                src="/images/icons/tiktok.svg"
-                alt="TikTok"
-                className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
-              />
-            </a>
-
-            <a
-              href="#"
-              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center transition-all"
-              aria-label="YouTube"
-            >
-              <img
-                src="/images/icons/youtube.svg"
-                alt="YouTube"
-                className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
-              />
-            </a>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 pt-4 sm:pt-6 border-t border-gray-300">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 pt-6 sm:pt-8 border-t border-gray-300">
           {/* Links */}
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm">
             <a

@@ -147,16 +147,15 @@ export default function HeroSection() {
         {/* Welcome Text */}
         <div className="text-center mb-12 lg:mb-16">
           <p className="text-xs font-semibold tracking-widest text-gray-900 leading-tight mb-4">
-            WELCOME TO LSC
+            Welcome to London Strategy Centre
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-light text-gray-900 max-w-5xl mx-auto px-4">
-            Innovation, Strategy <br /> & Leadership Excellence
+          Building Intelligent Organisations  <br /> for an AI-Driven World
           </h1>
           <p className="font-light text-gray-600 max-w-2xl mx-auto py-2 lg:px-10">
-            Transform your business with our four-pillar approach, Specializing
-            in cutting-edge AI and Cyberscurity certifications for the
-            digital-first future.
+        In an age of AI, accelerating complexity, and constant disruption, organisations must evolve into intelligent and adaptive systems.
           </p>
+            
         </div>
 
         {/* Carousel Section */}
@@ -313,16 +312,16 @@ export default function HeroSection() {
         <div className="mt-12 sm:mt-16 lg:mt-20 flex justify-center px-4">
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12 px-4 sm:px-6 md:px-8 py-3 sm:py-4 border border-gray-200 rounded-full shadow-sm bg-white max-w-full">
             <button className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
-              BCG SPOTLIGHT
+              Tier-1
             </button>
             <button className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
-              ARTIFICIAL INTELLIGENCE
+              Digital Twins
             </button>
-            <button className="text-xs sm:text-sm font-semibold text-gray-600 hover:text-green-600 transition-colors whitespace-nowrap">
-              CEO AGENDA
+            <button className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
+              Cyber Excellence
             </button>
-            <button className="text-xs sm:text-sm font-semibold text-gray-600 hover:text-green-600 transition-colors whitespace-nowrap">
-              CLIENT IMPACT LIBRARY
+            <button className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
+              Customised Interventions
             </button>
           </div>
         </div>
