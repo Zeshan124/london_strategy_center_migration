@@ -39,12 +39,12 @@ export default function CyberSecurityHero() {
               <button className="px-5 py-2.5 bg-transparent border border-white text-white text-xs font-semibold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300">
                 REQUEST A CONSULTATION
               </button>
-              <button className="px-5 py-2.5 bg-transparent border border-white text-white text-xs font-semibold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300">
-                DOWNLOAD CYBER OVERVIEW
-                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
-              </button>
+             <button className="px-5 py-2.5 bg-transparent border border-white text-white text-xs font-semibold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300 flex items-center gap-2">
+  DOWNLOAD CYBER OVERVIEW
+  <svg className="w-3.5 h-3.5 hidden sm:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M7 17L17 7M17 7H7M17 7v10" />
+  </svg>
+</button>
             </div>
           </div>
         </div>

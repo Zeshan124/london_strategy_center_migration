@@ -12,6 +12,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("industries");
   const [email, setEmail] = useState("");
 
   // Signup form state
@@ -43,6 +44,7 @@ const Navbar = () => {
         setIsMobileMenuOpen(false);
         setIsLoginModalOpen(false);
         setIsSignUpModalOpen(false);
+        setActiveSection("industries");
       }
     };
 
@@ -77,6 +79,17 @@ const Navbar = () => {
     }));
   };
 
+  const cyberServices = [
+    { name: "Certification & Compliance Services", href: "/cyber-security/certification-and-compliance" },
+    { name: "Cyber Risk & Resilience", href: "/cyber-security/cyber-risk-and-resilience" },
+    { name: "Technical Security Services", href: "/cyber-security/technical-security-services" },
+    { name: "Defence & Government Cyber Assurance", href: "/cyber-security/defence-and-government-cyber-assurance" },
+    { name: "Cyber Risk & Architecture Advisory", href: "/cyber-security/cyber-risk-and-architecture-advisory" },
+    { name: "Operational Technology & Specialist Security", href: "/cyber-security/operational-technology-specialist-security" },
+    { name: "Cyber Strategy & Governance Advisory", href: "/cyber-security/cyber-strategy-and-governance-advisory" },
+    { name: "Specialist Programme Support", href: "/cyber-security/specialist-programme-support" },
+  ];
+
   const industries = [
     { name: "Aerospace and Defense", href: "#" },
     { name: "Automotive Industry", href: "#" },
@@ -102,6 +115,7 @@ const Navbar = () => {
     { name: "SERVICES", href: "/services" },
     { name: "BLOG", href: "/blog" },
     { name: "FREE MATERIALS", href: "/free-material" },
+    { name: "CYBER SECURITY", href: "/cyber-security" },
     { name: "CONTACT", href: "/contact" },
   ];
 
@@ -216,7 +230,7 @@ const Navbar = () => {
             <div className="flex items-center justify-between px-3 sm:px-6 lg:px-8 py-3 sm:py-4 border-b border-gray-200">
               <div className="flex items-center gap-2 sm:gap-4 flex-1">
                 <button
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => { setIsMobileMenuOpen(false); setActiveSection("industries"); }}
                   className="p-1.5 sm:p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors"
                   aria-label="Close menu"
                 >
@@ -271,15 +285,7 @@ const Navbar = () => {
                           Our Services
                         </h2>
                         <ul className="space-y-1 pl-0">
-                          <li>
-                            <Link
-                              href="/cyberexcellence"
-                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors bg-gray-100 block py-2 px-3 rounded"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              Cyber Excellence
-                            </Link>
-                          </li>
+                         
                           <li>
                             <Link
                               href="/digital-twin"
@@ -298,7 +304,7 @@ const Navbar = () => {
                               Press Release
                             </Link>
                           </li>
-                           <li>
+                          <li>
                             <Link
                               href="/trl"
                               className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
@@ -315,6 +321,26 @@ const Navbar = () => {
                             >
                               WDL
                             </Link>
+                          </li>
+                          
+ <li>
+                            <Link
+                              href="/cyberexcellence"
+                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              Cyber Excellence
+                            </Link>
+                          </li>
+                          <li>
+                            <button
+                              onClick={() => setActiveSection(activeSection === "cyber-security" ? "industries" : "cyber-security")}
+                              className={`w-full text-left text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded ${
+                                activeSection === "cyber-security" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
+                              }`}
+                            >
+                              Cyber Security
+                            </button>
                           </li>
                         </ul>
                       </div>
@@ -410,29 +436,60 @@ const Navbar = () => {
 
                   {/* Right Content Area */}
                   <div className="flex-1">
-                    {/* Industries Section */}
-                    <div>
-                      <h2 className="text-sm font-medium text-gray-900 mb-1">
-                        Industries
-                      </h2>
-                      <p className="text-xs text-gray-600 mb-4">
-                        Learn how we draw on industry expertise to make
-                        companies more competitive.
-                      </p>
-
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 sm:gap-x-12 gap-y-2">
-                        {industries.map((industry, index) => (
+                    {activeSection === "cyber-security" ? (
+                      /* Cyber Security Services */
+                      <div>
+                        <h2 className="text-sm font-medium text-gray-900 mb-1">
+                          Cyber Security
+                        </h2>
+                        <p className="text-xs text-gray-600 mb-4">
+                          See how we help organisations connect technical assurance with strategic governance across the full security spectrum.
+                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 sm:gap-x-12 gap-y-2">
+                          {cyberServices.map((service, index) => (
+                            <Link
+                              key={index}
+                              href={service.href}
+                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </div>
+                        <div className="mt-6 pt-4 border-t border-gray-100">
                           <Link
-                            key={index}
-                            href={industry.href}
-                            className="text-sm text-gray-700 hover:text-gray-900 transition-colors py-1"
+                            href="/cyber-security"
+                            className="text-sm font-medium text-[#0E2253] hover:underline"
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
-                            {industry.name}
+                            View all Cyber Security services →
                           </Link>
-                        ))}
+                        </div>
                       </div>
-                    </div>
+                    ) : (
+                      /* Industries Section */
+                      <div>
+                        <h2 className="text-sm font-medium text-gray-900 mb-1">
+                          Industries
+                        </h2>
+                        <p className="text-xs text-gray-600 mb-4">
+                          Learn how we draw on industry expertise to make companies more competitive.
+                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 sm:gap-x-12 gap-y-2">
+                          {industries.map((industry, index) => (
+                            <Link
+                              key={index}
+                              href={industry.href}
+                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {industry.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
