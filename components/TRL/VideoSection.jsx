@@ -144,9 +144,9 @@ export default function VideoSection({
           <strong className="text-slate-900">{totalCount}</strong> videos
         </div>
 
-        {/* Video Grid - Zigzag Layout */}
+        {/* Video Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {videos.map((video, index) => {
+          {videos.map((video) => {
             const isNew = video.publishedAt
               ? new Date(video.publishedAt) >
                 new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)
@@ -155,22 +155,8 @@ export default function VideoSection({
             const isLong = desc.length > 100;
             const tags = video.tags || [];
 
-            // Calculate zigzag offset
-            const row = Math.floor(index / 3);
-            const col = index % 3;
-            let offsetClass = "";
-
-            // Zigzag pattern: middle column offset in even rows, side columns offset in odd rows
-            if (row % 2 === 0) {
-              // Even row: offset middle item (index 1, 4, 7, etc.)
-              if (col === 1) offsetClass = "lg:mt-8";
-            } else {
-              // Odd row: offset first and third items (index 3, 5, 9, 11, etc.)
-              if (col === 0 || col === 2) offsetClass = "lg:mt-8";
-            }
-
             return (
-              <div key={video.videoId} className={`group ${offsetClass}`}>
+              <div key={video.videoId} className="group">
                 {/* Video Card */}
                 <div className="bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
                   {/* Thumbnail Container */}

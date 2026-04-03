@@ -21,13 +21,13 @@ export default function Executives() {
             framework with regulatory requirements and sector-specific needs.
           </p>
 
-          <div>
+          {/* <div>
             <img
               src="/images/InnerPages/cyberexcellence/LSC-Logo.svg"
               alt="LSC Logo"
               className="w-40 mb-6"
             />
-          </div>
+          </div> */}
         </div>
 
         {/* Right Image */}

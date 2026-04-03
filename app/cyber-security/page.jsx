@@ -10,7 +10,6 @@ import Executives from "@/components/InnerPages/CyberExcellence/Executives";
 import ExperienceSection from "@/components/InnerPages/CyberExcellence/ExperienceSection";
 import LearningObjectives from "@/components/InnerPages/CyberExcellence/LearningObjectives";
 import ServicesHero from "@/components/InnerPages/CyberExcellence/ServicesHero";
-import CertificationLevels from "@/components/InnerPages/CyberExcellence/CertificationLevels";
 import BenefitsSection from "@/components/InnerPages/CyberExcellence/BenefitsSection";
 import CertificationsSection from "@/components/Home/CertificationsSection";
 import CyberAssessmentFramework from "@/components/InnerPages/CyberExcellence/CyberAssessmentFramework";
@@ -20,23 +19,24 @@ import AssessmentProcessByLevel from "@/components/InnerPages/CyberExcellence/As
 import WhyActNow from "@/components/InnerPages/CyberExcellence/WhyActNow";
 import UniBirmingham from "@/components/InnerPages/CyberExcellence/UniBirmingham";
 import ContactForm from "@/components/InnerPages/CyberExcellence/ContactForm";
+import CyberSecurityHero from "@/components/CyberSecurity/cyberSecurityHero";
+import PracticeAreas from "@/components/CyberSecurity/practiceAreas";
+import CTASection from "@/components/CyberSecurity/CTASection";
+import Services from "@/components/CyberSecurity/Services";
+import FAQ from "@/components/CyberSecurity/FAQ";
+import ConsultationForm from "@/components/CyberSecurity/ConsultationForm";
 
 const page = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
       <main>
-        <ServicesHero />
-        <Executives />
-        {/* <UniBirmingham /> */}
-        <CertificationLevels />
-        <BenefitsSection />
-        <CyberAssessmentFramework />
-        <TimelineSection />
-        <LearningGlobalModels />
-        <AssessmentProcessByLevel />
-        <WhyActNow />
-        <ContactForm />
+        <CyberSecurityHero />
+        <PracticeAreas />
+        <CTASection />
+        {/* <Services /> */}
+        <FAQ />
+       <ConsultationForm />
       </main>
       <Footer />
     </div>

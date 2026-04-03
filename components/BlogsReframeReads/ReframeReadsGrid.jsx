@@ -286,21 +286,11 @@ export default function ReframeReadsGrid() {
           <strong className="text-slate-900">{totalCount}</strong> articles
         </div>
 
-        {/* ── Article Grid (zigzag from VideoSection) ── */}
+        {/* ── Article Grid ── */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {articles.map((article, index) => {
-            // Zigzag offset — same logic as VideoSection
-            const row = Math.floor(index / 3);
-            const col = index % 3;
-            let offsetClass = "";
-            if (row % 2 === 0) {
-              if (col === 1) offsetClass = "lg:mt-8";
-            } else {
-              if (col === 0 || col === 2) offsetClass = "lg:mt-8";
-            }
-
+          {articles.map((article) => {
             return (
-              <div key={article.id} className={`group ${offsetClass}`}>
+              <div key={article.id} className="group">
                 <div className="bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 rounded-xl">
 
                   {/* ── Cover Image ── */}
