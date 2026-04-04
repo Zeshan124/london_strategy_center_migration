@@ -3,27 +3,28 @@
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 
-export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState(2); // Third item open by default
+const DEFAULT_FAQS = [
+  {
+    question: "Can LSC support organisations at different stages of cyber maturity?",
+    answer: "Yes, LSC provides tailored support for organisations at any stage of their cybersecurity journey, from initial assessment to advanced implementation.",
+  },
+  {
+    question: "Does LSC provide ongoing support or only project-based engagements?",
+    answer: "LSC offers both ongoing support and project-based engagements, depending on your organisation's needs and preferences.",
+  },
+  {
+    question: "How do LSC's services differ from standard cyber security consultancies?",
+    answer: "LSC connects technical security with organisational governance. The aim is not just to identify vulnerabilities or achieve certification — it is to build the decision-making capability and governance structures that sustain security performance over time.",
+  },
+  {
+    question: "Which certifications and frameworks does LSC support?",
+    answer: "LSC supports various certifications and frameworks including ISO 27001, NIST CSF, Cyber Essentials, IASME, and the Cyber Excellence framework aligned with NCICC-1 2005.",
+  },
+];
 
-  const faqs = [
-    {
-      question: "Can LSC support organisations at different stages of cyber maturity?",
-      answer: "Yes, LSC provides tailored support for organisations at any stage of their cybersecurity journey, from initial assessment to advanced implementation."
-    },
-    {
-      question: "Does LSC provide ongoing support or only project-based engagements?",
-      answer: "LSC offers both ongoing support and project-based engagements, depending on your organization's needs and preferences."
-    },
-    {
-      question: "How do LSC's services differ from standard cyber security consultancies?",
-      answer: "LSC connects technical security with organisational governance. The aim is not just to identify vulnerabilities or achieve certification - it is to build the decision-making capability and governance structures that sustain security performance over time."
-    },
-    {
-      question: "Which certifications and frameworks does LSC support?",
-      answer: "LSC supports various certifications and frameworks including ISO 27001, NIST, CIS Controls, and other industry-standard security frameworks."
-    }
-  ];
+export default function FAQ({ faqs: faqsProp, intro }) {
+  const faqs = faqsProp ?? DEFAULT_FAQS;
+  const [openIndex, setOpenIndex] = useState(2);
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -35,15 +36,16 @@ export default function FAQ() {
 
         {/* Header */}
         <div className="mb-8 sm:mb-12">
+          {intro && (
             <div className="mb-8 sm:mb-10 md:mb-12 sm:text-left sm:py-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-4 sm:mb-5 md:mb-6">
-            Who these services are for
-          </h2>
-          <p className="text-sm sm:text-base md:text-base text-slate-600 leading-relaxed">
-          LSC's cyber security services are designed for organisations where security is a board-level concern - not solely an IT function. This includes defence contractors and suppliers navigating MOD requirements, government organisations meeting NCSC and public sector frameworks, enterprises managing complex supply chains and regulatory obligations, and leadership teams seeking to elevate cyber governance from operational to strategic.
-
-          </p>
-        </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-4 sm:mb-5 md:mb-6">
+                {intro.heading}
+              </h2>
+              <p className="text-sm sm:text-base md:text-base text-slate-600 leading-relaxed">
+                {intro.paragraph}
+              </p>
+            </div>
+          )}
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal text-slate-900">
             Frequently Asked Questions
           </h2>
@@ -60,7 +62,7 @@ export default function FAQ() {
                 className="w-full flex items-start justify-between gap-4 py-6 sm:py-8 text-left hover:bg-slate-50 transition-colors duration-200 group"
               >
                 {/* Icon */}
-                <div className="flex-shrink-0 pt-1">
+                <div className="shrink-0 pt-1">
                   {openIndex === index ? (
                     <Minus className="w-5 h-5 sm:w-6 sm:h-6 text-slate-900" strokeWidth={2} />
                   ) : (

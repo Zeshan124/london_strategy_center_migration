@@ -14,7 +14,7 @@ export default function CTASection({ cta }) {
 
   return (
     <section className="bg-[#F1EEEA]">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch h-auto lg:h-[50vh] min-h-[500px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
         {/* Left Content */}
         <div className="bg-[#F1EEEA] px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-14 lg:py-16 flex flex-col justify-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light leading-tight mb-4 text-gray-900">
@@ -28,7 +28,7 @@ export default function CTASection({ cta }) {
         </div>
 
         {/* Right Image */}
-        <div className="relative h-64 sm:h-80 lg:h-full">
+        <div className="relative h-64 sm:h-80 lg:min-h-[420px]">
           <img
             src={image}
             alt={heading}

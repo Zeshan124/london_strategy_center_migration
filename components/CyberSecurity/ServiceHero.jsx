@@ -27,7 +27,7 @@ export default function ServiceHero({ service }) {
           {service.description}
         </p>
         
-          <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] mb-12 rounded-2xl overflow-hidden">
+          <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] mb-10 rounded-2xl overflow-hidden">
             <Image
               src={service.image}
               alt={service.title}
@@ -36,6 +36,17 @@ export default function ServiceHero({ service }) {
               priority
             />
           </div>
+
+          {/* Below-image text content */}
+          {service.heroContent?.length > 0 && (
+            <div className="space-y-4">
+              {service.heroContent.map((paragraph, i) => (
+                <p key={i} className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          )}
 
       </div>
     </div>
