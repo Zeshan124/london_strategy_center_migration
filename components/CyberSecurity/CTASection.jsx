@@ -28,7 +28,7 @@ export default function CTASection({ cta }) {
         </div>
 
         {/* Right Image */}
-        <div className="relative h-64 sm:h-80 lg:min-h-[420px]">
+        <div className="relative">
           <img
             src={image}
             alt={heading}

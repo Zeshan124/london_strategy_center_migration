@@ -24,7 +24,7 @@ export default function UniBirmingham({ partner }) {
         </div>
 
         {/* Right Content */}
-        <div className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-14 lg:py-16 flex flex-col justify-center">
+        <div className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-14 lg:py-16 flex flex-col justify-center items-center text-center sm:items-start sm:text-left">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light leading-tight mb-4 text-gray-900">
             {heading}
           </h2>

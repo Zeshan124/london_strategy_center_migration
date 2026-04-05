@@ -132,7 +132,7 @@ export default function ConsultationForm() {
             <div className="pt-2">
               <button
                 type="submit"
-                className="w-full sm:w-72 py-4 bg-[#0E2253] text-white text-xs tracking-widest uppercase rounded-xl hover:bg-[#0E2253] transition-all duration-300"
+                className="w-full sm:w-78 py-6 bg-[#0E2253] text-white text-xs tracking-widest uppercase rounded-xl hover:bg-[#0E2253] transition-all duration-300"
               >
                 SUBMIT REQUEST
               </button>

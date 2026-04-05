@@ -65,10 +65,12 @@ function getColClass(count) {
 }
 
 export default function PracticeAreas({ practiceAreas }) {
-  const heading  = practiceAreas?.heading  ?? DEFAULT_HEADING;
-  const subheading = practiceAreas?.subheading ?? DEFAULT_SUBHEADING;
-  const features  = practiceAreas?.features  ?? DEFAULT_FEATURES;
-  const colClass  = getColClass(features.length);
+  const heading        = practiceAreas?.heading        ?? DEFAULT_HEADING;
+  const subheading     = practiceAreas?.subheading     ?? DEFAULT_SUBHEADING;
+  const features       = practiceAreas?.features       ?? DEFAULT_FEATURES;
+  const heading_bottom = practiceAreas?.heading_bottom ?? null;
+  const subheading_bottom = practiceAreas?.subheading_bottom ?? null;
+  const colClass       = getColClass(features.length);
 
   return (
     <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-12">
@@ -105,6 +107,22 @@ export default function PracticeAreas({ practiceAreas }) {
             </Link>
           ))}
         </div>
+
+        {/* Bottom Heading — only rendered when passed via practiceAreas prop */}
+        {(heading_bottom || subheading_bottom) && (
+          <div className="mt-10 sm:mt-12 lg:mt-16 text-center sm:text-left">
+            {heading_bottom && (
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-4 sm:mb-6 lg:max-w-3xl">
+                {heading_bottom}
+              </h2>
+            )}
+            {subheading_bottom && (
+              <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mx-auto sm:mx-0">
+                {subheading_bottom}
+              </p>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );
