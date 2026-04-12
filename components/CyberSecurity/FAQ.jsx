@@ -31,7 +31,7 @@ export default function FAQ({ faqs: faqsProp, intro }) {
   };
 
   return (
-    <section className="bg-white py-12 sm:py-16 md:py-20">
+    <section className="bg-white py-12 sm:py-16 md:py-8">
       <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
 
         {/* Header */}

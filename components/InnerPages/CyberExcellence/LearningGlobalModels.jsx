@@ -173,7 +173,7 @@ const LearningGlobalModels = () => {
             Innovation and Technology (DSIT).
           </p>
         </div>
-        <div className="px-4 sm:px-6 lg:px-0 py-8 sm:py-12 lg:py-20">
+        <div className="px-4 sm:px-6 lg:px-0 py-8 sm:py-12 lg:py-10">
           {/* Header */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl text-gray-900 mb-8 sm:mb-12">
             Message From Our Principal
@@ -198,7 +198,7 @@ const LearningGlobalModels = () => {
           </div>
 
           {/* Description */}
-          <div className="mb-12 sm:mb-16">
+          <div>
             <p className="text-base text-gray-700 leading-relaxed">
               “In cybersecurity, standing still is falling behind. Regular
               reassessment and updated certification standards create a culture

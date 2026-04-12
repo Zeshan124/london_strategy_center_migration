@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 export default function AboutSection() {
-  const [activeTab, setActiveTab] = useState("approach");
+  const [activeTab, setActiveTab] = useState("people");
 
   const tabs = [
     { id: "people", label: "People", icon: "down" },

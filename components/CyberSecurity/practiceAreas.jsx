@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 
 const DEFAULT_HEADING = "Practice Areas";
 const DEFAULT_SUBHEADING = "LSC's cyber security services span the full spectrum from technical testing to board-level strategy. Each is designed to function independently or as part of a coordinated programme.";
@@ -86,25 +87,36 @@ export default function PracticeAreas({ practiceAreas }) {
         </div>
 
         {/* Features Grid — columns adapt to feature count */}
-        <div className={`grid grid-cols-1 sm:grid-cols-2 ${colClass} gap-6 sm:gap-8 md:gap-10 lg:gap-12`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 ${colClass} gap-6 md:gap-8`}>
           {features.map((feature) => (
-            <Link
-              key={feature.id}
-              href={feature.slug ? `/cyber-security/${feature.slug}` : "#"}
-              className="group text-center sm:text-left hover:opacity-90 transition-opacity"
-            >
-              <div className="mb-4 sm:mb-6 flex justify-center sm:justify-start">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20">
-                  <img src={feature.icon} alt={feature.title} className="w-full h-full object-contain" />
-                </div>
-              </div>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-normal text-gray-900 mb-3 sm:mb-4 group-hover:text-[#0E2253] transition-colors">
-                {feature.title}
-              </h3>
-              <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                {feature.description}
-              </p>
-            </Link>
+           <Link
+  key={feature.id}
+  href={feature.slug ? `/cyber-security/${feature.slug}` : "#"}
+  className="group border-2 border-slate-200 rounded-xl p-6 sm:p-8 hover:border-slate-300 hover:shadow-lg transition-all duration-300"
+>
+  {/* Icon */}
+  <div className="mb-6 sm:mb-8">
+    <div className="w-16 h-16 sm:w-20 sm:h-20">
+      <Image
+        src={feature.icon}
+        alt={feature.title}
+        width={80}
+        height={80}
+        className="object-contain w-full h-full"
+      />
+    </div>
+  </div>
+
+  {/* Title */}
+  <h3 className="text-lg sm:text-xl md:text-2xl font-normal text-slate-900 mb-4 leading-tight group-hover:text-[#0E2253] transition-colors">
+    {feature.title}
+  </h3>
+
+  {/* Description */}
+  <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+    {feature.description}
+  </p>
+</Link>
           ))}
         </div>
 

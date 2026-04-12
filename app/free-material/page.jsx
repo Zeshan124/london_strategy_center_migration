@@ -13,7 +13,7 @@ const page = () => {
       <main>
        <HeroMaterials />
        <FreeMaterialsSection />
-       <StatsCounter />
+       {/* <StatsCounter /> */}
        <Newsletter />
       </main>
       <Footer />

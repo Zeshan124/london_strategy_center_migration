@@ -3,6 +3,7 @@
 import DigitalAvatarModal from "./DigitalAvatarModal";
 import { X } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function HowItWorks() {
   const features = [
@@ -110,30 +111,35 @@ export default function HowItWorks() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {features.map((feature) => (
-            <div key={feature.id} className="text-center sm:text-left">
-              {/* Icon */}
-              <div className="mb-4 sm:mb-6 flex justify-center sm:justify-start">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20">
-                  <img
-                    src={feature.icon}
-                    alt={feature.title}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </div>
+           <div
+  key={feature.id}
+  className="group border-2 border-slate-200 rounded-xl p-6 sm:p-8 hover:border-slate-300 hover:shadow-lg transition-all duration-300"
+>
+  {/* Icon */}
+  <div className="mb-6 sm:mb-8">
+    <div className="w-16 h-16 sm:w-20 sm:h-20">
+      <Image
+        src={feature.icon}
+        alt={feature.title}
+        width={80}
+        height={80}
+        className="object-contain w-full h-full"
+      />
+    </div>
+  </div>
 
-              {/* Title */}
-              <h3 className="text-lg sm:text-xl md:text-2xl font-normal text-gray-900 mb-3 sm:mb-4">
-                {feature.title}
-              </h3>
+  {/* Title */}
+  <h3 className="text-lg sm:text-xl md:text-2xl font-normal text-slate-900 mb-4 leading-tight">
+    {feature.title}
+  </h3>
 
-              {/* Description */}
-              <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
+  {/* Description */}
+  <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+    {feature.description}
+  </p>
+</div>
           ))}
         </div>
         <div className="mt-12 sm:mt-16 md:mt-20">

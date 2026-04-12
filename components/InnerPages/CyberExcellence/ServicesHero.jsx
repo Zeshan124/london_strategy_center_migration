@@ -55,7 +55,7 @@ export default function ServicesHero() {
                     Introduction
                   </h2>
 
-                  <div className="text-base text-gray-700 leading-relaxed whitespace-pre-line mb-2">
+                  {/* <div className="text-base text-gray-700 leading-relaxed whitespace-pre-line mb-2">
                     The Cyber Excellence Certification scheme is designed to
                     address the growing cybersecurity challenges in the Middle
                     East region. This comprehensive certification provides
@@ -66,7 +66,7 @@ export default function ServicesHero() {
                     Middle East, taking into account regional regulations,
                     cultural considerations, and the unique threat landscape of
                     the region.
-                  </div>
+                  </div> */}
 
                   <div className="text-base text-gray-700 leading-relaxed whitespace-pre-line mb-6">
                 Our certification scheme is specifically tailored for organizations operating in the Middle East, taking into account regional regulations, cultural considerations, and the unique threat landscape of the region.

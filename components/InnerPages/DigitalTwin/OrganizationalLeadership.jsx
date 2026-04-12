@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function OrganizationalLeadership() {
   const features = [
     {
@@ -30,72 +32,64 @@ export default function OrganizationalLeadership() {
       description:
         "Enable boards and executive committees to reduce strategic drift and embed cybernetic foundations.",
     },
-    // {
-    //   id: 5,
-    //   icon: "/images/icons/av_timer.png",
-    //   title: "Customised Solution",
-    //   description:
-    //     "We prioritise your organisation's goals to design bespoke leadership and strategy development services.",
-    // },
-    // {
-    //   id: 6,
-    //   icon: "/images/icons/business_center.png",
-    //   title: "Work With Us",
-    //   description:
-    //     "We seek motivated, inquisitive individuals passionate about making a meaningful impact with excellence.",
-    // },
   ];
 
   return (
     <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24">
-      {/* Container */}
-      <div className="mx-auto px-4 sm:px-6 lg:px-24">
+      <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
+
         {/* Header */}
-        <div className="mb-10 sm:mb-12 lg:mb-16 text-center sm:text-left">
+        <div className="mb-10 sm:mb-12 md:mb-16">
           <p className="text-xs font-bold tracking-widest text-[#0E2253] uppercase mb-4">
             Organisational Leadership Digital Twin
           </p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-4 sm:mb-6">
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal text-slate-900 mb-4">
             Scaling Executive Logic Across the Enterprise
           </h2>
 
-          <p className="text-sm sm:text-base text-gray-700 leading-relaxed mx-auto sm:mx-0">
+          <p className="text-sm sm:text-base text-slate-600 max-w-4xl">
             The Organisational Leadership Digital Twin scales executive logic
             across the enterprise. Built from structured modelling of executive
             priorities, risk tolerance, decision sequencing, and escalation
             expectations, it creates a leadership-anchored intelligence system
-            that continuously tests organisational alignment to strategic
-            intent.
+            that continuously tests organisational alignment to strategic intent.
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+        {/* Card Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {features.map((feature) => (
-            <div key={feature.id} className="text-center sm:text-left">
+            <div
+              key={feature.id}
+              className="group border-2 border-slate-200 rounded-xl p-6 sm:p-8 hover:border-slate-300 hover:shadow-lg transition-all duration-300"
+            >
               {/* Icon */}
-              <div className="mb-4 sm:mb-6 flex justify-center sm:justify-start">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20">
-                  <img
+              <div className="mb-6 sm:mb-8">
+                <div className="w-16 h-16 sm:w-20 sm:h-20">
+                  <Image
                     src={feature.icon}
                     alt={feature.title}
-                    className="w-full h-full object-contain"
+                    width={80}
+                    height={80}
+                    className="object-contain w-full h-full"
                   />
                 </div>
               </div>
 
               {/* Title */}
-              <h3 className="text-lg sm:text-xl md:text-2xl font-normal text-gray-900 mb-3 sm:mb-4">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-normal text-slate-900 mb-4 leading-tight">
                 {feature.title}
               </h3>
 
               {/* Description */}
-              <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                 {feature.description}
               </p>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

@@ -34,7 +34,7 @@ const page = () => {
         <CyberAssessmentFramework />
         <TimelineSection />
         <LearningGlobalModels />
-        <AssessmentProcessByLevel />
+        {/* <AssessmentProcessByLevel /> */}
         <WhyActNow />
         <ContactForm />
       </main>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function CyberSecurityHero() {
   return (
-   <div className="min-h-screen bg-white lg:pt-28 py-16">
+   <div className="min-h-screen bg-white lg:pt-28 py-0">
       <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-8 sm:py-8 md:py-8 lg:pt-16">
 
         {/* Hero Card */}
@@ -28,23 +28,23 @@ export default function CyberSecurityHero() {
             <h2 className="text-xl sm:text-2xl font-light text-white mb-6">
               Services for Organisations
             </h2>
-            <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-8 max-w-md">
+            {/* <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-8 max-w-md">
               Cyber threats do not respect organisational boundaries, supply chain
               structures, or compliance timelines. Yet most organisations manage cyber
               risk in fragments - certification here, penetration testing there, governance
               bolted on as an afterthought. The result is a security posture that looks
               complete on paper but fractures under pressure.
-            </p>
+            </p> */}
             <div className="flex flex-wrap gap-3">
               <button className="px-5 py-2.5 bg-transparent border border-white text-white text-xs font-semibold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300">
                 REQUEST A CONSULTATION
               </button>
-             <button className="px-5 py-2.5 bg-transparent border border-white text-white text-xs font-semibold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300 flex items-center gap-2">
+             {/* <button className="px-5 py-2.5 bg-transparent border border-white text-white text-xs font-semibold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300 flex items-center gap-2">
   DOWNLOAD CYBER OVERVIEW
   <svg className="w-3.5 h-3.5 hidden sm:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
     <path d="M7 17L17 7M17 7H7M17 7v10" />
   </svg>
-</button>
+</button> */}
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function CyberSecurityHero() {
 
         {/* Isolation from governance section */}
         <div className="mt-12 sm:mt-16">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-light text-gray-900 leading-tight mb-8 max-w-2xl">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-light text-gray-900 leading-tight mb-8">
             Security fails when it operates in isolation from governance
           </h2>
           <div className="space-y-4">

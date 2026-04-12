@@ -301,7 +301,7 @@ export default function FreeMaterialsSection() {
 
         {/* View More */}
         {sortedMaterials.length > 0 && (
-          <div className="flex justify-center mt-8 sm:mt-12 lg:mt-16">
+          <div className="flex justify-center mt-8 sm:mt-12 lg:my-16">
             <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#0E2253] text-white text-sm font-semibold rounded-lg hover:bg-[#1a3a6b] transition-colors">
               VIEW MORE →
             </button>

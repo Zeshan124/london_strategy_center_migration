@@ -93,14 +93,14 @@ export default function DigitalTwinHero() {
             Scalable Intelligence
           </h1>
 
-          <div className="text-lg text-gray-900 mb-8">
+          {/* <div className="text-lg text-gray-900 mb-8">
             From AI-powered executive growth partners to organisation-wide
             strategic sensing systems, we turn how leaders think into a
             continuous intelligence infrastructure that strengthens alignment,
             accelerates decision-making, and builds cybernetic capability. This
             is not AI coaching. This is leadership intelligence engineered for
             scale.
-          </div>
+          </div> */}
           <div className="text-lg text-gray-900 italic mb-8">
             This is not AI coaching. This is leadership intelligence engineered
             for scale.

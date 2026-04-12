@@ -4,24 +4,24 @@ export default function CertificationsSection() {
   const certifications = [
     {
       id: 1,
-      badge: 'ADVANCED',
-      duration: '12 WEEKS',
+      // badge: 'ADVANCED',
+      // duration: '12 WEEKS',
       title: 'Artificial Intelligence',
       description: 'Comprehensive AI strategy and implementation certification',
       image: '/images/AI.jpg'
     },
     {
       id: 2,
-      badge: 'EXPERT',
-      duration: '16 WEEKS',
+      // badge: 'EXPERT',
+      // duration: '16 WEEKS',
       title: 'Cyber Security',
       description: 'Advanced cybersecurity framework and risk management',
       image: '/images/Cyber-Excellence.jpg'
     },
     {
       id: 3,
-      badge: 'PROFESSIONALS',
-      duration: '10 WEEKS',
+      // badge: 'PROFESSIONALS',
+      // duration: '10 WEEKS',
       title: 'Advisory Services',
       description: 'Digital transformation in logistics and supply chain',
       image: '/images/Digital-Logistics.jpg'
@@ -62,19 +62,19 @@ export default function CertificationsSection() {
                 <div className="absolute inset-0 " />
                 
                 {/* Badge */}
-                <div className="absolute top-5 left-5">
+                {/* <div className="absolute top-5 left-5">
                   <span className="inline-block px-4 py-1 bg-black/50 border-2 border-white/60 rounded-md text-xs font-medium tracking-wider text-white uppercase">
                     {cert.badge}
                   </span>
-                </div>
+                </div> */}
               </div>
 
               {/* Content Box */}
               <div className="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow-xl transform translate-y-0 transition-transform duration-500">
                 {/* Duration */}
-                <p className="text-xs font-semibold tracking-wider text-[#0E2253] mb-3 uppercase">
+                {/* <p className="text-xs font-semibold tracking-wider text-[#0E2253] mb-3 uppercase">
                   {cert.duration}
-                </p>
+                </p> */}
 
                 {/* Title */}
                 <h3 className="text-xl lg:text-2xl font-normal text-gray-900 mb-2 leading-tight">

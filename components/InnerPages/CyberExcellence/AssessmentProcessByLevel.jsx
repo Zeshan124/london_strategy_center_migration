@@ -5,8 +5,8 @@ import React from "react";
 const AssessmentProcessByLevel = () => {
   const levels = [
     {
-      title: "ENTRY LEVEL 1",
-      badge: "ENTRY LEVEL 1",
+      title: "AWARE LEVEL 1",
+      badge: "AWARE LEVEL 1",
       items: [
         "Firewalls & internet gateways",
         "Secure configuration",
@@ -18,8 +18,8 @@ const AssessmentProcessByLevel = () => {
         "Self-assessment via a short online questionnaire. Light-touch independent verification of declarations. Scope: Five core technical controls (Cyber Essentials-aligned):",
     },
     {
-      title: "FOUNDATION LEVEL 2",
-      badge: "FOUNDATION LEVEL 2",
+      title: "BASIC LEVEL 2",
+      badge: "BASIC LEVEL 2",
       items: [
         "External/internal vulnerability scanning",
         "Checks for unpatched/misconfigured systems",
@@ -31,8 +31,8 @@ const AssessmentProcessByLevel = () => {
         "Includes all Level 1 aspects. Independent technical verification by a qualified assessor, including:",
     },
     {
-      title: "CERTIFIED LEVEL 3",
-      badge: "CERTIFIED LEVEL 3",
+      title: "FOUNDATION LEVEL 3",
+      badge: "FOUNDATION LEVEL 3",
       items: [
         "Deeper sampling and evidence review (policies, runbooks, intrusion prevention configs, backup/restore records).",
         "Effectiveness validation (tabletop exercises, restore tests, incident response walkthroughs).",
@@ -41,8 +41,8 @@ const AssessmentProcessByLevel = () => {
       description: "Includes all Level 1 & 2 assessment activities.",
     },
     {
-      title: "ASSURED LEVEL 4",
-      badge: "ASSURED LEVEL 4",
+      title: "HOLISTIC LEVEL 4",
+      badge: "HOLISTIC LEVEL 4",
       items: [
         "Threat-led testing (e.g., red/purple teaming, breach & attack simulation) mapped to crown-jewel assets.",
         "Architecture & design assurance (network segmentation, zero-trust patterns, high-availability and failover).",

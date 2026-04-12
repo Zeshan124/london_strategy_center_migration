@@ -63,7 +63,7 @@ export default function FeaturedEpisode() {
         {/* Right Image */}
         <div className="relative h-64 sm:h-80 lg:h-full">
           <img
-            src="/images/home/Featured-Episode.jpg"
+            src="/images/home/Featured-Episodes.jpg"
             alt="Modern architecture with colorful geometric patterns"
             className="w-full h-full object-cover"
           />

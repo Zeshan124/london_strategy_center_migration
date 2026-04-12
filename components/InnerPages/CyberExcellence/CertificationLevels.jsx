@@ -1,37 +1,41 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import AssessmentProcessByLevel from "./AssessmentProcessByLevel";
 
 export default function CertificationLevel() {
+  const [showAssessment, setShowAssessment] = useState(false);
   const certifications = [
     {
       number: "1",
-      title: "Entry Level",
+      title: "Aware Level",
       desc: "Self-assessment for low-risk organisations.",
       img: "/images/InnerPages/cyberexcellence/Level-1.svg",
     },
+    
     {
       number: "2",
+      title: "Basic Level",
+      desc: "Independent assessment for moderate-risk organisations.",
+      img: "/images/InnerPages/cyberexcellence/Level-3.svg",
+    },
+    {
+      number: "3",
       title: "Foundation Level",
       desc: "Additional controls for low-risk organisations.",
       img: "/images/InnerPages/cyberexcellence/Level-2.svg",
     },
     {
-      number: "3",
-      title: "Certified Level",
-      desc: "Independent assessment for moderate-risk organisations.",
-      img: "/images/InnerPages/cyberexcellence/Level-3.svg",
-    },
-    {
       number: "4",
-      title: "Assured Level",
+      title: "Holistic Level",
       desc: "Highest standard for critical infrastructure.",
       img: "/images/InnerPages/cyberexcellence/Level-4.svg",
     },
   ];
 
   return (
+    <>
     <section id="certification" className="py-12 sm:py-16 md:py-10 bg-white">
       <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
         {/* Regional Solution Section */}
@@ -129,9 +133,12 @@ export default function CertificationLevel() {
                 <button className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-white text-slate-900 text-sm sm:text-base rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden w-full sm:w-auto">
                   <span className="relative z-10">GET CERTIFIED TODAY</span>
                 </button>
-                <button className="px-6 sm:px-8 py-3 sm:py-4 bg-transparent text-white text-sm sm:text-base rounded-xl border-2 border-white hover:bg-white/10 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-                  LEARN MORE
-                  <span className="text-base sm:text-xl px-2">↗</span>
+                <button
+                  onClick={() => setShowAssessment((prev) => !prev)}
+                  className="px-6 sm:px-8 py-3 sm:py-4 bg-transparent text-white text-sm sm:text-base rounded-xl border-2 border-white hover:bg-white/10 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+                >
+                  {showAssessment ? "SHOW LESS" : "LEARN MORE"}
+                  <span className="text-base sm:text-xl px-2">{showAssessment ? "↓" : "↗"}</span>
                 </button>
               </div>
             </div>
@@ -139,5 +146,8 @@ export default function CertificationLevel() {
         </div>
       </div>
     </section>
+
+    {showAssessment && <AssessmentProcessByLevel />}
+    </>
   );
 }

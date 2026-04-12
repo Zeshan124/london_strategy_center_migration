@@ -28,9 +28,9 @@ const page = () => {
       <Navbar />
       <main>
         <DigitalTwinHero />
-        <DigitalExecutives />
+        {/* <DigitalExecutives /> */}
         <OrganizationalLeadership />
-        <DigitalTwinProcess />
+        {/* <DigitalTwinProcess /> */}
         <HowItWorks />
         <ContactFormSection />
       </main>
