@@ -31,7 +31,7 @@ const teamMembers = [
 
 export default function MeetTheTeam() {
   return (
-    <section className="bg-white py-12 sm:py-16 lg:py-20">
+    <section className="bg-white py-12 sm:py-16 lg:py-16">
       <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
         {/* Header */}
         <div className="mb-10 sm:mb-12 max-w-4xl">

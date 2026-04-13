@@ -18,7 +18,6 @@ import UniBirmingham from "@/components/InnerPages/CyberExcellence/UniBirmingham
 import OrganizationalLeadership from "@/components/InnerPages/DigitalTwin/OrganizationalLeadership";
 import DigitalTwinProcess from "@/components/InnerPages/DigitalTwin/DigitalTwinProcess";
 import HowItWorks from "@/components/InnerPages/DigitalTwin/HowItWorks";
-import ContactFormSection from "@/components/InnerPages/DigitalTwin/ContactFormSection";
 import WomenLeadershipHero from "@/components/InnerPages/WDL/WomenLeadershipHero";
 import CTASection from "@/components/InnerPages/WDL/CTASection";
 import ProgrammeCommitment from "@/components/InnerPages/WDL/ProgrammeCommitment";
@@ -29,6 +28,7 @@ import MeetTheTeam from "@/components/InnerPages/WDL/MeetTheTeam";
 import ProfessorYusra from "@/components/InnerPages/WDL/ProfessorYusra";
 import SampleCertificate from "@/components/InnerPages/WDL/SampleCertificate";
 import ProgrammeFeesPartners from "@/components/InnerPages/WDL/ProgrammeFeesPartners";
+import ContactFormSection from "@/components/InnerPages/WDL/ContactFormSection";
 
 const page = () => {
   return (
@@ -45,6 +45,7 @@ const page = () => {
         <ProfessorYusra />
         <SampleCertificate />
         {/* <ProgrammeFeesPartners /> */}
+        <ContactFormSection />
       </main>
       <Footer />
       {/* <ChatWidget /> */}

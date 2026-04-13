@@ -24,7 +24,7 @@ export default function VideoSection({
   const [currentVideo, setCurrentVideo] = useState(null);
   const [expandedIds, setExpandedIds] = useState({});
 
-  const perPage = 12;
+  const perPage = 3;
 
   // Apply filtering, sorting and pagination
   useEffect(() => {

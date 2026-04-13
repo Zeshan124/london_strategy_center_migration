@@ -32,10 +32,10 @@ const page = () => {
         <CertificationLevels />
         <BenefitsSection />
         <CyberAssessmentFramework />
-        <TimelineSection />
-        <LearningGlobalModels />
+        {/* <TimelineSection />
+        <LearningGlobalModels /> */}
         {/* <AssessmentProcessByLevel /> */}
-        <WhyActNow />
+        {/* <WhyActNow /> */}
         <ContactForm />
       </main>
       <Footer />

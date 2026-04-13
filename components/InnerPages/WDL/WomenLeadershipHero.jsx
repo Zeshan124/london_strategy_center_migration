@@ -27,7 +27,7 @@ export default function WomenLeadershipHero() {
         {/* Main content */}
         <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-16 sm:py-8 md:py-8 lg:pt-16">
           {/* Logo */}
-          <div className="mb-6">
+          {/* <div className="mb-6">
             <div className="inline-block">
               <Image
                 src="/images/InnerPages/WDL/UOB-logo.svg"
@@ -37,7 +37,7 @@ export default function WomenLeadershipHero() {
                 className="object-contain"
               />
             </div>
-          </div>
+          </div> */}
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-6">
             Women's Leadership <br /> in the Digital Era
@@ -51,7 +51,7 @@ export default function WomenLeadershipHero() {
           {/* Featured Video */}
           <div className="relative mb-0 sm:mb-12 pt-12 sm:pt-24 rounded-2xl overflow-hidden">
             <video
-              src="/images/InnerPages/digitaltwin/Paul_Nanson.mp4"
+              src="/images/InnerPages/WDL/University_of_Birmingham_Dubai_V2.mp4"
               autoPlay
               loop
               muted
