@@ -85,7 +85,10 @@ export default function WomenLeadershipHero() {
 
               {/* Action Buttons */}
               <div className="flex items-center gap-3 min-w-max">
-                <button className="px-6 py-2.5 bg-[#0E2253] text-white text-sm rounded-lg hover:bg-[#2d4a7a] transition-all duration-300 whitespace-nowrap">
+                <button
+                  onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
+                  className="px-6 py-2.5 bg-[#0E2253] text-white text-sm rounded-lg hover:bg-[#2d4a7a] transition-all duration-300 whitespace-nowrap"
+                >
                   APPLY NOW
                 </button>
                 <button className="px-6 py-2.5 bg-[#B90722] text-white text-sm rounded-lg hover:bg-red-700 transition-all duration-300 whitespace-nowrap">
@@ -95,10 +98,14 @@ export default function WomenLeadershipHero() {
                   NOMINATE
                   <ArrowRight className="w-4 h-4" />
                 </button>
-                <button className="px-6 py-2.5 border-2 border-slate-900 text-slate-900 text-sm rounded-lg hover:bg-slate-900 hover:text-white transition-all duration-300 flex items-center gap-2 whitespace-nowrap">
+                <a
+                  href="/images/InnerPages/WDL/womens-leadership-in-the-digital-era.pdf"
+                  download="womens-leadership-in-the-digital-era.pdf"
+                  className="px-6 py-2.5 border-2 border-slate-900 text-slate-900 text-sm rounded-lg hover:bg-slate-900 hover:text-white transition-all duration-300 flex items-center gap-2 whitespace-nowrap"
+                >
                   DOWNLOAD BROCHURE
                   <Download className="w-4 h-4" />
-                </button>
+                </a>
               </div>
             </div>
           </div>

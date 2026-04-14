@@ -33,20 +33,33 @@ export default function ContactFormSection() {
   return (
     <>
       {/* Trigger Section */}
-      <section className="bg-[#F1EEEA] py-12 sm:py-16 md:py-20 lg:py-24">
-        <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-24 flex flex-col items-start gap-4">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-900 leading-tight">
-            Ready to take the next step in your leadership journey?
-          </h2>
-          <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-            Register your interest in the Women's Leadership Development Programme and a member of our team will be in touch to discuss your application.
-          </p>
-          <button
-            onClick={() => setShowForm(true)}
-            className="mt-2 px-10 py-3.5 bg-[#0E2253] text-white text-xs tracking-widest uppercase rounded-xl hover:bg-[#1a3570] transition-all duration-300"
-          >
-            Register Your Interest
-          </button>
+      <section id="contact-form" className="bg-white py-12 sm:py-16 lg:py-20">
+        <div className="relative mx-4 sm:mx-6 lg:mx-16 xl:mx-20">
+          <div className="bg-[#132D5F] rounded-xl sm:rounded-2xl lg:rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10">
+
+              {/* Left: Text */}
+              <div className="flex flex-col gap-3 lg:max-w-xl">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-white leading-tight">
+                  Ready to take the next step in your leadership journey?
+                </h2>
+                <p className="text-sm sm:text-base text-white leading-relaxed">
+                  Register your interest in the Women's Leadership Development Programme and a member of our team will be in touch.
+                </p>
+              </div>
+
+              {/* Right: Button */}
+              <div className="lg:shrink-0">
+                <button
+                  onClick={() => setShowForm(true)}
+                  className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 bg-white border-2 border-[#0E2253] text-gray-900 rounded-xl text-sm text-center hover:bg-gray-900 hover:text-white transition-all duration-300"
+                >
+                  Register Your Interest
+                </button>
+              </div>
+
+            </div>
+          </div>
         </div>
       </section>
 

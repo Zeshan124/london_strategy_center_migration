@@ -23,8 +23,8 @@ export default function CertificationsSection() {
       // badge: 'PROFESSIONALS',
       // duration: '10 WEEKS',
       title: 'Advisory Services',
-      description: 'Digital transformation in logistics and supply chain',
-      image: '/images/Digital-Logistics.jpg'
+      description: 'Advisory Services provide expert advice to support better decisions and growth.',
+      image: '/images/home/advisory_services.png'
     }
   ];
 

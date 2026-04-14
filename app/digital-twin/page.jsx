@@ -32,7 +32,7 @@ const page = () => {
         <OrganizationalLeadership />
         {/* <DigitalTwinProcess /> */}
         <HowItWorks />
-        <ContactFormSection />
+        {/* <ContactFormSection /> */}
       </main>
       <Footer />
       {/* <ChatWidget /> */}

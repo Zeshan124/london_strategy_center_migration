@@ -13,9 +13,9 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#F1EEEA]">
-      <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-8 sm:py-10 md:py-12">
+      <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-8 sm:py-10 md:py-8">
         {/* Main Grid - Logo Left, Content Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-3">
           {/* Left Column - Logo and Links */}
           <div className="flex flex-col justify-between">
             {/* Logo */}
@@ -23,7 +23,7 @@ export default function Footer() {
               <Image
                 src="/images/icons/logo-footer.svg"
                 alt="London Strategy Centre Logo"
-                width={200}
+                width={140}
                 height={80}
                 className="object-contain"
                 priority

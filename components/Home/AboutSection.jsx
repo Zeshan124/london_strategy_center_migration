@@ -22,10 +22,10 @@ export default function AboutSection() {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-green-100 via-green-50 to-blue-50">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch min-h-screen">
+    <section className="bg-gradient-to-br from-green-100 via-green-50 to-blue-50">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
         {/* Left Content */}
-        <div className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-26 py-12 sm:py-16 md:py-20 lg:py-24 flex flex-col justify-center">
+        <div className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-26 py-12 sm:py-16  flex flex-col justify-center">
           {/* Eyebrow */}
           {/* <p className="text-xs sm:text-xs font-semibold tracking-widest text-gray-700 mb-4 sm:mb-6 uppercase">
             About London Strategy Centre
@@ -82,7 +82,7 @@ export default function AboutSection() {
         </div>
 
         {/* Right Image */}
-        <div className="relative h-64 sm:h-80 md:h-96 lg:h-full min-h-[400px] lg:min-h-screen">
+        <div className="relative h-64 sm:h-80 min-h-[400px] md:h-full lg:h-[600]">
           <img
             src="/images/home/6.jpg"
             alt="Executive meeting"

@@ -113,17 +113,26 @@ export default function DigitalTwinHero() {
             >
               DISCOVER HOW IT WORKS
             </button>
-            <button
-              onClick={() => setIsFormOpen(true)}
-              className="group inline-flex items-center gap-2 px-6 py-3 bg-[white] border-2 border-[#0E2253] text-gray-900 rounded-xl font-medium text-xs hover:bg-[#0E2253] hover:text-white transition-all duration-300"
-            >
-              BOOK FREE DIGITAL TWIN CONSULTATION
-              <img
-                src="/images/InnerPages/digitaltwin/arrow-up.svg"
-                alt="Play Icon"
-                className="w-4 h-4 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
-              />
-            </button>
+          <button
+  onClick={() => setIsFormOpen(true)}
+  className="relative overflow-hidden group inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-[#0E2253] text-gray-900 rounded-xl font-medium text-xs hover:bg-[#0E2253] hover:text-white transition-all duration-300"
+>
+  {/* Shine Effect */}
+  <span className="absolute inset-0 overflow-hidden rounded-xl">
+    <span className="absolute -left-[120%] top-0 h-full w-[120%] 
+    bg-gradient-to-r from-transparent via-white/60 to-transparent 
+    skew-x-[-20deg] group-hover:left-[120%] transition-all duration-700"></span>
+  </span>
+
+  <span className="relative z-10 flex items-center gap-2">
+    BOOK FREE DIGITAL TWIN CONSULTATION
+    <img
+      src="/images/InnerPages/digitaltwin/arrow-up.svg"
+      alt="icon"
+      className="w-4 h-4 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+    />
+  </span>
+</button>
           </div>
 
           {/* Featured Video - Full Width */}

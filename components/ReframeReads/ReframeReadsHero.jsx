@@ -81,13 +81,14 @@ export default function ReframeReadsHero() {
 
           {/* Featured Video - Full Width */}
           <div className="py-8 sm:py-12 lg:py-24">
-            <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">
-              <Image
-                src="/images/InnerPages/trl/banner.jpg"
-                alt="Strategy in the Digital Landscape"
-                fill
-                className="object-cover"
-                priority
+            <div className="relative rounded-2xl overflow-hidden">
+              <video
+                src="/images/InnerPages/trl/Web_Video_LSC.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-auto object-cover"
               />
             </div>
           </div>
