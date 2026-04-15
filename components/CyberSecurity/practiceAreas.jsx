@@ -81,7 +81,7 @@ export default function PracticeAreas({ practiceAreas }) {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-4 sm:mb-6">
             {heading}
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed max-w-5xl mx-auto sm:mx-0">
+          <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mx-auto sm:mx-0">
             {subheading}
           </p>
         </div>

@@ -24,7 +24,7 @@ export default function CertificationsSection() {
       // duration: '10 WEEKS',
       title: 'Advisory Services',
       description: 'Advisory Services provide expert advice to support better decisions and growth.',
-      image: '/images/home/advisory_services.png'
+      image: '/images/home/advisory_services.jpg'
     }
   ];
 

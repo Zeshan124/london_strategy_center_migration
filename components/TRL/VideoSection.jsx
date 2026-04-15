@@ -91,7 +91,7 @@ export default function VideoSection({
   }
 
   return (
-    <section className=" py-12 sm:py-16 md:py-20">
+    <section className="py-12 sm:py-16 md:py-16">
       <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
         {/* Search / Filters */}
         <div className="mb-8">

@@ -39,7 +39,7 @@ export default function ContactFormSection() {
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10">
 
               {/* Left: Text */}
-              <div className="flex flex-col gap-3 lg:max-w-xl">
+              <div className="flex flex-col gap-3 lg:max-w-full">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-white leading-tight">
                   Ready to take the next step in your leadership journey?
                 </h2>
