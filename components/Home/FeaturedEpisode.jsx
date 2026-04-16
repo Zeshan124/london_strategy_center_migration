@@ -28,17 +28,17 @@ export default function FeaturedEpisode() {
 
           {/* Description */}
           <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-6">
-            Join our CEO as she discusses the critical leadership skills needed to navigate AI transformation and build resilient, fire-ready organizations.
+           Join our thought leadership as they discuss leadership and resilience in the AI world and how Agentic AI is optimising the path of success but with limitations.
           </p>
 
           {/* Meta Info */}
-          <div className="flex flex-wrap items-center gap-2 text-sm text-gray-600 mb-6">
+          {/* <div className="flex flex-wrap items-center gap-2 text-sm text-gray-600 mb-6">
             <span className="font-medium">Sarah Mitchell, CEO & Strategic Leadership Expert</span>
             <span className="text-gray-400">●</span>
             <span>45 min</span>
             <span className="text-gray-400">●</span>
             <span>Dec 15, 2025</span>
-          </div>
+          </div> */}
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4">
@@ -53,18 +53,21 @@ export default function FeaturedEpisode() {
               </button>
             ))}
 
-            <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#0E2253] text-white rounded-xl font-medium text-sm hover:bg-gray-800 transition-all duration-300">
+            {/* <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#0E2253] text-white rounded-xl font-medium text-sm hover:bg-gray-800 transition-all duration-300">
               DOWNLOAD
               <img src="/images/icons/download-icon-btn.svg" alt="Download Icon" className="w-4 h-4" />
-            </button>
+            </button> */}
           </div>
         </div>
 
-        {/* Right Image */}
+        {/* Right Video */}
         <div className="relative h-64 sm:h-80 lg:h-full">
-          <img
-            src="/images/home/Featured-Episodes.jpg"
-            alt="Modern architecture with colorful geometric patterns"
+          <video
+            src="/images/InnerPages/trl/Web_Video_LSC.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
             className="w-full h-full object-cover"
           />
         </div>

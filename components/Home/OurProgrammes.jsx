@@ -3,70 +3,84 @@
 import Image from "next/image";
 
 export default function OurProgrammes() {
-  const programmes = [
+ const industries = [
     {
       id: 1,
-      icon: "/images/home/women-leadership.svg",
-      title: "Women's Leadership in the Digital Era",
-      description: "We help individuals and organisations grow through advanced strategy, leadership, and innovation development."
+      title: 'Women Leadership in the Digital Era',
+      description: 'We help individuals and organisations grow through advanced strategy, leadership, and innovation development.',
+      image: '/images/home/wdl.jpg'
     },
     {
       id: 2,
-      icon: "/images/home/global-strategic.svg",
-      title: "Global Strategic Trends",
-      description: "We provide world-class programmes to unlock leadership and strategic potential at the executive level."
+      title: 'Global Strategic Trends',
+      description: 'We provide world-class programmes to unlock leadership and strategic potential at the executive level.',
+      image: '/images/home/global_strategic.jpg'
     },
     {
       id: 3,
-      icon: "/images/home/innovation-design.svg",
-      title: "IDeA X Innovation Design",
-      description: "We use contemporary, immersive executive education to improve thinking and organisational performance."
-    }
+      title: 'IDeA X Innovation Design',
+      description: 'We use contemporary, immersive executive education to improve thinking and organisational performance.',
+      image: '/images/home/idea_x.jpg'
+    },
   ];
-
-  return (
-    <section className="bg-white py-12 sm:py-16 md:py-20">
-      <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
-        
+ return (
+    <section className="bg-white py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto px-6 sm:px-8 lg:px-24">
         {/* Header */}
-        <div className="mb-10 sm:mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal text-slate-900 mb-3 sm:mb-4">
-            Our Programmes
+        <div className="mb-12 lg:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light leading-tight mb-4 text-gray-900">
+            Our Industries
           </h2>
-          <p className="text-sm sm:text-base text-slate-600">
+          <p className="text-base sm:text-lg text-gray-600">
             Specialized expertise across diverse sectors and industries
           </p>
         </div>
 
-        {/* Programme Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {programmes.map((programme) => (
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-5">
+          {industries.map((industry) => (
             <div
-              key={programme.id}
-              className="group border-2 border-slate-200 rounded-xl p-6 sm:p-8 hover:border-slate-300 hover:shadow-lg transition-all duration-300"
+              key={industry.id}
+              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
             >
-              {/* Icon */}
-              <div className="mb-6 sm:mb-8">
-                <div className="w-16 h-16 sm:w-20 sm:h-20">
-                  <Image
-                    src={programme.icon}
-                    alt={programme.title}
-                    width={80}
-                    height={80}
-                    className="object-contain w-full h-full"
-                  />
-                </div>
+              {/* Image */}
+              <div className="relative h-[400px] sm:h-[550px] overflow-hidden">
+                <img
+                  src={industry.image}
+                  alt={industry.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0" />
+                
+                {/* Badge */}
+                {/* <div className="absolute top-5 left-5">
+                  <span className="inline-block px-4 py-2 bg-black/50 backdrop-blur-md border border-white/50 rounded-md text-xs font-medium tracking-wider text-white uppercase">
+                    {industry.badge}
+                  </span>
+                </div> */}
               </div>
 
-              {/* Title */}
-              <h3 className="text-lg sm:text-xl md:text-2xl font-normal text-slate-900 mb-4 leading-tight">
-                {programme.title}
-              </h3>
+              {/* Content Box */}
+              <div className="absolute bottom-5 left-5 right-5 bg-white rounded-2xl p-3 shadow-xl transform transition-all duration-500">
+                {/* Title */}
+                <h3 className="text-lg sm:text-2xl font-normal text-gray-900 mb-2 leading-tight">
+                  {industry.title}
+                </h3>
 
-              {/* Description */}
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                {programme.description}
-              </p>
+                {/* Description */}
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {industry.description}
+                </p>
+
+                {/* Hover: Arrow - Appears on hover */}
+                {/* <div className="mt-3 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+                  <svg className="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div> */}
+              </div>
             </div>
           ))}
         </div>
