@@ -63,7 +63,7 @@ export default function FeaturedEpisode() {
         {/* Right Video */}
         <div className="relative h-64 sm:h-80 lg:h-full">
           <video
-            src="/images/InnerPages/trl/Web_Video_LSC.mp4"
+            src="/images/home/Web_video_lsc.mp4"
             autoPlay
             muted
             loop

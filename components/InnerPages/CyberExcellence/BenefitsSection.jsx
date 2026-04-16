@@ -49,81 +49,84 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-12">
+      <section className="relative py-16 md:py-20 overflow-hidden bg-slate-50">
+
+      {/* Background Blobs */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-blue-200 opacity-30 blur-3xl rounded-full animate-pulse"></div>
+        <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-[#0E2253] opacity-20 blur-3xl rounded-full animate-[spin_25s_linear_infinite]"></div>
+      </div>
+
       <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
 
         {/* Header */}
-        <div className="mb-10 sm:mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal text-slate-900 mb-3 sm:mb-4">
+        <div className="mb-12 md:mb-16 max-w-4xl">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-slate-900 mb-4">
             Benefits of Cyber Excellence
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-600 max-w-4xl">
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
             Our mission is to empower individuals and organisations through
             strategic thinking, leadership excellence, and innovation that
             drives sustainable growth.
           </p>
         </div>
 
-        {/* Card Grid (Same as OurProgrammes) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="group border-2 border-slate-200 rounded-xl p-6 sm:p-8 hover:border-slate-300 hover:shadow-lg transition-all duration-300"
+              className="group relative rounded-2xl p-[1px] bg-gradient-to-br from-transparent via-transparent to-transparent hover:from-[#0E2253]/40 hover:via-blue-400/30 hover:to-transparent transition-all duration-500"
             >
-              {/* Icon */}
-              <div className="mb-6 sm:mb-8">
-                <div className="w-16 h-16 sm:w-20 sm:h-20">
-                  <Image
-                    src={feature.icon}
-                    alt={feature.title}
-                    width={80}
-                    height={80}
-                    className="object-contain w-full h-full"
-                  />
+              <div
+                className="relative h-full rounded-2xl bg-white/80 backdrop-blur-lg p-6 md:p-8 border border-slate-200/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 overflow-hidden"
+                onMouseMove={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  e.currentTarget.style.setProperty("--x", `${e.clientX - rect.left}px`);
+                  e.currentTarget.style.setProperty("--y", `${e.clientY - rect.top}px`);
+                }}
+              >
+                {/* Spotlight */}
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500"
+                  style={{
+                    background:
+                      "radial-gradient(400px circle at var(--x) var(--y), rgba(14,34,83,0.15), transparent 60%)",
+                  }}
+                ></div>
+
+                {/* Icon */}
+                <div className="mb-6 relative z-10">
+                  <div className="w-14 h-14 flex items-center justify-center rounded-xl 
+                  bg-gradient-to-br from-[#0E2253]/15 via-blue-100 to-transparent 
+                  group-hover:scale-110 transition duration-300">
+                    <Image
+                      src={feature.icon}
+                      alt={feature.title}
+                      width={36}
+                      height={36}
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
+
+                {/* Title */}
+                <h3 className="relative z-10 text-lg md:text-xl font-semibold text-slate-900 mb-3 group-hover:text-[#0E2253] transition">
+                  {feature.title}
+                </h3>
+
+                {/* Divider */}
+                <div className="relative z-10 w-12 h-[2px] bg-gradient-to-r from-[#0E2253] to-blue-400 mb-4 group-hover:w-16 transition-all duration-300"></div>
+
+                {/* Description */}
+                <p className="relative z-10 text-sm text-slate-600 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-
-              {/* Title */}
-              <h3 className="text-lg sm:text-xl md:text-2xl font-normal text-slate-900 mb-4 leading-tight">
-                {feature.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                {feature.description}
-              </p>
             </div>
           ))}
         </div>
-
-        {/* CTA Section (unchanged) */}
-        {/* <div className="mt-12 sm:mt-16 md:mt-20">
-          <div className="bg-[#132D5F] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl text-white relative overflow-hidden">
-            
-            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
-              
-              <div className="flex-1 text-center md:text-left w-full">
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-normal mb-3">
-                  Ready to get Certified?
-                </h3>
-                <p className="text-sm sm:text-base leading-relaxed">
-                  Join thousands of organisations improving their cybersecurity posture.
-                </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
-                <button className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-slate-900 text-sm sm:text-base rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-                  GET CERTIFIED TODAY
-                </button>
-                <button className="px-6 sm:px-8 py-3 sm:py-4 bg-transparent text-white text-sm sm:text-base rounded-xl border-2 border-white hover:bg-white/10 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-                  LEARN MORE ↗
-                </button>
-              </div>
-            </div>
-          </div>
-        </div> */}
 
       </div>
     </section>
