@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { X } from 'lucide-react';
+import { X, Play } from 'lucide-react';
 
 const videos = [
   { id: 'OfseuaG7QVA', label: 'Pace of Change' },
@@ -14,8 +14,9 @@ export default function FeaturedEpisode() {
   return (
     <section className="bg-[#F1EEEA]">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch h-auto lg:h-[50vh] min-h-[500px]">
+
         {/* Left Content */}
-        <div className=" bg-[#F1EEEA] px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-14 lg:py-16 flex flex-col justify-center">
+        <div className="bg-[#F1EEEA] px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-14 lg:py-16 flex flex-col justify-center">
           {/* Eyebrow */}
           <p className="text-xs font-semibold tracking-widest text-[#0E2253] mb-4 uppercase">
             Featured Episode
@@ -27,36 +28,32 @@ export default function FeaturedEpisode() {
           </h2>
 
           {/* Description */}
-          <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-6">
-           Join our thought leadership as they discuss leadership and resilience in the AI world and how Agentic AI is optimising the path of success but with limitations.
+          <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-8">
+            Join our thought leadership as they discuss leadership and resilience in the AI world and how Agentic AI is optimising the path of success but with limitations.
           </p>
 
-          {/* Meta Info */}
-          {/* <div className="flex flex-wrap items-center gap-2 text-sm text-gray-600 mb-6">
-            <span className="font-medium">Sarah Mitchell, CEO & Strategic Leadership Expert</span>
-            <span className="text-gray-400">●</span>
-            <span>45 min</span>
-            <span className="text-gray-400">●</span>
-            <span>Dec 15, 2025</span>
-          </div> */}
-
-          {/* Buttons */}
-          <div className="flex flex-wrap gap-4">
-            {videos.map((video) => (
+          {/* Video Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3">
+            {videos.map((video, index) => (
               <button
                 key={video.id}
-                onClick={() => setActiveVideo(video.id)}
-                className="group inline-flex items-center gap-2 px-6 py-3 bg-[white] border-2 border-[#0E2253] text-gray-900 rounded-xl font-medium text-sm hover:bg-gray-900 hover:text-white transition-all duration-300"
+                onClick={() => setActiveVideo(video)}
+                className="group flex items-center gap-3 px-5 py-3.5 bg-white rounded-xl shadow-sm border border-gray-200 hover:border-[#0E2253] hover:shadow-md transition-all duration-300 text-left"
               >
-                {video.label}
-                <img src="/images/icons/play-icon.svg" alt="Play Icon" className="w-4 h-4 transition-all duration-300 group-hover:brightness-0 group-hover:invert" />
+                {/* Play circle */}
+                <div className="w-9 h-9 rounded-full bg-[#0E2253] group-hover:bg-[#1a3570] flex items-center justify-center shrink-0 transition-colors duration-300">
+                  <Play className="w-3.5 h-3.5 text-white fill-white ml-0.5" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[10px] text-gray-400 uppercase tracking-widest leading-none mb-0.5">
+                    Episode {index + 1}
+                  </span>
+                  <span className="text-sm font-medium text-gray-900 group-hover:text-[#0E2253] transition-colors duration-300 leading-snug">
+                    {video.label}
+                  </span>
+                </div>
               </button>
             ))}
-
-            {/* <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#0E2253] text-white rounded-xl font-medium text-sm hover:bg-gray-800 transition-all duration-300">
-              DOWNLOAD
-              <img src="/images/icons/download-icon-btn.svg" alt="Download Icon" className="w-4 h-4" />
-            </button> */}
           </div>
         </div>
 
@@ -73,31 +70,46 @@ export default function FeaturedEpisode() {
         </div>
       </div>
 
-      {/* Video Modal */}
+      {/* Video Modal — Reel / Portrait view */}
       {activeVideo && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
           onClick={() => setActiveVideo(null)}
         >
+          {/* Close button — outside the card, top-right */}
+          <button
+            onClick={() => setActiveVideo(null)}
+            className="absolute top-4 right-4 w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/25 text-white transition-colors duration-200 z-10"
+            aria-label="Close"
+          >
+            <X className="w-5 h-5" />
+          </button>
+
+          {/* Portrait container — 9:16 ratio, max height 90vh */}
           <div
-            className="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-2xl"
+            className="relative rounded-2xl overflow-hidden shadow-2xl"
+            style={{ aspectRatio: '9/16', height: 'min(90vh, 640px)', width: 'auto' }}
             onClick={(e) => e.stopPropagation()}
           >
-            <button
-              onClick={() => setActiveVideo(null)}
-              className="absolute top-3 right-3 z-10 w-9 h-9 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-colors duration-200"
-            >
-              <X className="w-5 h-5" />
-            </button>
-            <div className="aspect-video">
-              <iframe
-                src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1&rel=0`}
-                title="Video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
+            {/* Now Playing label */}
+            <div className="absolute top-0 left-0 right-0 z-10 flex items-center gap-2 px-4 py-3 bg-linear-to-b from-black/60 to-transparent">
+              <div className="w-6 h-6 rounded-full bg-[#0E2253] flex items-center justify-center shrink-0">
+                <Play className="w-2.5 h-2.5 text-white fill-white ml-0.5" />
+              </div>
+              <div>
+                <p className="text-[9px] text-white/50 uppercase tracking-widest leading-none">Now Playing</p>
+                <p className="text-xs font-medium text-white leading-snug">{activeVideo.label}</p>
+              </div>
             </div>
+
+            {/* iframe fills the portrait box */}
+            <iframe
+              src={`https://www.youtube.com/embed/${activeVideo.id}?autoplay=1&rel=0&modestbranding=1`}
+              title={activeVideo.label}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
           </div>
         </div>
       )}
