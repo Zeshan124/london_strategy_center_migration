@@ -73,68 +73,100 @@ export default function PracticeAreas({ practiceAreas }) {
   const subheading_bottom = practiceAreas?.subheading_bottom ?? null;
   const colClass       = getColClass(features.length);
 
-  return (
-    <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-12">
+ return (
+    <section className="relative py-16 md:py-20 overflow-hidden bg-slate-50">
+
+      {/* Background Blobs */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-blue-200 opacity-30 blur-3xl rounded-full animate-pulse"></div>
+        <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-[#0E2253] opacity-20 blur-3xl rounded-full animate-[spin_25s_linear_infinite]"></div>
+      </div>
+
       <div className="mx-auto px-4 sm:px-6 lg:px-24">
+
         {/* Header */}
-        <div className="mb-10 sm:mb-12 lg:mb-16 text-center sm:text-left">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-4 sm:mb-6">
+        <div className="mb-12 lg:mb-16 text-center sm:text-left">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-slate-900 mb-4">
             {heading}
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mx-auto sm:mx-0">
+          <p className="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed">
             {subheading}
           </p>
         </div>
 
-        {/* Features Grid — columns adapt to feature count */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 ${colClass} gap-6 md:gap-8`}>
+        {/* Cards */}
+        <div className={`grid grid-cols-1 md:grid-cols-2 ${colClass} gap-8`}>
           {features.map((feature) => (
-           <Link
-  key={feature.id}
-  href={feature.slug ? `/cyber-security/${feature.slug}` : "#"}
-  className="group border-2 border-slate-200 rounded-xl p-6 sm:p-8 hover:border-slate-300 hover:shadow-lg transition-all duration-300"
->
-  {/* Icon */}
-  <div className="mb-6 sm:mb-8">
-    <div className="w-16 h-16 sm:w-20 sm:h-20">
-      <Image
-        src={feature.icon}
-        alt={feature.title}
-        width={80}
-        height={80}
-        className="object-contain w-full h-full"
-      />
-    </div>
-  </div>
+            <Link
+              key={feature.id}
+              href={feature.slug ? `/cyber-security/${feature.slug}` : "#"}
+              className="group relative rounded-2xl p-[1px] bg-gradient-to-br from-transparent via-transparent to-transparent hover:from-[#0E2253]/40 hover:via-blue-400/30 hover:to-transparent transition-all duration-500"
+            >
+              <div
+                className="relative h-full rounded-2xl bg-white/80 backdrop-blur-lg p-6 md:p-8 border border-slate-200/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 overflow-hidden"
+                onMouseMove={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  e.currentTarget.style.setProperty("--x", `${e.clientX - rect.left}px`);
+                  e.currentTarget.style.setProperty("--y", `${e.clientY - rect.top}px`);
+                }}
+              >
+                {/* Spotlight */}
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500"
+                  style={{
+                    background:
+                      "radial-gradient(400px circle at var(--x) var(--y), rgba(14,34,83,0.15), transparent 60%)",
+                  }}
+                ></div>
 
-  {/* Title */}
-  <h3 className="text-lg sm:text-xl md:text-2xl font-normal text-slate-900 mb-4 leading-tight group-hover:text-[#0E2253] transition-colors">
-    {feature.title}
-  </h3>
+                {/* Icon */}
+                <div className="mb-6 relative z-10">
+                  <div className="w-14 h-14 flex items-center justify-center rounded-xl 
+                  bg-gradient-to-br from-[#0E2253]/15 via-blue-100 to-transparent 
+                  group-hover:scale-110 transition duration-300">
+                    <Image
+                      src={feature.icon}
+                      alt={feature.title}
+                      width={36}
+                      height={36}
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
 
-  {/* Description */}
-  <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-    {feature.description}
-  </p>
-</Link>
+                {/* Title */}
+                <h3 className="relative z-10 text-lg md:text-xl font-semibold text-slate-900 mb-3 group-hover:text-[#0E2253] transition">
+                  {feature.title}
+                </h3>
+
+                {/* Divider */}
+                <div className="relative z-10 w-12 h-[2px] bg-gradient-to-r from-[#0E2253] to-blue-400 mb-4 group-hover:w-16 transition-all duration-300"></div>
+
+                {/* Description */}
+                <p className="relative z-10 text-sm text-slate-600 leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            </Link>
           ))}
         </div>
 
-        {/* Bottom Heading — only rendered when passed via practiceAreas prop */}
+        {/* Bottom Section */}
         {(heading_bottom || subheading_bottom) && (
-          <div className="mt-10 sm:mt-12 lg:mt-16 text-center sm:text-left">
+          <div className="mt-12 lg:mt-16 text-center sm:text-left">
             {heading_bottom && (
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-4 sm:mb-6 lg:max-w-3xl">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-slate-900 mb-4">
                 {heading_bottom}
               </h2>
             )}
             {subheading_bottom && (
-              <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mx-auto sm:mx-0">
+              <p className="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed">
                 {subheading_bottom}
               </p>
             )}
           </div>
         )}
+
       </div>
     </section>
   );
