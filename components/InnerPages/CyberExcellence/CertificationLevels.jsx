@@ -2,10 +2,55 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import AssessmentProcessByLevel from "./AssessmentProcessByLevel";
+import { X } from "lucide-react";
+
+const assessments = [
+  {
+    badge: "AWARE LEVEL 1",
+    description: "Self-assessment via a short online questionnaire. Light-touch independent verification of declarations. Scope: Five core technical controls (Cyber Essentials-aligned):",
+    items: [
+      "Firewalls & internet gateways",
+      "Secure configuration",
+      "User access control",
+      "Malware protection",
+      "Patch management",
+    ],
+  },
+  {
+    badge: "BASIC LEVEL 2",
+    description: "Includes all Level 1 aspects. Independent technical verification by a qualified assessor, including:",
+    items: [
+      "External/internal vulnerability scanning",
+      "Checks for unpatched/misconfigured systems",
+      "Malware/AV effectiveness checks",
+      "User device build reviews (laptops, desktops, mobiles)",
+      "Tests confirming boundary and access control measures",
+    ],
+  },
+  {
+    badge: "FOUNDATION LEVEL 3",
+    description: "Includes all Level 1 & 2 assessment activities.",
+    items: [
+      "Deeper sampling and evidence review (policies, runbooks, intrusion prevention configs, backup/restore records).",
+      "Effectiveness validation (tabletop exercises, restore tests, incident response walkthroughs).",
+      "Supplier oversight checks (contracts, SLAs, assurance artefacts).",
+    ],
+  },
+  {
+    badge: "HOLISTIC LEVEL 4",
+    description: "Includes all Level 1 aspects. Independent technical verification by a qualified assessor, including:",
+    items: [
+      "Threat-led testing (e.g., red/purple teaming, breach & attack simulation) mapped to crown-jewel assets.",
+      "Architecture & design assurance (network segmentation, zero-trust patterns, high-availability and failover).",
+      "Operational resilience validation (RTO/RPO evidence, crisis exercises with executives).",
+      "Continuous monitoring and SOC use-cases with measurable detection/response SLAs.",
+      "Metrics & governance reviewed at board level; transparent reporting to regulators where required.",
+    ],
+  },
+];
 
 export default function CertificationLevel() {
-  const [showAssessment, setShowAssessment] = useState(false);
+  const [selectedLevel, setSelectedLevel] = useState(null);
   const certifications = [
     {
       number: "1",
@@ -75,9 +120,10 @@ export default function CertificationLevel() {
         {/* Certification Cards Grid - Fully Responsive */}
         <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7 md:gap-16 mb-12 sm:mb-16 md:mb-20">
           {certifications.map((cert, index) => (
-            <div
+            <button
               key={index}
-              className="group relative transition-all duration-300"
+              onClick={() => setSelectedLevel(index)}
+              className="group relative text-left transition-all duration-300 cursor-pointer focus:outline-none"
             >
               {/* Card Content */}
               <div className="flex flex-col items-center sm:items-start">
@@ -95,7 +141,7 @@ export default function CertificationLevel() {
                 </div>
 
                 {/* Title - Responsive text */}
-                <h3 className="text-lg sm:text-xl md:text-2xl text-gray-900 mb-2 sm:mb-3 text-center sm:text-left">
+                <h3 className="text-lg sm:text-xl md:text-2xl text-gray-900 mb-2 sm:mb-3 text-center sm:text-left group-hover:text-[#0E2253] transition-colors duration-200">
                   {cert.title}
                 </h3>
 
@@ -103,24 +149,63 @@ export default function CertificationLevel() {
                 <p className="text-xs sm:text-sm md:text-sm text-slate-600 leading-relaxed text-center sm:text-left">
                   {cert.desc}
                 </p>
-              </div>
-            </div>
-          ))}
-        </div>
 
-        {/* Learn More Button */}
-        <div className="mt-12 sm:mt-16 flex justify-center">
-          <button
-            onClick={() => setShowAssessment((prev) => !prev)}
-            className="px-10 py-3.5 bg-[#0E2253] text-white text-sm rounded-xl border-2 border-[#0E2253] hover:bg-transparent hover:text-[#0E2253] transition-all duration-300 uppercase tracking-widest"
-          >
-            {showAssessment ? "Show Less ↑" : "Learn More ↗"}
-          </button>
+                {/* Learn More hint — always visible on mobile, hover-only on desktop */}
+                <span className="mt-3 text-xs text-[#0E2253] font-semibold uppercase tracking-widest opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-200">
+                  Learn More ↗
+                </span>
+              </div>
+            </button>
+          ))}
         </div>
       </div>
     </section>
 
-    {showAssessment && <AssessmentProcessByLevel />}
+    {/* Assessment Modal */}
+    {selectedLevel !== null && (
+      <div
+        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+        onClick={() => setSelectedLevel(null)}
+      >
+        <div
+          className="relative bg-[#F1EEEA] rounded-2xl shadow-2xl w-full max-w-xl p-8 max-h-[90vh] overflow-y-auto"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <button
+            onClick={() => setSelectedLevel(null)}
+            className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 transition-colors"
+            aria-label="Close"
+          >
+            <X className="w-6 h-6" />
+          </button>
+
+          {/* Badge */}
+          <div className="mb-6">
+            <span className="inline-block bg-[#0E2253] text-white px-6 py-2.5 rounded-xl font-bold text-sm uppercase tracking-wide">
+              {assessments[selectedLevel].badge}
+            </span>
+          </div>
+
+          {/* HOW IT'S ASSESSED */}
+          <h3 className="text-[#1e3a5f] text-xs uppercase tracking-widest mb-3">
+            HOW IT'S ASSESSED
+          </h3>
+
+          <p className="text-slate-900 text-sm leading-relaxed mb-5">
+            {assessments[selectedLevel].description}
+          </p>
+
+          <ul className="space-y-3">
+            {assessments[selectedLevel].items.map((item, i) => (
+              <li key={i} className="flex items-start gap-3 text-slate-900 text-sm leading-relaxed">
+                <span className="shrink-0 w-1.5 h-1.5 bg-[#0E2253] rounded-full mt-1.5"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    )}
     </>
   );
 }
