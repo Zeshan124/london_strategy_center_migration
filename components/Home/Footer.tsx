@@ -56,7 +56,7 @@ export default function Footer() {
 
               {/* Copyright */}
               <p className="text-xs sm:text-sm text-slate-900">
-                © 2025 London Strategy Centre
+                © 2026 London Strategy Centre
               </p>
             </div>
           </div>

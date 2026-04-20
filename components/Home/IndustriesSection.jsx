@@ -1,98 +1,137 @@
 'use client';
 
+import { useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import 'swiper/css';
+
 export default function IndustriesSection() {
+  const swiperRef = useRef(null);
+
   const industries = [
     {
       id: 1,
-      badge: 'AEROSPACE',
       title: 'Aerospace and Defence',
       description: 'Strategic consulting for aerospace innovation and defense sector transformation',
       image: '/images/home/industries-section-1.jpg'
     },
     {
       id: 2,
-      badge: 'PUBLIC',
       title: 'Public Sector',
       description: 'Public administration optimization and digital government solutions',
       image: '/images/home/industries-section-2.jpg'
     },
     {
       id: 3,
-      badge: 'TECH',
-      title: 'Technology, Media and Telecommunications',
+      title: 'Technology and Telecommunications',
       description: 'Digital transformation and innovation strategies for tech companies',
       image: '/images/home/industries-section-3.jpg'
     },
     {
       id: 4,
-      badge: 'INDUSTRIES',
-      title: 'Private Industries',
+      title: 'Private Sector',
       description: 'Comprehensive business solutions for private sector enterprises',
       image: '/images/home/industries-section-4.jpg'
-    }
+    },
+    {
+      id: 5,
+      title: 'Real Estate',
+      description: 'Strategic advisory for property investment, development, and portfolio management.',
+      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=800&fit=crop'
+    },
+    {
+      id: 6,
+      title: 'Healthcare',
+      description: 'Transforming healthcare delivery through innovation, strategy, and digital health solutions.',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=800&fit=crop'
+    },
+    {
+      id: 7,
+      title: 'Media',
+      description: 'Navigating the evolving media landscape with content strategy and digital transformation.',
+      image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&h=800&fit=crop'
+    },
+    {
+      id: 8,
+      title: 'Logistics',
+      description: 'Optimising supply chains and logistics operations for efficiency and resilience.',
+      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=800&fit=crop'
+    },
   ];
 
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto px-6 sm:px-8 lg:px-24">
         {/* Header */}
-        <div className="mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light leading-tight mb-4 text-gray-900">
-            Our Industries
-          </h2>
-          <p className="text-base sm:text-lg text-gray-600">
-            Specialized expertise across diverse sectors and industries
-          </p>
+        <div className="mb-12 lg:mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+          <div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light leading-tight mb-4 text-gray-900">
+              Our Industries
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600">
+              Specialised expertise across diverse sectors and industries
+            </p>
+          </div>
+
+          {/* Navigation Arrows */}
+          <div className="flex items-center gap-3 shrink-0">
+            <button
+              onClick={() => swiperRef.current?.slidePrev()}
+              className="p-2.5 border border-gray-300 rounded-full hover:bg-gray-100 transition-colors"
+              aria-label="Previous"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => swiperRef.current?.slideNext()}
+              className="p-2.5 border border-gray-300 rounded-full hover:bg-gray-100 transition-colors"
+              aria-label="Next"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-5">
+        {/* Slider */}
+        <Swiper
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          modules={[Autoplay]}
+          spaceBetween={20}
+          slidesPerView={1}
+          loop={true}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          breakpoints={{
+            640:  { slidesPerView: 2, spaceBetween: 20 },
+            1024: { slidesPerView: 4, spaceBetween: 20 },
+          }}
+        >
           {industries.map((industry) => (
-            <div
-              key={industry.id}
-              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
-            >
-              {/* Image */}
-              <div className="relative h-[400px] sm:h-[450px] overflow-hidden">
-                <img
-                  src={industry.image}
-                  alt={industry.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0" />
-                
-                {/* Badge */}
-                <div className="absolute top-5 left-5">
-                  <span className="inline-block px-4 py-2 bg-black/50 backdrop-blur-md border border-white/50 rounded-md text-xs font-medium tracking-wider text-white uppercase">
-                    {industry.badge}
-                  </span>
+            <SwiperSlide key={industry.id}>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer">
+                {/* Image */}
+                <div className="relative h-[400px] sm:h-[450px] overflow-hidden">
+                  <img
+                    src={industry.image}
+                    alt={industry.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0" />
+                </div>
+
+                {/* Content Box */}
+                <div className="absolute bottom-5 left-5 right-5 bg-white rounded-2xl p-3 shadow-xl transition-all duration-500">
+                  <h3 className="text-lg font-normal text-gray-900 mb-2 leading-tight">
+                    {industry.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {industry.description}
+                  </p>
                 </div>
               </div>
-
-              {/* Content Box */}
-              <div className="absolute bottom-5 left-5 right-5 bg-white rounded-2xl p-3 shadow-xl transform transition-all duration-500">
-                {/* Title */}
-                <h3 className="text-lg font-normal text-gray-900 mb-2 leading-tight">
-                  {industry.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {industry.description}
-                </p>
-
-                {/* Hover: Arrow - Appears on hover */}
-                {/* <div className="mt-3 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
-                  <svg className="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div> */}
-              </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );

@@ -24,7 +24,7 @@ export default function FeaturedEpisode() {
 
           {/* Main Heading */}
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light leading-tight mb-4 text-gray-900">
-            AI-First Leadership: Transforming Organizations in 2024
+            AI-First Leadership: Transforming Organisations in 2026
           </h2>
 
           {/* Description */}

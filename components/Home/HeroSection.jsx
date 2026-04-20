@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
+import { ChevronLeft, ChevronRight, Pause, Play, X } from "lucide-react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -11,7 +11,24 @@ import "swiper/css";
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
+  const [leadModal, setLeadModal] = useState(null); // holds the article object
+  const [leadForm, setLeadForm] = useState({ name: "", email: "" });
   const swiperRef = useRef(null);
+
+  function openLeadModal(article) {
+    setLeadForm({ name: "", email: "" });
+    setLeadModal(article);
+  }
+
+  function handleLeadSubmit(e) {
+    e.preventDefault();
+    // Trigger download
+    const link = document.createElement("a");
+    link.href = leadModal.document;
+    link.download = "";
+    link.click();
+    setLeadModal(null);
+  }
 
   const articles = [
     {
@@ -25,6 +42,7 @@ export default function HeroSection() {
       date: "November 25, 2025",
       type: "Article",
       link: "/as-ai-changes-work",
+      document: "/images/home/ud-report.pdf",
     },
     {
       id: 2,
@@ -37,6 +55,7 @@ export default function HeroSection() {
       date: "November 25, 2025",
       type: "Article",
       link: "/agentic-marketing-race",
+      document: "/documents/article-2.pdf",
     },
     {
       id: 3,
@@ -50,6 +69,7 @@ export default function HeroSection() {
       date: "November 21, 2025",
       type: "Article",
       link: "/reshaping-business-portfolio",
+      document: "/documents/article-3.pdf",
     },
     {
       id: 4,
@@ -62,6 +82,7 @@ export default function HeroSection() {
       date: "November 20, 2025",
       type: "Article",
       link: "/mobilizing-investment",
+      document: "/documents/article-4.pdf",
     },
     {
       id: 5,
@@ -75,6 +96,7 @@ export default function HeroSection() {
       date: "November 18, 2025",
       type: "Article",
       link: "/ai-first-cmo",
+      document: "/documents/article-5.pdf",
     },
     {
       id: 6,
@@ -89,8 +111,9 @@ export default function HeroSection() {
       date: "November 18, 2025",
       type: "Article",
       link: "/machines-manage-themselves",
+      document: "/documents/article-6.pdf",
     },
-     {
+    {
       id: 7,
       image: "/images/home/5.jpg",
       category: "Artificial Intelligence",
@@ -102,8 +125,9 @@ export default function HeroSection() {
       date: "November 18, 2025",
       type: "Article",
       link: "/ai-first-cmo",
+      document: "/documents/article-7.pdf",
     },
-     {
+    {
       id: 8,
       image: "/images/home/4.jpg",
       category: "Climate Risk, Adaptation, and Resilience",
@@ -114,6 +138,7 @@ export default function HeroSection() {
       date: "November 20, 2025",
       type: "Article",
       link: "/mobilizing-investment",
+      document: "/documents/article-8.pdf",
     },
   ];
 
@@ -253,7 +278,10 @@ export default function HeroSection() {
                       <span>{article.date}</span>
                     </div>
 
-                    <button className="inline-flex items-center gap-2 px-6 py-2.5 bg-green-400 hover:bg-green-500 text-black font-semibold text-sm rounded-md transition-colors duration-300">
+                    <button
+                      onClick={(e) => { e.stopPropagation(); openLeadModal(article); }}
+                      className="inline-flex items-center gap-2 px-6 py-2.5 bg-green-400 hover:bg-green-500 text-black font-semibold text-sm rounded-md transition-colors duration-300"
+                    >
                       LEARN MORE
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -312,20 +340,87 @@ export default function HeroSection() {
         <div className="mt-12 sm:mt-16 lg:mt-20 flex justify-center px-4">
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12 px-4 sm:px-6 md:px-8 py-3 sm:py-4 border border-gray-200 rounded-full shadow-sm bg-white max-w-full">
             <button className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
-              Tier-1
+              Agentic AI PDR
             </button>
             <button className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
               Digital Twins
             </button>
             <button className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
-              Cyber Excellence
+              Cyber Excellence Assessment
             </button>
             <button className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
-              Customised Interventions
+              Digital Business Plan
             </button>
           </div>
         </div>
       </main>
+
+      {/* Lead Capture Modal */}
+      {leadModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+          onClick={() => setLeadModal(null)}
+        >
+          <div
+            className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md p-8"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setLeadModal(null)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition-colors"
+              aria-label="Close"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <div className="mb-6">
+              <p className="text-xs font-semibold tracking-widest text-[#0E2253] uppercase mb-2">
+                {leadModal.type}
+              </p>
+              <h2 className="text-xl font-light text-gray-900 leading-snug">
+                {leadModal.title}
+              </h2>
+            </div>
+
+            <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+              Enter your details to download this article.
+            </p>
+
+            <form onSubmit={handleLeadSubmit} className="space-y-4">
+              <div className="flex flex-col gap-1.5">
+                <label className="text-sm font-semibold text-gray-900">Full Name</label>
+                <input
+                  type="text"
+                  required
+                  value={leadForm.name}
+                  onChange={(e) => setLeadForm((f) => ({ ...f, name: e.target.value }))}
+                  placeholder="Enter your full name"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#0E2253] transition-colors"
+                />
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <label className="text-sm font-semibold text-gray-900">Email Address</label>
+                <input
+                  type="email"
+                  required
+                  value={leadForm.email}
+                  onChange={(e) => setLeadForm((f) => ({ ...f, email: e.target.value }))}
+                  placeholder="Enter your email"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#0E2253] transition-colors"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full mt-2 py-3.5 bg-[#0E2253] text-white text-sm font-semibold rounded-xl hover:bg-[#1a3570] transition-all duration-300 uppercase tracking-widest"
+              >
+                Download Article
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

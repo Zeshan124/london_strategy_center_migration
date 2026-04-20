@@ -150,8 +150,8 @@ export default function CertificationLevel() {
                   {cert.desc}
                 </p>
 
-                {/* Learn More hint — always visible on mobile, hover-only on desktop */}
-                <span className="mt-3 text-xs text-[#0E2253] font-semibold uppercase tracking-widest opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-200">
+                {/* Learn More hint — always visible */}
+                <span className="mt-3 text-xs text-[#0E2253] font-semibold uppercase tracking-widest">
                   Learn More ↗
                 </span>
               </div>

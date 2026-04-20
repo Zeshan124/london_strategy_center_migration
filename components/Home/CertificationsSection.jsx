@@ -1,31 +1,30 @@
 'use client';
 
+import Link from 'next/link';
+
 export default function CertificationsSection() {
   const certifications = [
     {
       id: 1,
-      // badge: 'ADVANCED',
-      // duration: '12 WEEKS',
       title: 'Artificial Intelligence',
       description: 'Comprehensive AI strategy and implementation certification',
-      image: '/images/AI.jpg'
+      image: '/images/AI.jpg',
+      href: null,
     },
     {
       id: 2,
-      // badge: 'EXPERT',
-      // duration: '16 WEEKS',
       title: 'Cyber Security',
-      description: 'Advanced cybersecurity framework and risk management',
-      image: '/images/Cyber-Excellence.jpg'
+      description: 'Advanced cyber security framework and risk management',
+      image: '/images/Cyber-Excellence.jpg',
+      href: '/cyber-security',
     },
     {
       id: 3,
-      // badge: 'PROFESSIONALS',
-      // duration: '10 WEEKS',
       title: 'Advisory Services',
       description: 'Advisory Services provide expert advice to support better decisions and growth.',
-      image: '/images/home/advisory_services.jpg'
-    }
+      image: '/images/home/advisory_services.jpg',
+      href: null,
+    },
   ];
 
   return (
@@ -43,9 +42,12 @@ export default function CertificationsSection() {
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {certifications.map((cert, index) => (
-            <div
+          {certifications.map((cert, index) => {
+            const Wrapper = cert.href ? Link : 'div';
+            return (
+            <Wrapper
               key={cert.id}
+              {...(cert.href ? { href: cert.href } : {})}
               className={`group relative overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer ${
                 index === 1 ? 'lg:-translate-y-12' : ''
               }`}
@@ -96,8 +98,9 @@ export default function CertificationsSection() {
                   </button>
                 </div> */}
               </div>
-            </div>
-          ))}
+            </Wrapper>
+            );
+          })}
         </div>
       </div>
     </section>
