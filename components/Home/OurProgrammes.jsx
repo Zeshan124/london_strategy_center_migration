@@ -6,21 +6,21 @@ export default function OurProgrammes() {
  const industries = [
     {
       id: 1,
-      title: 'Women Leadership in the Digital Era',
-      description: 'We help individuals and organisations grow through advanced strategy, leadership, and innovation development.',
-      image: '/images/home/wdl.jpg'
+      title: 'CT Scan',
+      description: 'AI-enabled organisational diagnostic — revealing how leaders actually think, decide, and execute, and mapping the systemic constraints.',
+      image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&h=800&fit=crop'
     },
     {
       id: 2,
-      title: 'Global Strategic Trends',
-      description: 'We provide world-class programmes to unlock leadership and strategic potential at the executive level.',
-      image: '/images/home/global_strategic.jpg'
+      title: 'Agentic Leadership',
+      description: 'Producing measurable shifts in decision quality and execution coherence, not just competency scores.',
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=800&fit=crop'
     },
     {
       id: 3,
-      title: 'IDeA X Innovation Design',
-      description: 'We use contemporary, immersive executive education to improve thinking and organisational performance.',
-      image: '/images/home/idea_x.jpg'
+      title: 'Cybernetics Transformation',
+      description: 'Redesigning the decision architecture, sensing infrastructure, and governance structures through which your organisation continuously adapts, learns, and performs.',
+      image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&h=800&fit=crop'
     },
   ];
  return (

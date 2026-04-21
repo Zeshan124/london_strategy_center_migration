@@ -37,25 +37,25 @@ export default function IndustriesSection() {
     {
       id: 5,
       title: 'Real Estate',
-      description: 'Strategic advisory for property investment, development, and portfolio management.',
+      description: 'Real estate leaders need organisational intelligence built for complexity not instinct dressed as strategy.',
       image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=800&fit=crop'
     },
     {
       id: 6,
       title: 'Healthcare',
-      description: 'Transforming healthcare delivery through innovation, strategy, and digital health solutions.',
+      description: 'Healthcare organisations demand leadership capability designed for a fundamentally different environment',
       image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=800&fit=crop'
     },
     {
       id: 7,
       title: 'Media',
-      description: 'Navigating the evolving media landscape with content strategy and digital transformation.',
+      description: 'The sector requires leaders who make high-quality decisions not those who simply adapt faster to change they did not anticipate.',
       image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&h=800&fit=crop'
     },
     {
       id: 8,
       title: 'Logistics',
-      description: 'Optimising supply chains and logistics operations for efficiency and resilience.',
+      description: 'In logistics, execution coherence is the competitive advantage.',
       image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=800&fit=crop'
     },
   ];
