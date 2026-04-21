@@ -36,26 +36,26 @@ export default function HeroSection() {
       image: "/images/home/1.jpg",
       category: "Talent and Skills",
       categoryLink: "/talent-skills-strategy",
-      title: "As AI Changes Work, CEOs Must Change How Work Happens",
+      title: "LSC Tier 1 Reporting Architecture",
       description:
-        "The DNA of work is being rewritten by AI. CEOs must go beyond deploying tools and help their organization reimagine the nature of work itself.",
+        "A structured reporting architecture that enables Tier 1 leaders to translate complex data into clear, actionable insights—driving alignment, transparency, and faster decision-making across the organization.",
       date: "November 25, 2025",
       type: "Article",
       link: "/as-ai-changes-work",
-      document: "/images/home/ud-report.pdf",
+      document: "/images/home/Reporting_Architecture.pdf",
     },
     {
       id: 2,
       image: "/images/home/2.jpg",
       category: "Marketing and Sales",
       categoryLink: "/marketing-sales",
-      title: "The Agentic Marketing Race Is On. CMOs That Move First Will Win.",
+      title: "LSC Tier 1 Organisational Intelligence for Leaning & Development Leaders",
       description:
-        "Agentic AI is ushering in a new era for marketing, one where autonomous systems learn, decide, and act alongside human teams.",
+        "An advanced intelligence framework designed for L&D leaders to identify capability gaps, optimize learning strategies, and align workforce development with evolving business priorities.",
       date: "November 25, 2025",
       type: "Article",
       link: "/agentic-marketing-race",
-      document: "/documents/article-2.pdf",
+        document: "/images/home/Client_Ready_Material.pdf",
     },
     {
       id: 3,
@@ -63,13 +63,13 @@ export default function HeroSection() {
       category: "Value Creation Strategy",
       categoryLink: "/value-creation-strategy",
       title:
-        "Reshaping a Business Portfolio Is Hard—What Separates the Best from the Rest?",
+        "STRATEGIC INTELLIGENCE",
       description:
-        "Most efforts fail to outperform. But embracing six best practices significantly tilts the odds in your favor.",
+        "A comprehensive approach to leveraging strategic intelligence—helping organizations anticipate market shifts, prioritize high-impact initiatives, and consistently outperform through informed decision-making.",
       date: "November 21, 2025",
       type: "Article",
       link: "/reshaping-business-portfolio",
-      document: "/documents/article-3.pdf",
+       document: "/images/home/Premium_Report.pdf",
     },
     {
       id: 4,
@@ -241,14 +241,12 @@ export default function HeroSection() {
               className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
 
-            {/* Gradient overlay – appears on hover */}
-            <div
-              className={`absolute inset-0 bg-gradient-to-t transition-all duration-700 from-black/50 via-black/20 to-transparent group-hover:from-black/90 group-hover:via-black/50`}
-            />
+            {/* Gradient overlay — always dark on mobile, stronger on desktop hover */}
+            <div className="absolute inset-0 bg-linear-to-t transition-all duration-700 from-black/80 via-black/40 to-transparent lg:from-black/50 lg:via-black/20 lg:group-hover:from-black/90 lg:group-hover:via-black/50" />
 
-            {/* Content overlay */}
+            {/* Content overlay — always visible on mobile, slide-up on desktop */}
             <div className="absolute inset-0 flex flex-col justify-end text-white">
-              <div className="px-5 pb-5 translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out">
+              <div className="px-5 pb-5 translate-y-0 lg:translate-y-full lg:group-hover:translate-y-0 transition-transform duration-700 ease-out">
                 {/* Category badge */}
                 {(isCenter || isAdjacent) && (
                   <span className="inline-block px-3 py-1 mb-3 bg-white/15 backdrop-blur-sm border border-white/20 rounded text-xs font-semibold uppercase tracking-wider">
