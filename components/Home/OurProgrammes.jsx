@@ -29,7 +29,7 @@ export default function OurProgrammes() {
         {/* Header */}
         <div className="mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light leading-tight mb-4 text-gray-900">
-            Our Programmes
+            Our Services
           </h2>
           <p className="text-base sm:text-lg text-gray-600">
             Specialized expertise across diverse sectors and industries
