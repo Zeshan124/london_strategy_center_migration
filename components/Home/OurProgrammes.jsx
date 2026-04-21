@@ -8,19 +8,19 @@ export default function OurProgrammes() {
       id: 1,
       title: 'CT Scan',
       description: 'AI-enabled organisational diagnostic — revealing how leaders actually think, decide, and execute, and mapping the systemic constraints.',
-      image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&h=800&fit=crop'
+      image: '/images/home/ct_scan.jpg'
     },
     {
       id: 2,
       title: 'Agentic Leadership',
       description: 'Producing measurable shifts in decision quality and execution coherence, not just competency scores.',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=800&fit=crop'
+      image: '/images/home/agentic_ai.png'
     },
     {
       id: 3,
       title: 'Cybernetics Transformation',
       description: 'Redesigning the decision architecture, sensing infrastructure, and governance structures through which your organisation continuously adapts, learns, and performs.',
-      image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&h=800&fit=crop'
+      image: '/images/home/cybernetics.jpg'
     },
   ];
  return (
