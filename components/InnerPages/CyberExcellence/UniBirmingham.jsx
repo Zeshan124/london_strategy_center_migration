@@ -15,7 +15,7 @@ export default function UniBirmingham({ partner }) {
   const { image, heading, paragraphs, logo, logoAlt } = partner ?? DEFAULT;
 
   return (
-    <section className="py-6 sm:py-16 md:py-20 lg:py-10 relative overflow-hidden">
+    <section className="py-6 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch h-auto lg:h-[50vh] min-h-[500px]">
 
         {/* Left Image — hidden on mobile, shown on desktop */}

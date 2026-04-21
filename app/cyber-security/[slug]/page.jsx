@@ -52,12 +52,12 @@ export default function CyberServicePage() {
         <UniBirmingham partner={service.partner} />
 
         {/* 5. FAQ */}
-        <FAQ faqs={service.faqs} intro={service.faqIntro} />
+        {/* <FAQ faqs={service.faqs} intro={service.faqIntro} /> */}
 
         {/* 6. Consultation Form */}
-        <div id="consultation">
+        {/* <div id="consultation">
           <ConsultationForm />
-        </div>
+        </div> */}
       </main>
       <Footer />
     </>

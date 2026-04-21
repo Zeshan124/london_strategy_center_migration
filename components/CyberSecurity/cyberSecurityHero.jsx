@@ -1,8 +1,27 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
+import { X } from "lucide-react";
 
 export default function CyberSecurityHero() {
+  const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: "", email: "",
+  });
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowForm(false);
+    setShowSuccess(true);
+    setFormData({ fullName: "", email: "" });
+  };
+
+  const inputClass = "w-full px-4 py-3.5 border border-[#6B6B6B] rounded-xl text-sm text-[#6B6B6B] placeholder-[#6B6B6B] focus:outline-none focus:border-[#0E2253] transition-colors bg-white";
+
   return (
    <div className="min-h-screen bg-white lg:pt-28 py-0">
       <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-8 sm:py-8 md:py-8 lg:pt-16">
@@ -28,30 +47,20 @@ export default function CyberSecurityHero() {
             <h2 className="text-xl sm:text-2xl font-light text-white mb-6">
               Services for Organisations
             </h2>
-            {/* <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-8 max-w-md">
-              Cyber threats do not respect organisational boundaries, supply chain
-              structures, or compliance timelines. Yet most organisations manage cyber
-              risk in fragments - certification here, penetration testing there, governance
-              bolted on as an afterthought. The result is a security posture that looks
-              complete on paper but fractures under pressure.
-            </p> */}
             <div className="flex flex-wrap gap-3">
-              <button className="px-5 py-2.5 bg-transparent border border-white text-white text-xs font-semibold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300">
+              <button
+                onClick={() => setShowForm(true)}
+                className="px-5 py-2.5 bg-transparent border border-white text-white text-xs font-semibold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300"
+              >
                 REQUEST A CONSULTATION
               </button>
-             {/* <button className="px-5 py-2.5 bg-transparent border border-white text-white text-xs font-semibold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300 flex items-center gap-2">
-  DOWNLOAD CYBER OVERVIEW
-  <svg className="w-3.5 h-3.5 hidden sm:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M7 17L17 7M17 7H7M17 7v10" />
-  </svg>
-</button> */}
             </div>
           </div>
         </div>
 
         {/* Below-card description */}
         <p className="mt-8 text-sm sm:text-base text-gray-700 leading-relaxed">
-          London Strategy Centre delivers structured cyber security services that connect technical assurance with strategic governance. Every engagement is designed to strengthen the organisation as a system - not to produce isolated reports that sit unread.
+         We deliver structured cyber security services that connect technical assurance with strategic governance. Every engagement is designed to strengthen the organisation as a system, not to produce isolated reports that sit unread.
         </p>
 
         {/* Isolation from governance section */}
@@ -70,6 +79,76 @@ export default function CyberSecurityHero() {
         </div>
 
       </div>
+
+      {/* Consultation Form Modal */}
+      {showForm && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50"
+          onClick={() => setShowForm(false)}
+        >
+          <div
+            className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl p-8 max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setShowForm(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+              aria-label="Close"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            <div className="mb-6">
+              <h2 className="text-2xl sm:text-3xl font-light text-gray-900 leading-tight mb-2">
+                Request a Consultation
+              </h2>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Submit your details and a member of our team will be in touch shortly.
+              </p>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input type="text" name="fullName" required value={formData.fullName} onChange={handleChange} placeholder="Full Name" className={inputClass} />
+                <input type="email" name="email" required value={formData.email} onChange={handleChange} placeholder="Email Address" className={inputClass} />
+              </div>
+             
+              <p className="text-xs text-gray-600 leading-relaxed pt-1">
+                London Strategy Centre is committed to protecting your privacy. For more information please review our{" "}
+                <a href="/privacy-policy" className="underline hover:text-[#0E2253] transition-colors">privacy policy</a>.
+              </p>
+              <button type="submit" className="w-full sm:w-auto px-16 py-4 bg-[#0E2253] text-white text-xs tracking-widest uppercase rounded-xl hover:bg-[#1a3570] transition-all duration-300">
+                SUBMIT REQUEST
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* Success Modal */}
+      {showSuccess && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50"
+          onClick={() => setShowSuccess(false)}
+        >
+          <div
+            className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-8"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button onClick={() => setShowSuccess(false)} className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
+              <X className="w-6 h-6" />
+            </button>
+            <div className="text-center">
+              <h3 className="text-3xl font-bold text-[#0E2253] mb-4">Thank you</h3>
+              <p className="text-gray-600 text-base leading-relaxed mb-2">Your consultation request has been received.</p>
+              <p className="text-gray-600 text-base leading-relaxed mb-8">A member of our team will be in touch shortly.</p>
+              <button onClick={() => setShowSuccess(false)} className="px-12 py-3 bg-[#0E2253] text-white rounded-lg font-semibold hover:bg-[#1a3570] transition-all duration-300">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

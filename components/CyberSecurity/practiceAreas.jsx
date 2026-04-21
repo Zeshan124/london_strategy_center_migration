@@ -155,12 +155,12 @@ export default function PracticeAreas({ practiceAreas }) {
         {(heading_bottom || subheading_bottom) && (
           <div className="mt-12 lg:mt-16 text-center sm:text-left">
             {heading_bottom && (
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-slate-900 mb-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-slate-900 mb-4">
                 {heading_bottom}
               </h2>
             )}
             {subheading_bottom && (
-              <p className="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-base text-slate-600 leading-relaxed">
                 {subheading_bottom}
               </p>
             )}
