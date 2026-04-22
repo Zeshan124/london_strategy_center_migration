@@ -11,7 +11,7 @@ const DEFAULT_FEATURES = [
     id: 1, slug: "certification-and-compliance",
     icon: "/images/InnerPages/cyber-security/license.svg",
     title: "Certification & Compliance Services",
-    description: "Support to achieve recognised certifications and frameworks including Cyber Essentials, ISO 27001, IASME, and NIST CSF. Structured preparation that builds lasting capability, not just a certificate.",
+    description: "Support to achieve recognised certifications and frameworks - including Cyber Excellence Level 1 to 4 (/cyber-excellence) which is aligned with NCICC-1 2005. Additional support is available across leading frameworks including Cyber  Essentials, Cyber Essentials Plus (CE+) ; IASME Cyber Assurance ;  ISO 27001 gap analysis and NIST CSF pathway. Structured preparation that builds lasting capability, not just a certificate.",
   },
   {
     id: 2, slug: "cyber-risk-and-resilience",
@@ -29,13 +29,13 @@ const DEFAULT_FEATURES = [
     id: 4, slug: "defence-and-government-cyber-assurance",
     icon: "/images/InnerPages/cyber-security/encrypted.svg",
     title: "Defence & Government Cyber Assurance",
-    description: "Specialist support for organisations navigating MOD requirements, NCSC frameworks, and public sector cyber assurance standards.",
+    description: "Specialist support for organisations operating within government and defence environments,navigating strict security requirements, strengthening supply-chain security, and maintaining contract eligibility.",
   },
   {
     id: 5, slug: "cyber-risk-and-architecture-advisory",
     icon: "/images/InnerPages/cyber-security/chess_pawn.svg",
     title: "Cyber Risk & Architecture Advisory",
-    description: "Strategic advisory that embeds security into system design through threat modelling, secure architecture reviews, and structured risk management.",
+    description: "Strategic advisory that embeds cyber security into system design through threat modelling, secure architecture reviews, and structured risk management. Security considered from the outset, not retrofitted. ",
   },
   {
     id: 6, slug: "operational-technology-specialist-security",
