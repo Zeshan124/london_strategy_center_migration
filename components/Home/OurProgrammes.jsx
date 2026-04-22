@@ -32,7 +32,7 @@ export default function OurProgrammes() {
             Our Services
           </h2>
           <p className="text-base sm:text-lg text-gray-600">
-            Specialized expertise across diverse sectors and industries
+            Specialised expertise across diverse sectors and industries
           </p>
         </div>
 

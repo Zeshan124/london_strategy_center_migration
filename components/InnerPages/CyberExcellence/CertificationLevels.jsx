@@ -56,26 +56,26 @@ export default function CertificationLevel() {
       number: "1",
       title: "Aware Level",
       desc: "Self-assessment for low-risk organisations.",
-      img: "/images/InnerPages/cyberexcellence/Level-1.svg",
+      img: "/images/InnerPages/cyberexcellence/1.svg",
     },
     
     {
       number: "2",
       title: "Basic Level",
       desc: "Independent assessment for moderate-risk organisations.",
-      img: "/images/InnerPages/cyberexcellence/Level-3.svg",
+      img: "/images/InnerPages/cyberexcellence/2.svg",
     },
     {
       number: "3",
       title: "Foundation Level",
       desc: "Additional controls for low-risk organisations.",
-      img: "/images/InnerPages/cyberexcellence/Level-2.svg",
+      img: "/images/InnerPages/cyberexcellence/3.svg",
     },
     {
       number: "4",
       title: "Holistic Level",
       desc: "Highest standard for critical infrastructure.",
-      img: "/images/InnerPages/cyberexcellence/Level-4.svg",
+      img: "/images/InnerPages/cyberexcellence/4.svg",
     },
   ];
 
