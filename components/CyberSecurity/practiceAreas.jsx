@@ -57,6 +57,26 @@ const DEFAULT_FEATURES = [
   },
 ];
 
+// Renders a string with optional inline [text](/href) markdown links
+function RichText({ text, className }) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return (
+    <p className={className}>
+      {parts.map((part, i) => {
+        const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (match) {
+          return (
+            <Link key={i} href={match[2]} className="text-[#0E2253] underline underline-offset-2 hover:opacity-75 transition-opacity">
+              {match[1]}
+            </Link>
+          );
+        }
+        return part;
+      })}
+    </p>
+  );
+}
+
 // Derive the best column count from the number of features
 function getColClass(count) {
   if (count <= 3) return "lg:grid-cols-3";
@@ -160,9 +180,10 @@ export default function PracticeAreas({ practiceAreas }) {
               </h2>
             )}
             {subheading_bottom && (
-              <p className="text-sm sm:text-base md:text-base text-slate-600 leading-relaxed">
-                {subheading_bottom}
-              </p>
+              <RichText
+                text={subheading_bottom}
+                className="text-sm sm:text-base md:text-base text-slate-600 leading-relaxed"
+              />
             )}
           </div>
         )}
