@@ -17,7 +17,7 @@ const DEFAULT_FEATURES = [
     id: 2, slug: "cyber-risk-and-resilience",
     icon: "/images/InnerPages/cyber-security/verified_user.svg",
     title: "Cyber Risk & Resilience",
-    description: "Risk assessments, incident response planning, business continuity, and security policy development to strengthen governance and build the capability to respond and recover.",
+    description: "Risk assessments, incident response planning, business continuity, and security policy development. These services help organisations understand their exposure, strengthen governance, and build the capability to respond and recover.",
   },
   {
     id: 3, slug: "technical-security-services",
@@ -41,19 +41,19 @@ const DEFAULT_FEATURES = [
     id: 6, slug: "operational-technology-specialist-security",
     icon: "/images/InnerPages/cyber-security/reviews.svg",
     title: "Operational Technology & Specialist Security Reviews",
-    description: "Security assessments for operational, industrial, and specialised systems including ICS, SCADA, point-of-sale, and connected IoT platforms.",
+    description: "Security assessments for operational, industrial, and specialised systems - including point-of-sale environments, industrial control systems, and connected IoT platforms.",
   },
   {
     id: 7, slug: "cyber-strategy-and-governance-advisory",
     icon: "/images/InnerPages/cyber-security/mitre.svg",
     title: "Cyber Strategy & Governance Advisory",
-    description: "Advisory services that help leadership teams build strong cyber governance, develop security strategies, and manage cyber risk at board level. Includes Virtual CISO services.",
+    description: "Advisory services that help leadership teams build strong cyber governance, develop security strategies, improve maturity, and manage cyber risk at organisational and board level. Includes Virtual CISO services.",
   },
   {
     id: 8, slug: "specialist-programme-support",
     icon: "/images/InnerPages/cyber-security/support.svg",
     title: "Specialist Programme Support",
-    description: "Cyber security expertise embedded within major programmes, digital transformations, and acquisitions — defining requirements and providing assurance documentation.",
+    description: "Cyber security expertise embedded within major programmes, digital transformations, and acquisitions - defining requirements, integrating security into system design, and providing assurance documentation.",
   },
 ];
 

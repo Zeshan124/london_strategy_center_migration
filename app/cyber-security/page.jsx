@@ -33,6 +33,7 @@ const page = () => {
       <main>
         <CyberSecurityHero />
         <PracticeAreas />
+        <UniBirmingham />
         {/* <CTASection /> */}
         {/* <Services /> */}
         {/* <FAQ intro={{

@@ -1,14 +1,13 @@
 "use client";
 
 const DEFAULT = {
-  image: "/images/InnerPages/cyberexcellence/uni-birmingham.jpg",
-  heading: "University of Birmingham",
+  image: "/images/InnerPages/cyber-security/cta-section.jpg",
+  heading: "Who these services are for ",
   paragraphs: [
-    "University of Birmingham acts as the independent Assurance Body for this Cybersecurity Certification Framework. It ensures the integrity of the scheme and drives continual improvement. This includes conducting impartial reviews of certification activities, analysing certification trends, and generating threat insights that feed back into the framework’s evolution.",
-    "Through its global academic expertise, the Assurance Body provides evidence-based oversight and ensures that the certification process remains rigorous, credible, and aligned with international best practices.",
+    "LSC's cyber security services are designed for organisations where security is a board-level concern - not solely an IT function. This includes defence contractors and suppliers navigating MOD requirements, government organisations meeting NCSC and public sector frameworks, enterprises managing complex supply chains and regulatory obligations, and leadership teams seeking to elevate cyber governance from operational to strategic.",
   ],
-  logo: "/images/InnerPages/cyberexcellence/uof-logo.png",
-  logoAlt: "University of Birmingham Logo",
+  logo: null,
+  logoAlt: "banner image",
 };
 
 export default function UniBirmingham({ partner }) {
