@@ -86,6 +86,8 @@ function getColClass(count) {
 }
 
 export default function PracticeAreas({ practiceAreas }) {
+  const heading_top    = practiceAreas?.heading_top    ?? null;
+  const subheading_top = practiceAreas?.subheading_top ?? null;
   const heading        = practiceAreas?.heading        ?? DEFAULT_HEADING;
   const subheading     = practiceAreas?.subheading     ?? DEFAULT_SUBHEADING;
   const features       = practiceAreas?.features       ?? DEFAULT_FEATURES;
@@ -103,6 +105,21 @@ export default function PracticeAreas({ practiceAreas }) {
       </div>
 
       <div className="mx-auto px-4 sm:px-6 lg:px-24">
+
+        {(heading_top || subheading_top) && (
+          <div className="mb-12 lg:mb-16 text-center sm:text-left">
+            {heading_top && (
+              <h2 className="text-3xl sm:text-4xl md:text-4xl font-medium text-slate-900 mb-4">
+                {heading_top}
+              </h2>
+            )}
+            {subheading_top && (
+              <p className="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed">
+                {subheading_top}
+              </p>
+            )}
+          </div>
+        )}
 
         {/* Header */}
         <div className="mb-12 lg:mb-16 text-center sm:text-left">
