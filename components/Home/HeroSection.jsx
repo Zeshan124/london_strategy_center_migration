@@ -98,48 +98,115 @@ export default function HeroSection() {
       link: "/ai-first-cmo",
       document: "/documents/article-5.pdf",
     },
-    {
+     {
       id: 6,
-      image:
-        "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=1000&fit=crop",
-      category: "AI Agents",
-      categoryLink: "/ai-agents",
-      title:
-        "Leading in the Age of AI Agents: Managing the Machines That Manage Themselves",
+      image: "/images/home/1.jpg",
+      category: "Talent and Skills",
+      categoryLink: "/talent-skills-strategy",
+      title: "What a CT Scan Delivers",
       description:
-        "Agentic AI is both software and colleague—a form of artificial intelligence that acts. Organizations that swiftly adapt their management playbook to make full use of this transformative technology will gain the edge.",
-      date: "November 18, 2025",
-      type: "Article",
-      link: "/machines-manage-themselves",
-      document: "/documents/article-6.pdf",
+        "The CT Scan produces a structured evidence base. This document details the report architecture and how findings drive action.",
+      date: "November 25, 2025",
+      type: "DIAGNOSTIC REPORT STRUCTURE",
+      link: "/as-ai-changes-work",
+      document: "/images/home/Reporting_Architecture.pdf",
     },
     {
       id: 7,
+      image: "/images/home/2.jpg",
+      category: "Marketing and Sales",
+      categoryLink: "/marketing-sales",
+      title: "Diagnosis Before Intervention",
+      description:
+        "Transformation that skips diagnosis compounds the problem. Tier 1 identifies where execution breaks down and why.",
+      date: "November 25, 2025",
+      type: "THREE-TIER ARCHITECTURE - ENTRY POINT",
+      link: "/agentic-marketing-race",
+        document: "/images/home/Client_Ready_Material.pdf",
+    },
+    {
+      id: 8,
+      image: "/images/home/3.jpg",
+      category: "Value Creation Strategy",
+      categoryLink: "/value-creation-strategy",
+      title:
+        "STRATEGIC INTELLIGENCE",
+      description:
+        "A comprehensive approach to leveraging strategic intelligence—helping organizations anticipate market shifts, prioritize high-impact initiatives, and consistently outperform through informed decision-making.",
+      date: "November 21, 2025",
+      type: "Article",
+      link: "/reshaping-business-portfolio",
+       document: "/images/home/Premium_Report.pdf",
+    },
+    {
+      id: 9,
+      image: "/images/home/4.jpg",
+      category: "Climate Risk, Adaptation, and Resilience",
+      categoryLink: "/climate-risk-adaptation",
+      title: "What LSC Does, and Why It Matters",
+      description:
+        "System-level transformation, not individual development. Read how LSC works as an AI-augmented capability transformation partner. ",
+      date: "November 20, 2025",
+      type: "CAPABILITY OVERVIEW",
+      link: "/mobilizing-investment",
+      document: "/images/home/LSC_Capability_Statement.pdf",
+    },
+    {
+      id: 10,
       image: "/images/home/5.jpg",
       category: "Artificial Intelligence",
       categoryLink: "/artificial-intelligence",
       title:
-        "Art and Algorithms: What CEOs Should Look For in an AI-First Chief Marketing Officer",
+        "Cyber Capability Built for Complex Environments ",
       description:
-        "AI is redefining marketing as a growth engine—and repositioning the CMO as a chief growth architect.",
+        "Cyber risk is an organisational problem, not a technical one. This kit outlines LSC’s approach to risk, resilience and governance.",
       date: "November 18, 2025",
-      type: "Article",
+      type: "CYBER SECURITY PRACTICE",
       link: "/ai-first-cmo",
-      document: "/documents/article-7.pdf",
+      document: "/documents/article-5.pdf",
     },
-    {
-      id: 8,
-      image: "/images/home/4.jpg",
-      category: "Climate Risk, Adaptation, and Resilience",
-      categoryLink: "/climate-risk-adaptation",
-      title: "Actions to Mobilize Investment in Adaptation and Resilience",
-      description:
-        "As climate change and the resulting extreme weather events continue to cause economic losses worldwide, nations are imposing various adaptation and resilience strategies.",
-      date: "November 20, 2025",
-      type: "Article",
-      link: "/mobilizing-investment",
-      document: "/documents/article-8.pdf",
-    },
+    // {
+    //   id: 6,
+    //   image:
+    //     "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=1000&fit=crop",
+    //   category: "AI Agents",
+    //   categoryLink: "/ai-agents",
+    //   title:
+    //     "Leading in the Age of AI Agents: Managing the Machines That Manage Themselves",
+    //   description:
+    //     "Agentic AI is both software and colleague—a form of artificial intelligence that acts. Organizations that swiftly adapt their management playbook to make full use of this transformative technology will gain the edge.",
+    //   date: "November 18, 2025",
+    //   type: "Article",
+    //   link: "/machines-manage-themselves",
+    //   document: "/documents/article-6.pdf",
+    // },
+    // {
+    //   id: 7,
+    //   image: "/images/home/5.jpg",
+    //   category: "Artificial Intelligence",
+    //   categoryLink: "/artificial-intelligence",
+    //   title:
+    //     "Art and Algorithms: What CEOs Should Look For in an AI-First Chief Marketing Officer",
+    //   description:
+    //     "AI is redefining marketing as a growth engine—and repositioning the CMO as a chief growth architect.",
+    //   date: "November 18, 2025",
+    //   type: "Article",
+    //   link: "/ai-first-cmo",
+    //   document: "/documents/article-7.pdf",
+    // },
+    // {
+    //   id: 8,
+    //   image: "/images/home/4.jpg",
+    //   category: "Climate Risk, Adaptation, and Resilience",
+    //   categoryLink: "/climate-risk-adaptation",
+    //   title: "Actions to Mobilize Investment in Adaptation and Resilience",
+    //   description:
+    //     "As climate change and the resulting extreme weather events continue to cause economic losses worldwide, nations are imposing various adaptation and resilience strategies.",
+    //   date: "November 20, 2025",
+    //   type: "Article",
+    //   link: "/mobilizing-investment",
+    //   document: "/documents/article-8.pdf",
+    // },
   ];
 
   const handlePrev = () => {

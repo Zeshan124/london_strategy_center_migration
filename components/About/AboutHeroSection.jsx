@@ -20,7 +20,7 @@ export default function AboutHeroSection() {
         <div className="max-w-3xl">
           {/* Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6 sm:mb-8 leading-tight">
-            About LSC
+            About Us — London Strategy Centre
           </h1>
 
           {/* Description */}

@@ -7,45 +7,37 @@ export default function MissionVisionSection() {
     {
       id: 1,
       icon: "/images/icons/developing_people.png",
-      
-      title: "Developing People",
+      title: "System-level, not individual-level",
       description:
-        "We help individuals and organisations grow through advanced strategy, leadership, and innovation development.",
+        "The dominant assumption in organisational development is that improving people improves performance. It does, but only when the system supports that performance. LSC's interventions target the organisation as a whole: the decision architecture, the execution rhythms, the governance structures, and the human-AI systems that determine whether individual capability translates into collective performance.",
     },
     {
       id: 2,
       icon: "/images/icons/action_key.png",
-      title: "Next Gen Executive",
+      title: "Diagnostic intelligence before every intervention",
       description:
-        "We provide world-class programmes to unlock leadership and strategic potential at the executive level.",
+        "LSC does not begin an engagement with a solution. It begins with a structured assessment of how the organisation actually works, how decisions are made, where execution loses coherence, and what systemic constraints prevent strategy from becoming reality. This diagnostic intelligence, generated through AI-enabled sensing, shapes every recommendation and ensures that interventions address root causes, not presenting symptoms.",
     },
     {
       id: 3,
       icon: "/images/icons/approach.png",
-      title: "Our Approach",
+      title: "AI-augmented, not AI-dependent",
       description:
-        "We use contemporary, immersive executive education to improve thinking and organisational performance.",
+        "LSC integrates AI into its work not as a product to be installed, but as a capability to be governed. Human-AI collaboration is designed with clear accountability structures, responsible governance frameworks, and a phased adoption architecture that respects the complexity of real operating environments. LSC clients build AI-augmented capability that is embedded, measured, and sustained, not deployed and abandoned.",
     },
     {
       id: 4,
       icon: "/images/icons/uniqueness.png",
-      title: "Our Uniqueness",
+      title: "Built for complexity, not optimised for simplicity",
       description:
-        "We blend entrepreneurship, strategy courses, and technology-enabled learning to create tailored solutions.",
+        "LSC's methodology is designed for organisations where the operating environment is genuinely complex: where decision stakes are high, where execution must remain coherent across multiple functions and geographies, and where the cost of misalignment is strategic rather than operational. Defence, government, and enterprise clients operating under these conditions require a different kind of partner, one that can work at the intersection of strategy, execution, and organisational design simultaneously.",
     },
     {
       id: 5,
       icon: "/images/icons/av_timer.png",
-      title: "Customised Solution",
+      title: "Partnership, not prescription",
       description:
-        "We prioritise your organisation's goals to design bespoke leadership and strategy development services.",
-    },
-    {
-      id: 6,
-      icon: "/images/icons/business_center.png",
-      title: "Work With Us",
-      description:
-        "We seek motivated, inquisitive individuals passionate about making a meaningful impact with excellence.",
+        "LSC works alongside leadership teams rather than advising from a distance. Engagements are structured to embed LSC's practitioners within the organisation's real challenges, not to produce reports that require separate implementation. The result is structural change that the organisation owns, understands, and can sustain.",
     },
   ];
 

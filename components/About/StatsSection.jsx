@@ -36,7 +36,7 @@ export default function StatsSection() {
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-24">
         {/* Stats */}
-        <div
+        {/* <div
           className="
             flex gap-10 overflow-x-auto snap-x snap-mandatory pb-6
             sm:grid sm:grid-cols-3 sm:gap-12 sm:overflow-visible
@@ -46,34 +46,33 @@ export default function StatsSection() {
           {stats.map((stat) => (
             <StatItem key={stat.id} stat={stat} start={startCount} />
           ))}
-        </div>
+        </div> */}
 
         {/* Content */}
         <div className="max-w-5xl">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-8">
-            The Premier Destination for Next Generation Executive Development!
+            We Transform How Organisations Think, Decide, and Execute
+          </h2>
+
+          <div className="space-y-6 text-base sm:text-lg text-gray-700 leading-relaxed mb-12">
+            <p>
+              Most organisations have capable people. The problem is not individual performance, it is the system those people operate within. When decision architecture is poorly designed, when strategy dilutes as it passes through organisational layers, when execution fragments across functions and geographies, capability at the individual level fails to translate into performance at the system level. The gap compounds over time. Transformation programmes come and go. The underlying system remains unchanged.
+            </p>
+            <p className="font-semibold text-gray-900">
+              London Strategy Centre (LSC) exists to close that gap.
+            </p>
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-8">
+            LSC is your capability transformation partner
           </h2>
 
           <div className="space-y-6 text-base sm:text-lg text-gray-700 leading-relaxed">
             <p>
-              At the London Strategy Centre, we believe in the art of the possible.
-              Our mission is to equip you with the capabilities and knowledge to
-              become a world-class leader.
+              The central premise of LSC's work is that measurable organisational performance improvement requires a system-level intervention, not a training programme, a strategy report, or a technology implementation. It requires redesigning how the organisation senses its environment, how decisions are made and communicated, how execution is governed, and how capability compounds across time. That is what LSC builds.
             </p>
-
-            <p>
-              We understand that in today's competitive market, keeping up with
-              the latest thinking in developing and implementing strategy is
-              essential for success.
-            </p>
-
-            <p>
-              We are committed to helping you navigate your key challenges through
-              leadership capability development.
-            </p>
-
             <p className="font-semibold text-gray-900">
-              Unleash the power of executive development at London Strategy Centre!
+              Why LSC, Differentiator Cards
             </p>
           </div>
         </div>
