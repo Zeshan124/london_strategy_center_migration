@@ -13,7 +13,7 @@ export default function OurProgrammes() {
     {
       id: 2,
       title: 'Agentic Leadership',
-      description: 'Producing measurable shifts in decision quality and execution coherence — not just competency scores or attendance on a programme.',
+      description: 'Producing measurable shifts in decision quality and execution coherence, not just competency scores or attendance on a programme.',
       image: '/images/home/agentic_ai.png'
     },
     {

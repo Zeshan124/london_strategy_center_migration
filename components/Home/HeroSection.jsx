@@ -96,7 +96,7 @@ export default function HeroSection() {
       date: "November 18, 2025",
       type: "CYBER SECURITY PRACTICE",
       link: "/ai-first-cmo",
-      document: "/documents/article-5.pdf",
+      document: "/images/home/Cyber_Excellenc_Broucher_updated.pdf",
     },
      {
       id: 6,
@@ -163,7 +163,7 @@ export default function HeroSection() {
       date: "November 18, 2025",
       type: "CYBER SECURITY PRACTICE",
       link: "/ai-first-cmo",
-      document: "/documents/article-5.pdf",
+      document: "/images/home/Cyber_Excellenc_Broucher_updated.pdf",
     },
     // {
     //   id: 6,
