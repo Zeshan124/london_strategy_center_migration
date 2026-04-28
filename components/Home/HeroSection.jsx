@@ -36,11 +36,11 @@ export default function HeroSection() {
       image: "/images/home/1.jpg",
       category: "Talent and Skills",
       categoryLink: "/talent-skills-strategy",
-      title: "LSC Tier 1 Reporting Architecture",
+      title: "What a CT Scan Delivers",
       description:
-        "A structured reporting architecture that enables Tier 1 leaders to translate complex data into clear, actionable insights—driving alignment, transparency, and faster decision-making across the organization.",
+        "The CT Scan produces a structured evidence base. This document details the report architecture and how findings drive action.",
       date: "November 25, 2025",
-      type: "Article",
+      type: "DIAGNOSTIC REPORT STRUCTURE",
       link: "/as-ai-changes-work",
       document: "/images/home/Reporting_Architecture.pdf",
     },
@@ -49,11 +49,11 @@ export default function HeroSection() {
       image: "/images/home/2.jpg",
       category: "Marketing and Sales",
       categoryLink: "/marketing-sales",
-      title: "LSC Tier 1 Organisational Intelligence for Leaning & Development Leaders",
+      title: "Diagnosis Before Intervention",
       description:
-        "An advanced intelligence framework designed for L&D leaders to identify capability gaps, optimize learning strategies, and align workforce development with evolving business priorities.",
+        "Transformation that skips diagnosis compounds the problem. Tier 1 identifies where execution breaks down and why.",
       date: "November 25, 2025",
-      type: "Article",
+      type: "THREE-TIER ARCHITECTURE - ENTRY POINT",
       link: "/agentic-marketing-race",
         document: "/images/home/Client_Ready_Material.pdf",
     },
@@ -76,13 +76,13 @@ export default function HeroSection() {
       image: "/images/home/4.jpg",
       category: "Climate Risk, Adaptation, and Resilience",
       categoryLink: "/climate-risk-adaptation",
-      title: "Actions to Mobilize Investment in Adaptation and Resilience",
+      title: "What LSC Does, and Why It Matters",
       description:
-        "As climate change and the resulting extreme weather events continue to cause economic losses worldwide, nations are imposing various adaptation and resilience strategies.",
+        "System-level transformation, not individual development. Read how LSC works as an AI-augmented capability transformation partner. ",
       date: "November 20, 2025",
-      type: "Article",
+      type: "CAPABILITY OVERVIEW",
       link: "/mobilizing-investment",
-      document: "/documents/article-4.pdf",
+      document: "/images/home/LSC_Capability_Statement.pdf",
     },
     {
       id: 5,
@@ -90,11 +90,11 @@ export default function HeroSection() {
       category: "Artificial Intelligence",
       categoryLink: "/artificial-intelligence",
       title:
-        "Art and Algorithms: What CEOs Should Look For in an AI-First Chief Marketing Officer",
+        "Cyber Capability Built for Complex Environments ",
       description:
-        "AI is redefining marketing as a growth engine—and repositioning the CMO as a chief growth architect.",
+        "Cyber risk is an organisational problem, not a technical one. This kit outlines LSC’s approach to risk, resilience and governance.",
       date: "November 18, 2025",
-      type: "Article",
+      type: "CYBER SECURITY PRACTICE",
       link: "/ai-first-cmo",
       document: "/documents/article-5.pdf",
     },
@@ -266,21 +266,21 @@ export default function HeroSection() {
                 {/* Extra detail – center card only */}
                 {isCenter && (
                   <>
-                    <p className="text-sm text-gray-200 mt-2 mb-3 line-clamp-2 leading-relaxed">
+                    <p className="text-sm text-gray-200 mt-2 mb-3 line-clamp-3 leading-relaxed">
                       {article.description}
                     </p>
 
-                    <div className="flex items-center gap-2 text-xs text-gray-300 mb-4">
+                    {/* <div className="flex items-center gap-2 text-xs text-gray-300 mb-4">
                       <span className="uppercase font-semibold">{article.type}</span>
                       <span>·</span>
                       <span>{article.date}</span>
-                    </div>
+                    </div> */}
 
                     <button
                       onClick={(e) => { e.stopPropagation(); openLeadModal(article); }}
                       className="inline-flex items-center gap-2 px-6 py-2.5 bg-green-400 hover:bg-green-500 text-black font-semibold text-sm rounded-md transition-colors duration-300"
                     >
-                      LEARN MORE
+                      Download
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>

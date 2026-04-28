@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { X, Play } from 'lucide-react';
 
 const videos = [
-  { id: 'OfseuaG7QVA', label: 'Pace of Change' },
-  { id: 'oKmsrBywfwg', label: 'Agentic AI & Future of Leadership' },
+  { id: 'cUqoItg_xUs', label: 'Agentic Leadership' },
+  { id: 'CePJgdc9OGE', label: 'Cybernetics Enterprise' },
 ];
 
 export default function FeaturedEpisode() {

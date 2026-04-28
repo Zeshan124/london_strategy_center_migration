@@ -37,25 +37,25 @@ export default function IndustriesSection() {
     {
       id: 5,
       title: 'Real Estate',
-      description: 'Real estate leaders need organisational intelligence built for complexity not instinct dressed as strategy.',
+      description: 'Real estate leaders need organisational intelligence built for market complexity — not instinct or convention dressed as strategy.',
       image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=800&fit=crop'
     },
     {
       id: 6,
-      title: 'Healthcare',
-      description: 'Healthcare organisations demand leadership capability designed for a fundamentally different environment',
+      title: 'Healthcare Sector',
+      description: 'Healthcare organisations demand the leadership capability and decision systems designed for a fundamentally different environment.',
       image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=800&fit=crop'
     },
     {
       id: 7,
-      title: 'Media',
-      description: 'The sector requires leaders who make high-quality decisions not those who simply adapt faster to change they did not anticipate.',
+      title: 'Media Sector',
+      description: 'The sector demands leaders making high-quality decisions under pressure, not those who react faster to change they failed to see.',
       image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&h=800&fit=crop'
     },
     {
       id: 8,
-      title: 'Logistics',
-      description: 'In logistics, execution coherence is the competitive advantage.',
+      title: 'Logistics Sector',
+      description: 'In logistics, execution coherence is the decisive competitive advantage separating organisations that perform from those who fail.',
       image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=800&fit=crop'
     },
   ];
