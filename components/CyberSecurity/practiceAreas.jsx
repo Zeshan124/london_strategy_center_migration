@@ -11,7 +11,7 @@ const DEFAULT_FEATURES = [
     id: 1, slug: "certification-and-compliance",
     icon: "/images/InnerPages/cyber-security/license.svg",
     title: "Certification & Compliance Services",
-    description: "Support to achieve recognised certifications and frameworks - including Cyber Excellence Level 1 to 4 (/cyber-excellence) which is aligned with NCICC-1 2005. Additional support is available across leading frameworks including Cyber  Essentials, Cyber Essentials Plus (CE+) ; IASME Cyber Assurance ;  ISO 27001 gap analysis and NIST CSF pathway. Structured preparation that builds lasting capability, not just a certificate.",
+    description: "Support to achieve recognised certifications and frameworks - including Cyber Excellence Level 1 to 4 (/cyber-excellence) which is aligned with NCICC-1 2005. Additional support is available across leading frameworks.",
   },
   {
     id: 2, slug: "cyber-risk-and-resilience",
@@ -77,12 +77,12 @@ function RichText({ text, className }) {
   );
 }
 
-// Derive the best column count from the number of features
-function getColClass(count) {
-  if (count <= 3) return "lg:grid-cols-3";
-  if (count === 4) return "lg:grid-cols-4";
-  if (count === 5 || count === 6) return "lg:grid-cols-3";
-  return "lg:grid-cols-4";
+// Per-item width so flex rows center when not full
+function getItemWidthClass(count) {
+  if (count <= 3) return "lg:w-[calc(33.333%-1.334rem)]";
+  if (count === 4) return "lg:w-[calc(25%-1.5rem)]";
+  if (count === 5 || count === 6) return "lg:w-[calc(33.333%-1.334rem)]";
+  return "lg:w-[calc(25%-1.5rem)]";
 }
 
 export default function PracticeAreas({ practiceAreas }) {
@@ -93,7 +93,7 @@ export default function PracticeAreas({ practiceAreas }) {
   const features       = practiceAreas?.features       ?? DEFAULT_FEATURES;
   const heading_bottom = practiceAreas?.heading_bottom ?? null;
   const subheading_bottom = practiceAreas?.subheading_bottom ?? null;
-  const colClass       = getColClass(features.length);
+  const itemWidthClass = getItemWidthClass(features.length);
 
  return (
     <section className="relative py-16 md:py-20 overflow-hidden bg-slate-50">
@@ -132,12 +132,12 @@ export default function PracticeAreas({ practiceAreas }) {
         </div>
 
         {/* Cards */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 ${colClass} gap-8`}>
+        <div className="flex flex-wrap justify-center gap-8">
           {features.map((feature) => (
             <Link
               key={feature.id}
               href={feature.slug ? `/cyber-security/${feature.slug}` : "#"}
-              className="group relative rounded-2xl p-[1px] bg-gradient-to-br from-transparent via-transparent to-transparent hover:from-[#0E2253]/40 hover:via-blue-400/30 hover:to-transparent transition-all duration-500"
+              className={`group relative rounded-2xl p-px bg-linear-to-br from-transparent via-transparent to-transparent hover:from-[#0E2253]/40 hover:via-blue-400/30 hover:to-transparent transition-all duration-500 w-full md:w-[calc(50%-1rem)] ${itemWidthClass}`}
             >
               <div
                 className="relative h-full rounded-2xl bg-white/80 backdrop-blur-lg p-6 md:p-8 border border-slate-200/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 overflow-hidden"
