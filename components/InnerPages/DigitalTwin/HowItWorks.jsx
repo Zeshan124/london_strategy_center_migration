@@ -210,8 +210,7 @@ export default function HowItWorks() {
                 </button>
               </div>
             </div>
-            <div className="flex flex-wrap justify-center sm:justify-start items-center gap-4 sm:gap-6 lg:gap-10 pt-4 mt-2">
-              {/* Complimentary session */}
+            {/* <div className="flex flex-wrap justify-center sm:justify-start items-center gap-4 sm:gap-6 lg:gap-10 pt-4 mt-2">
               <div className="flex items-center gap-2 sm:gap-3">
                 <img
                   src="/images/InnerPages/digitaltwin/contemporary.svg"
@@ -222,11 +221,7 @@ export default function HowItWorks() {
                   Complimentary session
                 </span>
               </div>
-
-              {/* Dot Separator */}
               <span className="text-white opacity-50 text-base">•</span>
-
-              {/* 5 minutes */}
               <div className="flex items-center gap-2 sm:gap-3">
                 <img
                   src="/images/InnerPages/digitaltwin/timer.svg"
@@ -237,7 +232,7 @@ export default function HowItWorks() {
                   5 minutes
                 </span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -306,8 +301,8 @@ export default function HowItWorks() {
           />
         </div>
 
-        {/* Phone */}
-        <div>
+
+        {/* <div>
           <label className="block text-sm font-semibold text-gray-900 mb-2">
             Phone *
           </label>
@@ -322,7 +317,7 @@ export default function HowItWorks() {
           />
         </div>
 
-        {/* Organization */}
+   
         <div>
           <label className="block text-sm font-semibold text-gray-900 mb-2">
             Organization
@@ -337,7 +332,7 @@ export default function HowItWorks() {
           />
         </div>
 
-        {/* Objective */}
+       
         <div>
           <label className="block text-sm font-semibold text-gray-900 mb-2">
             Objective
@@ -350,7 +345,7 @@ export default function HowItWorks() {
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0E2253]"
             placeholder="Describe your objectives"
           />
-        </div>
+        </div> */}
 
         {/* Submit */}
         <button

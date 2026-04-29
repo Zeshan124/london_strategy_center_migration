@@ -170,7 +170,7 @@ export default function DigitalTwinHero() {
             {/* Modal Header */}
             <div className="flex justify-between items-center p-6 border-b border-gray-200">
               <h2 className="text-2xl font-bold text-[#0E2253]">
-                Book a Consultation
+              Book a virtual one-one session with the LSC Team
               </h2>
               <button
                 onClick={() => setIsFormOpen(false)}
@@ -214,8 +214,8 @@ export default function DigitalTwinHero() {
                 />
               </div>
 
-              {/* Phone */}
-              <div>
+        
+              {/* <div>
                 <label className="block text-sm font-semibold text-gray-900 mb-2">
                   Phone
                 </label>
@@ -229,7 +229,6 @@ export default function DigitalTwinHero() {
                 />
               </div>
 
-              {/* Organization */}
               <div>
                 <label className="block text-sm font-semibold text-gray-900 mb-2">
                   Organization
@@ -244,7 +243,6 @@ export default function DigitalTwinHero() {
                 />
               </div>
 
-              {/* Objective */}
               <div>
                 <label className="block text-sm font-semibold text-gray-900 mb-2">
                   Objective
@@ -257,7 +255,7 @@ export default function DigitalTwinHero() {
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0E2253] focus:border-transparent resize-none"
                   placeholder="Describe your objectives"
                 />
-              </div>
+              </div> */}
 
               {/* Submit Button */}
               <button

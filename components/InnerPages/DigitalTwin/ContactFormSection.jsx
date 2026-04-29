@@ -33,8 +33,8 @@ export default function ContactFormSection() {
       <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24">
         <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-24 flex flex-col items-start gap-4">
           <h2 className="text-xl sm:text-3xl md:text-4xl font-light text-gray-900">
-            Book a virtual one-one session with{" "}
-            <span className="font-medium">Major General Paul Nanson CB CBE</span>
+          Book a virtual one-one session with the LSC Team
+          
           </h2>
           <p className="text-xs sm:text-sm text-gray-700 uppercase tracking-wide">
             REGISTER YOUR INTEREST AND OUR TEAM WILL BE IN TOUCH
@@ -64,8 +64,8 @@ export default function ContactFormSection() {
             {/* Header */}
             <div className="mb-6">
               <h2 className="text-xl sm:text-2xl font-light text-gray-900 mb-2">
-                Book a virtual one-one session with{" "}
-                <span className="font-medium">Major General Paul Nanson CB CBE</span>
+               Book a virtual one-one session with the LSC Team
+             
               </h2>
               <p className="text-xs text-gray-700 uppercase tracking-wide">
                 REGISTER YOUR INTEREST AND OUR TEAM WILL BE IN TOUCH
