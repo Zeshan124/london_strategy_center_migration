@@ -114,7 +114,7 @@ const Navbar = () => {
     { name: "ABOUT US", href: "/about" },
     { name: "SERVICES", href: "/services" },
     { name: "BLOG", href: "/blog" },
-    { name: "FREE MATERIALS", href: "/free-material" },
+    { name: "DIGITAL TWIN", href: "/digital-twin" },
     { name: "CYBER SECURITY", href: "/cyber-security" },
     { name: "CONTACT", href: "/contact" },
   ];

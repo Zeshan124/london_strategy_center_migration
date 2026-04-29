@@ -188,7 +188,7 @@ export default function HowItWorks() {
               {/* Text Content */}
               <div className="flex-1 text-center md:text-left w-full">
                 <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-normal text-white mb-3 md:mb-2">
-                 Book a virtual one-one session with Major General Paul Nanson CB CBE
+                 Book a virtual one-one session with the LSC Team
                 </h3>
                 <p className="text-white text-sm sm:text-base lg:text-base leading-relaxed">
                 REGISTER YOUR INTEREST AND OUR TEAM WILL BE IN TOUCH
@@ -201,7 +201,7 @@ export default function HowItWorks() {
                   onClick={() => setIsFormOpen(true)}
                   className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 bg-white border-2 border-[#0E2253] text-gray-900 rounded-xl text-sm text-center hover:bg-gray-900 hover:text-white transition-all duration-300"
                 >
-                  BOOK FREE SESSION
+                  BOOK A SESSION
                   <img
                     src="/images/InnerPages/digitaltwin/arrow-up.svg"
                     alt="Play Icon"
@@ -262,7 +262,7 @@ export default function HowItWorks() {
       {/* Modal Header */}
       <div className="flex justify-between items-center p-6 border-b border-gray-200">
         <h2 className="text-2xl font-bold text-[#0E2253]">
-         Book a virtual one-one session with Major General Paul Nanson CB CBE
+         Book a virtual one-one session with the LSC Team
         </h2>
         <button
           onClick={() => setIsFormOpen(false)}
@@ -358,7 +358,7 @@ export default function HowItWorks() {
           disabled={isSubmitting}
           className="w-full bg-[#0E2253] text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 disabled:opacity-50"
         >
-          {isSubmitting ? "Opening Avatar..." : "Book a Free Session"}
+          {isSubmitting ? "Opening Avatar..." : "Book a Session"}
         </button>
       </form>
     </div>
