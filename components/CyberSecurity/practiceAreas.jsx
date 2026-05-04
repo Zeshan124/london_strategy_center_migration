@@ -86,6 +86,7 @@ function getItemWidthClass(count) {
 }
 
 export default function PracticeAreas({ practiceAreas }) {
+  const top_title      = practiceAreas?.top_title      ?? null;
   const heading_top    = practiceAreas?.heading_top    ?? null;
   const subheading_top = practiceAreas?.subheading_top ?? null;
   const heading        = practiceAreas?.heading        ?? DEFAULT_HEADING;
@@ -122,7 +123,8 @@ export default function PracticeAreas({ practiceAreas }) {
         )}
 
         {/* Header */}
-        <div className="mb-12 lg:mb-16 text-center sm:text-left">
+        <div className="mb-12 lg:mb-16 sm:text-left">
+          
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-slate-900 mb-4">
             {heading}
           </h2>
@@ -170,6 +172,12 @@ export default function PracticeAreas({ practiceAreas }) {
                     />
                   </div>
                 </div>
+
+                {top_title && (
+            <h2 className="text-3xl sm:text-2xl font-bold text-black mb-2">
+              {top_title}
+            </h2>
+          )}
 
                 {/* Title */}
                 <h3 className="relative z-10 text-lg md:text-xl font-semibold text-slate-900 mb-3 group-hover:text-[#0E2253] transition">

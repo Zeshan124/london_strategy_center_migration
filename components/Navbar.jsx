@@ -79,6 +79,15 @@ const Navbar = () => {
     }));
   };
 
+  const aiServices = [
+    { name: "The Agentic Systems Lab", href: "/ai/agentic-systems-lab" },
+    { name: "Capability Transformation (CT) Scan", href: "/ai/capability-transformation-scan" },
+    { name: "Agentic Leadership Transformation", href: "/ai/agentic-leadership-transformation" },
+    { name: "Cybernetic Organisation Design", href: "/ai/cybernetic-organisation-design" },
+    { name: "From AI Noise to Clear Direction in 5 Minutes", href: "/ai/ai-noise-to-direction" },
+    { name: "AIx Programme", href: "/ai/aix-programme" },
+  ];
+
   const cyberServices = [
     { name: "Certification & Compliance Services", href: "/cyber-security/certification-and-compliance" },
     { name: "Cyber Risk & Resilience", href: "/cyber-security/cyber-risk-and-resilience" },
@@ -277,7 +286,7 @@ const Navbar = () => {
                 {/* Navigation Sections */}
                 <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
                   {/* Left Navigation Menu */}
-                  <div className="w-full lg:w-72 lg:flex-shrink-0 lg:border-r border-gray-200 lg:pr-8">
+                  <div className="w-full lg:w-72 lg:shrink-0 lg:border-r border-gray-200 lg:pr-8">
                     <div className="space-y-3 sm:space-y-4">
                       {/* Our Services */}
                       <div>
@@ -331,6 +340,16 @@ const Navbar = () => {
                             >
                               Cyber Excellence
                             </Link>
+                          </li>
+                          <li>
+                            <button
+                              onClick={() => setActiveSection(activeSection === "ai" ? "industries" : "ai")}
+                              className={`w-full text-left text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded ${
+                                activeSection === "ai" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
+                              }`}
+                            >
+                              AI Services
+                            </button>
                           </li>
                           <li>
                             <button
@@ -436,7 +455,38 @@ const Navbar = () => {
 
                   {/* Right Content Area */}
                   <div className="flex-1">
-                    {activeSection === "cyber-security" ? (
+                    {activeSection === "ai" ? (
+                      /* AI Services */
+                      <div>
+                        <h2 className="text-sm font-medium text-gray-900 mb-1">
+                          AI Services
+                        </h2>
+                        <p className="text-xs text-gray-600 mb-4">
+                          From organisational diagnostics to system-level transformation and strategic AI governance.
+                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 sm:gap-x-12 gap-y-2">
+                          {aiServices.map((service, index) => (
+                            <Link
+                              key={index}
+                              href={service.href}
+                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </div>
+                        <div className="mt-6 pt-4 border-t border-gray-100">
+                          <Link
+                            href="/ai"
+                            className="text-sm font-medium text-[#0E2253] hover:underline"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            View all AI services →
+                          </Link>
+                        </div>
+                      </div>
+                    ) : activeSection === "cyber-security" ? (
                       /* Cyber Security Services */
                       <div>
                         <h2 className="text-sm font-medium text-gray-900 mb-1">
