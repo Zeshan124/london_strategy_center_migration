@@ -44,15 +44,17 @@ export default function AIServiceHero({ service }) {
             </p>
           )}
 
-          {/* CTA Button */}
-          {/* <div className="flex flex-wrap gap-3 mb-10">
-            <button
-              onClick={() => setShowForm(true)}
-              className="px-6 py-3 bg-[#0E2253] text-white text-xs font-semibold tracking-widest uppercase hover:bg-[#1a3570] transition-all duration-300"
-            >
-              {service.consultationCta || "REQUEST A CONSULTATION"}
-            </button>
-          </div> */}
+          {/* CTA Button — only shown when service.showCta is true */}
+          {service.showCta && (
+            <div className="flex flex-wrap gap-3 mb-10">
+              <button
+                onClick={() => setShowForm(true)}
+                className="px-6 py-3 bg-[#0E2253] text-white text-xs font-semibold tracking-widest uppercase hover:bg-[#1a3570] transition-all duration-300"
+              >
+                {service.consultationCta || "REQUEST A CONSULTATION"}
+              </button>
+            </div>
+          )}
 
           {/* Hero Image */}
           <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">

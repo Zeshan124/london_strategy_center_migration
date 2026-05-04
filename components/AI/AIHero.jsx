@@ -50,6 +50,15 @@ export default function AIHero() {
          Most organisations are investing in AI. Few are changing how they think, decide, or execute because of it. The gap between AI adoption and organisational performance is not a technology problem. It is a capability problem, one that sits in leadership behaviours, decision architecture, and system design. London Strategy Centre closes that gap. 
         </p>
 
+         <div className="flex flex-wrap gap-3 my-10">
+            <button
+              onClick={() => setShowForm(true)}
+              className="px-6 py-3 bg-[#0E2253] text-white text-xs font-semibold tracking-widest uppercase hover:bg-[#1a3570] transition-all duration-300"
+            >
+              {"REQUEST A CONSULTATION"}
+            </button>
+          </div>
+
         {/* Section below */}
         {/* <div className="mt-12 sm:mt-16">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-light text-gray-900 leading-tight mb-8">

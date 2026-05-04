@@ -1,17 +1,18 @@
 'use client';
 
 import { useRef } from 'react';
+import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import 'swiper/css';
 
 const DEFAULT_HEADING = 'A three-tier architecture that makes AI capability permanent ';
-const DEFAULT_SUBHEADING = 'LSC’s approach is built on a proprietary Capability Transformation Architecture (CTA), three integrated tiers that move organisations from diagnosis through behavioural change to embedded, self-reinforcing capability.'
+const DEFAULT_SUBHEADING = null;
 const DEFAULT_TIERS = [
-  { id: 1, title: 'Capability Transformation (CT) Scan (Tier 1):', description: 'AI-enabled sensing that reveals how leaders frame problems, where execution bottlenecks cluster, and what systemic constraints exist.', image: '/images/InnerPages/artificial-intelligence/ct-scan.jpg' },
-  { id: 2, title: 'Agentic Leadership Transformation (Tier 2):', description: 'Leaders working with AI as a thinking partner in live strategic and operational contexts. Not training. Not simulation.', image: '/images/InnerPages/artificial-intelligence/ai-leadership.jpg' },
-  { id: 3, title: 'Cybernetic Organisation Design (Tier 3):', description: 'Embedding AI-augmented sensing, governance, and learning systems across the enterprise so that capability compounds over time.', image: '/images/InnerPages/artificial-intelligence/cybernetic.jpg' },
+  { id: 1, title: 'Capability Transformation (CT) Scan (Tier 1):', description: 'AI-enabled sensing that reveals how leaders frame problems, where execution bottlenecks cluster, and what systemic constraints exist.', image: '/images/InnerPages/artificial-intelligence/ct-scan.jpg', href: '/ai/capability-transformation-scan' },
+  { id: 2, title: 'Agentic Leadership Transformation (Tier 2):', description: 'Leaders working with AI as a thinking partner in live strategic and operational contexts. Not training. Not simulation.', image: '/images/InnerPages/artificial-intelligence/ai-leadership.jpg', href: '/ai/agentic-leadership-transformation' },
+  { id: 3, title: 'Cybernetic Organisation Design (Tier 3):', description: 'Embedding AI-augmented sensing, governance, and learning systems across the enterprise so that capability compounds over time.', image: '/images/InnerPages/artificial-intelligence/cybernetic.jpg', href: '/ai/cybernetic-organisation-design' },
 ];
 
 export default function TiersSection({ heading, subheading, tiers }) {
@@ -57,25 +58,29 @@ export default function TiersSection({ heading, subheading, tiers }) {
         {/* Slider — centered grid for ≤3 items, Swiper for 4+ */}
         {resolvedTiers.length <= 3 ? (
           <div className="flex flex-wrap justify-center gap-5">
-            {resolvedTiers.map((tier) => (
-              <div
-                key={tier.id}
-                className="w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)] group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
-              >
-                <div className="relative h-[400px] sm:h-[550px] overflow-hidden">
-                  <img
-                    src={tier.image}
-                    alt={tier.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0" />
-                </div>
-                <div className="absolute bottom-5 left-5 right-5 bg-white rounded-2xl p-5 shadow-xl transition-all duration-500">
-                  <h3 className="text-lg font-normal text-gray-900 mb-2 leading-tight">{tier.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{tier.description}</p>
-                </div>
-              </div>
-            ))}
+            {resolvedTiers.map((tier) => {
+              const Wrapper = tier.href ? Link : 'div';
+              return (
+                <Wrapper
+                  key={tier.id}
+                  {...(tier.href ? { href: tier.href } : {})}
+                  className="w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)] group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                >
+                  <div className="relative h-[400px] sm:h-[550px] overflow-hidden">
+                    <img
+                      src={tier.image}
+                      alt={tier.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0" />
+                  </div>
+                  <div className="absolute bottom-5 left-5 right-5 bg-white rounded-2xl p-5 shadow-xl transition-all duration-500">
+                    <h3 className="text-lg font-normal text-gray-900 mb-2 leading-tight">{tier.title}</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">{tier.description}</p>
+                  </div>
+                </Wrapper>
+              );
+            })}
           </div>
         ) : (
           <Swiper

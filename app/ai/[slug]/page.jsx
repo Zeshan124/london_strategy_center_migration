@@ -14,6 +14,8 @@ import Phases from "@/components/AI/Phases";
 import ContactSection from "@/components/AI/ContactSection";
 import UniBirmingham from "@/components/InnerPages/CyberExcellence/UniBirmingham";
 import SecondCTASection from "@/components/AI/SecondCTASection";
+import WhyDifferent from "@/components/AI/WhyDifferent";
+import AIxArchitecture from "@/components/AI/AIxArchitecture";
 
 export default function AIServicePage() {
   const { slug } = useParams();
@@ -46,6 +48,8 @@ export default function AIServicePage() {
         {/* 2. CTA Section */}
         <AICTASection cta={service.cta} />
 
+       
+
         {/* 3. Practice Areas */}
         <PracticeAreas practiceAreas={service.practiceAreas} />
 
@@ -60,6 +64,9 @@ export default function AIServicePage() {
           />
         )}
 
+         {/* Why Different — ai-noise-to-direction only */}
+        {service.whyDifferent && <WhyDifferent content={service.whyDifferent} />}
+
         {/* 5. Phases (shown when service has phases data) */}
         {service.phases && (
           <Phases
@@ -70,15 +77,8 @@ export default function AIServicePage() {
           />
         )}
 
-        {/* 6. Contact section */}
-        {service.contact && (
-          <ContactSection
-            top={service.contact.top}
-            banner={service.contact.banner}
-          />
-        )}
-
-       
+        {/* AIx Architecture — aix-programme only */}
+        {service.aixArchitecture && <AIxArchitecture content={service.aixArchitecture} />}
         
       </main>
       <Footer />

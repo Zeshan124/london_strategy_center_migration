@@ -173,11 +173,12 @@ export default function PracticeAreas({ practiceAreas }) {
                   </div>
                 </div>
 
-                {top_title && (
-            <h2 className="text-3xl sm:text-2xl font-bold text-black mb-2">
-              {top_title}
-            </h2>
-          )}
+                {/* Per-card top label (e.g. "Tier 1:") */}
+                {feature.top_title && (
+                  <p className="relative z-10 text-xs font-bold text-[#0E2253] uppercase tracking-widest mb-1">
+                    {feature.top_title}
+                  </p>
+                )}
 
                 {/* Title */}
                 <h3 className="relative z-10 text-lg md:text-xl font-semibold text-slate-900 mb-3 group-hover:text-[#0E2253] transition">

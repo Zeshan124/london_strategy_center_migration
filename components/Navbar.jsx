@@ -348,7 +348,7 @@ const Navbar = () => {
                                 activeSection === "ai" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
                               }`}
                             >
-                              AI Services
+                             Artificial Intelligence
                             </button>
                           </li>
                           <li>
@@ -459,7 +459,7 @@ const Navbar = () => {
                       /* AI Services */
                       <div>
                         <h2 className="text-sm font-medium text-gray-900 mb-1">
-                          AI Services
+                          Artificial Intelligence services
                         </h2>
                         <p className="text-xs text-gray-600 mb-4">
                           From organisational diagnostics to system-level transformation and strategic AI governance.
@@ -482,7 +482,7 @@ const Navbar = () => {
                             className="text-sm font-medium text-[#0E2253] hover:underline"
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
-                            View all AI services →
+                            View all Artificial Intelligence services →
                           </Link>
                         </div>
                       </div>

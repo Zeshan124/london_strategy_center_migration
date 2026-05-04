@@ -15,22 +15,22 @@ const DEFAULT_SUBHEADING = null;
 const DEFAULT_PHASES = [
   {
     id: 1,
-    title: 'Artificial Intelligence',
+    title: 'Sense:',
     description: 'Deploy Tier 1 diagnostics to map the organisation’s decision patterns, execution friction points, and capability readiness for AI-augmented ways of working. ',
     image: '/images/InnerPages/artificial-intelligence/sense.jpg',
     href: null,
   },
   {
     id: 2,
-    title: 'Cyber Security',
+    title: 'Transform:',
     description: 'Run Tier 2 agentic leadership labs on live business challenges. Leaders develop new practices with AI as a thinking partner, producing measurable shifts in decision quality.',
     image: '/images/InnerPages/artificial-intelligence/transform.jpg',
     href: '/cyber-security',
   },
   {
     id: 3,
-    title: 'Advisory Services',
-    description: 'Design and implement Tier 3 cybernetic systems — governance frameworks, sensing infrastructure, and feedback loops that make capability self-sustaining. ',
+    title: 'Embed:',
+    description: 'Design and implement Tier 3 cybernetic systems — governance frameworks, sensing infrastructure, and feedback loops that make capability self-sustaining.  ',
     image: '/images/InnerPages/artificial-intelligence/embed.jpg',
     href: null,
   },

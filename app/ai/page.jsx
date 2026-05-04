@@ -63,7 +63,7 @@ const page = () => {
        <TiersSection />
        <SecondCTASection />
        <Phases />
-       <ContactSection />
+       {/* <ContactSection /> */}
         
       </main>
       <Footer />
