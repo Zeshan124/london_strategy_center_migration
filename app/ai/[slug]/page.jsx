@@ -79,7 +79,14 @@ export default function AIServicePage() {
 
         {/* AIx Architecture — aix-programme only */}
         {service.aixArchitecture && <AIxArchitecture content={service.aixArchitecture} />}
-        
+
+        {/* Contact section */}
+        {service.contact && (
+          <ContactSection
+            top={service.contact.top}
+            banner={service.contact.banner}
+          />
+        )}
       </main>
       <Footer />
     </>

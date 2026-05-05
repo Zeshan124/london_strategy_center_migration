@@ -28,7 +28,7 @@ export default function AIHero() {
         <div className="rounded-2xl overflow-hidden relative min-h-[340px] sm:min-h-[450px]">
           {/* Background Image */}
           <Image
-            src="/images/InnerPages/artificial-intelligence/ai-banner.jpg"
+            src="/images/InnerPages/artificial-intelligence/shared/ai-hero-banner.jpg"
             alt="AI Services"
             fill
             className="object-cover"

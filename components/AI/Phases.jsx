@@ -3,11 +3,8 @@
 import Link from 'next/link';
 
 const DEFAULT_INTRO = {
-  heading: 'Sequential design produces compounding returns',
-  paragraphs: [
-    'The three tiers are not a menu. They are a sequence. Tier 1 produces the organisational intelligence that makes Tier 2 precise. Tier 2 produces the leadership transformation that makes Tier 3 sustainable. Tier 3 embeds both into permanent infrastructure. Each tier amplifies the returns of the one before it.',
-    'Organisations that engage the full architecture do not experience three separate interventions. They experience a single, compounding transformation — one that moves from diagnosis through behavioural change to system redesign, with each phase calibrated by evidence from the last.',
-  ],
+  heading: null,
+  paragraphs: null,
 };
 
 const DEFAULT_HEADING = 'From diagnosis to embedded capability in three phases';
@@ -17,21 +14,21 @@ const DEFAULT_PHASES = [
     id: 1,
     title: 'Sense:',
     description: 'Deploy Tier 1 diagnostics to map the organisation’s decision patterns, execution friction points, and capability readiness for AI-augmented ways of working. ',
-    image: '/images/InnerPages/artificial-intelligence/sense.jpg',
+    image: '/images/InnerPages/artificial-intelligence/shared/phase-1-sense.jpg',
     href: null,
   },
   {
     id: 2,
     title: 'Transform:',
     description: 'Run Tier 2 agentic leadership labs on live business challenges. Leaders develop new practices with AI as a thinking partner, producing measurable shifts in decision quality.',
-    image: '/images/InnerPages/artificial-intelligence/transform.jpg',
+    image: '/images/InnerPages/artificial-intelligence/shared/phase-2-transform.jpg',
     href: '/cyber-security',
   },
   {
     id: 3,
     title: 'Embed:',
     description: 'Design and implement Tier 3 cybernetic systems — governance frameworks, sensing infrastructure, and feedback loops that make capability self-sustaining.  ',
-    image: '/images/InnerPages/artificial-intelligence/embed.jpg',
+    image: '/images/InnerPages/artificial-intelligence/shared/phase-3-embed.jpg',
     href: null,
   },
 ];
