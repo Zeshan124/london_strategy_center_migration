@@ -3,7 +3,8 @@
 const DEFAULT = {
   heading: "Built for leaders operating under complexity",
   paragraphs: [
-    "LSC works with CEOs, executive committees, boards, and government leaders who face decisions with systemic consequences. Our clients include defence and security organisations, sovereign wealth enterprises, large-scale public sector bodies, and global enterprises in healthcare, energy, and infrastructure.  This is not an AI training programme. It is a system-level partnership that changes how an organisation performs permanently. ",
+    "LSC works with CEOs, executive committees, boards, and government leaders who face decisions with systemic consequences. Our clients include defence and security organisations, sovereign wealth enterprises, large-scale public sector bodies, and global enterprises in healthcare, energy, and infrastructure. ",
+    "This is not an AI training programme. It is a system-level partnership that changes how an organisation performs permanently."
   ],
   image: "/images/InnerPages/artificial-intelligence/cta-section.jpg",
 };

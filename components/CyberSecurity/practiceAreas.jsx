@@ -59,22 +59,40 @@ const DEFAULT_FEATURES = [
 
 // Renders a string with optional inline [text](/href) markdown links
 function RichText({ text, className }) {
-  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
-  return (
-    <p className={className}>
-      {parts.map((part, i) => {
-        const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-        if (match) {
-          return (
-            <Link key={i} href={match[2]} className="text-[#0E2253] underline underline-offset-2 hover:opacity-75 transition-opacity">
-              {match[1]}
-            </Link>
-          );
-        }
-        return part;
-      })}
-    </p>
-  );
+  if (Array.isArray(text)) {
+    return text.map((t, idx) => (
+      <p key={idx} className={`${className} ${idx < text.length - 1 ? 'mb-2' : ''}`}>
+        {t.split(/(\[[^\]]+\]\([^)]+\))/g).map((part, i) => {
+          const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+          if (match) {
+            return (
+              <Link key={i} href={match[2]} className="text-[#0E2253] underline underline-offset-2 hover:opacity-75 transition-opacity">
+                {match[1]}
+              </Link>
+            );
+          }
+          return part;
+        })}
+      </p>
+    ));
+  } else {
+    const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+    return (
+      <p className={className}>
+        {parts.map((part, i) => {
+          const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+          if (match) {
+            return (
+              <Link key={i} href={match[2]} className="text-[#0E2253] underline underline-offset-2 hover:opacity-75 transition-opacity">
+                {match[1]}
+              </Link>
+            );
+          }
+          return part;
+        })}
+      </p>
+    );
+  }
 }
 
 // Per-item width so flex rows center when not full
@@ -91,6 +109,7 @@ export default function PracticeAreas({ practiceAreas }) {
   const subheading_top = practiceAreas?.subheading_top ?? null;
   const heading        = practiceAreas?.heading        ?? DEFAULT_HEADING;
   const subheading     = practiceAreas?.subheading     ?? DEFAULT_SUBHEADING;
+  const heading_secondary = practiceAreas?.heading_secondary ?? null;
   const features       = practiceAreas?.features       ?? DEFAULT_FEATURES;
   const heading_bottom = practiceAreas?.heading_bottom ?? null;
   const subheading_bottom = practiceAreas?.subheading_bottom ?? null;
@@ -115,9 +134,10 @@ export default function PracticeAreas({ practiceAreas }) {
               </h2>
             )}
             {subheading_top && (
-              <p className="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed">
-                {subheading_top}
-              </p>
+              <RichText
+                text={subheading_top}
+                className="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed"
+              />
             )}
           </div>
         )}
@@ -128,9 +148,15 @@ export default function PracticeAreas({ practiceAreas }) {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-slate-900 mb-4">
             {heading}
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed">
-            {subheading}
-          </p>
+          <RichText
+            text={subheading}
+            className="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed"
+          />
+          {heading_secondary && (
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-medium text-slate-900 mt-8 mb-4">
+              {heading_secondary}
+            </h3>
+          )}
         </div>
 
         {/* Cards */}
@@ -189,9 +215,12 @@ export default function PracticeAreas({ practiceAreas }) {
                 <div className="relative z-10 w-12 h-[2px] bg-gradient-to-r from-[#0E2253] to-blue-400 mb-4 group-hover:w-16 transition-all duration-300"></div>
 
                 {/* Description */}
-                <p className="relative z-10 text-sm text-slate-600 leading-relaxed">
-                  {feature.description}
-                </p>
+                <div className="relative z-10">
+                  <RichText
+                    text={feature.description}
+                    className="text-sm text-slate-600 leading-relaxed"
+                  />
+                </div>
               </div>
             </Link>
           ))}

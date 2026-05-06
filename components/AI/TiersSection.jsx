@@ -15,11 +15,13 @@ const DEFAULT_TIERS = [
   { id: 3, title: 'Cybernetic Organisation Design (Tier 3):', description: 'Embedding AI-augmented sensing, governance, and learning systems across the enterprise so that capability compounds over time.', image: '/images/InnerPages/artificial-intelligence/shared/tier-3-cybernetic-design-card.jpg', href: '/ai/cybernetic-organisation-design' },
 ];
 
-export default function TiersSection({ heading, subheading, tiers }) {
+export default function TiersSection({ top_heading, top_subheading, heading, subheading, tiers }) {
   const swiperRef = useRef(null);
 
+  const resolvedTopHeading = top_heading ?? null;
+  const resolvedTopSubheading = top_subheading ?? null;
   const resolvedHeading = heading ?? DEFAULT_HEADING;
-  const resolvedSubheading = subheading ?? DEFAULT_SUBHEADING;
+  const resolvedSubheading = subheading !== undefined ? subheading : DEFAULT_SUBHEADING;
   const resolvedTiers = tiers ?? DEFAULT_TIERS;
 
   return (
@@ -28,12 +30,32 @@ export default function TiersSection({ heading, subheading, tiers }) {
         {/* Header */}
         <div className="mb-12 lg:mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
           <div>
+            {resolvedTopHeading && (
+              <h2 className="text-2xl sm:text-3xl lg:text-3xl font-light leading-tight mb-2 text-gray-900">
+                {resolvedTopHeading}
+              </h2>
+            )}
+            {resolvedTopSubheading && (
+              <div className="text-sm sm:text-base text-gray-600 mb-6">
+                {Array.isArray(resolvedTopSubheading) ? (
+                  resolvedTopSubheading.map((text, idx) => (
+                    <p key={idx} className={idx < resolvedTopSubheading.length - 1 ? "mb-2" : ""}>
+                      {text}
+                    </p>
+                  ))
+                ) : (
+                  <p>{resolvedTopSubheading}</p>
+                )}
+              </div>
+            )}
             <h2 className="text-3xl sm:text-4xl lg:text-4xl font-light leading-tight mb-4 text-gray-900">
               {resolvedHeading}
             </h2>
-            <p className="text-base sm:text-lg text-gray-600">
-              {resolvedSubheading}
-            </p>
+            {resolvedSubheading && (
+              <p className="text-base sm:text-lg text-gray-600">
+                {resolvedSubheading}
+              </p>
+            )}
           </div>
 
           {/* Navigation Arrows */}

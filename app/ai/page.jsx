@@ -59,10 +59,10 @@ const page = () => {
       <Navbar />
       <main>
         <AIHero />
+       <Phases />
         <AICTASection />
        <TiersSection />
        <SecondCTASection />
-       <Phases />
        <ContactSection />
         
       </main>

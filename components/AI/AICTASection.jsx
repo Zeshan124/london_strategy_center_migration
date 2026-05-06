@@ -3,7 +3,8 @@
 const DEFAULT = {
   heading: "AI investment without system-level design produces noise, not capability ",
   paragraphs: [
-    "Organisations acquire AI tools, build data teams, and commission pilots. What they rarely do is redesign the organisational system around AI’s actual potential: faster sensing, sharper decision-making, and adaptive execution at scale. The result is fragmented adoption, executive scepticism, and a widening distance between what AI could deliver and what it does. The problem is structural. AI is being added to organisations that were designed before AI existed. Without intervening at the level of leadership practice, decision rights, and operating model, technology investment compounds cost without compounding capability. ",
+    "Organisations acquire AI tools, build data teams, and commission pilots. What they rarely do is redesign the organisational system around AI’s actual potential: faster sensing, sharper decision-making, and adaptive execution at scale. The result is fragmented adoption, executive scepticism, and a widening distance between what AI could deliver and what it does.",
+    "The problem is structural. AI is being added to organisations that were designed before AI existed. Without intervening at the level of leadership practice, decision rights, and operating model, technology investment compounds cost without compounding capability."
   ],
   image: "/images/InnerPages/artificial-intelligence/ai-investment.jpg",
 };
