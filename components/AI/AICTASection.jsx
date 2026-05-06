@@ -6,11 +6,12 @@ const DEFAULT = {
     "Organisations acquire AI tools, build data teams, and commission pilots. What they rarely do is redesign the organisational system around AI’s actual potential: faster sensing, sharper decision-making, and adaptive execution at scale. The result is fragmented adoption, executive scepticism, and a widening distance between what AI could deliver and what it does.",
     "The problem is structural. AI is being added to organisations that were designed before AI existed. Without intervening at the level of leadership practice, decision rights, and operating model, technology investment compounds cost without compounding capability."
   ],
+  bullets: null,
   image: "/images/InnerPages/artificial-intelligence/ai-investment.jpg",
 };
 
 export default function AICTASection({ cta }) {
-  const { heading, paragraphs, image } = cta ?? DEFAULT;
+  const { heading, paragraphs, bullets, image } = cta ?? DEFAULT;
 
   return (
     <section className="bg-[#F1EEEA]">
@@ -25,6 +26,16 @@ export default function AICTASection({ cta }) {
               {p}
             </p>
           ))}
+          {bullets?.length > 0 && (
+            <ul className="space-y-3 mt-4 text-sm sm:text-base text-gray-700">
+              {bullets.map((bullet, i) => (
+                <li key={i} className="flex gap-3">
+                  <span className="mt-1 h-2.5 w-2.5 rounded-full bg-gray-900" />
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
 
         {/* Right Image */}

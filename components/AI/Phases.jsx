@@ -33,10 +33,12 @@ const DEFAULT_PHASES = [
   },
 ];
 
-export default function Phases({ heading, subheading, phases, intro }) {
+export default function Phases({ heading, subheading, phases, intro, footer_heading, footer_subheading }) {
   const resolvedIntro    = intro ?? DEFAULT_INTRO;
   const resolvedHeading  = heading ?? DEFAULT_HEADING;
   const resolvedSubheading = subheading ?? DEFAULT_SUBHEADING;
+  const resolvedFooterHeading = footer_heading ?? null;
+  const resolvedFooterSubheading = footer_subheading ?? null;
   const resolvedPhases   = phases ?? DEFAULT_PHASES;
 
   return (
@@ -133,6 +135,21 @@ export default function Phases({ heading, subheading, phases, intro }) {
             );
           })}
         </div>
+
+        {(resolvedFooterHeading || resolvedFooterSubheading) && (
+          <div className="mt-12 lg:mt-16">
+            {resolvedFooterHeading && (
+              <h3 className="text-2xl sm:text-3xl font-light leading-tight mb-4 text-gray-900">
+                {resolvedFooterHeading}
+              </h3>
+            )}
+            {resolvedFooterSubheading && (
+              <p className="text-base sm:text-2xl font-bold mx-auto">
+                {resolvedFooterSubheading}
+              </p>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );

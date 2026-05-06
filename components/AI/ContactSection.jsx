@@ -31,7 +31,7 @@ export default function ContactSection({ top, banner }) {
 
   return (
     <>
-      <section id="contact-form" className="bg-white py-12 sm:py-16 lg:py-12">
+      <section id="contact-form" className="bg-white py-12 sm:py-16 lg:py-10">
         <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
 
           {/* Top heading + paragraphs */}

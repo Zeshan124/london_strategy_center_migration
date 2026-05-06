@@ -51,6 +51,8 @@ export default function AIServicePage() {
               heading={service.phases.heading}
               subheading={service.phases.subheading}
               phases={service.phases.items}
+              footer_heading={service.phases.footer_heading}
+              footer_subheading={service.phases.footer_subheading}
             />
           )}
           <AICTASection cta={service.cta} />
@@ -76,8 +78,6 @@ export default function AIServicePage() {
               tiers={service.tiers2.items}
             />
           )}
-          
-          
           
           {service.contact && (
             <ContactSection

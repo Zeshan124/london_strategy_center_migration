@@ -46,7 +46,7 @@ export default function WhyDifferent({ content }) {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
               {/* Left column */}
               <div>
-                <p className="text-base sm:text-3xl italic text-gray-900 mb-4">{c.left.title}</p>
+                <p className="text- font-bold sm:text-2xl text-gray-900 mb-4">{c.left.title}</p>
                 <ul className="space-y-3">
                   {c.left.items.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
@@ -59,7 +59,7 @@ export default function WhyDifferent({ content }) {
 
               {/* Right column */}
               <div>
-                <p className="text-base sm:text-3xl italic text-gray-900 mb-4">{c.right.title}</p>
+                <p className="text-base font-bold sm:text-2xl text-gray-900 mb-4">{c.right.title}</p>
                 <ul className="space-y-3">
                   {c.right.items.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
