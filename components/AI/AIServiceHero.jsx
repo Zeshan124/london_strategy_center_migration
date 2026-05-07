@@ -101,7 +101,7 @@ export default function AIServiceHero({ service }) {
 
             <div className="mb-6">
               <h2 className="text-2xl sm:text-3xl font-light text-gray-900 leading-tight mb-2">
-                Request a Consultation
+                {service.consultationHeading || "Request a Consultation"}
               </h2>
               <p className="text-sm text-gray-700 leading-relaxed">
                 Submit your details and a member of our team will be in touch shortly.
