@@ -113,6 +113,7 @@ export default function PracticeAreas({ practiceAreas }) {
   const features       = practiceAreas?.features       ?? DEFAULT_FEATURES;
   const heading_bottom = practiceAreas?.heading_bottom ?? null;
   const subheading_bottom = practiceAreas?.subheading_bottom ?? null;
+  const linkPrefix     = practiceAreas?.linkPrefix     ?? "/cyber-security";
   const itemWidthClass = getItemWidthClass(features.length);
 
  return (
@@ -164,7 +165,7 @@ export default function PracticeAreas({ practiceAreas }) {
           {features.map((feature) => (
             <Link
               key={feature.id}
-              href={feature.slug ? `/cyber-security/${feature.slug}` : "#"}
+              href={feature.slug ? `${linkPrefix}/${feature.slug}` : "#"}
               className={`group relative rounded-2xl p-px bg-linear-to-br from-transparent via-transparent to-transparent hover:from-[#0E2253]/40 hover:via-blue-400/30 hover:to-transparent transition-all duration-500 w-full md:w-[calc(50%-1rem)] ${itemWidthClass}`}
             >
               <div
@@ -187,7 +188,7 @@ export default function PracticeAreas({ practiceAreas }) {
                 {/* Icon */}
                 <div className="mb-6 relative z-10">
                   <div className="w-14 h-14 flex items-center justify-center rounded-xl 
-                  bg-gradient-to-br from-[#0E2253]/15 via-blue-100 to-transparent 
+                  bg-linear-to-br from-[#0E2253]/15 via-blue-100 to-transparent
                   group-hover:scale-110 transition duration-300">
                     <Image
                       src={feature.icon}
@@ -212,7 +213,7 @@ export default function PracticeAreas({ practiceAreas }) {
                 </h3>
 
                 {/* Divider */}
-                <div className="relative z-10 w-12 h-[2px] bg-gradient-to-r from-[#0E2253] to-blue-400 mb-4 group-hover:w-16 transition-all duration-300"></div>
+                <div className="relative z-10 w-12 h-0.5 bg-linear-to-r from-[#0E2253] to-blue-400 mb-4 group-hover:w-16 transition-all duration-300"></div>
 
                 {/* Description */}
                 <div className="relative z-10">
