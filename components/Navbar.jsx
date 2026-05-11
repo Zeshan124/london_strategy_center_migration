@@ -79,6 +79,11 @@ const Navbar = () => {
     }));
   };
 
+  const advisoryServices = [
+    { name: "Entrepreneurship and Scale-Up Services", href: "/advisory/entrepreneurship-and-scale-up" },
+    { name: "Operational and Strategic Advisory Services", href: "/advisory/operational-and-strategic-advisory" },
+  ];
+
   const aiServices = [
     { name: "The Agentic Systems Lab", href: "/ai/agentic-systems-lab" },
     { name: "Capability Transformation (CT) Scan", href: "/ai/capability-transformation-scan" },
@@ -343,6 +348,16 @@ const Navbar = () => {
                           </li>
                           <li>
                             <button
+                              onClick={() => setActiveSection(activeSection === "advisory" ? "industries" : "advisory")}
+                              className={`w-full text-left text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded ${
+                                activeSection === "advisory" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
+                              }`}
+                            >
+                              Advisory Services
+                            </button>
+                          </li>
+                          <li>
+                            <button
                               onClick={() => setActiveSection(activeSection === "ai" ? "industries" : "ai")}
                               className={`w-full text-left text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded ${
                                 activeSection === "ai" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
@@ -455,7 +470,38 @@ const Navbar = () => {
 
                   {/* Right Content Area */}
                   <div className="flex-1">
-                    {activeSection === "ai" ? (
+                    {activeSection === "advisory" ? (
+                      /* Advisory Services */
+                      <div>
+                        <h2 className="text-sm font-medium text-gray-900 mb-1">
+                          Advisory Services
+                        </h2>
+                        <p className="text-xs text-gray-600 mb-4">
+                          Strategic, operational, and entrepreneurship advisory for organisations navigating complex challenges.
+                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 sm:gap-x-12 gap-y-2">
+                          {advisoryServices.map((service, index) => (
+                            <Link
+                              key={index}
+                              href={service.href}
+                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </div>
+                        <div className="mt-6 pt-4 border-t border-gray-100">
+                          <Link
+                            href="/advisory"
+                            className="text-sm font-medium text-[#0E2253] hover:underline"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            View all Advisory Services →
+                          </Link>
+                        </div>
+                      </div>
+                    ) : activeSection === "ai" ? (
                       /* AI Services */
                       <div>
                         <h2 className="text-sm font-medium text-gray-900 mb-1">
