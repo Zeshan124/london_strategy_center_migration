@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-const DEFAULT_HEADING = "Two complementary\nadvisory practices";
+const DEFAULT_HEADING = "Two complementary advisory practices";
 const DEFAULT_SUBHEADING = "LSC's advisory work spans two complementary practice areas, each targeting a distinct but interconnected dimension of organisational performance.";
 const DEFAULT_PRACTICES = [
   {

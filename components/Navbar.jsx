@@ -319,13 +319,14 @@ const Navbar = () => {
                             </Link>
                           </li>
                           <li>
-                            <Link
-                              href="/trl"
-                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
-                              onClick={() => setIsMobileMenuOpen(false)}
+                            <button
+                              onClick={() => setActiveSection(activeSection === "trl" ? "industries" : "trl")}
+                              className={`w-full text-left text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded ${
+                                activeSection === "trl" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
+                              }`}
                             >
                               TRL
-                            </Link>
+                            </button>
                           </li>
                           <li>
                             <Link
@@ -470,7 +471,33 @@ const Navbar = () => {
 
                   {/* Right Content Area */}
                   <div className="flex-1">
-                    {activeSection === "advisory" ? (
+                    {activeSection === "trl" ? (
+                      /* TRL Pages */
+                      <div>
+                        <h2 className="text-sm font-medium text-gray-900 mb-1">
+                          The Reframe Lab
+                        </h2>
+                        <p className="text-xs text-gray-600 mb-4">
+                          LSC's intellectual platform — where the assumptions behind strategy, capability, and organisational design are examined and reconstructed.
+                        </p>
+                        <div className="flex flex-col gap-2">
+                          <Link
+                            href="/trl"
+                            className="text-sm text-gray-700 hover:text-gray-900 transition-colors py-1"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            The Reframe Lab
+                          </Link>
+                          <Link
+                            href="/trl/podcast"
+                            className="text-sm text-gray-700 hover:text-gray-900 transition-colors py-1"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            Podcast & Videos
+                          </Link>
+                        </div>
+                      </div>
+                    ) : activeSection === "advisory" ? (
                       /* Advisory Services */
                       <div>
                         <h2 className="text-sm font-medium text-gray-900 mb-1">
