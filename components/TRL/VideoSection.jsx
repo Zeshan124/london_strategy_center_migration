@@ -23,6 +23,12 @@ export default function VideoSection({
   const [sortBy, setSortBy] = useState("newest");
   const [currentVideo, setCurrentVideo] = useState(null);
   const [expandedIds, setExpandedIds] = useState({});
+  const [now, setNow] = useState(null);
+
+  // Set client-side timestamp after mount to avoid hydration mismatch
+  useEffect(() => {
+    setNow(Date.now());
+  }, []);
 
   const perPage = 3;
 
@@ -147,9 +153,8 @@ export default function VideoSection({
         {/* Video Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {videos.map((video) => {
-            const isNew = video.publishedAt
-              ? new Date(video.publishedAt) >
-                new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)
+            const isNew = now && video.publishedAt
+              ? new Date(video.publishedAt) > new Date(now - 7 * 24 * 60 * 60 * 1000)
               : false;
             const desc = video.description || "";
             const isLong = desc.length > 100;
@@ -229,22 +234,18 @@ export default function VideoSection({
                     <div className="flex items-center gap-4 text-xs text-slate-600 mb-3">
                       <div className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
-                        <span>
+                        <span suppressHydrationWarning>
                           {video.publishedAt
                             ? new Date(video.publishedAt).toLocaleDateString(
                                 "en-US",
-                                {
-                                  month: "short",
-                                  day: "numeric",
-                                  year: "numeric",
-                                },
+                                { month: "short", day: "numeric", year: "numeric" },
                               )
                             : "Feb 18, 2026"}
                         </span>
                       </div>
                       <div className="flex items-center gap-1">
                         <Eye className="w-4 h-4" />
-                        <span>
+                        <span suppressHydrationWarning>
                           {video.viewCount
                             ? Number(video.viewCount).toLocaleString()
                             : "19"}

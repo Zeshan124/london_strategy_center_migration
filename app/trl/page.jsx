@@ -1,35 +1,26 @@
-import React from "react";
-import Footer from "@/components/Home/Footer";
 import Navbar from "@/components/Navbar";
-import ReframeReadsHero from "@/components/ReframeReads/ReframeReadsHero";
-import PodcastCarousel from "@/components/ReframeReads/PodcastCarousel";
-import VideoSection from "@/components/TRL/VideoSection";
-import { fetchChannelVideos } from "@/lib/youtube";
-import ContactFormSection from "@/components/ReframeReads/ContactFormSection";
+import Footer from "@/components/Home/Footer";
+import HomePage from "@/components/TRL/HomePage";
+import CTASection from "@/components/TRL/CTASection";
+import LeadersThink from "@/components/TRL/LeadersThink";
+import LessonsForLeaders from "@/components/TRL/LessonsForLeaders";
+import ThePodcast from "@/components/TRL/ThePodcast";
+import ThoughtLeadership from "@/components/TRL/ThoughtLeadership";
+import { Bot } from "lucide-react";
+import BottomSection from "@/components/TRL/BottomSection";
 
-// revalidate the page once an hour so new videos propagate
-export const revalidate = 3600;
-
-// server component: fetch video data before render
-const page = async () => {
-  const channelId = process.env.YOUTUBE_CHANNEL_ID || "";
-  const allVideos = await fetchChannelVideos(channelId);
-  const initialVideos = allVideos.slice(0, 12);
-  const totalCount = allVideos.length;
-
+const page = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
       <main>
-        <ReframeReadsHero />
-        <PodcastCarousel />
-        <VideoSection
-          initialVideos={initialVideos}
-          allVideos={allVideos}
-          totalCount={totalCount}
-        />
-
-        <ContactFormSection />
+        <HomePage />
+        <CTASection />
+        <LeadersThink />
+        <LessonsForLeaders />
+        <ThePodcast />
+        <ThoughtLeadership />
+        <BottomSection />
       </main>
       <Footer />
     </div>
