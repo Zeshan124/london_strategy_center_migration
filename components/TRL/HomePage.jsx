@@ -40,7 +40,7 @@ export default function HomePage() {
   };
 
    const inputClass = "w-full px-4 py-3.5 border border-[#6B6B6B] rounded-xl text-sm text-[#6B6B6B] placeholder-[#6B6B6B] focus:outline-none focus:border-[#0E2253] transition-colors bg-white";
-   
+
   return (
     <>
       <div className="min-h-screen bg-white lg:pt-28 py-0">
@@ -95,7 +95,7 @@ export default function HomePage() {
         Most leadership content reinforces what executives already believe. It confirms existing mental models rather than testing them. The result is a market saturated with insight that sounds relevant but changes nothing.
          </p>
  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-    The Reframe Lab exists to do the opposite. It is London Strategy Centre's intellectual platform — a space where the assumptions behind strategy, capability, and organisational design are examined, challenged, and reconstructed. Every article, every conversation, every argument published here begins from the same premise: the way most organisations think about performance, leadership, and transformation is structurally
+    The Reframe Lab exists to do the opposite. It is London Strategy Centre's intellectual platform — a space where the assumptions behind strategy, capability, and organisational design are examined, challenged, and reconstructed. Every article, every conversation, every argument published here begins from the same premise: the way most organisations think about performance, leadership, and transformation is structurally incomplete.
 
         </p>
         </div>

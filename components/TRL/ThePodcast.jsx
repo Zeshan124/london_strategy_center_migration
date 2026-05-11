@@ -25,9 +25,9 @@ These are not motivational interviews. Each episode examines a specific question
 The podcast extends the intellectual agenda of The Reframe Lab into dialogue: testing ideas, surfacing practitioner insight, and making visible the leadership thinking that conventional platforms rarely capture.
           </p>
        
-          <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
+          {/* <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
             The Reframe Lab addresses that structural gap. It is not a content feed. It is a deliberate programme of intellectual inquiry into the forces that determine whether organisations adapt or stall — published by a team that works inside these systems every day.
-          </p>
+          </p> */}
          
         </div>
 

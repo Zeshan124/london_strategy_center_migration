@@ -33,17 +33,13 @@ export default function LeadersThink() {
         <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 pt-0 py-8 sm:py-8 md:py-8 lg:pt-16">
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 leading-tight mb-6 max-w-4xl">
-           The Reframe Lab
+           Reframe Reads
           </h1>
 
            
   <p className="text-base sm:text-lg text-gray-500 leading-relaxed mb-4">
-           Where Organisational Thinking Gets Rebuilt
+           Original Perspectives that shift how leaders think
             </p>
-       
-
-         
-
           <div className="py-8 sm:py-12 lg:py-14">
             <div className="relative rounded-2xl overflow-hidden">
               <Image
@@ -68,10 +64,10 @@ Reframe Reads covers the terrain that conventional business publishing avoids: w
 <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
 Each article is written for executives who make decisions under complexity — not for audiences seeking motivation or trend summaries. The standard is analytical rigour, not volume.
          </p>
- <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+ {/* <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
     The Reframe Lab exists to do the opposite. It is London Strategy Centre's intellectual platform — a space where the assumptions behind strategy, capability, and organisational design are examined, challenged, and reconstructed. Every article, every conversation, every argument published here begins from the same premise: the way most organisations think about performance, leadership, and transformation is structurally
 
-        </p>
+        </p> */}
         </div>
       </div>
     </>
