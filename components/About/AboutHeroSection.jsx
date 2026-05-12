@@ -17,10 +17,10 @@ export default function AboutHeroSection() {
 
       {/* Content */}
        <div className="z-10 px-4 sm:px-6 lg:px-24">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           {/* Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6 sm:mb-8 leading-tight">
-            About Us — London Strategy Centre
+            About Us <br /> London Strategy Centre
           </h1>
 
           {/* Description */}

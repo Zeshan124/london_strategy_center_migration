@@ -1,5 +1,6 @@
 import AboutHeroSection from "@/components/About/AboutHeroSection";
 import ContactLSC from "@/components/About/ContactLSC";
+import CTASection from "@/components/About/CTASection";
 import LeadershipTeam from "@/components/About/LeadershipTeam";
 import MissionVisionSection from "@/components/About/MissionVisionSection";
 import NewsLetter from "@/components/About/NewsLetter";
@@ -15,6 +16,7 @@ const page = () => {
       <main>
         <AboutHeroSection />
         <StatsSection />
+        <CTASection />
         <MissionVisionSection />
         {/* <LeadershipTeam /> */}
         <ContactLSC />

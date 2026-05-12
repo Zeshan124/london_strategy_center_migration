@@ -78,18 +78,18 @@ export default function HomePage() {
           
           </div>
 
-          <div className="py-8 sm:py-12 lg:py-16">
-            <div className="relative rounded-2xl overflow-hidden">
-              <Image
-                src="/images/InnerPages/trl/main_banner.jpg"
-                alt="The Reframe Lab"
-                width={1920}
-                height={1080}
-                className="w-full h-auto object-cover"
-                priority
-              />
-            </div>
+         <div className="relative mb-0 sm:mb-12 pt-12 sm:pt-24 rounded-2xl overflow-hidden">
+            <video
+              src="/images/InnerPages/trl/TRL_Home_Page.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              controls
+              className="w-full h-full object-cover rounded-2xl"
+            />
           </div>
+   
 
         <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
         Most leadership content reinforces what executives already believe. It confirms existing mental models rather than testing them. The result is a market saturated with insight that sounds relevant but changes nothing.

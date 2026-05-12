@@ -34,7 +34,7 @@ export default function ContactLSC() {
               To discuss how LSC's work applies to your organisation's specific context, contact the team.
             </p>
 
-            <p className="font-semibold text-gray-900 mb-4">
+            <p className="font-bold text-gray-900 mb-4">
              To discuss how LSC's work applies to your organisation's specific context, contact the team.
             </p>
             <button

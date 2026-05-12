@@ -62,19 +62,19 @@ export default function StatsSection() {
               London Strategy Centre (LSC) exists to close that gap.
             </p>
           </div>
-
+{/* 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-8">
             LSC is your capability transformation partner
-          </h2>
+          </h2> */}
 
-          <div className="space-y-6 text-base sm:text-lg text-gray-700 leading-relaxed">
+          {/* <div className="space-y-6 text-base sm:text-lg text-gray-700 leading-relaxed">
             <p>
               The central premise of LSC's work is that measurable organisational performance improvement requires a system-level intervention, not a training programme, a strategy report, or a technology implementation. It requires redesigning how the organisation senses its environment, how decisions are made and communicated, how execution is governed, and how capability compounds across time. That is what LSC builds.
             </p>
             <p className="font-semibold text-gray-900">
               Why LSC, Differentiator Cards
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
