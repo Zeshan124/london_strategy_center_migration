@@ -28,7 +28,7 @@ export default function AdvisoryHero() {
         <div className="rounded-2xl overflow-hidden relative min-h-[340px] sm:min-h-[450px]">
           {/* Background Image */}
           <Image
-            src="/images/home/advisory_services.jpg"
+            src="/images/InnerPages/advisory/advisory_hero.jpeg"
             alt="AI Services"
             fill
             className="object-cover"
