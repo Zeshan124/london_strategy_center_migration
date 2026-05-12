@@ -112,7 +112,7 @@ export default function AdvisoryPractices({ heading, subheading, practices }) {
               className="group bg-[#F5F3F0] overflow-hidden hover:shadow-xl transition-all duration-300"
             >
               {/* Image */}
-              <div className="relative w-full h-64 sm:h-72 md:h-80 overflow-hidden">
+              <div className="relative w-full h-64 sm:h-100 md:h-80 overflow-hidden">
                 <Image
                   src={practice.image}
                   alt={practice.title}
