@@ -47,21 +47,25 @@ export default function AdvisoryServicePage() {
         {/* 2. CTA Section */}
         <AdvisoryCTASection cta={service.cta} />
 
-        {/* 2b. Second CTA — entrepreneurship only */}
-        {service.cta2 && <AdvisoryCTASection cta={service.cta2} />}
-
-        
-
-        {/* 4. Second CTA */}
         <SecondCTASection cta={service.secondCta} />
 
-        {/* 5. Contact section */}
+         {/* 5. Contact section */}
         {service.contact && (
           <ContactSection
             top={service.contact.top}
             banner={service.contact.banner}
           />
         )}
+
+
+        {/* 2b. Second CTA — entrepreneurship only */}
+        {service.cta2 && <AdvisoryCTASection cta={service.cta2} />}
+
+        
+
+        {/* 4. Second CTA */}
+        
+       
 
         {/* 3. Advisory Practices — operational-and-strategic only */}
         {service.advisoryPractices && (
