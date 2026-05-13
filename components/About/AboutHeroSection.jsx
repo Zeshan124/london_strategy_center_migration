@@ -3,16 +3,17 @@
 export default function AboutHeroSection() {
   return (
     <section className="relative min-h-[80vh] sm:min-h-screen py-12 sm:py-16 lg:py-20 flex items-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        <img
-          src="/images/about/hero-banner.jpg"
-          alt="Modern geometric architecture"
+        <video
+          src="/images/home/Web_video_lsc.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/about/hero-banner.jpg"
           className="w-full h-full object-cover"
         />
-
-        {/* Dark Overlay */}
-        {/* <div className="absolute inset-0 bg-black/50"></div> */}
       </div>
 
       {/* Content */}
