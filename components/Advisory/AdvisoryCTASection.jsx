@@ -18,7 +18,7 @@ export default function AdvisoryCTASection({ cta }) {
       {/* Two-column: heading + paragraphs left, image right */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch min-h-[500px]">
         {/* Left Content */}
-        <div className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-14 lg:py-16 flex flex-col justify-center">
+        <div className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-18 py-12 sm:py-14 lg:py-16 flex flex-col justify-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light leading-tight mb-4 text-gray-900">
             {heading}
           </h2>

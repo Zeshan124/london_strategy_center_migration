@@ -13,10 +13,8 @@ const bullets = [
 export default function LessonsForLeaders() {
   return (
     <section className="">
-      <div className="grid grid-cols-1 lg:grid-cols-1 gap-0 items-stretch min-h-[500px]">
-
-        {/* Left Content */}
-        <div className=" px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-14 lg:py-16 flex flex-col justify-center">
+      <div className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-10 sm:py-8 sm:mb-4">
+        <div className="flex flex-col justify-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light leading-tight mb-6 text-gray-900">
             What are the lessons for leaders?
           </h2>
@@ -37,16 +35,6 @@ export default function LessonsForLeaders() {
             </Link>
           </div>
         </div>
-
-        {/* Right Image */}
-        {/* <div className="relative h-64 sm:h-80 lg:h-full">
-          <img
-            src="/images/InnerPages/trl/cta-section.jpg"
-            alt="The Reframe Lab"
-            className="w-full h-full object-cover"
-          />
-        </div> */}
-
       </div>
     </section>
   );

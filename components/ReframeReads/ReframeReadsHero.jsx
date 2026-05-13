@@ -80,7 +80,7 @@ export default function ReframeReadsHero() {
           </div>
 
           {/* Featured Video - Full Width */}
-          <div className="py-8 sm:py-12 lg:py-24">
+          {/* <div className="py-8 sm:py-12 lg:py-24">
             <div className="relative rounded-2xl overflow-hidden">
               <video
                 src="/images/InnerPages/trl/Web_Video_LSC.mp4"
@@ -91,7 +91,7 @@ export default function ReframeReadsHero() {
                 className="w-full h-auto object-cover"
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

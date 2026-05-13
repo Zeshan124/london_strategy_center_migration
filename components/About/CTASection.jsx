@@ -6,7 +6,7 @@ const DEFAULT = {
   paragraphs: [
     "The central premise of LSC's work is that measurable organisational performance improvement requires a system-level intervention, not a training programme, a strategy report, or a technology implementation. It requires redesigning how the organisation senses its environment, how decisions are made and communicated, how execution is governed, and how capability compounds across time. That is what LSC builds.",
   ],
-  subheading: "Why LSC, Differentiator Cards",
+  subheading: null,
   logo: null,
   logoAlt: "banner image",
 };

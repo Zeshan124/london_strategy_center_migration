@@ -63,9 +63,9 @@ export default function MissionVisionSection() {
 
         {/* Header */}
         <div className="mb-12 md:mb-16 max-w-4xl">
-           <p className="text-xs font-bold tracking-widest text-[#0E2253] uppercase mb-4">
+           {/* <p className="text-xs font-bold tracking-widest text-[#0E2253] uppercase mb-4">
               Why LSC, Differentiator Cards
-            </p>
+            </p> */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-slate-900 mb-4">
             Mission / Vision
           </h2>

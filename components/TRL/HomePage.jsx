@@ -19,6 +19,7 @@ import {
   Play,
   User,
   Timer,
+  X,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Home/Footer";
@@ -72,7 +73,10 @@ export default function HomePage() {
        
 
           <div className="flex gap-4 sm:justify-start">
-            <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#0E2253] text-white rounded-xl text-xs sm:text-sm hover:bg-gray-800 transition-all duration-300">
+            <button
+              onClick={() => setShowForm(true)}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#0E2253] text-white rounded-xl text-xs sm:text-sm hover:bg-gray-800 transition-all duration-300"
+            >
               JOIN US AS A SPEAKER
             </button>
           
@@ -80,7 +84,7 @@ export default function HomePage() {
 
          <div className="relative mb-0 sm:mb-12 pt-12 sm:pt-24 rounded-2xl overflow-hidden">
             <video
-              src="/images/InnerPages/trl/TRL_Home_Page.mp4"
+              src="/images/InnerPages/trl/Web_Video_LSC.mp4"
               autoPlay
               loop
               muted
@@ -89,7 +93,6 @@ export default function HomePage() {
               className="w-full h-full object-cover rounded-2xl"
             />
           </div>
-   
 
         <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
         Most leadership content reinforces what executives already believe. It confirms existing mental models rather than testing them. The result is a market saturated with insight that sounds relevant but changes nothing.
@@ -120,7 +123,7 @@ export default function HomePage() {
 
             <div className="mb-6">
               <h2 className="text-2xl sm:text-3xl font-light text-gray-900 leading-tight mb-2">
-                {service.consultationHeading || "Request a Consultation"}
+                Join Us as a Speaker
               </h2>
               <p className="text-sm text-gray-700 leading-relaxed">
                 Submit your details and a member of our team will be in touch shortly.

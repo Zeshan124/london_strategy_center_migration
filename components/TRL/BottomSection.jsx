@@ -8,7 +8,7 @@ const DEFAULT_TOP = {
   paragraphs: [
     "The Reframe Lab is designed for leaders who recognise that the quality of their organisation's thinking determines the quality of its performance. That includes CEOs and executive committees confronting execution risk, transformation leaders responsible for systemic change, government and defence leaders operating under uncertainty, and CTOs and Chief Strategy Officers building the next generation of organisational capability.",
 
-"If the content you consume should challenge how you think — not just what you know — The Reframe Lab is where that challenge begins.",
+"If the content you consume should challenge how you think, not just what you know — The Reframe Lab is where that challenge begins.",
   ],
 };
 

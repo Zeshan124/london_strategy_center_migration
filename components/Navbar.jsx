@@ -325,7 +325,7 @@ const Navbar = () => {
                                 activeSection === "trl" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
                               }`}
                             >
-                              TRL
+                              The Reframe Lab
                             </button>
                           </li>
                           <li>
@@ -481,19 +481,35 @@ const Navbar = () => {
                           LSC's intellectual platform — where the assumptions behind strategy, capability, and organisational design are examined and reconstructed.
                         </p>
                         <div className="flex flex-col gap-2">
-                          <Link
+                          {/* <Link
                             href="/trl"
                             className="text-sm text-gray-700 hover:text-gray-900 transition-colors py-1"
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
                             The Reframe Lab
-                          </Link>
+                          </Link> */}
                           <Link
                             href="/trl/podcast"
                             className="text-sm text-gray-700 hover:text-gray-900 transition-colors py-1"
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
-                            Podcast & Videos
+                            LSC Connect
+                          </Link>
+                          <Link
+                            href="/reframe-reads"
+                            className="text-sm text-gray-700 hover:text-gray-900 transition-colors py-1"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            Reframe Reads
+                          </Link>
+                        </div>
+                        <div className="mt-6 pt-4 border-t border-gray-100">
+                          <Link
+                            href="/trl"
+                            className="text-sm font-medium text-[#0E2253] hover:underline"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            View all Reframe Lab content →
                           </Link>
                         </div>
                       </div>
