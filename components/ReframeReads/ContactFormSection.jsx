@@ -52,7 +52,7 @@ export default function ContactFormSection() {
                   onClick={() => setShowForm(true)}
                   className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 bg-white border-2 border-[#0E2253] text-gray-900 rounded-xl text-sm text-center hover:bg-gray-900 hover:text-white transition-all duration-300"
                 >
-                  Apply as a Speaker
+                  Join us as a Speaker
                 </button>
               </div>
 
@@ -123,7 +123,7 @@ export default function ContactFormSection() {
                 />
                 <input
                   type="text"
-                  name="designation"
+                  name="Job Title"
                   required
                   value={formData.designation}
                   onChange={handleChange}
