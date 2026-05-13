@@ -6,12 +6,12 @@ export default function AboutHeroSection() {
       {/* Background Video */}
       <div className="absolute inset-0">
         <video
-          src="/images/home/Web_video_lsc.mp4"
+          src="/images/about/about_video.mp4"
           autoPlay
           muted
           loop
           playsInline
-          poster="/images/about/hero-banner.jpg"
+          poster="/images/about/about_video.mp4"
           className="w-full h-full object-cover"
         />
       </div>

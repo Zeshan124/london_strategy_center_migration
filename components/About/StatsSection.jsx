@@ -49,7 +49,7 @@ export default function StatsSection() {
         </div> */}
 
         {/* Content */}
-        <div className="max-w-5xl">
+        <div className="max-w-full">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-8">
             We Transform How Organisations Think, Decide, and Execute
           </h2>

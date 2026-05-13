@@ -63,6 +63,9 @@ export default function MissionVisionSection() {
 
         {/* Header */}
         <div className="mb-12 md:mb-16 max-w-4xl">
+           <p className="text-xs font-bold tracking-widest text-[#0E2253] uppercase mb-4">
+              Why LSC, Differentiator Cards
+            </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-slate-900 mb-4">
             Mission / Vision
           </h2>
@@ -76,11 +79,11 @@ export default function MissionVisionSection() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="group relative rounded-2xl p-[1px] bg-gradient-to-br from-transparent via-transparent to-transparent hover:from-[#0E2253]/40 hover:via-blue-400/30 hover:to-transparent transition-all duration-500"
+              className="group relative rounded-2xl p-[1px] bg-gradient-to-br from-transparent via-transparent to-transparent hover:from-[#0E2253]/40 hover:via-blue-400/30 hover:to-transparent transition-all duration-500 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.4rem)]"
             >
               <div
                 className="relative h-full rounded-2xl bg-white/80 backdrop-blur-lg p-6 md:p-8 border border-slate-200/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 overflow-hidden"

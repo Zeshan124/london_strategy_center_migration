@@ -30,7 +30,7 @@ export default function LessonsForLeaders() {
           </ul>
           <div>
             <Link
-              href="/trl/podcast"
+              href="/reframe-reads"
               className="inline-flex items-center px-6 py-3 bg-[#0E2253] text-white text-xs font-semibold tracking-widest uppercase hover:bg-[#1a3570] transition-all duration-300"
             >
               EXPLORE REFRAME LAB
