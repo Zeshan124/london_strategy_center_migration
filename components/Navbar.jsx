@@ -79,6 +79,11 @@ const Navbar = () => {
     }));
   };
 
+  const insightServices = [
+    { name: "LSC Connect", href: "/lsc-connect" },
+    { name: "Reframe Reads", href: "/reframe-reads" },
+  ];
+
   const advisoryServices = [
     { name: "Entrepreneurship and Scale-Up Services", href: "/advisory/entrepreneurship-and-scale-up" },
     { name: "Operational and Strategic Advisory Services", href: "/advisory/operational-and-strategic-advisory" },
@@ -382,13 +387,14 @@ const Navbar = () => {
 
                       {/* Our Insights */}
                       <div>
-                        <Link
-                          href="#"
-                          className="text-sm font-medium text-gray-900 hover:text-gray-700 transition-colors"
-                          onClick={() => setIsMobileMenuOpen(false)}
+                        <button
+                          onClick={() => setActiveSection(activeSection === "insights" ? "industries" : "insights")}
+                          className={`w-full text-left text-sm font-medium text-gray-900 hover:text-gray-700 transition-colors py-1 ${
+                            activeSection === "insights" ? "text-[#0E2253]" : ""
+                          }`}
                         >
                           Our Insights
-                        </Link>
+                        </button>
                       </div>
 
                       {/* LSC Alumni */}
@@ -471,7 +477,29 @@ const Navbar = () => {
 
                   {/* Right Content Area */}
                   <div className="flex-1">
-                    {activeSection === "trl" ? (
+                    {activeSection === "insights" ? (
+                      /* Our Insights */
+                      <div>
+                        <h2 className="text-sm font-medium text-gray-900 mb-1">
+                          Our Insights
+                        </h2>
+                        <p className="text-xs text-gray-600 mb-4">
+                          LSC's knowledge platforms — connecting practitioners, sharing research, and publishing thinking that challenges convention.
+                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 sm:gap-x-12 gap-y-2">
+                          {insightServices.map((service, index) => (
+                            <Link
+                              key={index}
+                              href={service.href}
+                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ) : activeSection === "trl" ? (
                       /* TRL Pages */
                       <div>
                         <h2 className="text-sm font-medium text-gray-900 mb-1">

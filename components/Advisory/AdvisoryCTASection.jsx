@@ -51,7 +51,7 @@ export default function AdvisoryCTASection({ cta }) {
 
       {/* Full-width bottom paragraphs */}
       {paragraphs_bottom?.length > 0 && (
-        <div className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-10 sm:py-12 space-y-4">
+        <div className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-10 sm:py-8 space-y-4">
           {paragraphs_bottom.map((p, i) => (
             <p key={i} className="text-sm sm:text-base text-gray-700 leading-relaxed">
               {p}
