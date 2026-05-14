@@ -27,7 +27,7 @@ const page = () => {
       <Navbar />
       <main>
         <ServicesHero />
-        <Executives />
+        {/* <Executives /> */}
         {/* <UniBirmingham /> */}
         <CertificationLevels />
         <BenefitsSection />

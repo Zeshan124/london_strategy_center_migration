@@ -9,35 +9,35 @@ export default function MissionVisionSection() {
       icon: "/images/icons/developing_people.png",
       title: "System-level, not individual-level",
       description:
-        "The dominant assumption in organisational development is that improving people improves performance. It does, but only when the system supports that performance. LSC's interventions target the organisation as a whole: the decision architecture, the execution rhythms, the governance structures, and the human-AI systems that determine whether individual capability translates into collective performance.",
+        "The assumption in organisational development is that improving people improves performance, but performance only improves when the system supports it through effective governance, decision making, execution, and human AI integration.",
     },
     {
       id: 2,
       icon: "/images/icons/action_key.png",
       title: "Diagnostic intelligence before every intervention",
       description:
-        "LSC does not begin an engagement with a solution. It begins with a structured assessment of how the organisation actually works, how decisions are made, where execution loses coherence, and what systemic constraints prevent strategy from becoming reality. This diagnostic intelligence, generated through AI-enabled sensing, shapes every recommendation and ensures that interventions address root causes, not presenting symptoms.",
+        "LSC uses structured organisational diagnostics and AI-enabled insight to identify decision gaps, execution barriers, and systemic constraints, ensuring every intervention addresses the factors shaping long-term performance.",
     },
     {
       id: 3,
       icon: "/images/icons/approach.png",
       title: "AI-augmented, not AI-dependent",
       description:
-        "LSC integrates AI into its work not as a product to be installed, but as a capability to be governed. Human-AI collaboration is designed with clear accountability structures, responsible governance frameworks, and a phased adoption architecture that respects the complexity of real operating environments. LSC clients build AI-augmented capability that is embedded, measured, and sustained, not deployed and abandoned.",
+        "LSC helps organisations build governed, measurable, and sustainable human AI capability through clear accountability, phased adoption, and practical integration within real operating environments.",
     },
     {
       id: 4,
       icon: "/images/icons/uniqueness.png",
       title: "Built for complexity, not optimised for simplicity",
       description:
-        "LSC's methodology is designed for organisations where the operating environment is genuinely complex: where decision stakes are high, where execution must remain coherent across multiple functions and geographies, and where the cost of misalignment is strategic rather than operational. Defence, government, and enterprise clients operating under these conditions require a different kind of partner, one that can work at the intersection of strategy, execution, and organisational design simultaneously.",
+        "LSC supports defence, government, and enterprise organisations operating in high-stakes environments where strategic alignment, cross-functional execution, and organisational resilience drive long-term success.",
     },
     {
       id: 5,
       icon: "/images/icons/av_timer.png",
       title: "Partnership, not prescription",
       description:
-        "LSC works alongside leadership teams rather than advising from a distance. Engagements are structured to embed LSC's practitioners within the organisation's real challenges, not to produce reports that require separate implementation. The result is structural change that the organisation owns, understands, and can sustain.",
+        "LSC works alongside leadership teams to deliver practical organisational change, embedding expertise within real business challenges to create sustainable transformation, stronger execution, and lasting organisational ownership.",
     },
   ];
 
