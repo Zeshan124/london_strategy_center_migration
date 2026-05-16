@@ -9,7 +9,7 @@ export default function CertificationsSection() {
       title: 'Artificial Intelligence',
       description: 'Comprehensive AI strategy and implementation certification',
       image: '/images/AI.jpg',
-      href: null,
+      href: '/artificial-intelligence',
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ export default function CertificationsSection() {
       title: 'Advisory Services',
       description: 'Advisory Services provide expert advice to support better decisions and growth.',
       image: '/images/home/advisory_services.jpg',
-      href: null,
+      href: '/advisory-services',
     },
   ];
 

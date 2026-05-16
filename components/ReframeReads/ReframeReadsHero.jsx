@@ -28,7 +28,7 @@ import Image from "next/image";
 export default function ReframeReadsHero() {
   return (
     <>
-      <div className="min-h-screen bg-white lg:pt-28 py-0">
+      <div className=" bg-white lg:pt-28 py-0">
         {/* Full Width Container */}
         <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 pt-24 py-8 sm:py-8 md:py-8 lg:pt-16">
           {/* Category Badge */}

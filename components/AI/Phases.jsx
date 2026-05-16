@@ -22,7 +22,7 @@ const DEFAULT_PHASES = [
     title: 'Phase 2 — Transform:',
     description: 'Run Tier 2 agentic leadership labs on live business challenges. Leaders develop new practices with AI as a thinking partner, producing measurable shifts in decision quality.',
     image: '/images/InnerPages/artificial-intelligence/shared/phase-2-transform.jpg',
-    href: '/cyber-security',
+    href: null,
   },
   {
     id: 3,

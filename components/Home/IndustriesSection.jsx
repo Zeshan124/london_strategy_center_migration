@@ -108,7 +108,7 @@ export default function IndustriesSection() {
         >
           {industries.map((industry) => (
             <SwiperSlide key={industry.id}>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer">
+              <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500">
                 {/* Image */}
                 <div className="relative h-[400px] sm:h-[450px] overflow-hidden">
                   <img

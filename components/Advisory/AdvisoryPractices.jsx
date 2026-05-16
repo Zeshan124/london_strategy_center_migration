@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const DEFAULT_HEADING = "Two complementary advisory practices";
 const DEFAULT_SUBHEADING = "LSC's advisory work spans two complementary practice areas, each targeting a distinct but interconnected dimension of organisational performance.";
 const DEFAULT_PRACTICES = [
   {
     id: 1,
+    href: "/advisory-services/operational-and-strategic-advisory",
     image: "/images/InnerPages/advisory/operational_and_advisory.jpg",
     title: "Operational and Strategic Advisory",
     description: {
@@ -17,6 +19,7 @@ const DEFAULT_PRACTICES = [
   },
   {
     id: 2,
+    href: "/advisory-services/entrepreneurship-and-scale-up",
     image: "/images/InnerPages/advisory/entrepreneurship_scaleup.jpg",
     title: "Entrepreneurship and Scale-Up Advisory",
     description: {
@@ -106,9 +109,12 @@ export default function AdvisoryPractices({ heading, subheading, practices }) {
 
         {/* Two-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-          {resolvedPractices.map((practice) => (
-            <div
+          {resolvedPractices.map((practice) => {
+            const Wrapper = practice.href ? Link : 'div';
+            return (
+            <Wrapper
               key={practice.id}
+              {...(practice.href ? { href: practice.href } : {})}
               className="group bg-[#F5F3F0] overflow-hidden hover:shadow-xl transition-all duration-300"
             >
               {/* Image */}
@@ -128,8 +134,9 @@ export default function AdvisoryPractices({ heading, subheading, practices }) {
                 </h3>
                 {renderDescription(practice.description, !!expandedIds[practice.id], () => toggle(practice.id))}
               </div>
-            </div>
-          ))}
+            </Wrapper>
+            );
+          })}
         </div>
 
       </div>

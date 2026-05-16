@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Home/Footer";
 import { AI_SERVICES } from "@/lib/aiServicesData";
 
+
 import AIServiceHero from "@/components/AI/AIServiceHero";
 import AICTASection from "@/components/AI/AICTASection";
 import PracticeAreas from "@/components/CyberSecurity/practiceAreas";
@@ -28,7 +29,7 @@ export default function AIServicePage() {
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-light text-gray-900 mb-4">Service Not Found</h1>
-            <Link href="/ai" className="text-[#0E2253] hover:underline">
+            <Link href="/artificial-intelligence" className="text-[#0E2253] hover:underline">
               ← Back to AI Services
             </Link>
           </div>

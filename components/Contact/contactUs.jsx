@@ -48,21 +48,22 @@ export default function ContactPage() {
             </p>
 
             {/* Contact Info Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-full">
               <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5">
                 <MapPin className="w-6 h-6 text-white mb-3" />
-                <p className="text-sm text-white/80">45 Albemarle Street, Mayfair, London</p>
+                <p className="text-sm text-white/80">45 Albemarle Street, 3rd Floor,
+Mayfair, W1S 4JL, London, United Kingdom</p>
               </div>
               <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5">
                 <Mail className="w-6 h-6 text-white mb-3" />
-                <a href="mailto:enquiries@londonstrategycentre.com" className="text-sm text-white/80 hover:text-white transition-colors">
-                  enquiries@lsc.com
+                <a href="mailto:enquiries@londonstrategycentre.com" className="text-sm text-white/80 hover:text-white transition-colors break-all">
+                  enquiries@londonstrategycentre.com
                 </a>
               </div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5">
+              {/* <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5">
                 <Phone className="w-6 h-6 text-white mb-3" />
                 <p className="text-sm text-white/80">+44 20 1234 5678</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -132,7 +133,7 @@ export default function ContactPage() {
           </div>
 
           {/* Category Dropdown */}
-          <div className="relative">
+          {/* <div className="relative">
             <select
               name="category"
               value={formData.category}
@@ -146,10 +147,10 @@ export default function ContactPage() {
               <option value="consultation">Consultation</option>
             </select>
             <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-white pointer-events-none" />
-          </div>
+          </div> */}
 
           {/* Information Dropdown */}
-          <div className="relative">
+          {/* <div className="relative">
             <select
               name="information"
               value={formData.information}
@@ -163,7 +164,7 @@ export default function ContactPage() {
               <option value="custom">Custom Programs</option>
             </select>
             <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-white pointer-events-none" />
-          </div>
+          </div> */}
 
           {/* Message Textarea */}
           <textarea

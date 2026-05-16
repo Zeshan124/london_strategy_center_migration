@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Home/Footer";
 import { ADVISORY_SERVICES } from "@/lib/advisoryServicesData";
 
+
 import AdvisoryServiceHero from "@/components/Advisory/AdvisoryServiceHero";
 import AICTASection from "@/components/AI/AICTASection";
 import PracticeAreas from "@/components/CyberSecurity/practiceAreas";
@@ -27,7 +28,7 @@ export default function AdvisoryServicePage() {
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-light text-gray-900 mb-4">Service Not Found</h1>
-            <Link href="/advisory" className="text-[#0E2253] hover:underline">
+            <Link href="/advisory-services" className="text-[#0E2253] hover:underline">
               ← Back to Advisory Services
             </Link>
           </div>

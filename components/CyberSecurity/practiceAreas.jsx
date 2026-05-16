@@ -11,7 +11,7 @@ const DEFAULT_FEATURES = [
     id: 1, slug: "certification-and-compliance",
     icon: "/images/InnerPages/cyber-security/license.svg",
     title: "Certification & Compliance Services",
-    description: "Support to achieve recognised certifications and frameworks - including Cyber Excellence Level 1 to 4 (/cyber-excellence) which is aligned with NCICC-1 2005. Additional support is available across leading frameworks.",
+    description: "Support to achieve recognised certifications and frameworks, including Cyber Excellence Level 1 to 4, which is aligned with NCNICC-1:2025. Additional support is available across leading frameworks.",
   },
   {
     id: 2, slug: "cyber-risk-and-resilience",

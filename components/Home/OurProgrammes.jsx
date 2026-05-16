@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function OurProgrammes() {
  const industries = [
@@ -8,23 +9,26 @@ export default function OurProgrammes() {
       id: 1,
       title: 'CT Scan',
       description: 'An AI-enabled diagnostic, mapping how leaders think, decide, and execute, then surfacing the systemic constraints on performance.',
-      image: '/images/home/ct_scan.jpg'
+      image: '/images/home/ct_scan.jpg',
+      href: '/artificial-intelligence/capability-transformation-scan',
     },
     {
       id: 2,
       title: 'Agentic Leadership',
       description: 'Producing measurable shifts in decision quality and execution coherence, not just competency scores or attendance on a programme.',
-      image: '/images/home/agentic_ai.png'
+      image: '/images/home/agentic_ai.jpg',
+      href: '/artificial-intelligence/agentic-leadership-transformation',
     },
     {
       id: 3,
       title: 'Cybernetics Transformation',
       description: 'Redesigning decision architecture, sensing systems, and governance so your organisation continuously senses, adapts, and performs.',
-      image: '/images/home/cybernetics.jpg'
+      image: '/images/home/cybernetics.jpg',
+      href: '/artificial-intelligence/cybernetic-organisation-design',
     },
   ];
  return (
-    <section className="bg-white py-16 sm:py-20 lg:py-24">
+    <section className="bg-white py-16 sm:py-20 lg:py-12">
       <div className="mx-auto px-6 sm:px-8 lg:px-24">
         {/* Header */}
         <div className="mb-12 lg:mb-16">
@@ -39,8 +43,9 @@ export default function OurProgrammes() {
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-5">
           {industries.map((industry) => (
-            <div
+            <Link
               key={industry.id}
+              href={industry.href}
               className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
             >
               {/* Image */}
@@ -81,7 +86,7 @@ export default function OurProgrammes() {
                   </svg>
                 </div> */}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

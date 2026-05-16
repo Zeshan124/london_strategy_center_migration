@@ -12,7 +12,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("industries");
+  const [activeSection, setActiveSection] = useState("trl");
   const [email, setEmail] = useState("");
 
   // Signup form state
@@ -44,7 +44,7 @@ const Navbar = () => {
         setIsMobileMenuOpen(false);
         setIsLoginModalOpen(false);
         setIsSignUpModalOpen(false);
-        setActiveSection("industries");
+        setActiveSection("trl");
       }
     };
 
@@ -85,20 +85,22 @@ const Navbar = () => {
   ];
 
   const advisoryServices = [
-    { name: "Entrepreneurship and Scale-Up Services", href: "/advisory/entrepreneurship-and-scale-up" },
-    { name: "Operational and Strategic Advisory Services", href: "/advisory/operational-and-strategic-advisory" },
+    { name: "Entrepreneurship and Scale-Up Services", href: "/advisory-services/entrepreneurship-and-scale-up" },
+    { name: "Operational and Strategic Advisory Services", href: "/advisory-services/operational-and-strategic-advisory" },
+    { name: "Digital Twin", href: "/digital-twin" },
   ];
 
   const aiServices = [
-    { name: "The Agentic Systems Lab", href: "/ai/agentic-systems-lab" },
-    { name: "Capability Transformation (CT) Scan", href: "/ai/capability-transformation-scan" },
-    { name: "Agentic Leadership Transformation", href: "/ai/agentic-leadership-transformation" },
-    { name: "Cybernetic Organisation Design", href: "/ai/cybernetic-organisation-design" },
-    { name: "From AI Noise to Clear Direction in 5 Minutes", href: "/ai/ai-noise-to-direction" },
-    { name: "AIx Programme", href: "/ai/aix-programme" },
+    { name: "The Agentic Systems Lab", href: "/artificial-intelligence/agentic-systems-lab" },
+    { name: "Capability Transformation (CT) Scan", href: "/artificial-intelligence/capability-transformation-scan" },
+    { name: "Agentic Leadership Transformation", href: "/artificial-intelligence/agentic-leadership-transformation" },
+    { name: "Cybernetic Organisation Design", href: "/artificial-intelligence/cybernetic-organisation-design" },
+    { name: "From AI Noise to Clear Direction in 5 Minutes", href: "/artificial-intelligence/ai-noise-to-direction" },
+    { name: "AIx Programme", href: "/artificial-intelligence/aix-programme" },
   ];
 
   const cyberServices = [
+    { name: "Cyber Excellence", href: "/cyberexcellence" },
     { name: "Certification & Compliance Services", href: "/cyber-security/certification-and-compliance" },
     { name: "Cyber Risk & Resilience", href: "/cyber-security/cyber-risk-and-resilience" },
     { name: "Technical Security Services", href: "/cyber-security/technical-security-services" },
@@ -130,11 +132,13 @@ const Navbar = () => {
 
   const centerMenuItems = [
     { name: "HOME", href: "/" },
-    { name: "ABOUT US", href: "/about" },
-    { name: "SERVICES", href: "/services" },
-    { name: "BLOG", href: "/blog" },
-    { name: "DIGITAL TWIN", href: "/digital-twin" },
+    { name: "ABOUT", href: "/about" },
+    { name: "ARTIFICIAL INTELLIGENCE", href: "/artificial-intelligence" },
+    // { name: "BLOG", href: "/blog" },
     { name: "CYBER SECURITY", href: "/cyber-security" },
+      { name: "ADVISORY SERVICES", href: "/advisory-services" },
+    // { name: "THE REFRAME LAB", href: "/trl" },
+    // { name: "DIGITAL TWIN", href: "/digital-twin" },
     { name: "CONTACT", href: "/contact" },
   ];
 
@@ -223,7 +227,7 @@ const Navbar = () => {
             )}
 
             {/* Search & Login */}
-            <div className="flex items-center gap-2 sm:gap-3 bg-white rounded-xl shadow-lg px-3 py-2 sm:px-4 sm:py-2.5">
+            {/* <div className="flex items-center gap-2 sm:gap-3 bg-white rounded-xl shadow-lg px-3 py-2 sm:px-4 sm:py-2.5">
               <button
                 aria-label="Search"
                 className="p-1.5 hover:bg-gray-100 rounded-full transition-colors"
@@ -236,7 +240,7 @@ const Navbar = () => {
               >
                 LOG IN
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </nav>
@@ -249,7 +253,7 @@ const Navbar = () => {
             <div className="flex items-center justify-between px-3 sm:px-6 lg:px-8 py-3 sm:py-4 border-b border-gray-200">
               <div className="flex items-center gap-2 sm:gap-4 flex-1">
                 <button
-                  onClick={() => { setIsMobileMenuOpen(false); setActiveSection("industries"); }}
+                  onClick={() => { setIsMobileMenuOpen(false); setActiveSection("trl"); }}
                   className="p-1.5 sm:p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors"
                   aria-label="Close menu"
                 >
@@ -304,64 +308,6 @@ const Navbar = () => {
                           Our Services
                         </h2>
                         <ul className="space-y-1 pl-0">
-                         
-                          <li>
-                            <Link
-                              href="/digital-twin"
-                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              Digital Twin
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/press-release"
-                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              Press Release
-                            </Link>
-                          </li>
-                          <li>
-                            <button
-                              onClick={() => setActiveSection(activeSection === "trl" ? "industries" : "trl")}
-                              className={`w-full text-left text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded ${
-                                activeSection === "trl" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
-                              }`}
-                            >
-                              The Reframe Lab
-                            </button>
-                          </li>
-                          <li>
-                            <Link
-                              href="/women-leadership"
-                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              WDL
-                            </Link>
-                          </li>
-                          
- <li>
-                            <Link
-                              href="/cyberexcellence"
-                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              Cyber Excellence
-                            </Link>
-                          </li>
-                          <li>
-                            <button
-                              onClick={() => setActiveSection(activeSection === "advisory" ? "industries" : "advisory")}
-                              className={`w-full text-left text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded ${
-                                activeSection === "advisory" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
-                              }`}
-                            >
-                              Advisory Services
-                            </button>
-                          </li>
                           <li>
                             <button
                               onClick={() => setActiveSection(activeSection === "ai" ? "industries" : "ai")}
@@ -382,11 +328,54 @@ const Navbar = () => {
                               Cyber Security
                             </button>
                           </li>
+                            <li>
+                            <button
+                              onClick={() => setActiveSection(activeSection === "advisory" ? "industries" : "advisory")}
+                              className={`w-full text-left text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded ${
+                                activeSection === "advisory" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
+                              }`}
+                            >
+                              Advisory Services
+                            </button>
+                          </li>
+                         
+                          {/* <li>
+                            <Link
+                              href="/press-release"
+                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              Press Release
+                            </Link>
+                          </li> */}
+                          <li>
+                            <button
+                              onClick={() => setActiveSection(activeSection === "trl" ? "industries" : "trl")}
+                              className={`w-full text-left text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded ${
+                                activeSection === "trl" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
+                              }`}
+                            >
+                              The Reframe Lab
+                            </button>
+                          </li>
+                          {/* <li>
+                            <Link
+                              href="/women-leadership"
+                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              WDL
+                            </Link>
+                          </li> */}
+                          
+                        
+                          
+                          
                         </ul>
                       </div>
 
                       {/* Our Insights */}
-                      <div>
+                      {/* <div>
                         <button
                           onClick={() => setActiveSection(activeSection === "insights" ? "industries" : "insights")}
                           className={`w-full text-left text-sm font-medium text-gray-900 hover:text-gray-700 transition-colors py-1 ${
@@ -395,10 +384,10 @@ const Navbar = () => {
                         >
                           Our Insights
                         </button>
-                      </div>
+                      </div> */}
 
                       {/* LSC Alumni */}
-                      <div>
+                      {/* <div>
                         <Link
                           href="#"
                           className="text-sm font-medium text-gray-900 hover:text-gray-700 transition-colors"
@@ -406,7 +395,7 @@ const Navbar = () => {
                         >
                           LSC Alumni
                         </Link>
-                      </div>
+                      </div> */}
 
                       {/* Our Company */}
                       <div>
@@ -423,7 +412,7 @@ const Navbar = () => {
                               About LSC
                             </Link>
                           </li>
-                          <li>
+                          {/* <li>
                             <Link
                               href="/services"
                               className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
@@ -440,8 +429,8 @@ const Navbar = () => {
                             >
                               Blog
                             </Link>
-                          </li>
-                          <li>
+                          </li> */}
+                          {/* <li>
                             <Link
                               href="/free-material"
                               className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
@@ -458,18 +447,18 @@ const Navbar = () => {
                             >
                               Corporate Newsroom
                             </Link>
-                          </li>
+                          </li> */}
                         </ul>
                       </div>
 
                       {/* Join Us */}
                       <div>
                         <Link
-                          href="#"
+                          href="/contact"
                           className="text-sm font-medium text-gray-900 hover:text-gray-700 transition-colors"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
-                          Join Us
+                          Contact Us
                         </Link>
                       </div>
                     </div>
@@ -564,7 +553,7 @@ const Navbar = () => {
                         </div>
                         <div className="mt-6 pt-4 border-t border-gray-100">
                           <Link
-                            href="/advisory"
+                            href="/advisory-services"
                             className="text-sm font-medium text-[#0E2253] hover:underline"
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
@@ -595,7 +584,7 @@ const Navbar = () => {
                         </div>
                         <div className="mt-6 pt-4 border-t border-gray-100">
                           <Link
-                            href="/ai"
+                            href="/artificial-intelligence"
                             className="text-sm font-medium text-[#0E2253] hover:underline"
                             onClick={() => setIsMobileMenuOpen(false)}
                           >

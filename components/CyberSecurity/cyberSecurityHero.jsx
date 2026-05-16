@@ -45,7 +45,7 @@ export default function CyberSecurityHero() {
               Cyber Security
             </h1>
             <h2 className="text-xl sm:text-2xl font-light text-white mb-6">
-              Services for Organisations
+              Building resilient organisations in an uncertain world
             </h2>
             <div className="flex flex-wrap gap-3">
               <button

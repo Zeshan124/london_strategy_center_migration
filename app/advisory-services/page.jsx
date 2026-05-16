@@ -38,7 +38,7 @@ const advisoryPracticeAreas = {
   heading: "Advisory Services",
   subheading: "LSC's advisory services address the strategic, leadership, and organisational conditions that determine whether organisations can perform at the level their context demands.",
   features: ADVISORY_FEATURES,
-  linkPrefix: "/advisory",
+  linkPrefix: "/advisory-services",
 };
 
 const page = () => {

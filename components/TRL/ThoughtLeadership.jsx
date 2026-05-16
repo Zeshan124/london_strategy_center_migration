@@ -33,7 +33,7 @@ export default function ThoughtLeadership({ cta }) {
           <img
             src={image}
             alt={heading}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </div>
 

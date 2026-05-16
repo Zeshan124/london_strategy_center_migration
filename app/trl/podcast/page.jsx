@@ -7,9 +7,6 @@ import VideoSection from "@/components/TRL/VideoSection";
 import { fetchChannelVideos } from "@/lib/youtube";
 import ContactFormSection from "@/components/ReframeReads/ContactFormSection";
 
-// revalidate the page once an hour so new videos propagate
-export const revalidate = 3600;
-
 // server component: fetch video data before render
 const page = async () => {
   const channelId = process.env.YOUTUBE_CHANNEL_ID || "";
