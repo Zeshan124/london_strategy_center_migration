@@ -111,6 +111,21 @@ const Navbar = () => {
     { name: "Specialist Programme Support", href: "/cyber-security/specialist-programme-support" },
   ];
 
+  const pressReleases = [
+    { name: "LSC & MILE Strategic Collaboration", href: "/press-release/mile-press-release" },
+    { name: "LSC & BAE Systems SDT Collaboration", href: "/press-release/bae-press-release" },
+    { name: "LSC & TTE Strategic Collaboration", href: "/press-release/tte-press-release" },
+    { name: "London Strategy Centre Launches in London", href: "/press-release/lsc_inauguration-press-release" },
+    { name: "Maj. Gen. Paul Nanson Joins LSC", href: "/press-release/maj-gen-retd-paul-nanson" },
+    { name: "LSC & HashMove Strategic Partnership", href: "/press-release/hashmove-press-release" },
+    { name: "LSC & EVC Strategic Collaboration", href: "/press-release/evc-press-release" },
+    { name: "LSC & University of Birmingham Dubai Partnership", href: "/press-release/university-of-birmingham-dubai" },
+    { name: "LSC & Sharjah Training Development Center", href: "/press-release/STDC" },
+    { name: "LSC & Arab International Women's Forum", href: "/press-release/AIWF" },
+    { name: "National Defence University KSA Partnership", href: "/press-release/nduksa" },
+    { name: "LSC Launches Cyber Excellence Certification", href: "/press-release/cyberexcellence" },
+  ];
+
   const industries = [
     { name: "Aerospace and Defense", href: "#" },
     { name: "Automotive Industry", href: "#" },
@@ -137,6 +152,7 @@ const Navbar = () => {
     // { name: "BLOG", href: "/blog" },
     { name: "CYBER SECURITY", href: "/cyber-security" },
       { name: "ADVISORY SERVICES", href: "/advisory-services" },
+    { name: "PRESS RELEASE", href: "/press-release" },
     // { name: "THE REFRAME LAB", href: "/trl" },
     // { name: "DIGITAL TWIN", href: "/digital-twin" },
     { name: "CONTACT", href: "/contact" },
@@ -202,29 +218,27 @@ const Navbar = () => {
 
           {/* Right Side - Navigation, Search & Login */}
           <div className="flex items-center gap-3 sm:gap-4">
-            {/* Navigation Menu - Only for non-home pages on desktop */}
-            {!isHomePage && (
-              <div className="hidden lg:flex items-center">
-                <div className="bg-white rounded-xl shadow-lg border border-gray-200 px-6 py-3">
-                  <ul className="flex items-center gap-5 xl:gap-7">
-                    {centerMenuItems.map((item, index) => (
-                      <li key={index}>
-                        <Link
-                          href={item.href}
-                          className={`text-sm font-medium transition-colors whitespace-nowrap ${
-                            pathname === item.href
-                              ? "text-gray-900 px-3 py-1.5  bg-[#F1EEEA] rounded-md"
-                              : "text-gray-700 hover:text-gray-900"
-                          }`}
-                        >
-                          {item.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            {/* Navigation Menu - All pages on desktop */}
+            <div className="hidden lg:flex items-center">
+              <div className="bg-white rounded-xl shadow-lg border border-gray-200 px-6 py-3">
+                <ul className="flex items-center gap-5 xl:gap-7">
+                  {centerMenuItems.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        href={item.href}
+                        className={`text-sm font-medium transition-colors whitespace-nowrap ${
+                          pathname === item.href
+                            ? "text-gray-900 px-3 py-1.5 bg-[#F1EEEA] rounded-md"
+                            : "text-gray-700 hover:text-gray-900"
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            )}
+            </div>
 
             {/* Search & Login */}
             {/* <div className="flex items-center gap-2 sm:gap-3 bg-white rounded-xl shadow-lg px-3 py-2 sm:px-4 sm:py-2.5">
@@ -348,6 +362,16 @@ const Navbar = () => {
                               Press Release
                             </Link>
                           </li> */}
+                          {/* <li>
+                            <button
+                              onClick={() => setActiveSection(activeSection === "press" ? "trl" : "press")}
+                              className={`w-full text-left text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded ${
+                                activeSection === "press" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
+                              }`}
+                            >
+                              Press Releases
+                            </button>
+                          </li> */}
                           <li>
                             <button
                               onClick={() => setActiveSection(activeSection === "trl" ? "industries" : "trl")}
@@ -412,6 +436,17 @@ const Navbar = () => {
                               About LSC
                             </Link>
                           </li>
+                          <li>
+                            <button
+                              onClick={() => setActiveSection(activeSection === "press" ? "trl" : "press")}
+                              className={`w-full text-left text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded ${
+                                activeSection === "press" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
+                              }`}
+                            >
+                              Press Releases
+                            </button>
+                          </li>
+                          
                           {/* <li>
                             <Link
                               href="/services"
@@ -592,6 +627,37 @@ const Navbar = () => {
                           </Link>
                         </div>
                       </div>
+                    ) : activeSection === "press" ? (
+                      /* Press Releases */
+                      <div>
+                        <h2 className="text-sm font-medium text-gray-900 mb-1">
+                          Press Releases
+                        </h2>
+                        <p className="text-xs text-gray-600 mb-4">
+                          Latest announcements, partnerships, and strategic milestones from London Strategy Centre.
+                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 sm:gap-x-12 gap-y-2">
+                          {pressReleases.map((pr, index) => (
+                            <Link
+                              key={index}
+                              href={pr.href}
+                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {pr.name}
+                            </Link>
+                          ))}
+                        </div>
+                        <div className="mt-6 pt-4 border-t border-gray-100">
+                          <Link
+                            href="/press-release"
+                            className="text-sm font-medium text-[#0E2253] hover:underline"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            View all Press Releases →
+                          </Link>
+                        </div>
+                      </div>
                     ) : activeSection === "cyber-security" ? (
                       /* Cyber Security Services */
                       <div>
@@ -624,25 +690,38 @@ const Navbar = () => {
                         </div>
                       </div>
                     ) : (
-                      /* Industries Section */
+                      /* Default: show TRL panel */
                       <div>
                         <h2 className="text-sm font-medium text-gray-900 mb-1">
-                          Industries
+                          The Reframe Lab
                         </h2>
                         <p className="text-xs text-gray-600 mb-4">
-                          Learn how we draw on industry expertise to make companies more competitive.
+                          LSC's intellectual platform — where the assumptions behind strategy, capability, and organisational design are examined and reconstructed.
                         </p>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 sm:gap-x-12 gap-y-2">
-                          {industries.map((industry, index) => (
-                            <Link
-                              key={index}
-                              href={industry.href}
-                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors py-1"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              {industry.name}
-                            </Link>
-                          ))}
+                        <div className="flex flex-col gap-2">
+                          <Link
+                            href="/trl/podcast"
+                            className="text-sm text-gray-700 hover:text-gray-900 transition-colors py-1"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            LSC Connect
+                          </Link>
+                          <Link
+                            href="/reframe-reads"
+                            className="text-sm text-gray-700 hover:text-gray-900 transition-colors py-1"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            Reframe Reads
+                          </Link>
+                        </div>
+                        <div className="mt-6 pt-4 border-t border-gray-100">
+                          <Link
+                            href="/trl"
+                            className="text-sm font-medium text-[#0E2253] hover:underline"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            View all Reframe Lab content →
+                          </Link>
                         </div>
                       </div>
                     )}

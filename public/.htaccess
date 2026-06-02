@@ -1,0 +1,17 @@
+RewriteEngine On
+RewriteBase /
+
+# Skip real FILES only (not directories)
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# If path.html exists, serve it (even if a directory with same name exists)
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f
+RewriteRule ^(.+?)/?$ /$1.html [L]
+
+# If path/index.html exists, serve it
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}/index.html -f
+RewriteRule ^(.+?)/?$ /$1/index.html [L]
+
+# Fallback 404
+ErrorDocument 404 /404.html

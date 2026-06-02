@@ -3,13 +3,23 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { subscribeNewsletter } from "@/lib/api/newsletter";
 
 export default function NewsletterCTASection() {
   const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("idle");
 
-  const handleSubmit = () => {
-    console.log("Email submitted:", email);
-    // Add your subscription logic here
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!email) return;
+    setStatus("loading");
+    try {
+      await subscribeNewsletter(email);
+      setStatus("success");
+      setEmail("");
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (

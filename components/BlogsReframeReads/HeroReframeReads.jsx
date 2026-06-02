@@ -70,17 +70,17 @@ export default function HeroReframeReads() {
           </div>
 
           <div className="flex gap-4 justify-center sm:justify-start">
-            <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#0E2253] text-white rounded-xl text-xs sm:text-sm hover:bg-gray-800 transition-all duration-300">
+            <Link href="/trl/podcast" className="inline-flex items-center gap-2 px-6 py-3 bg-[#0E2253] text-white rounded-xl text-xs sm:text-sm hover:bg-gray-800 transition-all duration-300">
             WATCH VIDEOS
-            </button>
-            <button className="group inline-flex items-center gap-2 px-6 py-3 bg-[white] border-2 border-[#0E2253] text-gray-900 rounded-xl font-medium text-xs sm:text-sm hover:bg-[#0E2253] hover:text-white transition-all duration-300">
+            </Link>
+            {/* <button className="group inline-flex items-center gap-2 px-6 py-3 bg-[white] border-2 border-[#0E2253] text-gray-900 rounded-xl font-medium text-xs sm:text-sm hover:bg-[#0E2253] hover:text-white transition-all duration-300">
             WATCH THE BOOKLET
               <img
                 src="/images/InnerPages/digitaltwin/arrow-up.svg"
                 alt="Play Icon"
                 className="w-4 h-4 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
               />
-            </button>
+            </button> */}
           </div>
 
           {/* Featured Video - Full Width */}

@@ -3,21 +3,23 @@
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import { subscribeNewsletter } from '@/lib/api/newsletter';
 
 export default function NewsletterSubscription() {
   const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState('idle');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate API call
-    setTimeout(() => {
-      console.log('Email submitted:', email);
+    if (!email) return;
+    setStatus('loading');
+    try {
+      await subscribeNewsletter(email);
+      setStatus('success');
       setEmail('');
-      setIsSubmitting(false);
-    }, 1000);
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (

@@ -15,7 +15,7 @@ const DEFAULT_TIERS = [
   { id: 3, title: 'Cybernetic Organisation Design (Tier 3):', description: 'Embedding AI-augmented sensing, governance, and learning systems across the enterprise so that capability compounds over time.', image: '/images/InnerPages/artificial-intelligence/shared/tier-3-cybernetic-design-card.jpg', href: '/artificial-intelligence/cybernetic-organisation-design' },
 ];
 
-export default function TiersSection({ top_heading, top_subheading, heading, subheading, tiers }) {
+export default function TiersSection({ top_heading, top_subheading, heading, subheading, tiers, isStatic = false }) {
   const swiperRef = useRef(null);
 
   const resolvedTopHeading = top_heading ?? null;
@@ -81,12 +81,12 @@ export default function TiersSection({ top_heading, top_subheading, heading, sub
         {resolvedTiers.length <= 3 ? (
           <div className="flex flex-wrap justify-center gap-5">
             {resolvedTiers.map((tier) => {
-              const Wrapper = tier.href ? Link : 'div';
+              const Wrapper = (!isStatic && tier.href) ? Link : 'div';
               return (
                 <Wrapper
                   key={tier.id}
-                  {...(tier.href ? { href: tier.href } : {})}
-                  className="w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)] group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                  {...(!isStatic && tier.href ? { href: tier.href } : {})}
+                  className={`w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)] group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500${!isStatic && tier.href ? ' cursor-pointer' : ''}`}
                 >
                   <div className="relative h-[400px] sm:h-[550px] overflow-hidden">
                     <img
@@ -119,7 +119,7 @@ export default function TiersSection({ top_heading, top_subheading, heading, sub
           >
             {resolvedTiers.map((tier) => (
               <SwiperSlide key={tier.id}>
-                <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer">
+                <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500">
                   <div className="relative h-[400px] sm:h-[450px] overflow-hidden">
                     <img
                       src={tier.image}

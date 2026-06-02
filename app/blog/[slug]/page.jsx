@@ -2,16 +2,12 @@ import BlogPostClient from "./BlogPostClient";
 
 export function generateStaticParams() {
   return [
-    { slug: "emotional-intelligent-leadership" },
-    { slug: "leadership-maturity" },
-    { slug: "leadership-development-roi" },
-    { slug: "leadership-practices" },
-    { slug: "womens-leadership-what-to-fix" },
-    { slug: "womens-leadership-confidence" },
-    { slug: "limelight-or-shade" },
-    { slug: "climate-action-geopolitical-tensions" },
-    { slug: "pope-francis-leadership-legacy" },
-    { slug: "make-innovation-happen" },
+    { slug: "leading-in-the-age-of-agentic-ai" },
+    { slug: "the-real-global-ai-race" },
+    { slug: "women-in-leadership-and-ai" },
+    { slug: "techno-feudalism" },
+    { slug: "sustainability_and_technology" },
+    { slug: "ai-brains-future" },
   ];
 }
 

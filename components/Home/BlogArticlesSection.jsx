@@ -1,15 +1,16 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function BlogArticlesSection() {
   const articles = [
     {
       id: 1,
-      badge: "LEADERSHIP",
+      badge: null,
       date: "DEC 18, 2025",
       readTime: "5 MIN READ",
-      title: "AI-Driven Leadership: The New Executive Imperative",
+      title: "Cyber Excellence in an Era of Fragmentation",
       image: "/images/home/Leadership.png",
       size: "large",
     },
@@ -25,10 +26,10 @@ export default function BlogArticlesSection() {
     },
     {
       id: 3,
-      badge: "INNOVATION",
+      badge: null,
       date: "DEC 12, 2025",
       readTime: "6 MIN READ",
-      title: "Strategic Innovation in Digital Transformation",
+      title: "Old Wine in a New Bottle",
       image: "/images/home/Innovation.png",
       size: "small",
     },
@@ -40,7 +41,7 @@ export default function BlogArticlesSection() {
         {/* Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Large Card - Left Side */}
-          <div className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer">
+          <Link href="/white-paper-cyber-excellence" className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer block">
             <div className="relative h-[500px] lg:h-[600px]">
               <img
                 src={articles[0].image}
@@ -54,11 +55,13 @@ export default function BlogArticlesSection() {
               {/* Gradient Overlay */}
 
               {/* Badge */}
-              <div className="absolute top-6 left-6">
-                <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md border border-white/40 rounded-md text-xs font-medium tracking-wider text-white uppercase">
-                  {articles[0].badge}
-                </span>
-              </div>
+              {articles[0].badge && (
+                <div className="absolute top-6 left-6">
+                  <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md border border-white/40 rounded-md text-xs font-medium tracking-wider text-white uppercase">
+                    {articles[0].badge}
+                  </span>
+                </div>
+              )}
 
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-8">
@@ -83,12 +86,12 @@ export default function BlogArticlesSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Right Side - Two Small Cards */}
           <div className="flex flex-col gap-6">
             {/* Small Card 1 */}
-            <div className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer bg-[#F1EEEA]">
+            <Link href="/cyber-security" className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer bg-[#F1EEEA] block">
               <div className="p-8 lg:p-10">
                 {/* Badge */}
                 <div className="mb-4">
@@ -117,10 +120,10 @@ export default function BlogArticlesSection() {
                   </button>
                 </div>
               </div>
-            </div>
+            </Link>
 
             {/* Small Card 2 */}
-            <div className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer">
+            <Link href="/old-wine-in-a-new-bottle" className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer block">
               <div className="relative h-[280px]">
                 <img
                   src={articles[2].image}
@@ -129,11 +132,13 @@ export default function BlogArticlesSection() {
                 />
 
                 {/* Badge */}
-                <div className="absolute top-6 left-6">
-                  <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md border border-white/40 rounded-md text-xs font-medium tracking-wider text-white uppercase">
-                    {articles[2].badge}
-                  </span>
-                </div>
+                {articles[2].badge && (
+                  <div className="absolute top-6 left-6">
+                    <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md border border-white/40 rounded-md text-xs font-medium tracking-wider text-white uppercase">
+                      {articles[2].badge}
+                    </span>
+                  </div>
+                )}
 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -158,7 +163,7 @@ export default function BlogArticlesSection() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

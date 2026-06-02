@@ -2,6 +2,25 @@
 
 import Link from 'next/link';
 
+function RichParagraph({ text, className }) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return (
+    <p className={className}>
+      {parts.map((part, i) => {
+        const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (match) {
+          return (
+            <Link key={i} href={match[2]} className="text-[#0E2253] underline underline-offset-2 hover:opacity-75 transition-opacity">
+              {match[1]}
+            </Link>
+          );
+        }
+        return part;
+      })}
+    </p>
+  );
+}
+
 const DEFAULT_INTRO = {
   heading: null,
   paragraphs: null,
@@ -56,7 +75,7 @@ export default function Phases({ heading, subheading, phases, intro, footer_head
             {resolvedIntro.paragraphs?.filter(Boolean).length > 0 && (
               <div className="space-y-4">
                 {resolvedIntro.paragraphs.filter(Boolean).map((p, i) => (
-                  <p key={i} className="text-sm sm:text-base text-gray-700 leading-relaxed">{p}</p>
+                  <RichParagraph key={i} text={p} className="text-sm sm:text-base text-gray-700 leading-relaxed" />
                 ))}
               </div>
             )}
@@ -81,7 +100,7 @@ export default function Phases({ heading, subheading, phases, intro, footer_head
             <Wrapper
               key={phase.id}
               {...(phase.href ? { href: phase.href } : {})}
-              className={`group relative overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer ${
+              className={`group relative overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500${phase.href ? ' cursor-pointer' : ''} ${
                 index === 1 ? 'lg:-translate-y-12' : ''
               }`}
             >

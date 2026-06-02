@@ -20,7 +20,7 @@ export default function Home() {
         <CertificationsSection />
         <FeaturedEpisode />
         <IndustriesSection />
-        {/* <BlogArticlesSection /> */}
+        <BlogArticlesSection />
         {/* <NewsletterCTASection /> */}
         <OurProgrammes />
       </main>

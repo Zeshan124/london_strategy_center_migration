@@ -2,22 +2,23 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { subscribeNewsletter } from "@/lib/api/newsletter";
 
 export default function Newsletter() {
   const [email, setEmail] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const [status, setStatus] = useState("idle");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsLoading(true);
-
-    console.log("Subscribing email:", email);
-
-    setTimeout(() => {
-      setIsLoading(false);
+    if (!email) return;
+    setStatus("loading");
+    try {
+      await subscribeNewsletter(email);
+      setStatus("success");
       setEmail("");
-      alert("Successfully subscribed!");
-    }, 1000);
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (

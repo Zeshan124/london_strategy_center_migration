@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import { ChevronLeft, ChevronRight, Pause, Play, X } from "lucide-react";
@@ -238,7 +239,7 @@ export default function HeroSection() {
       <main className="pt-20 px-6 lg:px-8 py-12 max-w-[1400px] mx-auto">
         {/* Welcome Text */}
         <div className="text-center mb-12 lg:mb-16">
-          <p className="text-xs font-semibold tracking-widest text-gray-900 leading-tight mb-4">
+          <p className="text-lg font-semibold tracking-widest text-gray-900 leading-tight mb-4">
             Welcome to London Strategy Centre
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-light text-gray-900 max-w-5xl mx-auto px-4">
@@ -407,9 +408,9 @@ export default function HeroSection() {
             <button className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
               Agentic AI PDR
             </button>
-            <button className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
+            <Link href="/digital-twin" className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
               Digital Twins
-            </button>
+            </Link>
             <button className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
               Cyber Excellence Assessment
             </button>

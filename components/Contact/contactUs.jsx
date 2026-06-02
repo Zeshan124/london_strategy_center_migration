@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { X, ChevronDown, MapPin, Mail, Phone } from 'lucide-react';
+import { submitContactForm } from '@/lib/api/contact';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -9,21 +10,28 @@ export default function ContactPage() {
     email: '',
     title: '',
     company: '',
-    category: '',
-    information: '',
-    message: ''
+    category: 'general',
+    information: 'general',
+    message: '',
+    consent: true
   });
+  const [status, setStatus] = useState('idle'); // idle | loading | success | error
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value, type, checked } = e.target;
+    setFormData({ ...formData, [name]: type === 'checkbox' ? checked : value });
   };
 
-  const handleSubmit = () => {
-    console.log('Form submitted:', formData);
-    // Add your form submission logic here
+  const handleSubmit = async () => {
+    if (!formData.name || !formData.email || !formData.message) return;
+    setStatus('loading');
+    try {
+      await submitContactForm(formData);
+      setStatus('success');
+      setFormData({ name: '', email: '', title: '', company: '', category: 'general', information: 'general', message: '', consent: true });
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
@@ -200,11 +208,26 @@ Mayfair, W1S 4JL, London, United Kingdom</p>
             {/* Submit Button */}
             <button
               onClick={handleSubmit}
-              className="w-full sm:w-auto px-12 sm:px-16 md:px-28 py-3.5 sm:py-4 bg-[#0a1d4a] text-white rounded-lg font-medium text-sm sm:text-base hover:bg-[#1e3a6b] transition-all duration-300 uppercase tracking-wide"
+              disabled={status === 'loading'}
+              className="w-full sm:w-auto px-12 sm:px-16 md:px-28 py-3.5 sm:py-4 bg-[#0a1d4a] text-white rounded-lg font-medium text-sm sm:text-base hover:bg-[#1e3a6b] transition-all duration-300 uppercase tracking-wide disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              SUBMIT
+              {status === 'loading' ? 'Sending...' : 'SUBMIT'}
             </button>
           </div>
+
+          {/* Success message */}
+          {status === 'success' && (
+            <div className="mt-4 px-5 py-4 bg-green-50 border border-green-200 rounded-2xl text-sm text-green-800 font-medium">
+              ✓ Thank you for your message. We will be in touch shortly.
+            </div>
+          )}
+
+          {/* Error message */}
+          {status === 'error' && (
+            <div className="mt-4 px-5 py-4 bg-red-50 border border-red-200 rounded-2xl text-sm text-red-700 font-medium">
+              Something went wrong. Please try again or email us at enquiries@londonstrategycentre.com
+            </div>
+          )}
         </div>
       </div>
     </div>

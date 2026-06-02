@@ -9,143 +9,141 @@ import {
   Bookmark,
   Search,
 } from "lucide-react";
+import Link from "next/link";
 
 // ── Static article data (replace / extend as needed) ─────────────────────────
 const ALL_ARTICLES = [
   {
     id: 1,
-    image: "/images/InnerPages/reframe-reads/blog-1.jpg",
-    badge: "FEATURED",
-    category: "leadership",
-    categoryLabel: "Sustainability & Technology",
-    title: "Women's Representation in AI and STEM",
-    articleTitle:
-      "Women in Leadership and Women in AI: What Are We Still Getting Wrong?",
-    author: "Dr Heather Jeffery",
-    authorRole: "Head of Subject and Associate Professor in Marketing, University of Birmingham Dubai",
-    authorOrg: "University of Birmingham",
+    image: "/images/InnerPages/reframe-reads/Imran-&-Yaqzan-Thumbnail.jpeg",
+    badge: "REFRAME READS",
+    category: "ai",
+    categoryLabel: "Artificial Intelligence & Leadership",
+    title: "Leading in the Age of Agentic AI",
+    articleTitle: "Leading in the Age of Agentic AI: Why AI demands Leadership Elasticity",
+    author: "LSC Team",
+    authorRole: "Edited and repurposed by LSC team",
+    authorOrg: "London Strategy Centre",
     authorOrgLogo: null,
     companyLogo: null,
     editedByLSC: true,
-    date: "Feb 18, 2026",
-    views: 19,
+    date: "Apr 09, 2026",
+    views: 0,
     description:
-      "Despite decades of progress, women remain significantly underrepresented in leadership, especially in technology and artificial intelligence",
-    readLink: "#",
-    tags: ["growth", "ai", "business"],
+      "Technologies like agentic AI and digital twins are not just reshaping industries — they are redefining leadership itself. Discover why leadership elasticity is the defining capability of our era.",
+    readLink: "/blog/leading-in-the-age-of-agentic-ai",
+    tags: ["AI", "Leadership", "AgenticAI"],
   },
+ 
   {
     id: 2,
-   image: "/images/InnerPages/reframe-reads/blog-2.jpg",
+    image: "/images/InnerPages/reframe-reads/Kamran-Kardan-Thumbnail.jpeg",
     badge: "REFRAME READS",
     category: "ai",
-    categoryLabel: "Reframe Reads",
-    title: "AI Hard Talk: From Hype to Real-World Impact",
-    articleTitle:
-      "Women in Leadership and Women in AI: What Are We Still Getting Wrong?",
-    author: "Junaid Mohsin Haq",
-    authorRole: "Senior Business Transformation Leader",
-    authorOrg: "Amazon",
-    authorOrgLogo: "/images/reframe-reads/amazon-logo.png",
-    companyLogo: "/images/reframe-reads/amazon-logo.png",
+    categoryLabel: "AI · Education · Business",
+    title: "The Real Global AI Race",
+    articleTitle: "The Real Global AI Race Is About Diffusion Without Losing Trust",
+    author: "LSC Team",
+    authorRole: "Edited and repurposed by LSC team",
+    authorOrg: "London Strategy Centre",
+    authorOrgLogo: null,
+    companyLogo: null,
     editedByLSC: true,
-    date: "Feb 18, 2026",
-    views: 19,
+    date: "Mar 05, 2026",
+    views: 0,
     description:
-      "Despite decades of progress, women remain significantly underrepresented in leadership, especially in technology and artificial intelligence",
-    readLink: "#",
-    tags: ["growth", "ai", "business"],
+      "AI race narratives focus on invention. But real power comes from diffusion — how quickly a country embeds AI into institutions, education, and the economy. And that's where the real tension begins.",
+    readLink: "/blog/the-real-global-ai-race",
+    tags: ["AI", "Education", "Business"],
   },
   {
     id: 3,
-    image: "/images/InnerPages/reframe-reads/blog-3.jpg",
+    image: "/images/InnerPages/reframe-reads/blog-1.jpg",
+    badge: "REFRAME READS",
+    category: "leadership",
+    categoryLabel: "Leadership · AI",
+    title: "Women in Leadership and Women in AI",
+    articleTitle: "Women in Leadership and Women in AI: What Are We Still Getting Wrong?",
+    author: "LSC Team",
+    authorRole: "Edited and repurposed by LSC team",
+    authorOrg: "London Strategy Centre",
+    authorOrgLogo: null,
+    companyLogo: null,
+    editedByLSC: true,
+    date: "Feb 04, 2026",
+    views: 0,
+    description:
+      "Despite decades of progress, women remain significantly underrepresented in leadership and AI. The problem isn't women's ability — it's the system around them.",
+    readLink: "/blog/women-in-leadership-and-ai",
+    tags: ["Women", "Leadership", "AI"],
+  },
+   {
+    id: 4,
+    image: "/images/InnerPages/reframe-reads/blog-2.jpg",
     badge: "REFRAME READS",
     category: "technology",
-    categoryLabel: "Sustainability & Technology",
-    title: "A Collision Or A Catalyst For Progress?",
-    articleTitle:
-      "Women in Leadership and Women in AI: What Are We Still Getting Wrong?",
-    author: "Dr Mohamed Irfan Shaikh",
-    authorRole: "Programme Director, SEE Institute Dubai",
-    authorOrg: "SEE Institute",
-    authorOrgLogo: "/images/reframe-reads/see-institute-logo.png",
-    companyLogo: "/images/reframe-reads/see-institute-logo.png",
+    categoryLabel: "Technology · Business",
+    title: "AI Hard Talk: From Hype to Real-World Impact",
+    articleTitle: "AI Hard Talk: From Hype to Real-World Impact",
+    author: "LSC Team",
+    authorRole: "Edited and repurposed by LSC team",
+    authorOrg: "London Strategy Centre",
+    authorOrgLogo: null,
+    companyLogo: null,
     editedByLSC: true,
-    date: "Feb 18, 2026",
-    views: 19,
+    date: "Jan 13, 2026",
+    views: 0,
     description:
-      "Despite decades of progress, women remain significantly underrepresented in leadership, especially in technology and artificial intelligence",
-    readLink: "#",
-    tags: ["growth", "ai", "business"],
+      "A handful of companies now control the digital roads billions of businesses must use. Techno-feudalism is reshaping power — and SMEs are caught in the middle.",
+    readLink: "/blog/techno-feudalism",
+    tags: ["Technology", "Business", "AI"],
   },
-  {
-    id: 4,
-  image: "/images/InnerPages/reframe-reads/blog-4.jpg",
-    badge: "FEATURED",
-    category: "leadership",
-    categoryLabel: "Reframe Reads",
-    title: "AI, Brains, & The Future We Are Shaping",
-    articleTitle:
-      "Women in Leadership and Women in AI: What Are We Still Getting Wrong?",
-    author: "Dr Vinod Metta",
-    authorRole: "Consultant Interventional Neurologist and Movement Disorders Specialist",
-    authorOrg: "King's College Hospital London",
-    authorOrgLogo: "/images/reframe-reads/kings-college-logo.png",
-    companyLogo: "/images/reframe-reads/kings-college-logo.png",
-    editedByLSC: true,
-    date: "Feb 18, 2026",
-    views: 19,
-    description:
-      "Despite decades of progress, women remain significantly underrepresented in leadership, especially in technology and artificial intelligence",
-    readLink: "#",
-    tags: ["growth", "ai", "business"],
-  },
-
   {
     id: 5,
-  image: "/images/InnerPages/reframe-reads/blog-2.jpg",
-    badge: "FEATURED",
-    category: "leadership",
-    categoryLabel: "Reframe Reads",
-    title: "AI, Brains, & The Future We Are Shaping",
-    articleTitle:
-      "Women in Leadership and Women in AI: What Are We Still Getting Wrong?",
-    author: "Dr Vinod Metta",
-    authorRole: "Consultant Interventional Neurologist and Movement Disorders Specialist",
-    authorOrg: "King's College Hospital London",
-    authorOrgLogo: "/images/reframe-reads/kings-college-logo.png",
-    companyLogo: "/images/reframe-reads/kings-college-logo.png",
+    image: "/images/InnerPages/reframe-reads/blog-4.jpg",
+    badge: "REFRAME READS",
+    category: "technology",
+    categoryLabel: "Sustainability · Technology",
+    title: "Sustainability and Technology",
+    articleTitle: "Sustainability and Technology: A Collision or a Catalyst for Progress?",
+    author: "Dr Muhammad Irfan Shaikh",
+    authorRole: "Programme Director, SEE Institute Dubai",
+    authorOrg: "SEE Institute Dubai",
+    authorOrgLogo: null,
+    companyLogo: null,
     editedByLSC: true,
-    date: "Feb 18, 2026",
-    views: 19,
+    date: "Nov 25, 2025",
+    views: 0,
     description:
-      "Despite decades of progress, women remain significantly underrepresented in leadership, especially in technology and artificial intelligence",
-    readLink: "#",
-    tags: ["growth", "ai", "business"],
+      "Sustainability once represented optimism. Now it's associated with job losses and decline. Can we redefine it as a catalyst for transformation rather than a constraint?",
+    readLink: "/blog/sustainability_and_technology",
+    tags: ["Sustainability", "Technology", "Environment"],
   },
-
   {
     id: 6,
-  image: "/images/InnerPages/reframe-reads/blog-3.jpg",
-    badge: "FEATURED",
-    category: "leadership",
-    categoryLabel: "Reframe Reads",
-    title: "AI, Brains, & The Future We Are Shaping",
-    articleTitle:
-      "Women in Leadership and Women in AI: What Are We Still Getting Wrong?",
+    image: "/images/InnerPages/reframe-reads/blog-3.jpg",
+    badge: "REFRAME READS",
+    category: "ai",
+    categoryLabel: "AI · Neuroscience · Leadership",
+    title: "AI, Brains, and the Future We Are Shaping",
+    articleTitle: "AI, Brains, and the Future We Are Shaping",
     author: "Dr Vinod Metta",
-    authorRole: "Consultant Interventional Neurologist and Movement Disorders Specialist",
-    authorOrg: "King's College Hospital London",
-    authorOrgLogo: "/images/reframe-reads/kings-college-logo.png",
-    companyLogo: "/images/reframe-reads/kings-college-logo.png",
+    authorRole: "Consultant Interventional Neurologist, King's College Dubai",
+    authorOrg: "King's College Dubai",
+    authorOrgLogo: null,
+    companyLogo: null,
     editedByLSC: true,
-    date: "Feb 18, 2026",
-    views: 19,
+    date: "Nov 07, 2025",
+    views: 0,
     description:
-      "Despite decades of progress, women remain significantly underrepresented in leadership, especially in technology and artificial intelligence",
-    readLink: "#",
-    tags: ["growth", "ai", "business"],
+      "Are our brains and systems ready for the world we are building? AI should be a tool, not a substitute — and the human touch remains the anchor technology cannot supply.",
+    readLink: "/blog/ai-brains-future",
+    tags: ["AI", "Neuroscience", "Leadership"],
   },
+  
+  
+  
+  
 ];
 
 
@@ -290,7 +288,7 @@ export default function ReframeReadsGrid() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles.map((article) => {
             return (
-              <div key={article.id} className="group">
+              <Link key={article.id} href={article.readLink} className="group block">
                 <div className="bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 rounded-xl">
 
                   {/* ── Cover Image ── */}
@@ -387,13 +385,10 @@ export default function ReframeReadsGrid() {
 
                     {/* Read Full Article link */}
                     <div className="flex items-center justify-between mb-4">
-                      <a
-                        href={article.readLink}
-                        className="inline-flex items-center gap-1 text-xs font-semibold text-slate-900 hover:text-[#0E2253] transition-colors group/link"
-                      >
+                      <span className="inline-flex items-center gap-1 text-xs font-semibold text-slate-900 group-hover:text-[#0E2253] transition-colors">
                         Read Full Article
-                        <ArrowUpRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
-                      </a>
+                        <ArrowUpRight className="w-3.5 h-3.5" />
+                      </span>
 
                       {/* Share */}
                       <button
@@ -420,7 +415,7 @@ export default function ReframeReadsGrid() {
                     )}
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

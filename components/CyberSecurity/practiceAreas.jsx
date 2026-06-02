@@ -114,6 +114,7 @@ export default function PracticeAreas({ practiceAreas }) {
   const heading_bottom = practiceAreas?.heading_bottom ?? null;
   const subheading_bottom = practiceAreas?.subheading_bottom ?? null;
   const linkPrefix     = practiceAreas?.linkPrefix     ?? "/cyber-security";
+  const isStatic       = practiceAreas?.isStatic       ?? false;
   const itemWidthClass = getItemWidthClass(features.length);
 
  return (
@@ -162,12 +163,9 @@ export default function PracticeAreas({ practiceAreas }) {
 
         {/* Cards */}
         <div className="flex flex-wrap justify-center gap-8">
-          {features.map((feature) => (
-            <Link
-              key={feature.id}
-              href={feature.slug ? `${linkPrefix}/${feature.slug}` : "#"}
-              className={`group relative rounded-2xl p-px bg-linear-to-br from-transparent via-transparent to-transparent hover:from-[#0E2253]/40 hover:via-blue-400/30 hover:to-transparent transition-all duration-500 w-full md:w-[calc(50%-1rem)] ${itemWidthClass}`}
-            >
+          {features.map((feature) => {
+            const cardClass = `group relative rounded-2xl p-px bg-linear-to-br from-transparent via-transparent to-transparent hover:from-[#0E2253]/40 hover:via-blue-400/30 hover:to-transparent transition-all duration-500 w-full md:w-[calc(50%-1rem)] ${itemWidthClass}`;
+            const inner = (
               <div
                 className="relative h-full rounded-2xl bg-white/80 backdrop-blur-lg p-6 md:p-8 border border-slate-200/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 overflow-hidden"
                 onMouseMove={(e) => {
@@ -187,7 +185,7 @@ export default function PracticeAreas({ practiceAreas }) {
 
                 {/* Icon */}
                 <div className="mb-6 relative z-10">
-                  <div className="w-14 h-14 flex items-center justify-center rounded-xl 
+                  <div className="w-14 h-14 flex items-center justify-center rounded-xl
                   bg-linear-to-br from-[#0E2253]/15 via-blue-100 to-transparent
                   group-hover:scale-110 transition duration-300">
                     <Image
@@ -223,8 +221,18 @@ export default function PracticeAreas({ practiceAreas }) {
                   />
                 </div>
               </div>
-            </Link>
-          ))}
+            );
+            const isLink = !isStatic && feature.slug && feature.slug !== "#";
+            return isLink ? (
+              <Link key={feature.id} href={`${linkPrefix}/${feature.slug}`} className={cardClass}>
+                {inner}
+              </Link>
+            ) : (
+              <div key={feature.id} className={cardClass}>
+                {inner}
+              </div>
+            );
+          })}
         </div>
 
         {/* Bottom Section */}

@@ -66,6 +66,7 @@ export default function AIServicePage() {
               heading={service.tiers.heading}
               subheading={service.tiers.subheading}
               tiers={service.tiers.items}
+              isStatic
             />
           )}
           <WhyDifferent content={service.whyDifferent} />
@@ -77,6 +78,7 @@ export default function AIServicePage() {
               heading={service.tiers2.heading}
               subheading={service.tiers2.subheading}
               tiers={service.tiers2.items}
+              isStatic
             />
           )}
           

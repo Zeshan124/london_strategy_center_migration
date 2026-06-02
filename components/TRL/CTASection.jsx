@@ -31,9 +31,9 @@ export default function CTASection() {
         {/* Right Image */}
         <div className="relative h-64 sm:h-80 lg:h-full">
           <img
-            src="/images/InnerPages/trl/cta-section.jpeg"
+            src="/images/InnerPages/trl/cta-section.png"
             alt="The Reframe Lab"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
           />
         </div>
 

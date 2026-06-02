@@ -22,7 +22,7 @@ export default function AboutSection() {
   };
 
   return (
-    <section className="bg-gradient-to-br from-green-100 via-green-50 to-blue-50">
+    <section className="bg-[#F3F4F6]">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
         {/* Left Content */}
         <div className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-26 py-12 sm:py-16  flex flex-col justify-center">
