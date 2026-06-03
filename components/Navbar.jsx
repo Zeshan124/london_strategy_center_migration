@@ -222,20 +222,74 @@ const Navbar = () => {
             <div className="hidden lg:flex items-center">
               <div className="bg-white rounded-xl shadow-lg border border-gray-200 px-6 py-3">
                 <ul className="flex items-center gap-5 xl:gap-7">
-                  {centerMenuItems.map((item, index) => (
-                    <li key={index}>
-                      <Link
-                        href={item.href}
-                        className={`text-sm font-medium transition-colors whitespace-nowrap ${
-                          pathname === item.href
-                            ? "text-gray-900 px-3 py-1.5 bg-[#F1EEEA] rounded-md"
-                            : "text-gray-700 hover:text-gray-900"
-                        }`}
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
+                  {centerMenuItems.map((item, index) => {
+                    const dropdownMap = {
+                      "ARTIFICIAL INTELLIGENCE": aiServices,
+                      "ADVISORY SERVICES": advisoryServices,
+                      "PRESS RELEASE": pressReleases,
+                    };
+                    const dropdownItems = dropdownMap[item.name];
+                    const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
+
+                    if (dropdownItems) {
+                      return (
+                        <li key={index} className="relative group">
+                          <Link
+                            href={item.href}
+                            className={`flex items-center gap-1 text-sm font-medium transition-colors whitespace-nowrap ${
+                              isActive
+                                ? "text-gray-900 px-3 py-1.5 bg-[#F1EEEA] rounded-md"
+                                : "text-gray-700 hover:text-gray-900"
+                            }`}
+                          >
+                            {item.name}
+                            <svg className="w-3 h-3 mt-0.5 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                          </Link>
+                          {/* Dropdown */}
+                          <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-4 min-w-[280px] max-w-[340px]">
+                              <div className={`space-y-1 ${dropdownItems.length > 6 ? "max-h-72 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-transparent" : ""}`}>
+                                {dropdownItems.map((sub, si) => (
+                                  <Link
+                                    key={si}
+                                    href={sub.href}
+                                    className="block px-3 py-2 text-sm text-gray-700 hover:text-[#0E2253] hover:bg-[#F1EEEA] rounded-lg transition-colors leading-snug"
+                                  >
+                                    {sub.name}
+                                  </Link>
+                                ))}
+                              </div>
+                              <div className="mt-3 pt-3 border-t border-gray-100">
+                                <Link
+                                  href={item.href}
+                                  className="text-xs font-bold text-[#0E2253] hover:underline uppercase tracking-widest"
+                                >
+                                  View all →
+                                </Link>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      );
+                    }
+
+                    return (
+                      <li key={index}>
+                        <Link
+                          href={item.href}
+                          className={`text-sm font-medium transition-colors whitespace-nowrap ${
+                            pathname === item.href
+                              ? "text-gray-900 px-3 py-1.5 bg-[#F1EEEA] rounded-md"
+                              : "text-gray-700 hover:text-gray-900"
+                          }`}
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </div>
@@ -526,9 +580,9 @@ const Navbar = () => {
                     ) : activeSection === "trl" ? (
                       /* TRL Pages */
                       <div>
-                        <h2 className="text-sm font-medium text-gray-900 mb-1">
+                        <Link href="/trl" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-900 hover:text-[#0E2253] hover:underline mb-1 block">
                           The Reframe Lab
-                        </h2>
+                        </Link>
                         <p className="text-xs text-gray-600 mb-4">
                           LSC's intellectual platform — where the assumptions behind strategy, capability, and organisational design are examined and reconstructed.
                         </p>
@@ -568,9 +622,9 @@ const Navbar = () => {
                     ) : activeSection === "advisory" ? (
                       /* Advisory Services */
                       <div>
-                        <h2 className="text-sm font-medium text-gray-900 mb-1">
+                        <Link href="/advisory-services" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-900 hover:text-[#0E2253] hover:underline mb-1 block">
                           Advisory Services
-                        </h2>
+                        </Link>
                         <p className="text-xs text-gray-600 mb-4">
                           Strategic, operational, and entrepreneurship advisory for organisations navigating complex challenges.
                         </p>
@@ -599,9 +653,9 @@ const Navbar = () => {
                     ) : activeSection === "ai" ? (
                       /* AI Services */
                       <div>
-                        <h2 className="text-sm font-medium text-gray-900 mb-1">
+                        <Link href="/artificial-intelligence" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-900 hover:text-[#0E2253] hover:underline mb-1 block">
                           Artificial Intelligence services
-                        </h2>
+                        </Link>
                         <p className="text-xs text-gray-600 mb-4">
                           From organisational diagnostics to system-level transformation and strategic AI governance.
                         </p>
@@ -630,9 +684,9 @@ const Navbar = () => {
                     ) : activeSection === "press" ? (
                       /* Press Releases */
                       <div>
-                        <h2 className="text-sm font-medium text-gray-900 mb-1">
+                        <Link href="/press-release" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-900 hover:text-[#0E2253] hover:underline mb-1 block">
                           Press Releases
-                        </h2>
+                        </Link>
                         <p className="text-xs text-gray-600 mb-4">
                           Latest announcements, partnerships, and strategic milestones from London Strategy Centre.
                         </p>
@@ -661,9 +715,9 @@ const Navbar = () => {
                     ) : activeSection === "cyber-security" ? (
                       /* Cyber Security Services */
                       <div>
-                        <h2 className="text-sm font-medium text-gray-900 mb-1">
+                        <Link href="/cyber-security" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-900 hover:text-[#0E2253] hover:underline mb-1 block">
                           Cyber Security
-                        </h2>
+                        </Link>
                         <p className="text-xs text-gray-600 mb-4">
                           See how we help organisations connect technical assurance with strategic governance across the full security spectrum.
                         </p>
@@ -692,9 +746,9 @@ const Navbar = () => {
                     ) : (
                       /* Default: show TRL panel */
                       <div>
-                        <h2 className="text-sm font-medium text-gray-900 mb-1">
+                        <Link href="/trl" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-900 hover:text-[#0E2253] hover:underline mb-1 block">
                           The Reframe Lab
-                        </h2>
+                        </Link>
                         <p className="text-xs text-gray-600 mb-4">
                           LSC's intellectual platform — where the assumptions behind strategy, capability, and organisational design are examined and reconstructed.
                         </p>

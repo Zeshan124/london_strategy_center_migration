@@ -135,7 +135,7 @@ export default function Footer() {
                 </svg>
               </div>
               <span className="text-sm text-slate-900 leading-relaxed">
-                London, Dubai, Riyadh
+                London | Dubai | Riyadh
               </span>
             </div>
 

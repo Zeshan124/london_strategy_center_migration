@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { X, Play } from 'lucide-react';
+import Link from 'next/link';
 
 const videos = [
   { id: 'cUqoItg_xUs', label: 'Agentic Leadership' },
@@ -33,7 +34,7 @@ export default function FeaturedEpisode() {
           </p>
 
           {/* Video Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 mb-5">
             {videos.map((video, index) => (
               <button
                 key={video.id}
@@ -55,6 +56,17 @@ export default function FeaturedEpisode() {
               </button>
             ))}
           </div>
+
+          {/* Explore Button */}
+          <Link
+            href="/trl"
+            className="self-start inline-flex items-center gap-2 px-8 py-4 bg-[#0E2253] text-white text-xs font-semibold tracking-widest uppercase hover:bg-[#1a3570] transition-all duration-300"
+          >
+            Explore More
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
         </div>
 
         {/* Right Video */}

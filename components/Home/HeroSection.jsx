@@ -68,7 +68,7 @@ export default function HeroSection() {
       description:
         "A comprehensive approach to leveraging strategic intelligence—helping organizations anticipate market shifts, prioritize high-impact initiatives, and consistently outperform through informed decision-making.",
       date: "November 21, 2025",
-      type: "Article",
+      type: "Intelligence",
       link: "/reshaping-business-portfolio",
        document: "/images/home/Premium_Report.pdf",
     },
@@ -309,41 +309,24 @@ export default function HeroSection() {
               className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
 
-            {/* Gradient overlay — always dark on mobile, stronger on desktop hover */}
-            <div className="absolute inset-0 bg-linear-to-t transition-all duration-700 from-black/80 via-black/40 to-transparent lg:from-black/50 lg:via-black/20 lg:group-hover:from-black/90 lg:group-hover:via-black/50" />
+            {/* Gradient overlay — stronger for center card */}
+            <div className={`absolute inset-0 bg-linear-to-t ${isCenter ? "from-black/90 via-black/55 to-transparent" : "from-black/70 via-black/20 to-transparent"}`} />
 
-            {/* Content overlay — always visible on mobile, slide-up on desktop */}
+            {/* Content overlay — always visible */}
             <div className="absolute inset-0 flex flex-col justify-end text-white">
-              <div className="px-5 pb-5 translate-y-0 lg:translate-y-full lg:group-hover:translate-y-0 transition-transform duration-700 ease-out">
-                {/* Category badge */}
-                {(isCenter || isAdjacent) && (
-                  <span className="inline-block px-3 py-1 mb-3 bg-white/15 backdrop-blur-sm border border-white/20 rounded text-xs font-semibold uppercase tracking-wider">
-                    {article.type}
-                  </span>
-                )}
-
-                {/* Title */}
-                <h3
-                  className={`font-light leading-snug ${
-                    isCenter ? "text-xl lg:text-2xl line-clamp-3" : "text-base lg:text-lg line-clamp-2"
-                  }`}
-                >
-                  {article.title}
-                </h3>
-
-                {/* Extra detail – center card only */}
+              <div className="px-5 pb-5">
+                {/* Center card: full content always visible */}
                 {isCenter && (
                   <>
-                    <p className="text-sm text-gray-200 mt-2 mb-3 line-clamp-3 leading-relaxed">
+                    <span className="inline-block px-3 py-1 mb-3 bg-white/15 backdrop-blur-sm border border-white/20 rounded text-xs font-semibold uppercase tracking-wider">
+                      {article.type}
+                    </span>
+                    <h3 className="text-xl lg:text-2xl font-light leading-snug line-clamp-3 mb-2">
+                      {article.title}
+                    </h3>
+                    <p className="text-sm text-gray-200 mb-3 line-clamp-3 leading-relaxed">
                       {article.description}
                     </p>
-
-                    {/* <div className="flex items-center gap-2 text-xs text-gray-300 mb-4">
-                      <span className="uppercase font-semibold">{article.type}</span>
-                      <span>·</span>
-                      <span>{article.date}</span>
-                    </div> */}
-
                     <button
                       onClick={(e) => { e.stopPropagation(); openLeadModal(article); }}
                       className="inline-flex items-center gap-2 px-6 py-2.5 bg-green-400 hover:bg-green-500 text-black font-semibold text-sm rounded-md transition-colors duration-300"
@@ -354,6 +337,13 @@ export default function HeroSection() {
                       </svg>
                     </button>
                   </>
+                )}
+
+                {/* Side cards: title only */}
+                {!isCenter && (
+                  <h3 className="text-base lg:text-lg font-light leading-snug line-clamp-2">
+                    {article.title}
+                  </h3>
                 )}
               </div>
             </div>
@@ -414,9 +404,14 @@ export default function HeroSection() {
             <button className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
               Cyber Excellence Assessment
             </button>
-            <button className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
+            <a
+              href="https://lsc-venture-framework.londonstrategycentre.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap"
+            >
               Digital Business Plan
-            </button>
+            </a>
           </div>
         </div>
       </main>
