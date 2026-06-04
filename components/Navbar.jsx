@@ -9,6 +9,7 @@ import Image from "next/image";
 const Navbar = () => {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
+  const hideTopNav = pathname.startsWith("/ai-assessment") || pathname.startsWith("/cyber-assessment");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
@@ -218,13 +219,14 @@ const Navbar = () => {
 
           {/* Right Side - Navigation, Search & Login */}
           <div className="flex items-center gap-3 sm:gap-4">
-            {/* Navigation Menu - All pages on desktop */}
-            <div className="hidden lg:flex items-center">
+            {/* Navigation Menu - hidden on home and assessment pages */}
+            <div className={`${hideTopNav ? 'hidden' : 'hidden lg:flex'} items-center`}>
               <div className="bg-white rounded-xl shadow-lg border border-gray-200 px-6 py-3">
                 <ul className="flex items-center gap-5 xl:gap-7">
                   {centerMenuItems.map((item, index) => {
                     const dropdownMap = {
                       "ARTIFICIAL INTELLIGENCE": aiServices,
+                      "CYBER SECURITY": cyberServices,
                       "ADVISORY SERVICES": advisoryServices,
                       "PRESS RELEASE": pressReleases,
                     };
