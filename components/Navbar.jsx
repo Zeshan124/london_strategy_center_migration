@@ -9,7 +9,7 @@ import Image from "next/image";
 const Navbar = () => {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
-  const hideTopNav = pathname.startsWith("/ai-assessment") || pathname.startsWith("/cyber-assessment");
+  const hideTopNav = pathname.startsWith("/ai-assessment") || pathname.startsWith("/cyber-assessment") || pathname.startsWith("/venture-framework");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
