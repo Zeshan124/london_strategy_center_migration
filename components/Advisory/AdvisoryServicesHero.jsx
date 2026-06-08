@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { submitLeadForm } from "@/lib/api/lead";
 import Image from "next/image";
 import { X } from "lucide-react";
 
@@ -8,6 +9,7 @@ export default function AdvisoryServiceHero({ service }) {
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({ fullName: "", email: "" });
   const [showSuccess, setShowSuccess] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 

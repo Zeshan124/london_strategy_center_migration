@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { X } from "lucide-react";
+import { submitCyberExcellenceEnquiry } from "@/lib/api/cyberexcellenceEnquiry";
 
 export default function ContactForm() {
   const [showForm, setShowForm] = useState(false);
@@ -14,16 +15,27 @@ export default function ContactForm() {
     message: "",
   });
   const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setShowForm(false);
-    setShowSuccessModal(true);
-    setFormData({ fullName: "", jobTitle: "", company: "", email: "", contactNumber: "", message: "" });
+    setSubmitting(true);
+    setSubmitError('');
+    try {
+      await submitCyberExcellenceEnquiry(formData);
+      setShowForm(false);
+      setShowSuccessModal(true);
+      setFormData({ fullName: "", jobTitle: "", company: "", email: "", contactNumber: "", message: "" });
+    } catch {
+      setSubmitError('Something went wrong. Please try again or email us at Cyberexcellence@londonstrategycentre.com');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -196,12 +208,16 @@ export default function ContactForm() {
                 />
               </div>
 
+              {submitError && (
+                <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-3">{submitError}</p>
+              )}
               <div className="flex justify-end">
                 <button
                   type="submit"
-                  className="px-10 py-3 bg-[#0E2253] text-white font-semibold text-sm hover:bg-[#1a3570] transition-all duration-300 uppercase tracking-wide"
+                  disabled={submitting}
+                  className="px-10 py-3 bg-[#0E2253] text-white font-semibold text-sm hover:bg-[#1a3570] transition-all duration-300 uppercase tracking-wide disabled:opacity-60"
                 >
-                  Register Now
+                  {submitting ? 'Submitting…' : 'Register Now'}
                 </button>
               </div>
             </form>

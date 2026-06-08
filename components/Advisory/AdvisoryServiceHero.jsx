@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { submitLeadForm } from "@/lib/api/lead";
 import Image from "next/image";
 import { X } from "lucide-react";
 
@@ -8,14 +9,20 @@ export default function AdvisoryServiceHero({ service }) {
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({ fullName: "", email: "" });
   const [showSuccess, setShowSuccess] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setSubmitting(true);
+    try {
+      await submitLeadForm(formData.fullName, formData.email, 'advisory-services');
+    } catch {}
+    setSubmitting(false);
     setShowForm(false);
     setShowSuccess(true);
-    setFormData({ fullName: "", email: "" });
+    setFormData({ fullName: '', email: '' });
   };
 
   const inputClass = "w-full px-4 py-3.5 border border-[#6B6B6B] rounded-xl text-sm text-[#6B6B6B] placeholder-[#6B6B6B] focus:outline-none focus:border-[#0E2253] transition-colors bg-white";
@@ -117,8 +124,8 @@ export default function AdvisoryServiceHero({ service }) {
                 London Strategy Centre is committed to protecting your privacy. For more information please review our{" "}
                 <a href="/privacy-policy" className="underline hover:text-[#0E2253] transition-colors">privacy policy</a>.
               </p>
-              <button type="submit" className="w-full sm:w-auto px-16 py-4 bg-[#0E2253] text-white text-xs tracking-widest uppercase rounded-xl hover:bg-[#1a3570] transition-all duration-300">
-                SUBMIT REQUEST
+              <button type="submit" disabled={submitting} className="w-full sm:w-auto px-16 py-4 bg-[#0E2253] text-white text-xs tracking-widest uppercase rounded-xl hover:bg-[#1a3570] transition-all duration-300 disabled:opacity-60">
+                {submitting ? 'Submitting...' : 'SUBMIT REQUEST'}
               </button>
             </form>
           </div>
