@@ -9,7 +9,7 @@ import Image from "next/image";
 const Navbar = () => {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
-  const hideTopNav = pathname.startsWith("/ai-assessment") || pathname.startsWith("/cyber-assessment") || pathname.startsWith("/venture-framework");
+  const hideTopNav = pathname.startsWith("/ai-direction-scan") || pathname.startsWith("/cyber-assessment") || pathname.startsWith("/venture-framework");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false);
@@ -112,19 +112,20 @@ const Navbar = () => {
     { name: "Specialist Programme Support", href: "/cyber-security/specialist-programme-support" },
   ];
 
-  const pressReleases = [
-    { name: "LSC & MILE Strategic Collaboration", href: "/press-release/mile-press-release" },
-    { name: "LSC & BAE Systems SDT Collaboration", href: "/press-release/bae-press-release" },
-    { name: "LSC & TTE Strategic Collaboration", href: "/press-release/tte-press-release" },
-    { name: "London Strategy Centre Launches in London", href: "/press-release/lsc_inauguration-press-release" },
-    { name: "Maj. Gen. Paul Nanson Joins LSC", href: "/press-release/maj-gen-retd-paul-nanson" },
-    { name: "LSC & HashMove Strategic Partnership", href: "/press-release/hashmove-press-release" },
-    { name: "LSC & EVC Strategic Collaboration", href: "/press-release/evc-press-release" },
-    { name: "LSC & University of Birmingham Dubai Partnership", href: "/press-release/university-of-birmingham-dubai" },
-    { name: "LSC & Sharjah Training Development Center", href: "/press-release/STDC" },
-    { name: "LSC & Arab International Women's Forum", href: "/press-release/AIWF" },
+  const pressReleases = [    
     { name: "National Defence University KSA Partnership", href: "/press-release/nduksa" },
     { name: "LSC Launches Cyber Excellence Certification", href: "/press-release/cyberexcellence" },
+    { name: "LSC & Arab International Women's Forum", href: "/press-release/AIWF" },
+    { name: "LSC & Sharjah Training Development Center", href: "/press-release/STDC" },
+    { name: "LSC & University of Birmingham Dubai Partnership", href: "/press-release/university-of-birmingham-dubai" },
+    { name: "LSC & EVC Strategic Collaboration", href: "/press-release/evc-press-release" },
+    { name: "LSC & HashMove Strategic Partnership", href: "/press-release/hashmove-press-release" },
+     { name: "Maj. Gen. Paul Nanson Joins LSC", href: "/press-release/maj-gen-retd-paul-nanson" },
+     { name: "London Strategy Centre Launches in London", href: "/press-release/lsc_inauguration-press-release" },
+     { name: "LSC & TTE Strategic Collaboration", href: "/press-release/tte-press-release" },
+     { name: "LSC & BAE Systems SDT Collaboration", href: "/press-release/bae-press-release" },
+     { name: "LSC & MILE Strategic Collaboration", href: "/press-release/mile-press-release" },
+
   ];
 
   const industries = [

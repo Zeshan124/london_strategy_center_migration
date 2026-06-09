@@ -81,7 +81,7 @@ export default function CertificationLevel() {
 
   return (
     <>
-    <section id="certification" className="py-12 sm:py-16 md:py-10 bg-white">
+    <section id="certification" className="py-12 sm:py-16 md:py-5 bg-white">
       <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
         {/* Regional Solution Section */}
         <div className="mb-12 sm:mb-14 md:mb-16 text-center sm:text-left">
@@ -109,12 +109,12 @@ export default function CertificationLevel() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-4 sm:mb-5 md:mb-6">
             Certification Levels
           </h2>
-          <p className="text-sm sm:text-base md:text-base text-slate-600 leading-relaxed">
+          {/* <p className="text-sm sm:text-base md:text-base text-slate-600 leading-relaxed">
             With "Cyber Excellence, organisations in all sectors can scale
             securely, governments can ensure robust supply chains, and the
             Region can move towards unified cybersecurity standards aligned with
             digital transformation."
-          </p>
+          </p> */}
         </div>
 
         {/* Certification Cards Grid - Fully Responsive */}

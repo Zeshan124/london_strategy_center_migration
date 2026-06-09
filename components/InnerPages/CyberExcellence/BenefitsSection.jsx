@@ -9,42 +9,42 @@ export default function BenefitsSection() {
       icon: "/images/InnerPages/cyberexcellence/compliance.png",
       title: "Compliance",
       description:
-        "We help individuals and organisations grow through advanced strategy, leadership, and innovation development.",
+        "Align with key national regulations, including NCA ECC, UAE IAS, ensuring regulator and partner confidence.",
     },
     {
       id: 2,
       icon: "/images/InnerPages/cyberexcellence/risk.png",
       title: "Risk Reduction",
       description:
-        "We provide world-class programmes to unlock leadership and strategic potential at the executive level.",
+        "Apply controls addressing most regional threats, including those flagged by ARCC and local intelligence.",
     },
     {
       id: 3,
       icon: "/images/InnerPages/cyberexcellence/trust.png",
       title: "Trust",
       description:
-        "We use contemporary, immersive executive education to improve thinking and organisational performance.",
+        "Prove proactive data protection and resilience through independent assessment recognised across Middle Eastern markets.",
     },
     {
       id: 4,
       icon: "/images/InnerPages/cyberexcellence/resilience.png",
       title: "Resilience",
       description:
-        "We blend entrepreneurship, strategy courses, and technology-enabled learning to create tailored solutions.",
+        "Certified controls help prevent, detect, and respond to cyber threats, ensuring business continuity.",
     },
     {
       id: 5,
       icon: "/images/InnerPages/cyberexcellence/credibility.png",
       title: "Credibility",
       description:
-        "We prioritise your organisation's goals to design bespoke leadership and strategy development services.",
+        "Certification demonstrates strong cybersecurity commitment, boosting trust with customers, partners, and investors.",
     },
     {
       id: 6,
       icon: "/images/InnerPages/cyberexcellence/work-with-us.png",
-      title: "Work With Us",
+      title: "ADAPTABILITY",
       description:
-        "We seek motivated, inquisitive individuals passionate about making a meaningful impact with excellence.",
+        "Cyber Excellence certification evolves with threats, supporting growth and digital transformation.",
     },
   ];
 
@@ -65,11 +65,11 @@ export default function BenefitsSection() {
             Benefits of Cyber Excellence
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+          {/* <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
             Our mission is to empower individuals and organisations through
             strategic thinking, leadership excellence, and innovation that
             drives sustainable growth.
-          </p>
+          </p> */}
         </div>
 
         {/* Cards */}

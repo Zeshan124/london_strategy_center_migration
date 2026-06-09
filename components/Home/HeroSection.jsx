@@ -135,7 +135,7 @@ export default function HeroSection() {
       description:
         "A comprehensive approach to leveraging strategic intelligence—helping organizations anticipate market shifts, prioritize high-impact initiatives, and consistently outperform through informed decision-making.",
       date: "November 21, 2025",
-      type: "Article",
+      type: "",
       link: "/reshaping-business-portfolio",
        document: "/images/home/Premium_Report.pdf",
     },
@@ -395,8 +395,8 @@ export default function HeroSection() {
         {/* BCG Spotlight Footer Section */}
         <div className="mt-12 sm:mt-16 lg:mt-20 flex justify-center px-4">
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12 px-4 sm:px-6 md:px-8 py-3 sm:py-4 border border-gray-200 rounded-full shadow-sm bg-white max-w-full">
-            <Link href="/ai-assessment" className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
-              Agentic AI PDR
+            <Link href="/ai-direction-scan" className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
+              AI Direction Scan
             </Link>
             <Link href="/digital-twin" className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
               Digital Twins
@@ -404,14 +404,17 @@ export default function HeroSection() {
             <Link href="/cyber-assessment" className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
               Cyber Excellence Assessment
             </Link>
-            <a
+             <Link href="/venture-framework" className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap">
+              Digital Business Plan
+            </Link>
+            {/* <a
               href="https://lsc-venture-framework.londonstrategycentre.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-green-600 transition-colors whitespace-nowrap"
             >
               Digital Business Plan
-            </a>
+            </a> */}
           </div>
         </div>
       </main>

@@ -21,7 +21,7 @@ import FeaturedCampaignsSection from "@/components/blog/FeaturedCampaignsSection
 export default function ServicesHero() {
   return (
     <>
-      <div className="min-h-screen bg-white lg:pt-28 py-16">
+      <div className="min-h-screen bg-white lg:pt-28 py-5">
         {/* Full Width Container */}
         <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-8 sm:py-8 md:py-8 lg:pt-16">
           {/* Title */}
@@ -30,7 +30,7 @@ export default function ServicesHero() {
           </h1>
 
           <div className="text-sm text-gray-900 mb-8">
-            Building a safer digital future for the middle east
+            Building a safer digital future for the Middle East
           </div>
 
           {/* Featured Image - Full Width */}
@@ -50,26 +50,17 @@ export default function ServicesHero() {
             <div className="lg:col-span-full">
               {/* Article Content */}
               <div className="prose prose-lg max-w-none">
-                <div className="mb-10">
-                  <h2 className="text-2xl sm:text-3xl text-gray-900 mb-6">
+                <div className="mb-0">
+                  <h2 className="text-2xl sm:text-5xl text-gray-900 mb-6">
                     Introduction
                   </h2>
 
-                  {/* <div className="text-base text-gray-700 leading-relaxed whitespace-pre-line mb-2">
-                    The Cyber Excellence Certification scheme is designed to
-                    address the growing cybersecurity challenges in the Middle
-                    East region. This comprehensive certification provides
-                    organizations with the knowledge, skills, and frameworks
-                    necessary to build robust cybersecurity capabilities and
-                    protect their digital assets. Our certification scheme is
-                    specifically tailored for organizations operating in the
-                    Middle East, taking into account regional regulations,
-                    cultural considerations, and the unique threat landscape of
-                    the region.
-                  </div> */}
+                 
 
-                  <div className="text-base text-gray-700 leading-relaxed whitespace-pre-line mb-6">
-                Our certification scheme is specifically tailored for organizations operating in the Middle East, taking into account regional regulations, cultural considerations, and the unique threat landscape of the region.
+                  <div className="text-base text-gray-700 leading-relaxed whitespace-pre-line mb-4">
+               The Cyber Excellence Certification scheme is designed to address the growing cybersecurity challenges in the Middle East region. This comprehensive certification provides organizations with the knowledge, skills, and frameworks necessary to build robust cybersecurity capabilities and protect their digital assets.
+
+Our certification scheme is specifically tailored for organizations operating in the Middle East, taking into account regional regulations, cultural considerations, and the unique threat landscape of the region.
                   </div>
                 </div>
               </div>

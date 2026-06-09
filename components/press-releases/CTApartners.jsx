@@ -28,11 +28,11 @@ export default function CTApartners({ ctaSection }) {
         </div>
       </section>
 
-      <div className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-10">
+      {/* <div className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-10">
         <p className="text-sm sm:text-base text-gray-700 leading-relaxed mx-auto">
           {ctaSection.closingParagraph}
         </p>
-      </div>
+      </div> */}
     </>
   );
 }

@@ -41,7 +41,7 @@ export default function ContactForm() {
   return (
     <>
       {/* Trigger Section */}
-      <section className="bg-[#f0f0f0] py-12 sm:py-16 md:py-20 lg:py-24">
+      <section className="bg-[#f1f1f1] py-12 sm:py-16 md:py-20 lg:py-24">
         <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-24">
 
           {/* Top: Description + Contact Info */}
