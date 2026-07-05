@@ -28,6 +28,9 @@ function ResultsContent() {
   const rawAnswers = searchParams.get('answers');
   const companyParam = searchParams.get('company') || 'Your Organisation';
 
+  // session from URL param, or fall back to sessionStorage (set before navigation)
+  const resolvedSessionId = sessionId || (typeof window !== 'undefined' ? sessionStorage.getItem('cyber_session_id') : null);
+
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [downloading, setDownloading] = useState(false);
@@ -66,16 +69,11 @@ function ResultsContent() {
   }, [sessionId, rawAnswers, companyParam]);
 
   const handleDownloadPDF = async () => {
-    if (!sessionId) {
-      // No API session — use browser print as PDF fallback
-      window.print();
-      return;
-    }
     setDownloading(true);
     try {
-      await downloadAssessmentPDF(sessionId, data?.leadInfo?.companyName || 'Report');
+      await downloadAssessmentPDF(resolvedSessionId, data?.leadInfo?.companyName || 'Report');
     } catch {
-      // API failed — fall back to browser print
+      // API failed or no session — fall back to browser print
       window.print();
     } finally {
       setDownloading(false);

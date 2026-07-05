@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Home/Footer';
 import { LSC_QUESTIONS, DEFAULT_RESPONSES, SECTORS, STAGES, MOAT_TYPES, BUSINESS_MODELS, SCALING_OPTIONS, COMPOUNDING_OPTIONS, RISK_PROBABILITY_OPTIONS, RISK_IMPACT_OPTIONS } from '@/lib/vef/defaultResponses';
 import { calcAllScores, calcProbability } from '@/lib/vef/scoringEngine';
+import { submitVentureLead } from '@/lib/api/ventureFramework';
 
 const inputClass = "w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#0E2253] transition-colors";
 const textareaClass = inputClass + " resize-none";
@@ -26,6 +27,13 @@ function GateModal({ onClose }) {
     if (form.full_name.length < 2) { setError('Please enter your full name.'); return; }
     setLoading(true); setError('');
     try {
+      // Submit to backend — non-blocking on failure
+      try {
+        const data = await submitVentureLead(form);
+        if (data.lead_id) localStorage.setItem('vef_lead_id', data.lead_id);
+      } catch (apiErr) {
+        console.error('VEF lead API error:', apiErr);
+      }
       localStorage.setItem('vef_lead_email', form.email);
       localStorage.setItem('vef_lead_name', form.full_name.split(' ')[0]);
       localStorage.setItem('vef_last_submit', String(Date.now()));

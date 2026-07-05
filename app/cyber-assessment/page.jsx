@@ -235,8 +235,10 @@ export default function CyberAssessmentPage() {
   const handleSubmitAnswers = async () => {
     setLoading(true);
     setError('');
+    // Always store session_id so results page can use it for PDF download
+    sessionStorage.setItem('cyber_session_id', sessionId);
     try {
-      const result = await submitAssessmentAnswers({ answers, session_id: sessionId });
+      await submitAssessmentAnswers({ answers, session_id: sessionId });
       router.push(`/cyber-assessment/results?session=${sessionId}&company=${encodeURIComponent(leadInfo.company_name || '')}`);
     } catch {
       router.push(`/cyber-assessment/results?answers=${encodeURIComponent(JSON.stringify(answers))}&company=${encodeURIComponent(leadInfo.company_name || '')}`);

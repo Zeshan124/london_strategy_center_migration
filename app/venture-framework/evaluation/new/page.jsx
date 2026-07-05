@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Home/Footer';
 import { LSC_QUESTIONS, DEFAULT_RESPONSES, SECTORS, STAGES, MOAT_TYPES, BUSINESS_MODELS, SCALING_OPTIONS, COMPOUNDING_OPTIONS, RISK_PROBABILITY_OPTIONS, RISK_IMPACT_OPTIONS } from '@/lib/vef/defaultResponses';
 import { calcAllScores, calcProbability } from '@/lib/vef/scoringEngine';
+import { submitVentureEvaluation } from '@/lib/api/ventureFramework';
 
 const inputClass = "w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#0E2253] transition-colors bg-white";
 const textareaClass = "w-full px-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#0E2253] transition-colors resize-none bg-white";
@@ -654,6 +655,19 @@ export default function NewEvaluationPage() {
     const updated = { ...data, updated_date: new Date().toISOString() };
     if (idx >= 0) all[idx] = updated; else all.push(updated);
     localStorage.setItem('vef_evaluations', JSON.stringify(all));
+
+    // Sync to backend (non-blocking)
+    submitVentureEvaluation({
+      id: updated.id,
+      lead_email: updated.lead_email || localStorage.getItem('vef_lead_email') || '',
+      venture_name: updated.venture_name || updated.responses?.ventureInfo?.name || '',
+      sector: updated.responses?.ventureInfo?.sector || '',
+      stage: updated.responses?.ventureInfo?.stage || '',
+      geography: updated.responses?.ventureInfo?.geography || '',
+      venture_description: updated.responses?.ventureInfo?.description || '',
+      status: updated.status || 'draft',
+    }).catch(() => {});
+
     setTimeout(() => { setSaving(false); setSaved(true); setTimeout(() => setSaved(false), 2000); }, 300);
   };
 

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Home/Footer';
 import { DIMENSION_META } from '@/lib/assessment/engine';
+import { saveRoadmapProgress } from '@/lib/api/aiRoadmap';
 
 const WEEKS = [
   {
@@ -159,6 +160,12 @@ export default function AIRoadmapPage() {
     const updated = { ...completedDays, [key]: !completedDays[key] };
     setCompletedDays(updated);
     sessionStorage.setItem('roadmapProgress', JSON.stringify(updated));
+
+    // Sync to backend (non-blocking)
+    const sessionId = sessionStorage.getItem('aiAssessmentSessionId');
+    if (sessionId) {
+      saveRoadmapProgress(sessionId, updated, totalActivities).catch(() => {});
+    }
   };
 
   const totalActivities = WEEKS.reduce((sum, w) => sum + w.activities.length, 0);

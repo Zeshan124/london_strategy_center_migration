@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Home/Footer';
 import { ROLE_QUESTIONS } from '@/lib/assessment/questionBank';
 import { classifyRole, selectCapabilityQuestions, calculateResults, DIMENSION_META, MATURITY_PROFILES } from '@/lib/assessment/engine';
+import { submitAIAssessment } from '@/lib/api/aiAssessment';
 
 const ARCHETYPE_DESCRIPTIONS = {
   'Strategic Leader': 'You shape direction and navigate complexity — AI amplifies your judgment at scale.',
@@ -457,25 +458,133 @@ function LandingPhase({ onStart }) {
   );
 }
 
+// ── Email Capture ─────────────────────────────────────────────────────────────
+function EmailCapture({ onSubmit, submitting, error }) {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    onSubmit({ name, email });
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-[#0a0f1e] to-[#1a1f3a] flex flex-col">
+      <Navbar />
+      <div className="flex-1 flex flex-col items-center justify-center px-4 py-24">
+        <div className="w-full max-w-md">
+          <div className="text-center mb-8">
+            <div className="w-14 h-14 rounded-full bg-[#e63946]/20 border border-[#e63946]/40 flex items-center justify-center mx-auto mb-5 text-2xl">✓</div>
+            <p className="text-xs font-bold tracking-widest text-[#e63946] uppercase mb-3">Assessment Complete</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Your results are ready</h2>
+            <p className="text-white/60 text-sm leading-relaxed">Enter your details to access your personalised AI Direction report and roadmap.</p>
+          </div>
+
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8">
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-widest text-white/50 mb-1.5">Full Name</label>
+                <input
+                  type="text"
+                  required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Your full name"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#e63946]/60 transition-colors"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-widest text-white/50 mb-1.5">Work Email</label>
+                <input
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="your@company.com"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#e63946]/60 transition-colors"
+                />
+              </div>
+              {error && (
+                <p className="text-xs text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg px-3 py-2">{error}</p>
+              )}
+              <button
+                type="submit"
+                disabled={submitting}
+                className="w-full py-4 bg-[#e63946] hover:bg-[#c1121f] text-white font-semibold rounded-xl text-sm uppercase tracking-widest transition-colors disabled:opacity-50 flex items-center justify-center gap-2 mt-2"
+              >
+                {submitting ? (
+                  <><span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" /> Generating report…</>
+                ) : 'View My AI Direction Report →'}
+              </button>
+            </form>
+            <p className="text-[10px] text-white/30 text-center mt-4">Your details are used only to send your report. No spam.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ── Main Page ─────────────────────────────────────────────────────────────────
 export default function AIAssessmentPage() {
   const router = useRouter();
-  const [phase, setPhase] = useState('landing'); // landing | role | transition | capability
+  const [phase, setPhase] = useState('landing'); // landing | role | transition | capability | email
   const [roleProfile, setRoleProfile] = useState(null);
+  const [roleAnswers, setRoleAnswers] = useState([]);
   const [capQuestions, setCapQuestions] = useState([]);
+  const [capAnswers, setCapAnswers] = useState([]);
+  const [scores, setScores] = useState(null);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
-  const handleRoleComplete = (profile, roleAnswers) => {
+  const handleRoleComplete = (profile, answers) => {
     const qs = selectCapabilityQuestions(profile);
     setRoleProfile(profile);
+    setRoleAnswers(answers);
     setCapQuestions(qs);
-    sessionStorage.setItem('roleAnswers', JSON.stringify({ role_profile: profile, role_answers: roleAnswers }));
+    sessionStorage.setItem('roleAnswers', JSON.stringify({ role_profile: profile, role_answers: answers }));
     setPhase('transition');
   };
 
   const handleCapabilitySubmit = async (answerArray) => {
-    const { dimAvgs, overall, maturity, track } = calculateResults(answerArray, capQuestions, roleProfile);
-    const results = { dimAvgs, overall, maturity, track, answers: answerArray, roleProfile };
-    sessionStorage.setItem('demoResults', JSON.stringify(results));
+    const result = calculateResults(answerArray, capQuestions, roleProfile);
+    setCapAnswers(answerArray);
+    setScores(result);
+    // Store results so results page can render immediately after email submit
+    sessionStorage.setItem('demoResults', JSON.stringify({
+      dimAvgs: result.dimAvgs,
+      overall: result.overall,
+      maturity: result.maturity,
+      track: result.track,
+      answers: answerArray,
+      roleProfile,
+    }));
+    setPhase('email');
+  };
+
+  const handleEmailSubmit = async ({ name, email }) => {
+    setSubmitting(true);
+    setSubmitError('');
+    try {
+      const response = await submitAIAssessment({
+        email,
+        roleProfile,
+        roleAnswers,
+        capabilityAnswers: capAnswers,
+        scores,
+      });
+      // Store session_id so the roadmap can sync progress
+      if (response?.session_id) {
+        sessionStorage.setItem('aiAssessmentSessionId', response.session_id);
+      }
+    } catch (err) {
+      // Non-blocking — still show results even if API fails
+      console.error('AI assessment API error:', err);
+    }
+    // Store email/name for results page personalisation
+    sessionStorage.setItem('assessmentEmail', email);
+    sessionStorage.setItem('assessmentName', name);
+    setSubmitting(false);
     router.push('/ai-direction-scan/results');
   };
 
@@ -483,5 +592,6 @@ export default function AIAssessmentPage() {
   if (phase === 'role') return <RolePhase onComplete={handleRoleComplete} />;
   if (phase === 'transition') return <TransitionScreen roleProfile={roleProfile} onContinue={() => setPhase('capability')} />;
   if (phase === 'capability') return <CapabilityPhase questions={capQuestions} roleProfile={roleProfile} onSubmit={handleCapabilitySubmit} />;
+  if (phase === 'email') return <EmailCapture onSubmit={handleEmailSubmit} submitting={submitting} error={submitError} />;
   return null;
 }
