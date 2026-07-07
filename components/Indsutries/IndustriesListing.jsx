@@ -10,7 +10,7 @@ const caseStudies = [
     title: "Aviation",
     description:
       "Aviation technical operations run on documentation. Airworthiness Directives, Aircraft Maintenance Manuals, Service Bulletins, fault isolation manuals, and engineering orders constitute a library that grows continuously and must be applied precisely.",
-    href: "/case-studies/aviation",
+    href: "/case-study/aviation-ai",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const caseStudies = [
     title: "Entrepreneurship",
     description:
       "Small and medium enterprises operate at a structural disadvantage. Large organisations retain standing access to strategic counsel — advisers who understand the business, the market, and the decision at hand. Founders rarely have that. They are surrounded by generalists, constrained...",
-    href: "/case-studies/entrepreneurship",
+    href: "/case-study/entrepreneurship",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const caseStudies = [
     title: "Healthcare",
     description:
       "Nibras connects patients with specialists across 200 medical specialities — one of the most complex routing challenges in modern healthcare. The organisation's core promise is that patients reach the right expert, at the right time.",
-    href: "/case-studies/healthcare",
+    href: "/case-study/healthcare",
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const caseStudies = [
     title: "Marketing Automation",
     description:
       "A B2B enterprise operating across multiple markets was generating significant marketing activity — and very little pipeline clarity. The organisation ran campaigns across email, paid media, LinkedIn, and its website.",
-    href: "/case-studies/marketing-automation",
+    href: "/case-study/marketing-automation",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const caseStudies = [
     title: "Real Estate",
     description:
       "Mayfair Dunes is a luxury residential and investment property operator with active sales teams across London, Dubai, and Karachi. The business manages high-value leads from internationally mobile buyers — across email, WhatsApp, and a dedicated call centre.",
-    href: "/case-studies/real-estate",
+    href: "/case-study/real-estate",
   },
   {
     id: 6,
@@ -50,7 +50,7 @@ const caseStudies = [
     title: "Sustainability",
     description:
       "Scope 3 emissions — the indirect emissions that run across an organisation's full value chain — represent the largest and least visible portion of most enterprises' carbon footprint. Regulatory pressure is no longer theoretical: CSRD, SEC climate disclosure rules, and procurement...",
-    href: "/case-studies/sustainability",
+    href: "/case-study/sustainability",
   },
 ];
 

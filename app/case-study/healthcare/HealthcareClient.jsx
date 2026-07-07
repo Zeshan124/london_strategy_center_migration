@@ -67,7 +67,7 @@ export default function HealthcareClient() {
               <img
                 alt="Healthcare AI Transformation"
                 className="w-full h-[320px] md:h-[480px] object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&h=800&fit=crop&q=80"
+                src="/images/InnerPages/Industries/healthcare/healthcare-hero.jpg"
               />
             </div>
             <div className="lg:col-span-4 flex flex-col gap-6 h-full justify-between">
@@ -175,7 +175,7 @@ export default function HealthcareClient() {
                   <img
                     alt="Healthcare System"
                     className="w-full h-full object-cover"
-                    src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=800&h=600&fit=crop&q=80"
+                    src="/images/InnerPages/Industries/healthcare/cta-section.jpg"
                   />
                 </div>
               </div>

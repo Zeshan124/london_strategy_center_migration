@@ -76,7 +76,7 @@ export default function SustainabilityClient() {
               <img
                 alt="Scope 3 Emissions Intelligence"
                 className="w-full h-80 md:h-[480px] object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=1200&h=800&fit=crop&q=80"
+                src="/images/InnerPages/Industries/sustainability/sustainability-hero.jpg"
               />
             </div>
             <div className="lg:col-span-4 flex flex-col gap-6 h-full justify-between">
@@ -182,7 +182,7 @@ export default function SustainabilityClient() {
                   <img
                     alt="Sustainability Intelligence"
                     className="w-full h-full object-cover"
-                    src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&h=600&fit=crop&q=80"
+                    src="/images/InnerPages/Industries/sustainability/cta-section.jpg"
                   />
                 </div>
               </div>

@@ -500,7 +500,7 @@ const Navbar = () => {
                                 activeSection === "press" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
                               }`}
                             >
-                              Press Releases
+                              Press Release
                             </button>
                           </li>
                           

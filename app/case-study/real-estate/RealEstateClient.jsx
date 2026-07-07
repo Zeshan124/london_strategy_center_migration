@@ -77,7 +77,7 @@ export default function RealEstateClient() {
               <img
                 alt="Mayfair Dunes Luxury Property Operations"
                 className="w-full h-80 md:h-[480px] object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=800&fit=crop&q=80"
+                src="/images/InnerPages/Industries/real-estate/real-estate-hero.jpg"
               />
             </div>
             <div className="lg:col-span-4 flex flex-col gap-6 h-full justify-between">
@@ -151,7 +151,7 @@ export default function RealEstateClient() {
             <div id="approach" className="scroll-mt-24">
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">LSC's Approach</h2>
               <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                LSC applied Tier 3 — Cybernetic Organisation Design: a framework that treats the organisation as a system to be designed, not a process to be optimised. LSC built a Tier 3 agentic system comprising eight specialised AI agents coordinated across the full sales cycle. Each agent has a defined scope and hard-coded guardrails.
+                LSC applied Tier 3 — Cybernetic Organisation Design: a framework that treats the organisation as a system to be designed, not a process to be optimised. LSC built a Tier 3 agentic system comprising eight specialised AI agents coordinated across the full sales cycle. Each agent has a defined scope and hard-coded guardrails. The system does not self-direct: every consequential step requires a human decision. 
               </p>
               <p className="text-sm text-gray-600 leading-relaxed mb-8">
                
@@ -183,7 +183,7 @@ export default function RealEstateClient() {
                   <img
                     alt="Luxury Real Estate"
                     className="w-full h-full object-cover"
-                    src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop&q=80"
+                    src="/images/InnerPages/Industries/real-estate/cta-section.jpg"
                   />
                 </div>
               </div>

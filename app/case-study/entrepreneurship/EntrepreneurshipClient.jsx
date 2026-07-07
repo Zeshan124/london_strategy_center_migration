@@ -67,7 +67,7 @@ export default function EntrepreneurshipClient() {
               <img
                 alt="SME Founder Strategic Operations"
                 className="w-full h-[320px] md:h-[480px] object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200&h=800&fit=crop&q=80"
+                src="/images/InnerPages/Industries/entrepreneurship/entrepreneurship-hero.jpg"
               />
             </div>
             <div className="lg:col-span-4 flex flex-col gap-6 h-full justify-between">
@@ -162,7 +162,7 @@ export default function EntrepreneurshipClient() {
                   <img
                     alt="Founder at Work"
                     className="w-full h-full object-cover"
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&q=80"
+                    src="/images/InnerPages/Industries/entrepreneurship/cta-section.jpg"
                   />
                 </div>
               </div>

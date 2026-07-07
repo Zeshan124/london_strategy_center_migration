@@ -212,7 +212,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/londonstrategycentre/"
+                href="https://www.instagram.com/londonstrategycentreuk/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 flex items-center justify-center border-2 border-slate-900 rounded-full hover:bg-slate-900 hover:text-white transition-all"
