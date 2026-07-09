@@ -86,13 +86,13 @@ export default function SustainabilityClient() {
                  LSC transformed Scope 3 emissions management by replacing manual, point-in-time reporting with an AI-powered, continuously monitored intelligence system. The solution automates supplier data collection, normalises emissions data across all 15 Scope 3 categories, and generates audit-ready, framework-compliant reports on demand. The result is accurate, real-time sustainability intelligence that reduces compliance effort, strengthens regulatory confidence, and enables more informed strategic decision-making.
                 </p>
               </div>
-              <div className="border-t border-gray-200 pt-4 flex justify-between items-center">
+              {/* <div className="border-t border-gray-200 pt-4 flex justify-between items-center">
                 <div>
                   <p className="font-semibold text-xs text-gray-500">LSC Sustainability Practice</p>
                   <p className="text-xs text-gray-400 mt-0.5">2024</p>
                 </div>
                 <span className="text-2xl">🌿</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -220,9 +220,9 @@ export default function SustainabilityClient() {
 
             {/* CTA */}
             <div className="border border-gray-200 rounded-2xl p-8 md:p-10 text-center">
-              <h2 className="text-xl font-semibold text-[#0E2253] mb-3">Assess Your Scope 3 Data Infrastructure</h2>
+              <h2 className="text-xl font-semibold text-[#0E2253] mb-3">Request a capability diagnostic  </h2>
               <p className="text-sm text-gray-500 max-w-xl mx-auto mb-6 leading-relaxed">
-                LSC's Sustainability practice builds Tier 3 agentic systems that transform emissions auditing from a compliance burden into a continuous intelligence capability.
+                Contact London Strategy Centre to assess your Scope 3 data infrastructure.
               </p>
               <a href="#contact" className="inline-block px-8 py-3.5 bg-[#0E2253] text-white font-bold text-xs uppercase tracking-widest hover:bg-[#1a3570] transition-all">
                 Request a Capability Diagnostic →

@@ -77,13 +77,13 @@ export default function HealthcareClient() {
                   LSC transformed Nibras' patient intake process by deploying AI voice agents across 200 medical specialities to conduct structured symptom assessments and intelligent triage. The solution accelerates patient routing, identifies urgent cases earlier, and provides clinicians with structured intake data while preserving human clinical decision-making. The result is faster access to appropriate care, improved operational efficiency, and scalable healthcare delivery without proportional increases in staffing.
                 </p>
               </div>
-              <div className="border-t border-gray-200 pt-4 flex justify-between items-center">
+              {/* <div className="border-t border-gray-200 pt-4 flex justify-between items-center">
                 <div>
                   <p className="font-semibold text-xs text-gray-500">LSC Healthcare Practice — Nibras</p>
                   <p className="text-xs text-gray-400 mt-0.5">2024</p>
                 </div>
                 <span className="text-2xl">🏥</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -206,7 +206,7 @@ export default function HealthcareClient() {
             </div>
 
             {/* CTA */}
-            <div className="border border-gray-200 rounded-2xl p-8 md:p-10 text-center">
+            {/* <div className="border border-gray-200 rounded-2xl p-8 md:p-10 text-center">
               <h2 className="text-xl font-semibold text-[#0E2253] mb-3">Transform Patient Intake with AI Voice Agents</h2>
               <p className="text-sm text-gray-500 max-w-xl mx-auto mb-6 leading-relaxed">
                 Our Healthcare practice helps organisations design and deploy Tier 3 agentic systems that operate at population scale.
@@ -214,7 +214,7 @@ export default function HealthcareClient() {
               <a href="#contact" className="inline-block px-8 py-3.5 bg-[#0E2253] text-white font-bold text-xs uppercase tracking-widest hover:bg-[#1a3570] transition-all">
                 Request a Capability Diagnostic →
               </a>
-            </div>
+            </div> */}
 
             {/* Contact Form */}
             {/* <div id="contact" className="scroll-mt-24 border border-gray-200 rounded-2xl p-8 md:p-10 bg-white">

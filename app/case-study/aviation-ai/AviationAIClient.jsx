@@ -94,13 +94,13 @@ function WhitepaperView({ onOpenSimulator }) {
                Request a Demo
               </button> */}
             </div>
-            <div className="border-t border-gray-200 pt-4 flex justify-between items-center">
+            {/* <div className="border-t border-gray-200 pt-4 flex justify-between items-center">
               <div>
                 <p className="font-semibold text-xs text-gray-500">Aviation technical operations</p>
                 <p className="text-xs text-gray-400 mt-0.5">17th june 2026</p>
               </div>
               <span className="text-2xl">✈</span>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -204,7 +204,7 @@ function WhitepaperView({ onOpenSimulator }) {
           </div>
 
           {/* CTA */}
-          <div className="border border-gray-200 rounded-2xl p-8 md:p-10 text-center">
+          {/* <div className="border border-gray-200 rounded-2xl p-8 md:p-10 text-center">
             <h2 className="text-xl font-semibold text-[#0E2253] mb-3">See It in Action</h2>
             <p className="text-sm text-gray-500 max-w-xl mx-auto mb-6 leading-relaxed">
               The AirCore simulator demonstrates the point-of-work diagnostic system with live fault scenarios, documentation cross-referencing, and compliance sign-off.
@@ -215,7 +215,7 @@ function WhitepaperView({ onOpenSimulator }) {
             >
               Request a Demo
             </button>
-          </div>
+          </div> */}
 
         </div>
       </section>

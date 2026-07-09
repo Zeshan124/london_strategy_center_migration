@@ -77,13 +77,13 @@ export default function EntrepreneurshipClient() {
                   LSC developed an AI-powered Digital Twin mentor that provides SME founders with continuous, business-specific strategic guidance based on their own goals, projects, and operating context. By replacing static planning with a living organisational intelligence model, the solution enables faster decision-making, proactive risk identification, and more effective project execution. The result is enterprise-grade strategic support that augments founder judgement and scales with the business.
                 </p>
               </div>
-              <div className="border-t border-gray-200 pt-4 flex justify-between items-center">
+              {/* <div className="border-t border-gray-200 pt-4 flex justify-between items-center">
                 <div>
                   <p className="font-semibold text-xs text-gray-500">LSC Entrepreneurship &amp; Growth Practice</p>
                   <p className="text-xs text-gray-400 mt-0.5">2024</p>
                 </div>
                 <span className="text-2xl">🧠</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

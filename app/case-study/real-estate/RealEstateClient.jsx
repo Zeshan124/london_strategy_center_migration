@@ -87,13 +87,13 @@ export default function RealEstateClient() {
                   LSC redesigned Mayfair Dunes’ multi-city sales operation with an AI-driven, human-governed agentic system that standardised lead qualification, improved pipeline visibility, and preserved organisational knowledge. By introducing structured workflows, defined governance, and real-time sales intelligence, the solution eliminated inconsistent decision-making while ensuring human oversight of critical commercial decisions. The result is a more scalable, transparent, and resilient sales operation across London, Dubai, and Karachi.
                 </p>
               </div>
-              <div className="border-t border-gray-200 pt-4 flex justify-between items-center">
+              {/* <div className="border-t border-gray-200 pt-4 flex justify-between items-center">
                 <div>
                   <p className="font-semibold text-xs text-gray-500">LSC Real Estate Practice — Mayfair Dunes</p>
                   <p className="text-xs text-gray-400 mt-0.5">2024</p>
                 </div>
                 <span className="text-2xl">🏛</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -214,7 +214,7 @@ export default function RealEstateClient() {
             </div>
 
             {/* CTA */}
-            <div className="border border-gray-200 rounded-2xl p-8 md:p-10 text-center">
+            {/* <div className="border border-gray-200 rounded-2xl p-8 md:p-10 text-center">
               <h2 className="text-xl font-semibold text-[#0E2253] mb-3">Eliminate the Failure Modes in Your Sales Operation</h2>
               <p className="text-sm text-gray-500 max-w-xl mx-auto mb-6 leading-relaxed">
                 LSC's Real Estate practice builds Tier 3 agentic systems designed around your sales cycle, your markets, and your governance requirements.
@@ -222,7 +222,7 @@ export default function RealEstateClient() {
               <a href="#contact" className="inline-block px-8 py-3.5 bg-[#0E2253] text-white font-bold text-xs uppercase tracking-widest hover:bg-[#1a3570] transition-all">
                 Request a Capability Diagnostic →
               </a>
-            </div>
+            </div> */}
 
             {/* Contact Form */}
             {/* <div id="contact" className="scroll-mt-24 border border-gray-200 rounded-2xl p-8 md:p-10 bg-white">
