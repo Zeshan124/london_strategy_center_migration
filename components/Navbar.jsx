@@ -112,7 +112,17 @@ const Navbar = () => {
     { name: "Specialist Programme Support", href: "/cyber-security/specialist-programme-support" },
   ];
 
-  const pressReleases = [    
+  const caseStudies = [
+    { name: "Aviation Technical Operations", href: "/case-study/aviation-ai" },
+    { name: "Entrepreneurship", href: "/case-study/entrepreneurship" },
+    { name: "Healthcare", href: "/case-study/healthcare" },
+    { name: "Marketing Automation", href: "/case-study/marketing-automation" },
+    { name: "Real Estate", href: "/case-study/real-estate" },
+    { name: "Sustainability", href: "/case-study/sustainability" },
+    { name: "SME Digital Twin — Strategy Tool", href: "/case-study/sme-digital-twin" },
+  ];
+
+  const pressReleases = [
     { name: "National Defence University KSA Partnership", href: "/press-release/nduksa" },
     { name: "LSC Launches Cyber Excellence Certification", href: "/press-release/cyberexcellence" },
     { name: "LSC & Arab International Women's Forum", href: "/press-release/AIWF" },
@@ -154,6 +164,7 @@ const Navbar = () => {
     // { name: "BLOG", href: "/blog" },
     { name: "CYBER SECURITY", href: "/cyber-security" },
       { name: "ADVISORY SERVICES", href: "/advisory-services" },
+    // { name: "CASE STUDIES", href: "/case-study" },
     { name: "PRESS RELEASE", href: "/press-release" },
     // { name: "THE REFRAME LAB", href: "/trl" },
     // { name: "DIGITAL TWIN", href: "/digital-twin" },
@@ -229,6 +240,7 @@ const Navbar = () => {
                       "ARTIFICIAL INTELLIGENCE": aiServices,
                       "CYBER SECURITY": cyberServices,
                       "ADVISORY SERVICES": advisoryServices,
+                      "CASE STUDIES": caseStudies,
                       "PRESS RELEASE": pressReleases,
                     };
                     const dropdownItems = dropdownMap[item.name];
@@ -429,6 +441,16 @@ const Navbar = () => {
                               Press Releases
                             </button>
                           </li> */}
+                          <li>
+                            <button
+                              onClick={() => setActiveSection(activeSection === "case-studies" ? "trl" : "case-studies")}
+                              className={`w-full text-left text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded ${
+                                activeSection === "case-studies" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
+                              }`}
+                            >
+                              Case Studies
+                            </button>
+                          </li>
                           <li>
                             <button
                               onClick={() => setActiveSection(activeSection === "trl" ? "industries" : "trl")}
@@ -712,6 +734,37 @@ const Navbar = () => {
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
                             View all Press Releases →
+                          </Link>
+                        </div>
+                      </div>
+                    ) : activeSection === "case-studies" ? (
+                      /* Case Studies */
+                      <div>
+                        <Link href="/case-study" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-900 hover:text-[#0E2253] hover:underline mb-1 block">
+                          Case Studies
+                        </Link>
+                        <p className="text-xs text-gray-600 mb-4">
+                          Real-world transformations across aviation, healthcare, real estate, sustainability, and more.
+                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 sm:gap-x-12 gap-y-2">
+                          {caseStudies.map((cs, index) => (
+                            <Link
+                              key={index}
+                              href={cs.href}
+                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {cs.name}
+                            </Link>
+                          ))}
+                        </div>
+                        <div className="mt-6 pt-4 border-t border-gray-100">
+                          <Link
+                            href="/case-study"
+                            className="text-sm font-medium text-[#0E2253] hover:underline"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            View all Case Studies →
                           </Link>
                         </div>
                       </div>
