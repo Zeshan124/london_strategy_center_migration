@@ -119,7 +119,7 @@ const Navbar = () => {
     { name: "Marketing Automation", href: "/case-study/marketing-automation" },
     { name: "Real Estate", href: "/case-study/real-estate" },
     { name: "Sustainability", href: "/case-study/sustainability" },
-    { name: "SME Digital Twin — Strategy Tool", href: "/case-study/sme-digital-twin" },
+    // { name: "SME Digital Twin — Strategy Tool", href: "/case-study/sme-digital-twin" },
   ];
 
   const pressReleases = [
