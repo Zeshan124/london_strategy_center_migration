@@ -44,15 +44,6 @@ export default function DigitalTwinHero() {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    // Validate required fields
-    if (
-      !formData.fullName.trim() ||
-      !formData.email.trim()
-    ) {
-      alert("Please fill in all required fields");
-      return;
-    }
-
     setIsSubmitting(true);
     const name = formData.fullName;
 

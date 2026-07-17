@@ -225,7 +225,6 @@ export default function PoliciesPage() {
                 id={section.id}
                 className="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden"
               >
-                {/* Section Header */}
                 <div className="bg-linear-to-r from-[#F1EEEA] to-white px-6 sm:px-8 py-6 border-b border-gray-100">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-[#0E2253]/10 flex items-center justify-center text-2xl shrink-0">
@@ -245,7 +244,6 @@ export default function PoliciesPage() {
                   </div>
                 </div>
 
-                {/* Section Body */}
                 <div className="px-6 sm:px-8 py-6">
                   {renderContent(section.content)}
                 </div>

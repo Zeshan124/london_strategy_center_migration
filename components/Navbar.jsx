@@ -119,7 +119,7 @@ const Navbar = () => {
     { name: "Marketing Automation", href: "/case-study/marketing-automation" },
     { name: "Real Estate", href: "/case-study/real-estate" },
     { name: "Sustainability", href: "/case-study/sustainability" },
-    { name: "SME Digital Twin — Strategy Tool", href: "/case-study/sme-digital-twin" },
+    // { name: "SME Digital Twin — Strategy Tool", href: "/case-study/sme-digital-twin" },
   ];
 
   const pressReleases = [
@@ -443,16 +443,6 @@ const Navbar = () => {
                           </li> */}
                           <li>
                             <button
-                              onClick={() => setActiveSection(activeSection === "case-studies" ? "trl" : "case-studies")}
-                              className={`w-full text-left text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded ${
-                                activeSection === "case-studies" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
-                              }`}
-                            >
-                              Case Studies
-                            </button>
-                          </li>
-                          <li>
-                            <button
                               onClick={() => setActiveSection(activeSection === "trl" ? "industries" : "trl")}
                               className={`w-full text-left text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded ${
                                 activeSection === "trl" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
@@ -514,6 +504,16 @@ const Navbar = () => {
                             >
                               About LSC
                             </Link>
+                          </li>
+                          <li>
+                            <button
+                              onClick={() => setActiveSection(activeSection === "case-studies" ? "trl" : "case-studies")}
+                              className={`w-full text-left text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded ${
+                                activeSection === "case-studies" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
+                              }`}
+                            >
+                              Case Studies
+                            </button>
                           </li>
                           <li>
                             <button

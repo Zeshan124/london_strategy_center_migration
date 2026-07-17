@@ -1,9 +1,9 @@
 "use client";
 
-import DigitalAvatarModal from "./DigitalAvatarModal";
 import { X } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
+import { submitLeadForm } from "@/lib/api/lead";
 
 export default function HowItWorks() {
   const features = [
@@ -45,8 +45,7 @@ export default function HowItWorks() {
   ];
 
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const [isAvatarOpen, setIsAvatarOpen] = useState(false);
-  const [submittedName, setSubmittedName] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -64,36 +63,20 @@ export default function HowItWorks() {
     }));
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
-    // Validate required fields
-    if (
-      !formData.fullName.trim() ||
-      !formData.email.trim() ||
-      !formData.phone.trim()
-    ) {
-      alert("Please fill in all required fields");
-      return;
+    try {
+      await submitLeadForm(formData.fullName, formData.email, "Digital-Twin");
+    } catch (err) {
+      console.error("Lead API error:", err);
     }
 
-    setIsSubmitting(true);
-    const name = formData.fullName;
-
-    // Close the form and open the digital avatar in-page
-    setTimeout(() => {
-      setSubmittedName(name);
-      setIsFormOpen(false);
-      setIsAvatarOpen(true);
-      setFormData({
-        fullName: "",
-        email: "",
-        phone: "",
-        organization: "",
-        objective: "",
-      });
-      setIsSubmitting(false);
-    }, 500);
+    setIsFormOpen(false);
+    setIsSuccess(true);
+    setFormData({ fullName: "", email: "", phone: "", organization: "", objective: "" });
+    setIsSubmitting(false);
   };
 
   return (
@@ -201,7 +184,7 @@ export default function HowItWorks() {
                   onClick={() => setIsFormOpen(true)}
                   className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 bg-white border-2 border-[#0E2253] text-gray-900 rounded-xl text-sm text-center hover:bg-gray-900 hover:text-white transition-all duration-300"
                 >
-                  BOOK A SESSION
+                  BOOK A SESSIO
                   <img
                     src="/images/InnerPages/digitaltwin/arrow-up.svg"
                     alt="Play Icon"
@@ -237,12 +220,24 @@ export default function HowItWorks() {
         </div>
       </div>
 
-      {/* Digital Avatar Modal */}
-<DigitalAvatarModal
-  isOpen={isAvatarOpen}
-  onClose={() => setIsAvatarOpen(false)}
-  userName={submittedName}
-/>
+      {/* Success Modal */}
+{isSuccess && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+    <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-8">
+      <button onClick={() => setIsSuccess(false)} className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
+        <X size={20} />
+      </button>
+      <div className="text-center">
+        <h3 className="text-3xl font-bold text-[#0E2253] mb-4">Thank you</h3>
+        <p className="text-gray-600 text-base leading-relaxed mb-2">Your session request has been received.</p>
+        <p className="text-gray-600 text-base leading-relaxed mb-8">Our team will be in touch shortly.</p>
+        <button onClick={() => setIsSuccess(false)} className="px-12 py-3 bg-[#0E2253] text-white rounded-lg font-semibold hover:bg-[#1a3570] transition-all duration-300">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+)}
 
 {/* Consultation Form Modal */}
 {isFormOpen && (

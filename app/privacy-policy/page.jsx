@@ -75,8 +75,6 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-
-      {/* Hero Banner */}
       <div className="bg-[#0E2253] pt-36 pb-16 sm:pb-20">
         <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
           <p className="text-xs font-semibold tracking-widest text-white/50 uppercase mb-4">Legal</p>
@@ -172,10 +170,8 @@ export default function PrivacyPolicyPage() {
               </div>
             ))}
           </div>
-
         </div>
       </main>
-
       <Footer />
     </div>
   );
