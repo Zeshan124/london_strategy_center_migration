@@ -18,18 +18,14 @@ import {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Home/Footer";
 import FeaturedCampaignsSection from "@/components/blog/FeaturedCampaignsSection";
-import DigitalAvatarModal from "./DigitalAvatarModal";
+import { submitFreeSessionBooking } from "@/lib/api/freeSession";
 
 export default function DigitalTwinHero() {
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const [isAvatarOpen, setIsAvatarOpen] = useState(false);
-  const [submittedName, setSubmittedName] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
-    // phone: "",
-    // organization: "",
-    // objective: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -41,26 +37,20 @@ export default function DigitalTwinHero() {
     }));
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-
     setIsSubmitting(true);
-    const name = formData.fullName;
 
-    // Close the form and open the digital avatar in-page
-    setTimeout(() => {
-      setSubmittedName(name);
-      setIsFormOpen(false);
-      setIsAvatarOpen(true);
-      setFormData({
-        fullName: "",
-        email: "",
-        // phone: "",
-        // organization: "",
-        // objective: "",
-      });
-      setIsSubmitting(false);
-    }, 500);
+    try {
+      await submitFreeSessionBooking(formData.fullName, formData.email);
+    } catch (err) {
+      console.error("Free session booking error:", err);
+    }
+
+    setIsFormOpen(false);
+    setIsSuccess(true);
+    setFormData({ fullName: "", email: "" });
+    setIsSubmitting(false);
   };
 
   return (
@@ -140,12 +130,31 @@ export default function DigitalTwinHero() {
         </div>
       </div>
 
-      {/* Digital Avatar Modal */}
-      <DigitalAvatarModal
-        isOpen={isAvatarOpen}
-        onClose={() => setIsAvatarOpen(false)}
-        userName={submittedName}
-      />
+      {/* Success Modal */}
+      {isSuccess && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-8">
+            <button
+              onClick={() => setIsSuccess(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+              aria-label="Close"
+            >
+              <X size={20} />
+            </button>
+            <div className="text-center">
+              <h3 className="text-3xl font-bold text-[#0E2253] mb-4">Thank you</h3>
+              <p className="text-gray-600 text-base leading-relaxed mb-2">Your free session request has been received.</p>
+              <p className="text-gray-600 text-base leading-relaxed mb-8">Our team will be in touch shortly.</p>
+              <button
+                onClick={() => setIsSuccess(false)}
+                className="px-12 py-3 bg-[#0E2253] text-white rounded-lg font-semibold hover:bg-[#1a3570] transition-all duration-300"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Consultation Form Modal */}
       {isFormOpen && (
@@ -253,9 +262,7 @@ export default function DigitalTwinHero() {
                 disabled={isSubmitting}
                 className="w-full bg-[#0E2253] text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed mt-6"
               >
-                {isSubmitting
-                  ? "Opening Avatar..."
-                  : "Book a Free Session"}
+                {isSubmitting ? "Submitting..." : "Book a Free Session"}
               </button>
             </form>
           </div>
