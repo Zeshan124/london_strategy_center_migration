@@ -118,7 +118,7 @@ export default function DigitalTwinHero() {
           {/* Featured Video - Full Width */}
           <div className="relative mb-0 sm:mb-12 pt-12 sm:pt-24 rounded-2xl overflow-hidden">
             <video
-              src="/images/InnerPages/digitaltwin/Paul_Nanson.mp4"
+              src="/images/InnerPages/digitaltwin/Major_General_Paul_Nanson_Introduction.mp4"
               autoPlay
               loop
               muted
