@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
+import { SITE, organizationSchema, websiteSchema } from "@/lib/seo";
 
 const metropolis = localFont({
   src: [
@@ -19,6 +20,53 @@ const metropolis = localFont({
 });
 
 export const metadata = {
+  metadataBase: new URL(SITE.url),
+  title: {
+    default: "London Strategy Centre | Building Intelligent Organisations for an AI-Driven World",
+    template: "%s | London Strategy Centre",
+  },
+  description: SITE.description,
+  applicationName: SITE.name,
+  keywords: [
+    "London Strategy Centre",
+    "AI capability transformation",
+    "agentic AI",
+    "cyber security advisory",
+    "strategic advisory",
+    "digital twin",
+    "cybernetic organisation design",
+    "AI strategy consulting",
+  ],
+  authors: [{ name: SITE.name, url: SITE.url }],
+  creator: SITE.name,
+  publisher: SITE.name,
+  alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    siteName: SITE.name,
+    url: SITE.url,
+    title: "London Strategy Centre | Building Intelligent Organisations for an AI-Driven World",
+    description: SITE.description,
+    locale: SITE.locale,
+    images: [{ url: SITE.ogImage, width: 1200, height: 630, alt: SITE.name }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "London Strategy Centre",
+    description: SITE.description,
+    images: [SITE.ogImage],
+  },
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
@@ -34,7 +82,6 @@ export default function RootLayout({ children }) {
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-          integrity="sha512-..." // optionally you can include integrity
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
@@ -50,6 +97,15 @@ export default function RootLayout({ children }) {
         gtag('config', 'G-L2TQZVBC96');
       `}</Script>
       <body className={`${metropolis.variable} antialiased`} suppressHydrationWarning>
+        {/* Structured data: Organization + WebSite */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema()) }}
+        />
         {children}
       </body>
     </html>
