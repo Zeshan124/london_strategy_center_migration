@@ -27,7 +27,9 @@ export default function SustainabilityClient() {
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    let ticking = false;
+    const update = () => {
+      ticking = false;
       const pos = window.scrollY + 200;
       for (const item of NAV_ITEMS) {
         const el = document.getElementById(item.id);
@@ -37,7 +39,13 @@ export default function SustainabilityClient() {
         }
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -71,11 +79,11 @@ export default function SustainabilityClient() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <div className="lg:col-span-8 relative overflow-hidden group border border-gray-200">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            <div className="lg:col-span-8 relative overflow-hidden group border border-gray-200 min-h-[320px] md:min-h-[480px] lg:min-h-0">
               <img
                 alt="Scope 3 Emissions Intelligence"
-                className="w-full h-80 md:h-[480px] object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 src="/images/InnerPages/Industries/sustainability/sustainability-hero.jpg"
               />
             </div>
@@ -169,7 +177,7 @@ export default function SustainabilityClient() {
                 </div>
               </div> */}
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
                 <div>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     The agentic system operates across all 15 Scope 3 categories simultaneously. Agents identify data gaps and query suppliers automatically, without requiring manual intervention from the sustainability team. Every action is logged, timestamped, and traceable — creating a continuous, structured audit trail rather than a periodic report.
@@ -178,10 +186,10 @@ export default function SustainabilityClient() {
                     At the core of this architecture is organisational intelligence built for execution coherence: the system does not wait for humans to initiate a reporting cycle. It maintains a live emissions profile, flags anomalies, and generates framework-aligned outputs — against CSRD, GHG Protocol, and sector-specific standards — on demand. This is AI-augmented transformation applied to a domain where the cost of imprecision is rising rapidly.
                   </p>
                 </div>
-                <div className="border border-gray-200 overflow-hidden rounded-lg">
+                <div className="border border-gray-200 overflow-hidden rounded-lg relative min-h-[280px] md:min-h-[400px] lg:min-h-0">
                   <img
                     alt="Sustainability Intelligence"
-                    className="w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover"
                     src="/images/InnerPages/Industries/sustainability/cta-section.jpg"
                   />
                 </div>

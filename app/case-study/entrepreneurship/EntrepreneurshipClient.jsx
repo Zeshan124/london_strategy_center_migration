@@ -18,7 +18,9 @@ export default function EntrepreneurshipClient() {
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    let ticking = false;
+    const update = () => {
+      ticking = false;
       const pos = window.scrollY + 200;
       for (const item of NAV_ITEMS) {
         const el = document.getElementById(item.id);
@@ -28,7 +30,13 @@ export default function EntrepreneurshipClient() {
         }
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -62,11 +70,11 @@ export default function EntrepreneurshipClient() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <div className="lg:col-span-8 relative overflow-hidden group border border-gray-200">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            <div className="lg:col-span-8 relative overflow-hidden group border border-gray-200 min-h-[320px] md:min-h-[480px] lg:min-h-0">
               <img
                 alt="SME Founder Strategic Operations"
-                className="w-full h-[320px] md:h-[480px] object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 src="/images/InnerPages/Industries/entrepreneurship/entrepreneurship-hero.jpg"
               />
             </div>
@@ -143,7 +151,7 @@ export default function EntrepreneurshipClient() {
             {/* LSC's Approach */}
             <div id="approach" className="scroll-mt-24">
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">LSC's Approach</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
                 <div>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     LSC developed a Digital Twin mentor architecture under Tier 3 — Cybernetic Organisation Design: an AI model built specifically around the founder’s business, not a generic assistant applied to it.
@@ -158,10 +166,10 @@ export default function EntrepreneurshipClient() {
                    The architecture is designed to grow with the business. As the charter evolves, as projects close and open, as the operating environment shifts, the Digital Twin updates. It is not a report. It is a living model of the organisation, capable of supporting decision quality across every layer of execution.
                   </p>
                 </div>
-                <div className="border border-gray-200 overflow-hidden rounded-lg">
+                <div className="border border-gray-200 overflow-hidden rounded-lg relative min-h-[280px] md:min-h-[400px] lg:min-h-0">
                   <img
                     alt="Founder at Work"
-                    className="w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover"
                     src="/images/InnerPages/Industries/entrepreneurship/cta-section.jpg"
                   />
                 </div>

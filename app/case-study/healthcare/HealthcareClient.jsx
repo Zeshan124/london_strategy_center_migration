@@ -18,7 +18,9 @@ export default function HealthcareClient() {
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    let ticking = false;
+    const update = () => {
+      ticking = false;
       const pos = window.scrollY + 200;
       for (const item of NAV_ITEMS) {
         const el = document.getElementById(item.id);
@@ -28,7 +30,13 @@ export default function HealthcareClient() {
         }
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -62,11 +70,11 @@ export default function HealthcareClient() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <div className="lg:col-span-8 relative overflow-hidden group border border-gray-200">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            <div className="lg:col-span-8 relative overflow-hidden group border border-gray-200 min-h-[320px] md:min-h-[480px] lg:min-h-0">
               <img
                 alt="Healthcare AI Transformation"
-                className="w-full h-[320px] md:h-[480px] object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 src="/images/InnerPages/Industries/healthcare/healthcare-hero.jpg"
               />
             </div>
@@ -162,7 +170,7 @@ export default function HealthcareClient() {
                 </div>
               </div> */}
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
                 <div>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     When a patient engages, the voice agent asks structured questions, identifies symptom patterns, and assesses urgency. Where conditions require immediate intervention, the agent delivers clear, clinically appropriate first aid guidance before the patient reaches a human clinician.
@@ -171,10 +179,10 @@ export default function HealthcareClient() {
                     Every agent has defined escalation rules. No agent diagnoses independently. The agentic system acts as organisational intelligence at the front line — ensuring that decision quality is built into the intake process, not left to chance.
                   </p>
                 </div>
-                <div className="border border-gray-200 overflow-hidden rounded-lg">
+                <div className="border border-gray-200 overflow-hidden rounded-lg relative min-h-[280px] md:min-h-[400px] lg:min-h-0">
                   <img
                     alt="Healthcare System"
-                    className="w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover"
                     src="/images/InnerPages/Industries/healthcare/cta-section.jpg"
                   />
                 </div>

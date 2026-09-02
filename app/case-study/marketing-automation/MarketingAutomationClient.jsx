@@ -29,7 +29,9 @@ function WhitepaperView({ onOpenSimulator }) {
   const [scrollSection, setScrollSection] = useState('context');
 
   useEffect(() => {
-    const handleScroll = () => {
+    let ticking = false;
+    const update = () => {
+      ticking = false;
       const pos = window.scrollY + 200;
       for (const item of NAV_ITEMS) {
         const el = document.getElementById(item.id);
@@ -39,7 +41,13 @@ function WhitepaperView({ onOpenSimulator }) {
         }
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -74,11 +82,11 @@ Revenue Intelligence:
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div className="lg:col-span-8 relative overflow-hidden group border border-gray-200">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <div className="lg:col-span-8 relative overflow-hidden group border border-gray-200 min-h-[320px] md:min-h-[480px] lg:min-h-0">
             <img
               alt="Aviation Hangar Diagnostic Operations"
-              className="w-full h-[320px] md:h-[480px] object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               src="/images/InnerPages/Industries/marketing/main-banner.jpg"
             />
           </div>
@@ -204,7 +212,7 @@ Revenue Intelligence:
 
           {/* What Changed */}
           <div id="outcomes" className="scroll-mt-24">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
               <div>
                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">What Changed</h2>
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
@@ -217,10 +225,10 @@ Revenue Intelligence:
                   Marketing and sales now share a single view of the pipeline. The conversation between functions has shifted from volume to quality, and from attribution disputes to shared data.
                 </p>
               </div>
-              <div className="border border-gray-200 overflow-hidden rounded-lg">
+              <div className="border border-gray-200 overflow-hidden rounded-lg relative min-h-[280px] md:min-h-[400px] lg:min-h-0">
                 <img
                   alt="Aviation Engineer at Work"
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover"
                   src="/images/InnerPages/Industries/marketing/cta-section.jpg"
                 />
               </div>

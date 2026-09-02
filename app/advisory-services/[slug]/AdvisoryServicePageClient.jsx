@@ -45,7 +45,7 @@ export default function AdvisoryServicePage() {
         {/* 1. Hero */}
         <AdvisoryServiceHero service={service} />
 
-        {/* 2. CTA Section */}
+        {/* 2. CTA Sections */}
         <AdvisoryCTASection cta={service.cta} />
 
         <SecondCTASection cta={service.secondCta} />
@@ -64,7 +64,7 @@ export default function AdvisoryServicePage() {
 
         
 
-        {/* 4. Second CTA */}
+        
         
        
 
