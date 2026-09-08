@@ -19,10 +19,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Home/Footer";
 import FeaturedCampaignsSection from "@/components/blog/FeaturedCampaignsSection";
 import { submitFreeSessionBooking } from "@/lib/api/freeSession";
+import DigitalAvatarModal from "./DigitalAvatarModal";
 
 export default function DigitalTwinHero() {
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [isAvatarOpen, setIsAvatarOpen] = useState(false);
+  const [avatarName, setAvatarName] = useState("");
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -47,8 +49,9 @@ export default function DigitalTwinHero() {
       console.error("Free session booking error:", err);
     }
 
+    setAvatarName(formData.fullName);
     setIsFormOpen(false);
-    setIsSuccess(true);
+    setIsAvatarOpen(true);
     setFormData({ fullName: "", email: "" });
     setIsSubmitting(false);
   };
@@ -130,31 +133,12 @@ export default function DigitalTwinHero() {
         </div>
       </div>
 
-      {/* Success Modal */}
-      {isSuccess && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-8">
-            <button
-              onClick={() => setIsSuccess(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
-              aria-label="Close"
-            >
-              <X size={20} />
-            </button>
-            <div className="text-center">
-              <h3 className="text-3xl font-bold text-[#0E2253] mb-4">Thank you</h3>
-              <p className="text-gray-600 text-base leading-relaxed mb-2">Your free session request has been received.</p>
-              <p className="text-gray-600 text-base leading-relaxed mb-8">Our team will be in touch shortly.</p>
-              <button
-                onClick={() => setIsSuccess(false)}
-                className="px-12 py-3 bg-[#0E2253] text-white rounded-lg font-semibold hover:bg-[#1a3570] transition-all duration-300"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Live Avatar Modal — opens after the free session form is submitted */}
+      <DigitalAvatarModal
+        isOpen={isAvatarOpen}
+        onClose={() => setIsAvatarOpen(false)}
+        userName={avatarName}
+      />
 
       {/* Consultation Form Modal */}
       {isFormOpen && (

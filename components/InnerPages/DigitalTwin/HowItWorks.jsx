@@ -184,7 +184,7 @@ export default function HowItWorks() {
                   onClick={() => setIsFormOpen(true)}
                   className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 bg-white border-2 border-[#0E2253] text-gray-900 rounded-xl text-sm text-center hover:bg-gray-900 hover:text-white transition-all duration-300"
                 >
-                  BOOK A SESSIO
+                  BOOK A SESSION
                   <img
                     src="/images/InnerPages/digitaltwin/arrow-up.svg"
                     alt="Play Icon"
@@ -348,7 +348,7 @@ export default function HowItWorks() {
           disabled={isSubmitting}
           className="w-full bg-[#0E2253] text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 disabled:opacity-50"
         >
-          {isSubmitting ? "Opening Avatar..." : "Book a Session"}
+          {isSubmitting ? "Submitting..." : "Book a Session"}
         </button>
       </form>
     </div>
