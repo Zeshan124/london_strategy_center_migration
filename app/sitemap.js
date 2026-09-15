@@ -44,8 +44,10 @@ export default function sitemap() {
     { path: "/trl/podcast", priority: 0.7, changeFrequency: "weekly" },
     { path: "/reframe-reads", priority: 0.7, changeFrequency: "weekly" },
     { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/latest-research", priority: 0.7, changeFrequency: "weekly" },
     { path: "/press-release", priority: 0.7, changeFrequency: "weekly" },
     { path: "/services", priority: 0.6, changeFrequency: "monthly" },
+    { path: "/customised-solutions", priority: 0.6, changeFrequency: "monthly" },
     { path: "/free-material", priority: 0.5, changeFrequency: "monthly" },
     { path: "/women-leadership", priority: 0.6, changeFrequency: "monthly" },
     { path: "/white-paper-cyber-excellence", priority: 0.6, changeFrequency: "monthly" },
@@ -54,6 +56,7 @@ export default function sitemap() {
     { path: "/cyber-assessment", priority: 0.7, changeFrequency: "monthly" },
     { path: "/venture-framework", priority: 0.7, changeFrequency: "monthly" },
     { path: "/contact", priority: 0.6, changeFrequency: "yearly" },
+    { path: "/work-with-us", priority: 0.5, changeFrequency: "monthly" },
     { path: "/privacy-policy", priority: 0.3, changeFrequency: "yearly" },
     { path: "/policies-and-legislation", priority: 0.3, changeFrequency: "yearly" },
   ].map((r) => ({ url: url(r.path), lastModified: now, changeFrequency: r.changeFrequency, priority: r.priority }));

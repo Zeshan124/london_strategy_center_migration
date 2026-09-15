@@ -505,6 +505,33 @@ const Navbar = () => {
                               About LSC
                             </Link>
                           </li>
+                          {/* <li>
+                            <Link
+                              href="/work-with-us"
+                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              Work With Us
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/latest-research"
+                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              Latest Research
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/customised-solutions"
+                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded hover:bg-gray-50"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              Customised Solutions
+                            </Link>
+                          </li> */}
                           <li>
                             <button
                               onClick={() => setActiveSection(activeSection === "case-studies" ? "trl" : "case-studies")}

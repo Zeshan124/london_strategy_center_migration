@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { X, Play } from 'lucide-react';
 import Link from 'next/link';
 
@@ -11,6 +11,27 @@ const videos = [
 
 export default function FeaturedEpisode() {
   const [activeVideo, setActiveVideo] = useState(null);
+
+  // Defer the heavy background video until the section is near the viewport.
+  // It sits below the fold, so this keeps ~7 MB out of the initial page load.
+  const videoWrapRef = useRef(null);
+  const [videoInView, setVideoInView] = useState(false);
+
+  useEffect(() => {
+    const el = videoWrapRef.current;
+    if (!el || videoInView) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVideoInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [videoInView]);
 
   return (
     <section className="bg-[#F1EEEA]">
@@ -69,16 +90,26 @@ export default function FeaturedEpisode() {
           </Link>
         </div>
 
-        {/* Right Video */}
-        <div className="relative h-64 sm:h-80 lg:h-full">
-          <video
-            src="/images/home/Web_video_lsc.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-full object-cover"
-          />
+        {/* Right Video — lazy-loaded when scrolled into view */}
+        <div ref={videoWrapRef} className="relative h-64 sm:h-80 lg:h-full">
+          {videoInView ? (
+            <video
+              src="/images/home/Web_video_lsc.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="none"
+              poster="/images/home/Featured-Episode.jpg"
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <img
+              src="/images/home/Featured-Episode.jpg"
+              alt="LSC featured episode"
+              className="w-full h-full object-cover"
+            />
+          )}
         </div>
       </div>
 
