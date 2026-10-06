@@ -17,9 +17,9 @@ export default function PodcastCarousel() {
 
   // Sample podcast data - replace with your actual data
   const podcasts = [
-    {
+     {
       id: 1,
-      image: "/images/InnerPages/trl/1.jpeg",
+      image: "/images/InnerPages/trl/0.jpeg",
       title: "Rethinking Human Potential in the AI Age",
       guest: "Dr. Vinod Metta",
       role: "Consultant Interventional Neurologist & Movement Disorders Specialist",
@@ -27,7 +27,7 @@ export default function PodcastCarousel() {
     },
     {
       id: 2,
-    image: "/images/InnerPages/trl/2.jpg",
+      image: "/images/InnerPages/trl/2.jpg",
       title: "Future of Work and Leadership",
       guest: "John Smith",
       role: "CEO & Leadership Expert",
@@ -43,6 +43,14 @@ export default function PodcastCarousel() {
     },
     {
       id: 4,
+       image: "/images/InnerPages/trl/3.jpg",
+      title: "Digital Transformation Strategy",
+      guest: "Sarah Johnson",
+      role: "Chief Digital Officer",
+      hospital: "Tech Innovations Ltd",
+    },
+    {
+      id: 5,
        image: "/images/InnerPages/trl/4.jpg",
       title: "Digital Transformation Strategy",
       guest: "Sarah Johnson",
@@ -50,7 +58,7 @@ export default function PodcastCarousel() {
       hospital: "Tech Innovations Ltd",
     },
      {
-      id: 5,
+      id: 6,
        image: "/images/InnerPages/trl/5.jpg",
       title: "Digital Transformation Strategy",
       guest: "Sarah Johnson",
@@ -58,37 +66,37 @@ export default function PodcastCarousel() {
       hospital: "Tech Innovations Ltd",
     },
     {
-      id: 6,
+      id: 7,
        image: "/images/InnerPages/trl/6.jpeg",
       title: "Digital Transformation Strategy",
       guest: "Sarah Johnson",
       role: "Chief Digital Officer",
       hospital: "Tech Innovations Ltd",
     },
-    {
-      id: 7,
-       image: "/images/InnerPages/trl/7.jpeg",
-      title: "Digital Transformation Strategy",
-      guest: "Sarah Johnson",
-      role: "Chief Digital Officer",
-      hospital: "Tech Innovations Ltd",
-    },
-    {
-      id: 8,
-       image: "/images/InnerPages/trl/8.jpeg",
-      title: "Digital Transformation Strategy",
-      guest: "Sarah Johnson",
-      role: "Chief Digital Officer",
-      hospital: "Tech Innovations Ltd",
-    },
-     {
-      id: 9,
-       image: "/images/InnerPages/trl/9.jpeg",
-      title: "Digital Transformation Strategy",
-      guest: "Sarah Johnson",
-      role: "Chief Digital Officer",
-      hospital: "Tech Innovations Ltd",
-    },
+    // {
+    //   id: 7,
+    //    image: "/images/InnerPages/trl/7.jpeg",
+    //   title: "Digital Transformation Strategy",
+    //   guest: "Sarah Johnson",
+    //   role: "Chief Digital Officer",
+    //   hospital: "Tech Innovations Ltd",
+    // },
+    // {
+    //   id: 8,
+    //    image: "/images/InnerPages/trl/8.jpeg",
+    //   title: "Digital Transformation Strategy",
+    //   guest: "Sarah Johnson",
+    //   role: "Chief Digital Officer",
+    //   hospital: "Tech Innovations Ltd",
+    // },
+    //  {
+    //   id: 9,
+    //    image: "/images/InnerPages/trl/9.jpeg",
+    //   title: "Digital Transformation Strategy",
+    //   guest: "Sarah Johnson",
+    //   role: "Chief Digital Officer",
+    //   hospital: "Tech Innovations Ltd",
+    // },
     // Add more podcasts as needed
   ];
 
