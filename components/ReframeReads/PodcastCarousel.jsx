@@ -27,7 +27,7 @@ export default function PodcastCarousel() {
     },
     {
       id: 2,
-      image: "/images/InnerPages/trl/2.jpg",
+      image: "/images/InnerPages/trl/1.jpeg",
       title: "Future of Work and Leadership",
       guest: "John Smith",
       role: "CEO & Leadership Expert",
@@ -35,11 +35,11 @@ export default function PodcastCarousel() {
     },
     {
       id: 3,
-       image: "/images/InnerPages/trl/3.jpg",
-      title: "Digital Transformation Strategy",
-      guest: "Sarah Johnson",
-      role: "Chief Digital Officer",
-      hospital: "Tech Innovations Ltd",
+      image: "/images/InnerPages/trl/2.jpg",
+      title: "Future of Work and Leadership",
+      guest: "John Smith",
+      role: "CEO & Leadership Expert",
+      hospital: "Global Ventures Inc",
     },
     {
       id: 4,
