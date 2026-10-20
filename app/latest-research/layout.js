@@ -1,11 +1,10 @@
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Leadership Acts and Moments of Engagement",
+  title: "Latest Research",
   description:
-    "How leadership development can transform competencies into leadership acts that drive engagement and implement organisational strategy — research by Lester Coupland.",
+    "Research, frameworks and perspectives from London Strategy Centre on leadership, strategy and organisational transformation.",
   path: "/latest-research",
-  ogType: "article",
 });
 
 export default function LatestResearchLayout({ children }) {

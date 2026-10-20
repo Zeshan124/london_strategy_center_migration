@@ -3,6 +3,7 @@ import { AI_SERVICES } from "@/lib/aiServicesData";
 import { CYBER_SERVICES } from "@/lib/cyberServicesData";
 import { ADVISORY_SERVICES } from "@/lib/advisoryServicesData";
 import { PRESS_RELEASES } from "@/lib/pressReleasesData";
+import { LATEST_RESEARCH } from "@/lib/latestResearchData";
 
 // Required for `output: export` — generate a static sitemap.xml at build time.
 export const dynamic = "force-static";
@@ -81,6 +82,10 @@ export default function sitemap() {
     url: url(`/press-release/${pr.slug}`), lastModified: now, changeFrequency: "monthly", priority: 0.6,
   }));
 
+  const latestResearch = LATEST_RESEARCH.map((article) => ({
+    url: url(`/latest-research/${article.slug}`), lastModified: now, changeFrequency: "monthly", priority: 0.6,
+  }));
+
   const blog = BLOG_SLUGS.map((slug) => ({
     url: url(`/blog/${slug}`), lastModified: now, changeFrequency: "monthly", priority: 0.6,
   }));
@@ -92,6 +97,7 @@ export default function sitemap() {
     ...cyberServices,
     ...advisoryServices,
     ...pressReleases,
+    ...latestResearch,
     ...blog,
   ];
 }
