@@ -138,6 +138,11 @@ const Navbar = () => {
 
   ];
 
+  const latestResearch = [
+    { name: "From Organisational Insight to Strategic Impact", href: "/latest-research/organisational-insight-to-strategic-impact" },
+    { name: "Leadership Acts and Moments of Engagement", href: "/latest-research/leadership-acts-and-moments-of-engagement" },
+  ];
+
   const industries = [
     { name: "Aerospace and Defense", href: "#" },
     { name: "Automotive Industry", href: "#" },
@@ -552,7 +557,17 @@ const Navbar = () => {
                               Press Release
                             </button>
                           </li>
-                          
+                          <li>
+                            <button
+                              onClick={() => setActiveSection(activeSection === "research" ? "trl" : "research")}
+                              className={`w-full text-left text-sm text-gray-700 hover:text-gray-900 transition-colors block py-2 px-3 rounded ${
+                                activeSection === "research" ? "bg-gray-100 font-medium text-gray-900" : "hover:bg-gray-50"
+                              }`}
+                            >
+                              Latest Research
+                            </button>
+                          </li>
+
                           {/* <li>
                             <Link
                               href="/services"
@@ -761,6 +776,37 @@ const Navbar = () => {
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
                             View all Press Releases →
+                          </Link>
+                        </div>
+                      </div>
+                    ) : activeSection === "research" ? (
+                      /* Latest Research */
+                      <div>
+                        <Link href="/latest-research" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-900 hover:text-[#0E2253] hover:underline mb-1 block">
+                          Latest Research
+                        </Link>
+                        <p className="text-xs text-gray-600 mb-4">
+                          Research, frameworks and perspectives from London Strategy Centre on leadership, strategy and organisational transformation.
+                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 sm:gap-x-12 gap-y-2">
+                          {latestResearch.map((item, index) => (
+                            <Link
+                              key={index}
+                              href={item.href}
+                              className="text-sm text-gray-700 hover:text-gray-900 transition-colors py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                        </div>
+                        <div className="mt-6 pt-4 border-t border-gray-100">
+                          <Link
+                            href="/latest-research"
+                            className="text-sm font-medium text-[#0E2253] hover:underline"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            View all Latest Research →
                           </Link>
                         </div>
                       </div>
