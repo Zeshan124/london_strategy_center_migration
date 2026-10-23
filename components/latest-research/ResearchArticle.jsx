@@ -67,6 +67,45 @@ function Cards({ topLabel, bottomLabel, items }) {
   );
 }
 
+function Table({ columns, rows }) {
+  return (
+    <div className="my-6 overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
+      <table className="w-full text-left border-collapse">
+        <thead>
+          <tr className="bg-[#0E2253]">
+            {columns.map((col, i) => (
+              <th
+                key={i}
+                className={`px-5 sm:px-6 py-4 text-xs sm:text-sm font-bold uppercase tracking-widest text-white ${
+                  i > 0 ? "text-center border-l border-white/15" : ""
+                }`}
+              >
+                {col}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, r) => (
+            <tr key={r} className="border-t border-gray-200 bg-white">
+              {row.map((cell, c) => (
+                <td
+                  key={c}
+                  className={`px-5 sm:px-6 py-4 text-sm sm:text-base leading-relaxed ${
+                    c > 0 ? "text-center font-semibold text-[#0E2253] border-l border-gray-200" : "text-gray-700"
+                  }`}
+                >
+                  <RichText text={cell} />
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 function Block({ block, isLast }) {
   switch (block.type) {
     case "paragraph":
@@ -81,6 +120,18 @@ function Block({ block, isLast }) {
       return <Steps items={block.items} />;
     case "cards":
       return <Cards {...block} />;
+    case "table":
+      return <Table {...block} />;
+    case "list":
+      return (
+        <ul className={`list-disc pl-5 space-y-2 text-sm sm:text-base text-gray-600 leading-relaxed ${isLast ? "" : "mb-3"}`}>
+          {block.items.map((item, i) => (
+            <li key={i}>
+              <RichText text={item} />
+            </li>
+          ))}
+        </ul>
+      );
     default:
       return null;
   }
@@ -126,9 +177,11 @@ export default function ResearchArticle({ article }) {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white leading-[1.1] tracking-tight mb-3">
               {article.title}
             </h1>
-            <p className="text-lg sm:text-xl text-white/45 font-light italic mb-5 leading-relaxed">
-              {article.subtitle}
-            </p>
+            {article.subtitle && (
+              <p className="text-lg sm:text-xl text-white/45 font-light italic mb-5 leading-relaxed">
+                {article.subtitle}
+              </p>
+            )}
             <div className="w-16 h-0.5 bg-white/25 mb-6" />
 
             <div className="flex flex-wrap items-center gap-6 sm:gap-8">

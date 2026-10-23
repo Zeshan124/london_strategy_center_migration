@@ -141,6 +141,9 @@ const Navbar = () => {
   const latestResearch = [
     { name: "From Organisational Insight to Strategic Impact", href: "/latest-research/organisational-insight-to-strategic-impact" },
     { name: "Leadership Acts and Moments of Engagement", href: "/latest-research/leadership-acts-and-moments-of-engagement" },
+    { name: "Emotional Intelligent Leadership", href: "/latest-research/emotionally-intelligent-leadership-being-or-performing" },
+    { name: "Leadership Maturity", href: "/latest-research/leadership-maturity" },
+    { name: "Leadership Development and the ROI RItual", href: "/latest-research/leadership-development-and-the-roi-ritual" },
   ];
 
   const industries = [
